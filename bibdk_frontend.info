@@ -1,0 +1,7 @@
+name = Bibliotek.dk Frontend helper module
+description = Provides helper functions and scripts for the bibliotek.dk frontend
+core = 7.x
+package = "Bibliotek.dk"
+
+scripts[] = js/bibdk_popup.js
+scripts[] = js/jquery.popupwindow.js
