@@ -1,4 +1,4 @@
-name = Bibliotek.dk Frontend helper module
-description = Provides helper functions and scripts for the bibliotek.dk frontend
+name = Bibliotek.dk Frontend
+description = Handles visual setup of the bibdk profile such as blocks etc.
 core = 7.x
 package = "Bibliotek.dk"
