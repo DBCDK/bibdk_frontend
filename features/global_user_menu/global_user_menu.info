@@ -1,0 +1,10 @@
+name = Global user menu
+description = The top most global user menu
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:1
+features[menu_custom][] = menu-global-user-menu
+features[menu_links][] = menu-global-user-menu:user/login
+features[menu_links][] = menu-global-user-menu:user/logout

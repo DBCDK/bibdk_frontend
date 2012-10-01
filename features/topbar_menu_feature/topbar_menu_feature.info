@@ -1,0 +1,16 @@
+name = Topbar Menu Feature
+description = Feature holding the topbar menu
+core = 7.x
+package = Bibliotek.dk
+php = 5.2.4
+dependencies[] = fe_block
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = menu
+features[fe_block_settings][] = locale-language
+features[fe_block_settings][] = menu-menu-topbar-menu
+features[features_api][] = api:1
+features[menu_custom][] = menu-topbar-menu
+features[menu_links][] = menu-topbar-menu:help
+features[menu_links][] = menu-topbar-menu:http://bib.ding.dbc.dk/da/node/12
+features[menu_links][] = menu-topbar-menu:http://bib.ding.dbc.dk/da/node/13
