@@ -1,7 +1,7 @@
 name = Topbar Menu Feature
 description = Feature holding the topbar menu
 core = 7.x
-package = Bibliotek.dk
+package = Bibdk features
 php = 5.2.4
 dependencies[] = fe_block
 dependencies[] = features
