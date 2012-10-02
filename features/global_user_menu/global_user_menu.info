@@ -2,6 +2,7 @@ name = Global user menu
 description = The top most global user menu
 core = 7.x
 package = Bibdk features
+php = 5.2.4
 dependencies[] = features
 dependencies[] = menu
 features[features_api][] = api:1
