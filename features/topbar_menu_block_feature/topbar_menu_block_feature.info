@@ -1,0 +1,10 @@
+name = Topbar menu block feature
+description = Feature holding the topbar menu block
+core = 7.x
+package = Bibdk features
+version = 7.x-1.0
+project = topbar_menu_block_feature
+dependencies[] = bibdk_help
+dependencies[] = fe_block
+features[fe_block_settings][] = bibdk_help-bibdk-help-topbar-menu
+features[features_api][] = api:1
