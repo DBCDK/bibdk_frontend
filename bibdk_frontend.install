@@ -1,0 +1,108 @@
+<?php
+
+
+function bibdk_frontend_install(){
+  _bibdk_frontend_set_variables();
+  _bibdk_frontend_enable_modules();
+  _bibdk_frontend_set_blocks();
+}
+
+/** \brief
+ * define and set default theme blocks e.g header, content, subheader, menu ....
+ *
+ */
+function _bibdk_frontend_set_blocks() {
+  // set and enable default theme
+  $default_theme = variable_get('theme_default', 'bibdk_theme'); 
+  theme_enable(array($default_theme));
+  
+  $values = array(
+    array(
+      'module' => 'menu',
+      'delta' => 'menu-topbar-menu',
+      'theme' => $default_theme,
+      'status' => '1',
+      'weight' => '-15',
+      'region' => 'topbar',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'menu',
+      'delta' => 'menu-global-user-menu',
+      'theme' => $default_theme,
+      'status' => '1',
+      'weight' => '15',
+      'region' => 'topbar',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'bibdk_vejviser',
+      'delta' => 'bibdk_vejviser',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 15,
+      'region' => 'information',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'bibdk_article',
+      'delta' => 'bibdk_articles',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => -15,
+      'region' => 'information',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'bibdk_custom_search',
+      'delta' => 'bibdk-search-menu',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'search_panel',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+  );
+
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+}
+
+
+function _bibdk_frontend_set_variables(){
+  variable_set('theme_default', 'bibdk_theme');  
+  // Set front page.
+  #variable_set('site_frontpage', 'ding_frontpage');
+}
+
+function _bibdk_frontend_enable_modules(){
+  $modules = array(
+    //Features
+    'global_user_menu',
+    'topbar_menu_feature',
+    
+    //Content
+    'bibdk_article',
+  );
+  if (!module_enable($modules)) {
+    throw new Exception('A module present in array \'$module_list\' in file \'bibdk.install\' was not found. Install process aborted.');
+  }
+  
+}
+
+function bibdk_frontend_update_7002(&$sandbox) {
+  
+}
