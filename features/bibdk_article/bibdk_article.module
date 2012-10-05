@@ -10,11 +10,11 @@ include_once 'bibdk_article.features.inc';
  * Implements hook_block_info
  */
 function bibdk_article_block_info(){
-  
+
   $blocks['bibdk_articles'] = array(
-    'info' => t('Bibdk Article Frontpage teaser'), 
+    'info' => t('Bibdk Article Frontpage teaser'),
   );
-  
+
   return $blocks;
 }
 
@@ -29,7 +29,7 @@ function bibdk_article_block_view($delta = ''){
         $block['subject'] = t('Recent content');
         if ($articles = bibdk_article_get_block_posts()) {
           $block['content'] = array(
-            '#theme' => 'bibdk_articles_block', 
+            '#theme' => 'bibdk_articles_block',
             '#articles' => $articles,
           );
         }
@@ -58,17 +58,17 @@ function bibdk_article_theme(){
     'bibdk_articles_block' => array(
       'variables' => array('articles' => NULL),
       'template' => 'theme/bibdk-articles-block'
-    ), 
+    ),
     'bibdk_articles_block_widget' => array(
       'variables' => array(
-        'title' => NULL, 
-        'body' => NULL, 
-        'link' => NULL, 
-        'class' => NULL, 
-        'rows' => NULL, 
+        'title' => NULL,
+        'body' => NULL,
+        'link' => NULL,
+        'class' => NULL,
+        'rows' => NULL,
         ),
       'template' => 'theme/bibdk-articles-block-widget'
-    ), 
+    ),
   );
   return $themes;
 }
@@ -78,21 +78,24 @@ function bibdk_article_theme(){
  */
 function bibdk_article_get_block_posts(){
   //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
-   $query = new EntityFieldQuery();
+  $columns = array();
+  $query = new EntityFieldQuery();
 
   $query
     ->entityCondition('entity_type', 'node', '=')
     ->propertyCondition('type', 'bibdk_article', '=')
     ->propertyCondition('status', '1', '=');
-  
+
   $result = $query->execute();
   
   if (!isset($result['node']))
     return;
   
   $ids = array();
-  foreach($result['node'] as $record) {
-    $ids[] = $record->nid;
+  if ( isset($result['node']) ) {
+    foreach($result['node'] as $record) {
+      $ids[] = $record->nid;
+    }
   }
   $articles = entity_load('node', $ids);
   foreach($articles as $article){
@@ -108,7 +111,7 @@ function bibdk_article_get_block_posts(){
     );
     if (empty($columns[$placement]['width']))
       $columns[$placement]['width'] = $classes['width'];
-    
+
     $columns[$placement]['articles'][] = theme('bibdk_articles_block_widget', $article_render_array);
   }
   ksort($columns);
