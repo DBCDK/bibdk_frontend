@@ -123,7 +123,7 @@ function bibdk_article_get_block_posts(){
  */
 function bibdk_article_get_classes($columns, $rows){
   $classes = array(
-    'width' => ($columns == 2) ? 'grid_9' : 'grid_5',
+    'width' => ($columns == 2) ? 'span9' : 'span5',
     'height' => ($rows == 2) ? 'widget-light-grey widget-height-'.$rows : 'widget-dark-grey widget-height-'.$rows
   );
   return $classes;
