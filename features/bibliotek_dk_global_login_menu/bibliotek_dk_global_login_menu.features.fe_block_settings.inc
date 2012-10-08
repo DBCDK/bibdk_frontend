@@ -1,25 +1,21 @@
 <?php
 /**
  * @file
- * topbar_menu_feature.features.fe_block_settings.inc
+ * bibliotek_dk_global_login_menu.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function topbar_menu_feature_default_fe_block_settings() {
+function bibliotek_dk_global_login_menu_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '1.0';
 
   // Theme independent visibility settings.
   $export['visibility'] = array(
-    'locale-language' => array(
-      'delta' => 'language',
-      'module' => 'locale',
-    ),
-    'menu-menu-topbar-menu' => array(
-      'delta' => 'menu-topbar-menu',
+    'menu-menu-global-login-menu' => array(
+      'delta' => 'menu-global-login-menu',
       'module' => 'menu',
     ),
   );
@@ -27,31 +23,17 @@ function topbar_menu_feature_default_fe_block_settings() {
   // bibdk_theme
   $theme = array();
 
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
+  $theme['menu-menu-global-login-menu'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-global-login-menu',
     'theme' => 'bibdk_theme',
     'status' => '1',
-    'weight' => '-14',
+    'weight' => '0',
     'region' => 'topbar',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
     'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-topbar-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-topbar-menu',
-    'theme' => 'bibdk_theme',
-    'status' => '1',
-    'weight' => '-15',
-    'region' => 'topbar',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
     'cache' => -1,
   );
 
