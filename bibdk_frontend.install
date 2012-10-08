@@ -110,7 +110,7 @@ function _bibdk_frontend_enable_modules(){
     'bibdk_article',
   );
   if (!module_enable($modules)) {
-    throw new Exception('A module present in array \'$module_list\' in file \'bibdk.install\' was not found. Install process aborted.');
+    throw new Exception('A module present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
   
 }
