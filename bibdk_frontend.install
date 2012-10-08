@@ -19,17 +19,6 @@ function _bibdk_frontend_set_blocks() {
   
   $values = array(
     array(
-      'module' => 'menu',
-      'delta' => 'menu-topbar-menu',
-      'theme' => $default_theme,
-      'status' => '1',
-      'weight' => '-15',
-      'region' => 'topbar',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
-    ),
-    array(
       'module' => 'locale',
       'delta' => 'language',
       'theme' => $default_theme,
@@ -103,7 +92,7 @@ function _bibdk_frontend_set_variables(){
 function _bibdk_frontend_enable_modules(){
   $modules = array(
     //Features
-    'global_login_menu',
+    'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
     
     //Content

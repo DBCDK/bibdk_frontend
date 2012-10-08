@@ -28,7 +28,7 @@ function bibliotek_dk_global_login_menu_default_fe_block_settings() {
     'delta' => 'menu-global-login-menu',
     'theme' => 'bibdk_theme',
     'status' => '1',
-    'weight' => '0',
+    'weight' => '15',
     'region' => 'topbar',
     'custom' => '0',
     'visibility' => '0',
