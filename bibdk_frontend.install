@@ -62,6 +62,7 @@ function _bibdk_frontend_set_blocks() {
       'cache' => -1,
       'title' => '<none>',
     ),
+    //TODO Insert: Search block, 
   );
 
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
