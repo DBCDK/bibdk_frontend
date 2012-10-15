@@ -105,7 +105,7 @@ function bibdk_article_get_block_posts(){
       'title' => $article->title,
       'body' => isset($article->body['und'][0])? $article->body['und'][0]['value'] : "",
       'link' => isset($article->field_bibdk_article_link['und'][0]['value']) ? $article->field_bibdk_article_link['und'][0]['value'] : "",
-      'link_text' => isset($article->field_bibdk_article_link_text['und'][0])? $article->field_bibdk_article_link_text['und'][0]['value'] : "Read more",
+      'link_text' => isset($article->field_bibdk_article_link_text['und'][0])? $article->field_bibdk_article_link_text['und'][0]['value'] : t("Read more"),
       'class' => $classes['height'],
       'rows' =>  $article->field_layout_rows['und'][0]['value'],
     );

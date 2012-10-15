@@ -13,7 +13,7 @@
 			<footer class="footer">
 					<div class="field-read-more">
 						<a href="<?php print $link; ?>">
-							<span class="icon icon-left icon-blue-right">&#9660;</span><?php print t('read more'); ?>
+							<span class="icon icon-left icon-blue-right">&#9660;</span><?php print $link_text; ?>
 						</a>
 					</div>	
 			</footer>
