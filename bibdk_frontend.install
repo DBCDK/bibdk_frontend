@@ -5,7 +5,7 @@ function bibdk_frontend_install(){
   _bibdk_frontend_set_variables();
   _bibdk_frontend_set_blocks();
   _bibdk_frontend_enable_modules();
-  
+
 }
 
 /** \brief
@@ -14,9 +14,9 @@ function bibdk_frontend_install(){
  */
 function _bibdk_frontend_set_blocks() {
   // set and enable default theme
-  $default_theme = variable_get('theme_default', 'bibdk_theme'); 
+  $default_theme = variable_get('theme_default', 'bibdk_theme');
   theme_enable(array($default_theme));
-  
+
   $values = array(
     array(
       'module' => 'locale',
@@ -51,7 +51,7 @@ function _bibdk_frontend_set_blocks() {
       'cache' => -1,
       'title' => '<none>',
     ),
-    //TODO Insert: Search block, 
+    //TODO Insert: Search block,
   );
 
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
@@ -63,7 +63,7 @@ function _bibdk_frontend_set_blocks() {
 
 
 function _bibdk_frontend_set_variables(){
-  variable_set('theme_default', 'bibdk_theme');  
+  variable_set('theme_default', 'bibdk_theme');
   // Set front page.
   #variable_set('site_frontpage', 'ding_frontpage');
 }
@@ -73,15 +73,15 @@ function _bibdk_frontend_enable_modules(){
     //Features
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
-    'bibliotek_dk_header_block',
-    
+    'bibliotek_dk_header_actions',
+
     //Content
     'bibdk_article',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
-  
+
 }
 
 function bibdk_frontend_update_7003(&$sandbox) {
