@@ -64,6 +64,7 @@ function _bibdk_frontend_set_blocks() {
 
 function _bibdk_frontend_set_variables(){
   variable_set('theme_default', 'bibdk_theme');
+  variable_set('search_default_module', 'search');
   // Set front page.
   #variable_set('site_frontpage', 'ding_frontpage');
 }
@@ -74,6 +75,7 @@ function _bibdk_frontend_enable_modules(){
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
     'bibliotek_dk_header_actions',
+    'bibliotek_dk_search_region',
 
     //Content
     'bibdk_article',
