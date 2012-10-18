@@ -1,6 +1,6 @@
 <?php
 
- $page = new stdClass;
+$page = new stdClass;
 $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
 $page->api_version = 1;
 $page->name = 'bibdk_frontpage';
@@ -27,23 +27,25 @@ $handler->subtask = 'bibdk_frontpage';
 $handler->handler = 'panel_context';
 $handler->weight = 0;
 $handler->conf = array(
-  'title' => 'Bibdk Frontpage',
+  'title' => 'Bibliotek Frontpage',
   'no_blocks' => 0,
   'pipeline' => 'standard',
   'body_classes_to_remove' => '',
-  'body_classes_to_add' => '',
+  'body_classes_to_add' => 'testhest',
   'css_id' => '',
   'css' => '',
   'contexts' => array(),
   'relationships' => array(),
 );
 $display = new panels_display;
-$display->layout = 'bibdk_onecolumn';
+$display->layout = 'bibdk_100';
 $display->layout_settings = array();
 $display->panel_settings = array(
   'style_settings' => array(
     'default' => NULL,
     'middle' => NULL,
+    'top' => NULL,
+    'bottom' => NULL,
   ),
 );
 $display->cache = array();
@@ -65,10 +67,7 @@ $display->panels = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'alpha',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
