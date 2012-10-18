@@ -64,7 +64,10 @@ function _bibdk_frontend_set_blocks() {
 
 function _bibdk_frontend_set_variables(){
   variable_set('theme_default', 'bibdk_theme');
-  variable_set('search_default_module', 'search');
+  $search_active_modules = variable_get('search_active_modules');
+  $search_active_modules['ting_openformat'] = 'ting_openformat';
+  variable_set('search_active_modules', $search_active_modules);
+  variable_set('search_default_module', 'ting_openformat');
   // Set front page.
   #variable_set('site_frontpage', 'ding_frontpage');
 }
@@ -81,7 +84,7 @@ function _bibdk_frontend_enable_modules(){
     'bibdk_article',
   );
   if (!module_enable($modules)) {
-    throw new Exception('A module present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
+    throw new Exception('A module: '.current($modules).' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
 
 }
