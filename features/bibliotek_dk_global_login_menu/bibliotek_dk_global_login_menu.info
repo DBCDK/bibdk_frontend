@@ -2,6 +2,7 @@ name = Bibliotek.dk - Global login menu
 description = Menu holding links for login/logout
 core = 7.x
 package = Bibliotek.dk
+php = 5.2.4
 version = 7.x-1.0
 project = bibliotek_dk_global_login_menu
 dependencies[] = fe_block
