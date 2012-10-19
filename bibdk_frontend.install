@@ -1,0 +1,94 @@
+<?php
+
+
+function bibdk_frontend_install(){
+  _bibdk_frontend_set_variables();
+  _bibdk_frontend_set_blocks();
+  _bibdk_frontend_enable_modules();
+
+}
+
+/** \brief
+ * define and set default theme blocks e.g header, content, subheader, menu ....
+ *
+ */
+function _bibdk_frontend_set_blocks() {
+  // set and enable default theme
+  $default_theme = variable_get('theme_default', 'bibdk_theme');
+  theme_enable(array($default_theme));
+
+  $values = array(
+    array(
+      'module' => 'locale',
+      'delta' => 'language',
+      'theme' => $default_theme,
+      'status' => '1',
+      'weight' => '0',
+      'region' => 'topbar',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'menu',
+      'delta' => 'menu-global-login-menu',
+      'theme' => $default_theme,
+      'status' => '1',
+      'weight' => '15',
+      'region' => 'topbar',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    array(
+      'module' => 'bibdk_custom_search',
+      'delta' => 'bibdk-search-menu',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'search_panel',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+    //TODO Insert: Search block,
+  );
+
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+}
+
+
+function _bibdk_frontend_set_variables(){
+  variable_set('theme_default', 'bibdk_theme');
+  $search_active_modules = variable_get('search_active_modules');
+  $search_active_modules['ting_openformat'] = 'ting_openformat';
+  variable_set('search_active_modules', $search_active_modules);
+  variable_set('search_default_module', 'ting_openformat');
+  // Set front page.
+  #variable_set('site_frontpage', 'ding_frontpage');
+}
+
+function _bibdk_frontend_enable_modules(){
+  $modules = array(
+    //Features
+    'bibliotek_dk_global_login_menu',
+    'topbar_menu_block_feature',
+    'bibliotek_dk_header_actions',
+    'bibliotek_dk_search_region',
+
+    //Content
+    'bibdk_article',
+  );
+  if (!module_enable($modules)) {
+    throw new Exception('A module: '.current($modules).' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
+  }
+
+}
+
+function bibdk_frontend_update_7003(&$sandbox) {
+  _bibdk_frontend_enable_modules();
+}
