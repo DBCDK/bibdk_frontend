@@ -24,3 +24,43 @@ function bibdk_frontend_default_page_manager_pages() {
    }
   return $pages;
 }
+
+
+
+/**
+ * Implements hook_block_info().
+ */
+function bibdk_frontend_block_info() {
+
+  $blocks['tabs1'] = array(
+    'info' => t('Bibdk: Primary tabs'),
+    'description' => t('Primary level of Drupals menu_local_tasks'),
+  );
+  $blocks['tabs2'] = array(
+    'info' => t('Bibdk: Secondary tabs'),
+    'description' => t('Secondary level of Drupals menu_local_tasks'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function bibdk_frontend_block_view($delta = '') {
+
+  $block = array();
+
+  switch ($delta) {
+
+    case 'tabs1':
+      $block['subject'] = "Primary tabs";
+      $block['content'] = menu_primary_local_tasks();
+    break;
+
+    case 'tabs2':
+      $block['subject'] = "Secondary tabs";
+      $block['content'] = menu_secondary_local_tasks();
+    break;
+  }
+  return $block;
+}
