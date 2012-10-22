@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Implements hook_ctools_plugin_api().
  */
@@ -12,34 +11,28 @@ function bibdk_frontend_ctools_plugin_api() {
 }
 
 /**
-* Implementation of hook_default_page_manager_pages().
-*/
+ * Implementation of hook_default_page_manager_pages().
+ */
 function bibdk_frontend_default_page_manager_pages() {
   $pages = array();
   $path = drupal_get_path('module', 'bibdk_frontend') . '/pages';
   $files = drupal_system_listing('/\.inc$/', $path, 'name', 0);
-  foreach($files as $file) {
+  foreach ($files as $file) {
     include_once $file->uri;
     $pages[$page->name] = $page;
-   }
+  }
   return $pages;
 }
-
-
 
 /**
  * Implements hook_block_info().
  */
 function bibdk_frontend_block_info() {
+  $blocks['bibdk_tabs'] = array(
+    'info' => t('Bibdk: tabs'),
+    'description' => t('sidebar tab menu_local_tabs'),
+  );
 
-  $blocks['tabs1'] = array(
-    'info' => t('Bibdk: Primary tabs'),
-    'description' => t('Primary level of Drupals menu_local_tasks'),
-  );
-  $blocks['tabs2'] = array(
-    'info' => t('Bibdk: Secondary tabs'),
-    'description' => t('Secondary level of Drupals menu_local_tasks'),
-  );
   return $blocks;
 }
 
@@ -47,20 +40,16 @@ function bibdk_frontend_block_info() {
  * Implements hook_block_view().
  */
 function bibdk_frontend_block_view($delta = '') {
-
   $block = array();
-
   switch ($delta) {
+    case 'bibdk_tabs':
+      $block['content'] = menu_local_tabs();
+      break;
+  }
 
-    case 'tabs1':
-      $block['subject'] = "Primary tabs";
-      $block['content'] = menu_primary_local_tasks();
-    break;
-
-    case 'tabs2':
-      $block['subject'] = "Secondary tabs";
-      $block['content'] = menu_secondary_local_tasks();
-    break;
+  //unset primary tab
+  if (isset($block['content']['#primary'])) {
+    unset($block['content']['#primary']);
   }
   return $block;
 }
