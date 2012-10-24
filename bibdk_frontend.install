@@ -57,7 +57,7 @@ function _bibdk_frontend_set_blocks() {
       'theme' => $default_theme,
       'status' => 1,
       'weight' => 0,
-      'region' => 'side_bar',
+      'region' => 'sidebar',
       'pages' => '',
       'cache' => -1,
       'title' => '<none>',
