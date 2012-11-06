@@ -50,7 +50,7 @@ function _bibdk_frontend_set_blocks() {
       'pages' => '',
       'cache' => -1,
       'title' => '<none>',
-    ),  
+    ),
     array(
       'module' => 'bibdk_frontend',
       'delta' => 'bibdk_tabs',
@@ -87,6 +87,7 @@ function _bibdk_frontend_enable_modules(){
     //Features
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
+    'html_5_text_format',
     'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
 
