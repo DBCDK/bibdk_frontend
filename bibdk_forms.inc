@@ -23,7 +23,12 @@ function bibdk_form_1($form, &$form_state) {
 
 
   // Section1
-  $form['form_section1'] = wrap_form_section();
+  $form['form_section1'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section', 'form-section-first'),
+    ),
+  );
 
 // Text fields
   $form['form_section1']['textfield'] = array(
@@ -210,7 +215,12 @@ function bibdk_form_1($form, &$form_state) {
 
 
   // Section5
-  $form['form_section5'] = wrap_form_section();
+  $form['form_section5'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section', 'form-section-horizontal'),
+    ),
+  );
 
 
   // Fieldset
@@ -232,7 +242,12 @@ function bibdk_form_1($form, &$form_state) {
 
 
   // Section6
-  $form['form_section6'] = wrap_form_section();
+  $form['form_section6'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section', 'form-section-horizontal'),
+    ),
+  );
 
   $form['form_section6']['input_container'] = array(
     '#type' => 'textfield',
@@ -241,10 +256,12 @@ function bibdk_form_1($form, &$form_state) {
 
 
   // Section7
-  $form['form_section7'] = wrap_form_section();
-
-
-  // Actions
+  $form['form_section7'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section', 'form-section-last'),
+    ),
+  );
   $form['form_section7']['actions'] = array('#type' => 'actions');
   $form['form_section7']['actions']['submit'] = array(
     '#type' => 'submit',
@@ -255,7 +272,7 @@ function bibdk_form_1($form, &$form_state) {
     '#value' => t('Delete'),
   );
   $form['form_section7']['actions']['cancel'] = array(
-    '#markup' => l(t('Cancel'), 'foo/bar'),
+    '#markup' => l(t('Cancel'), 'foo/bar', array('attributes' => array('class' => 'form-cancel'))),
   );
 
 
