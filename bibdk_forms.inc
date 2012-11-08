@@ -304,9 +304,6 @@ function bibdk_form_callback_all_element_types($form, &$form_state) {
   $form['actions']['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Save'),
-    '#attributes' => array(
-      'class' => array('btn-blue')
-    ),
   );
   $form['actions']['delete'] = array(
     '#type' => 'button',
@@ -536,9 +533,6 @@ function bibdk_form_callback_all_inline_element_types($form, &$form_state) {
   $form['actions']['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Save'),
-    '#attributes' => array(
-      'class' => array('btn-blue')
-    ),
   );
   $form['actions']['delete'] = array(
     '#type' => 'button',
