@@ -13,15 +13,15 @@
 			<footer class="footer">
 					<div class="field-read-more">
 						<a href="<?php print $link; ?>">
-							<span class="icon icon-left icon-blue-right">&#9660;</span><?php print $link_text; ?>
+							<span class="icon icon-left icon-blue-right">&nbsp;</span><?php print $link_text; ?>
 						</a>
-					</div>	
+					</div>
 			</footer>
       <?php endif; ?>
-		</div> 
+		</div>
 		<!-- inner -->
-  </div> 
+  </div>
   <!-- widget -->
 
-</article>  
+</article>
 <!-- widget-wrapper -->
