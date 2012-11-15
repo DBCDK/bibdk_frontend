@@ -87,6 +87,7 @@ function _bibdk_frontend_set_variables(){
 function _bibdk_frontend_enable_modules(){
   $modules = array(
     //Features
+    'bibdk_language_settings',
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
     'html_5_text_format',
