@@ -78,6 +78,8 @@ function _bibdk_frontend_set_variables(){
   $search_active_modules['ting_openformat'] = 'ting_openformat';
   variable_set('search_active_modules', $search_active_modules);
   variable_set('search_default_module', 'ting_openformat');
+   // enable the panel page showing searchresult and facets
+  variable_set('page_manager_search_disabled_ting_openformat',0);
   // Set front page.
   #variable_set('site_frontpage', 'ding_frontpage');
 }
