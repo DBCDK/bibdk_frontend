@@ -81,7 +81,7 @@ function _bibdk_frontend_set_variables(){
    // enable the panel page showing searchresult and facets
   variable_set('page_manager_search_disabled_ting_openformat',0);
   // Set front page.
-  #variable_set('site_frontpage', 'ding_frontpage');
+  variable_set('site_frontpage', 'bibdk_frontpage');
 }
 
 function _bibdk_frontend_enable_modules(){
