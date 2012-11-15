@@ -1,0 +1,12 @@
+name = Bibdk language settings
+description = Set up danish, english (british) & Drupal english (disabled)
+core = 7.x
+package = Bibdk features
+version = 7.x-1.0
+project = bibdk_language_settings
+dependencies[] = features
+dependencies[] = locale
+features[features_api][] = api:1
+features[language][] = da
+features[language][] = en
+features[language][] = en-gb
