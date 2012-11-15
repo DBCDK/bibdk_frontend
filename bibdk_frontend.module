@@ -44,6 +44,9 @@ function bibdk_frontend_block_view($delta = '') {
   switch ($delta) {
     case 'bibdk_tabs':
       $block['content'] = menu_local_tabs();
+      foreach ($block['content']['#secondary'] as $n => $tab) {
+        $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title']);
+      }
       break;
   }
 

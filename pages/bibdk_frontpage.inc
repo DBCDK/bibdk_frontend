@@ -1,6 +1,6 @@
 <?php
 
-$page = new stdClass;
+$page = new stdClass();
 $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
 $page->api_version = 1;
 $page->name = 'bibdk_frontpage';
@@ -18,7 +18,7 @@ $page->conf = array(
   'admin_paths' => FALSE,
 );
 $page->default_handlers = array();
-$handler = new stdClass;
+$handler = new stdClass();
 $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
 $handler->api_version = 1;
 $handler->name = 'page_bibdk_frontpage_panel_context';
@@ -37,7 +37,7 @@ $handler->conf = array(
   'contexts' => array(),
   'relationships' => array(),
 );
-$display = new panels_display;
+$display = new panels_display();
 $display->layout = 'bibdk_100';
 $display->layout_settings = array();
 $display->panel_settings = array(
@@ -52,7 +52,7 @@ $display->cache = array();
 $display->title = 'Information';
 $display->content = array();
 $display->panels = array();
-  $pane = new stdClass;
+  $pane = new stdClass();
   $pane->pid = 'new-1';
   $pane->panel = 'middle';
   $pane->type = 'block';
@@ -73,7 +73,7 @@ $display->panels = array();
   $pane->locks = array();
   $display->content['new-1'] = $pane;
   $display->panels['middle'][0] = 'new-1';
-  $pane = new stdClass;
+  $pane = new stdClass();
   $pane->pid = 'new-2';
   $pane->panel = 'middle';
   $pane->type = 'block';
