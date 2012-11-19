@@ -10,6 +10,24 @@
 function bibliotek_dk_global_login_menu_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-global-login-menu:user
+  $menu_links['menu-global-login-menu:user'] = array(
+    'menu_name' => 'menu-global-login-menu',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'My page',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-global-login-menu:user/login
   $menu_links['menu-global-login-menu:user/login'] = array(
     'menu_name' => 'menu-global-login-menu',
@@ -46,6 +64,7 @@ function bibliotek_dk_global_login_menu_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Log in');
   t('Log out');
+  t('My page');
 
 
   return $menu_links;

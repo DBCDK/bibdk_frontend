@@ -1,0 +1,10 @@
+name = HTML 5 text format
+description = Add a HTML 5 text format for administrators
+core = 7.x
+package = Bibdk features
+php = 5.2.4
+version = 7.x-1.0
+project = html_5_text_format
+dependencies[] = features
+features[features_api][] = api:1
+features[filter][] = html_5
