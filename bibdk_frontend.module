@@ -46,7 +46,7 @@ function bibdk_frontend_block_view($delta = '') {
       $block['content'] = menu_local_tabs();
       if ( is_array($block['content']['#secondary']) ) {
         foreach ($block['content']['#secondary'] as $n => $tab) {
-          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title']);
+          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context'=>'bibdk_frontend'));
         }
       }
       break;
@@ -59,6 +59,16 @@ function bibdk_frontend_block_view($delta = '') {
   return $block;
 }
 
+
+function bibdk_frontend_block_view_alter(&$data, $block) {
+  if ( $block->delta == 'menu-global-login-menu' ) {
+    foreach ( $data['content'] as $key => $value ) {
+      if ( isset($value['#title']) ) {
+         $data['content'][$key]['#title'] = t($value['#title'], array(), array('context'=>'bibdk_frontend'));
+      }
+    }
+  }
+}
 
 
 /**
