@@ -18,7 +18,7 @@ function bibdk_frontend_default_page_manager_pages() {
   $path = drupal_get_path('module', 'bibdk_frontend') . '/pages';
   $files = drupal_system_listing('/\.inc$/', $path, 'name', 0);
   foreach ($files as $file) {
-    include_once $file->uri;
+    include $file->uri;
     $pages[$page->name] = $page;
   }
   return $pages;
