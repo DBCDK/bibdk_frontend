@@ -59,41 +59,6 @@ function topbar_menu_block_feature_default_fe_block_settings() {
 
   $export['theme']['bibdk_theme'] = $theme;
 
-  // Exported block settings for Garland.
-  $theme = array();
-
-  $theme['bibdk_help-bibdk-help-topbar-menu'] = array(
-    'module' => 'bibdk_help',
-    'delta' => 'bibdk-help-topbar-menu',
-    'theme' => 'garland',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-    'i18n_mode' => '0',
-  );
-
-  $theme['bibdk_help-bibdk-help-topbar-menu-eng'] = array(
-    'module' => 'bibdk_help',
-    'delta' => 'bibdk-help-topbar-menu-eng',
-    'theme' => 'garland',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-    'i18n_mode' => '0',
-  );
-
-  $export['theme']['garland'] = $theme;
-
   $theme_default = variable_get('theme_default', 'bartik');
   $themes = list_themes();
   foreach ($export['theme'] as $theme_key => $settings) {
