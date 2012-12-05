@@ -3,13 +3,12 @@
 /**
  * Implements hook_user_login().
  */
-/*
+
 function bibdk_frontend_user_login(&$edit, $account) {
-  if(isset($edit['temporary'])){
+  if(isset($edit['uid'])){
     drupal_goto('');
   }
 }
-*/
 
 /**
  * Implements hook_ctools_plugin_api().
