@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Implements hook_user_login().
+ */
+
+function bibdk_frontend_user_login(&$edit, $account) {
+  if(isset($edit['uid'])){
+    drupal_goto('');
+  }
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function bibdk_frontend_ctools_plugin_api() {
@@ -44,9 +54,9 @@ function bibdk_frontend_block_view($delta = '') {
   switch ($delta) {
     case 'bibdk_tabs':
       $block['content'] = menu_local_tabs();
-      if ( is_array($block['content']['#secondary']) ) {
+      if (is_array($block['content']['#secondary'])) {
         foreach ($block['content']['#secondary'] as $n => $tab) {
-          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context'=>'bibdk_frontend'));
+          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
         }
       }
       break;
@@ -61,10 +71,10 @@ function bibdk_frontend_block_view($delta = '') {
 
 
 function bibdk_frontend_block_view_alter(&$data, $block) {
-  if ( $block->delta == 'menu-global-login-menu' ) {
-    foreach ( $data['content'] as $key => $value ) {
-      if ( isset($value['#title']) ) {
-         $data['content'][$key]['#title'] = t($value['#title'], array(), array('context'=>'bibdk_frontend'));
+  if ($block->delta == 'menu-global-login-menu') {
+    foreach ($data['content'] as $key => $value) {
+      if (isset($value['#title'])) {
+        $data['content'][$key]['#title'] = t($value['#title'], array(), array('context' => 'bibdk_frontend'));
       }
     }
   }
@@ -81,7 +91,7 @@ function bibdk_frontend_menu() {
   $forms = array('all_element_types', 'all_inline_element_types');
 
   foreach ($forms as $form) {
-    $items['bibdk_forms/'. $form] = array(
+    $items['bibdk_forms/' . $form] = array(
       'title' => t($form),
       'page callback' => 'drupal_get_form',
       'page arguments' => array('bibdk_form_callback_' . $form),
