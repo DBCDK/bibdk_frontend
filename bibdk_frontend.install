@@ -82,6 +82,26 @@ function _bibdk_frontend_set_variables(){
   variable_set('page_manager_search_disabled_ting_openformat',0);
   // Set front page.
   variable_set('site_frontpage', 'bibdk_frontpage');
+  //Set captcha
+  _bibdk_frontend_setup_captcha();
+}
+
+/**
+ * Setting the captcha module
+ */
+function _bibdk_frontend_setup_captcha() {
+  variable_set('captcha_administration_mode', 0);
+  variable_set('captcha_allow_on_admin_pages', 0);
+  variable_set('captcha_default_challenge', 'bibdkcaptcha/Bibdk Captcha');
+  variable_set('captcha_add_captcha_description', 1);
+  variable_set('captcha_description_da', 'Skriv kontrolkoden så vi ved du er et menneske og ikke en robot.');
+  variable_set('captcha_description_en', 'This question is for testing whether you are a human visitor and to prevent automated spam submissions.');
+  variable_set('captcha_description_en-gb', 'This question is for testing whether you are a human visitor and to prevent automated spam submissions.');
+  variable_set('captcha_default_validation', 1);
+  variable_set('captcha_persistence', 1);
+
+  module_load_include('inc', 'captcha', 'captcha');
+  captcha_set_form_id_setting('user_register_form', 'default');
 }
 
 function _bibdk_frontend_enable_modules(){
@@ -105,4 +125,11 @@ function _bibdk_frontend_enable_modules(){
 
 function bibdk_frontend_update_7003(&$sandbox) {
   _bibdk_frontend_enable_modules();
+}
+
+/**
+ * Setting the correct values for the bibdk_captcha module
+ */
+function bibdk_frontend_update_7004(&$sandbox) {
+  _bibdk_frontend_setup_captcha();
 }
