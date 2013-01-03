@@ -104,6 +104,23 @@ function _bibdk_frontend_setup_captcha() {
   captcha_set_form_id_setting('user_register_form', 'default');
 }
 
+/** \brief default cache setup
+ *  
+ */
+function bibdk_frontend_setup_cache() {
+  // enable overall caching
+  variable_set('search_client_enable_cache',1);
+  // agency  
+  variable_set('AgencyRequest_cache_enable',1);
+  variable_set('AgencyRequest_cache_lifetime',10);
+  //search
+  variable_set('TingClientSearchRequest_cache_enable',1);
+  variable_set('TingClientSearchRequest_cache_lifetime',10);
+  //object
+  variable_set('TingClientObjectRequest_cache_enable',1);
+  variable_set('TingClientObjectRequest_cache_lifetime',10);  
+}
+
 function _bibdk_frontend_enable_modules(){
   $modules = array(
     //Features
@@ -132,4 +149,11 @@ function bibdk_frontend_update_7003(&$sandbox) {
  */
 function bibdk_frontend_update_7004(&$sandbox) {
   _bibdk_frontend_setup_captcha();
+}
+
+/** Implements hook_update_N
+ * set default caching 
+ */
+function bibdk_frontend_update_7005(&$sandbox) {
+  bibdk_frontend_setup_cache();
 }
