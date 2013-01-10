@@ -5,7 +5,7 @@ function bibdk_frontend_install(){
   _bibdk_frontend_set_variables();
   _bibdk_frontend_set_blocks();
   _bibdk_frontend_enable_modules();
-_bibdk_frontend_setup_cache();
+bibdk_frontend_setup_cache();
 }
 
 /** \brief
