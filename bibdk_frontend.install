@@ -41,17 +41,6 @@ function _bibdk_frontend_set_blocks() {
       'title' => '<none>',
     ),
     array(
-      'module' => 'bibdk_custom_search',
-      'delta' => 'bibdk-search-menu',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'search_panel',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
-    ),
-    array(
       'module' => 'bibdk_frontend',
       'delta' => 'bibdk_tabs',
       'theme' => $default_theme,
