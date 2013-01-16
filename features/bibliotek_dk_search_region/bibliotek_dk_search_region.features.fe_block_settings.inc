@@ -14,10 +14,6 @@ function bibliotek_dk_search_region_default_fe_block_settings() {
 
   // Theme independent visibility settings.
   $export['visibility'] = array(
-    'bibdk_custom_search-bibdk-search-menu' => array(
-      'delta' => 'bibdk-search-menu',
-      'module' => 'bibdk_custom_search',
-    ),
     'search-form' => array(
       'delta' => 'form',
       'module' => 'search',
@@ -26,20 +22,6 @@ function bibliotek_dk_search_region_default_fe_block_settings() {
 
   // Exported block settings for Bibliotek.dk.
   $theme = array();
-
-  $theme['bibdk_custom_search-bibdk-search-menu'] = array(
-    'module' => 'bibdk_custom_search',
-    'delta' => 'bibdk-search-menu',
-    'theme' => 'bibdk_theme',
-    'status' => '1',
-    'weight' => '-15',
-    'region' => 'search_panel',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
 
   $theme['search-form'] = array(
     'module' => 'search',

@@ -1,11 +1,11 @@
 <?php
 
 
-function bibdk_frontend_install(){
+function bibdk_frontend_install() {
   _bibdk_frontend_set_variables();
   _bibdk_frontend_set_blocks();
   _bibdk_frontend_enable_modules();
-
+  bibdk_frontend_setup_cache();
 }
 
 /** \brief
@@ -41,17 +41,6 @@ function _bibdk_frontend_set_blocks() {
       'title' => '<none>',
     ),
     array(
-      'module' => 'bibdk_custom_search',
-      'delta' => 'bibdk-search-menu',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'search_panel',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
-    ),
-    array(
       'module' => 'bibdk_frontend',
       'delta' => 'bibdk_tabs',
       'theme' => $default_theme,
@@ -72,14 +61,14 @@ function _bibdk_frontend_set_blocks() {
 }
 
 
-function _bibdk_frontend_set_variables(){
+function _bibdk_frontend_set_variables() {
   variable_set('theme_default', 'bibdk_theme');
   $search_active_modules = variable_get('search_active_modules');
   $search_active_modules['ting_openformat'] = 'ting_openformat';
   variable_set('search_active_modules', $search_active_modules);
   variable_set('search_default_module', 'ting_openformat');
-   // enable the panel page showing searchresult and facets
-  variable_set('page_manager_search_disabled_ting_openformat',0);
+  // enable the panel page showing searchresult and facets
+  variable_set('page_manager_search_disabled_ting_openformat', 0);
   // Set front page.
   variable_set('site_frontpage', 'bibdk_frontpage');
   //Set captcha
@@ -104,7 +93,27 @@ function _bibdk_frontend_setup_captcha() {
   captcha_set_form_id_setting('user_register_form', 'default');
 }
 
-function _bibdk_frontend_enable_modules(){
+/** \brief default cache setup
+ *
+ */
+function bibdk_frontend_setup_cache() {
+  // enable overall caching
+  variable_set('search_client_enable_cache', 1);
+  // agency
+  variable_set('AgencyRequest_cache_enable', 1);
+  variable_set('AgencyRequest_cache_lifetime', 10);
+  //search
+  variable_set('TingClientSearchRequest_cache_enable', 1);
+  variable_set('TingClientSearchRequest_cache_lifetime', 10);
+  //object
+  variable_set('TingClientObjectRequest_cache_enable', 1);
+  variable_set('TingClientObjectRequest_cache_lifetime', 10);
+  // borchk
+  variable_set('bibdk_borchk_cache_enable', 1);
+  variable_set('bibdk_borchk_cache_lifetime', 60);
+}
+
+function _bibdk_frontend_enable_modules() {
   $modules = array(
     //Features
     'bibdk_language_settings',
@@ -113,12 +122,12 @@ function _bibdk_frontend_enable_modules(){
     'html_5_text_format',
     'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
-
+    'bibdk_custom_search_feature',
     //Content
     'bibdk_article',
   );
   if (!module_enable($modules)) {
-    throw new Exception('A module: '.current($modules).' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
+    throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
 
 }
@@ -132,4 +141,18 @@ function bibdk_frontend_update_7003(&$sandbox) {
  */
 function bibdk_frontend_update_7004(&$sandbox) {
   _bibdk_frontend_setup_captcha();
+}
+
+/** Implements hook_update_N
+ * set default caching
+ */
+function bibdk_frontend_update_7005(&$sandbox) {
+  bibdk_frontend_setup_cache();
+}
+
+/**
+ * Enable bibdk_custom_search_feature
+ */
+function bibdk_frontend_update_7006(&$sandbox) {
+  module_enable(array('bibdk_custom_search_feature'));
 }
