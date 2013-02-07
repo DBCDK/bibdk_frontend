@@ -12,5 +12,6 @@ features[fe_block_settings][] = menu-menu-global-login-menu
 features[features_api][] = api:1
 features[menu_custom][] = menu-global-login-menu
 features[menu_links][] = menu-global-login-menu:user
+features[menu_links][] = menu-global-login-menu:user/cart
 features[menu_links][] = menu-global-login-menu:user/login
 features[menu_links][] = menu-global-login-menu:user/logout
