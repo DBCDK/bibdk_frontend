@@ -15,6 +15,8 @@ function bibliotek_dk_global_login_menu_menu_default_menu_custom() {
     'menu_name' => 'menu-global-login-menu',
     'title' => 'Bibliotek.dk - Global login menu',
     'description' => 'Menu holding login/log out links',
+    'language' => 'und',
+    'i18n_mode' => '0',
   );
   // Translatables
   // Included for use with string extractors like potx.
