@@ -59,6 +59,7 @@ function bibdk_frontend_block_view($delta = '') {
           $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
         }
       }
+      drupal_alter('bibdk_tabs',$block);
       break;
   }
 
@@ -70,6 +71,17 @@ function bibdk_frontend_block_view($delta = '') {
 }
 
 
+function bibdk_frontend_bibdk_tabs_alter(&$data){
+  if ( !empty($data['content']['#secondary']) ) {
+    foreach ( $data['content']['#secondary'] as $key => $tab ) {
+      if ( $tab['#link']['path'] == 'user/%/edit/bibdk_mypage' ) { // bibdk_mypage profile tab
+        $data['content']['#bibdk_mypage_tab'] = $tab;
+        unset($data['content']['#secondary'][$key]);
+      }
+    }
+  }
+}
+
 function bibdk_frontend_block_view_alter(&$data, $block) {
   if ($block->delta == 'menu-global-login-menu') {
     foreach ($data['content'] as $key => $value) {
@@ -80,8 +92,8 @@ function bibdk_frontend_block_view_alter(&$data, $block) {
   }
 }
 
-/** Implements hook_form_FORM_ID_alter (profile2_form) 
- * remove account settings 
+/** Implements hook_form_FORM_ID_alter (profile2_form)
+ * remove account settings
  * unset action region
  */
 function bibdk_frontend_form_profile2_form_alter(&$form, &$form_state) {
