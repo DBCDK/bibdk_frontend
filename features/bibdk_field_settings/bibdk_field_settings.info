@@ -2,6 +2,7 @@ name = bibdk_field_settings
 description = feature export of all field settings
 core = 7.x
 package = Bibliotek.dk
+php = 5.2.4
 dependencies[] = bibdk_adhl
 dependencies[] = bibdk_cart
 dependencies[] = bibdk_cart_field

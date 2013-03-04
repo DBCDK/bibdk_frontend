@@ -122,7 +122,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '13',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -206,7 +206,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '41',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -291,7 +291,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '46',
         ),
         'full' => array(
           'label' => 'above',
@@ -375,7 +375,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '2',
         ),
         'full' => array(
           'label' => 'above',
@@ -462,7 +462,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '34',
         ),
         'full' => array(
           'label' => 'above',
@@ -549,7 +549,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '26',
         ),
         'full' => array(
           'label' => 'above',
@@ -636,7 +636,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '31',
         ),
         'full' => array(
           'label' => 'above',
@@ -723,7 +723,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -810,7 +810,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '32',
         ),
         'full' => array(
           'label' => 'above',
@@ -897,7 +897,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '18',
         ),
         'full' => array(
           'label' => 'above',
@@ -984,7 +984,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '16',
         ),
         'full' => array(
           'label' => 'above',
@@ -1072,7 +1072,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '14',
         ),
         'full' => array(
           'label' => 'above',
@@ -1160,7 +1160,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '43',
         ),
         'full' => array(
           'label' => 'above',
@@ -1247,7 +1247,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'above',
@@ -1334,7 +1334,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '45',
         ),
         'full' => array(
           'label' => 'above',
@@ -1421,7 +1421,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '8',
         ),
         'full' => array(
           'label' => 'above',
@@ -1508,7 +1508,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '44',
         ),
         'full' => array(
           'label' => 'above',
@@ -1595,7 +1595,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '7',
         ),
         'full' => array(
           'label' => 'above',
@@ -1682,7 +1682,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '40',
         ),
         'full' => array(
           'label' => 'above',
@@ -1769,7 +1769,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '35',
         ),
         'full' => array(
           'label' => 'above',
@@ -1856,7 +1856,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '36',
         ),
         'full' => array(
           'label' => 'above',
@@ -1943,7 +1943,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '25',
         ),
         'full' => array(
           'label' => 'above',
@@ -2030,7 +2030,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '48',
         ),
         'full' => array(
           'label' => 'above',
@@ -2117,7 +2117,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '38',
         ),
         'full' => array(
           'label' => 'above',
@@ -2204,7 +2204,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'above',
@@ -2291,7 +2291,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '20',
         ),
         'full' => array(
           'label' => 'above',
@@ -2378,7 +2378,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '37',
         ),
         'full' => array(
           'label' => 'above',
@@ -2465,7 +2465,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '12',
         ),
         'full' => array(
           'label' => 'above',
@@ -2552,7 +2552,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '33',
         ),
         'full' => array(
           'label' => 'above',
@@ -2639,7 +2639,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '29',
         ),
         'full' => array(
           'label' => 'above',
@@ -2726,7 +2726,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
         'full' => array(
           'label' => 'above',
@@ -2813,7 +2813,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '10',
         ),
         'full' => array(
           'label' => 'above',
@@ -2900,7 +2900,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '30',
         ),
         'full' => array(
           'label' => 'above',
@@ -2987,7 +2987,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '39',
         ),
         'full' => array(
           'label' => 'above',
@@ -3074,7 +3074,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '11',
         ),
         'full' => array(
           'label' => 'above',
@@ -3161,7 +3161,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '24',
         ),
         'full' => array(
           'label' => 'above',
@@ -3248,7 +3248,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
         'full' => array(
           'label' => 'above',
@@ -3336,7 +3336,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '47',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -3420,7 +3420,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '42',
         ),
         'full' => array(
           'label' => 'above',
@@ -3507,7 +3507,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '21',
         ),
         'full' => array(
           'label' => 'above',
@@ -3594,7 +3594,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '49',
         ),
         'full' => array(
           'label' => 'above',
@@ -3681,7 +3681,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '22',
         ),
         'full' => array(
           'label' => 'above',
@@ -3767,9 +3767,10 @@ function bibdk_field_settings_field_default_fields() {
         ),
         'email' => array(
           'label' => 'above',
+          'module' => 'ting_openformat',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'ting_openformat_default_formatter',
+          'weight' => '0',
         ),
         'full' => array(
           'label' => 'above',
@@ -3856,9 +3857,10 @@ function bibdk_field_settings_field_default_fields() {
         ),
         'email' => array(
           'label' => 'above',
+          'module' => 'ting_openformat',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'ting_openformat_action_formatter',
+          'weight' => '1',
         ),
         'full' => array(
           'label' => 'above',
@@ -3946,7 +3948,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '19',
         ),
         'full' => array(
           'label' => 'above',
@@ -4033,7 +4035,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '23',
         ),
         'full' => array(
           'label' => 'above',
@@ -4120,7 +4122,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '17',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -4207,7 +4209,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '9',
         ),
         'full' => array(
           'label' => 'above',
@@ -4293,7 +4295,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '28',
         ),
         'full' => array(
           'label' => 'above',
@@ -4378,7 +4380,7 @@ function bibdk_field_settings_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '27',
         ),
         'full' => array(
           'label' => 'above',
