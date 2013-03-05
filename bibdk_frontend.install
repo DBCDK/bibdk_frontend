@@ -143,5 +143,5 @@ function bibdk_frontend_update_7006(&$sandbox) {
  * Enable bibliotek_dk_cart_menu_item_menu
  */
 function bibdk_frontend_update_7007(&$sandbox) {
-  module_enable(array('bibliotek_dk_cart_menu_item_menu'));
+  module_enable(array('bibliotek_dk_cart_menu_item'));
 }
