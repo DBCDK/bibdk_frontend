@@ -98,6 +98,7 @@ function _bibdk_frontend_enable_modules() {
     //Features
     'bibdk_language_settings',
     'bibliotek_dk_global_login_menu',
+    'bibliotek_dk_cart_menu_item_menu',
     'topbar_menu_block_feature',
     'html_5_text_format',
     'bibliotek_dk_header_actions',
@@ -136,4 +137,11 @@ function bibdk_frontend_update_7005(&$sandbox) {
  */
 function bibdk_frontend_update_7006(&$sandbox) {
   module_enable(array('bibdk_custom_search_feature'));
+}
+
+/**
+ * Enable bibliotek_dk_cart_menu_item_menu
+ */
+function bibdk_frontend_update_7007(&$sandbox) {
+  module_enable(array('bibliotek_dk_cart_menu_item_menu'));
 }
