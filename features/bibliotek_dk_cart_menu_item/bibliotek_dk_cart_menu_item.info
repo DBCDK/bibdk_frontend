@@ -5,4 +5,7 @@ package = Bibliotek.dk
 php = 5.2.4
 dependencies[] = bibdk_cart
 dependencies[] = bibliotek_dk_global_login_menu
+dependencies[] = fe_block
+dependencies[] = menu
+features[fe_block_settings][] = menu-menu-global-login-menu
 features[features_api][] = api:1
