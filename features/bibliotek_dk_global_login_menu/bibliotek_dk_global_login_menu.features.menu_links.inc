@@ -28,6 +28,24 @@ function bibliotek_dk_global_login_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-global-login-menu:user/cart
+  $menu_links['menu-global-login-menu:user/cart'] = array(
+    'menu_name' => 'menu-global-login-menu',
+    'link_path' => 'user/cart',
+    'router_path' => 'user/cart',
+    'link_title' => 'items in cart',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-global-login-menu:user/login
   $menu_links['menu-global-login-menu:user/login'] = array(
     'menu_name' => 'menu-global-login-menu',
@@ -65,6 +83,7 @@ function bibliotek_dk_global_login_menu_menu_default_menu_links() {
   t('Log in');
   t('Log out');
   t('My page');
+  t('items in cart');
 
 
   return $menu_links;
