@@ -98,7 +98,7 @@ function _bibdk_frontend_enable_modules() {
     //Features
     'bibdk_language_settings',
     'bibliotek_dk_global_login_menu',
-    #'bibliotek_dk_cart_menu_item_menu',
+    'bibliotek_dk_cart_menu_item',
     'topbar_menu_block_feature',
     'html_5_text_format',
     'bibliotek_dk_header_actions',
