@@ -27,6 +27,11 @@ function bibdk_frontend_user_login(&$edit, $account) {
   }
 }
 
+function _bibdk_frontend_remember_favourites_message(){
+  $link = l(t('add_favourites'), 'vejviser');
+  return t('remember_to_add_favourite_libraries').' '.$link;
+}
+
 function _bibdk_frontend_welcome_message() {
   return t('Welcome', array(), array('context' => 'bibdk_provider'));
 }
