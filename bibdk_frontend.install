@@ -103,6 +103,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
     'bibdk_custom_search_feature',
+    'bibdk_field_settings',
     //Content
     'bibdk_article',
   );
@@ -136,4 +137,11 @@ function bibdk_frontend_update_7005(&$sandbox) {
  */
 function bibdk_frontend_update_7006(&$sandbox) {
   module_enable(array('bibdk_custom_search_feature'));
+}
+
+/**
+ * Enable feature bibdk_field_settings
+ */
+function bibdk_frontend_update_7007(&$sandbox) {
+  module_enable(array('bibdk_field_settings'));
 }
