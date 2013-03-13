@@ -4,6 +4,10 @@
  * Implements hook_user_login().
  */
 function bibdk_frontend_user_login(&$edit, $account) {
+  if (!isset($edit['uid'])) {
+    return;
+  }
+
   // go to user page on first time login
   if (isset($edit['input']['firsttime'])) {
     // we KNOE that login succeeded - or we wouldn't be here
@@ -27,9 +31,9 @@ function bibdk_frontend_user_login(&$edit, $account) {
   }
 }
 
-function _bibdk_frontend_remember_favourites_message(){
+function _bibdk_frontend_remember_favourites_message() {
   $link = l(t('add_favourites'), 'vejviser');
-  return t('remember_to_add_favourite_libraries').' '.$link;
+  return t('remember_to_add_favourite_libraries') . ' ' . $link;
 }
 
 function _bibdk_frontend_welcome_message() {
