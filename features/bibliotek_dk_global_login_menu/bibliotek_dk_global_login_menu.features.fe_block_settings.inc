@@ -20,7 +20,7 @@ function bibliotek_dk_global_login_menu_default_fe_block_settings() {
     ),
   );
 
-  // Exported block settings for Bibliotek.dk.
+  // bibdk_theme
   $theme = array();
 
   $theme['menu-menu-global-login-menu'] = array(
@@ -39,9 +39,9 @@ function bibliotek_dk_global_login_menu_default_fe_block_settings() {
 
   $export['theme']['bibdk_theme'] = $theme;
 
-  $theme_default = variable_get('theme_default', 'bartik');
+  $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();
-  foreach ($export['theme'] as $theme_key => $settings) {
+  foreach ($export as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
       unset($export['theme'][$theme_key]);
     }

@@ -3,11 +3,41 @@
 /**
  * Implements hook_user_login().
  */
-
 function bibdk_frontend_user_login(&$edit, $account) {
-  if(isset($edit['uid'])){
+  if (!isset($edit['uid'])) {
+    return;
+  }
+
+  // go to user page on first time login
+  if (isset($edit['input']['firsttime'])) {
+    // we KNOE that login succeeded - or we wouldn't be here
+    // unset messages
+    drupal_get_messages();
+    // set a welcome message
+    drupal_set_message(_bibdk_frontend_welcome_message());
+    // remind user to add favourites
+    drupal_set_message(_bibdk_frontend_remember_favourites_message());
+    if (module_exists('bibdk_mypage')) {
+      drupal_goto('/user/' . $account->uid . '/edit/bibdk_mypage');
+    }
+    else {
+      drupal_goto('user');
+    }
+  }
+  // do NOT redirect on password reset
+  elseif (!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') {
+    // go to frontpage on normal login
     drupal_goto('');
   }
+}
+
+function _bibdk_frontend_remember_favourites_message() {
+  $link = l(t('add_favourites'), 'vejviser');
+  return t('remember_to_add_favourite_libraries') . ' ' . $link;
+}
+
+function _bibdk_frontend_welcome_message() {
+  return t('Welcome', array(), array('context' => 'bibdk_provider'));
 }
 
 /**
@@ -59,7 +89,7 @@ function bibdk_frontend_block_view($delta = '') {
           $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
         }
       }
-      drupal_alter('bibdk_tabs',$block);
+      drupal_alter('bibdk_tabs', $block);
       break;
   }
 
@@ -70,11 +100,10 @@ function bibdk_frontend_block_view($delta = '') {
   return $block;
 }
 
-
-function bibdk_frontend_bibdk_tabs_alter(&$data){
-  if ( !empty($data['content']['#secondary']) ) {
-    foreach ( $data['content']['#secondary'] as $key => $tab ) {
-      if ( $tab['#link']['path'] == 'user/%/edit/bibdk_mypage' ) { // bibdk_mypage profile tab
+function bibdk_frontend_bibdk_tabs_alter(&$data) {
+  if (!empty($data['content']['#secondary'])) {
+    foreach ($data['content']['#secondary'] as $key => $tab) {
+      if ($tab['#link']['path'] == 'user/%/edit/bibdk_mypage') { // bibdk_mypage profile tab
         $data['content']['#bibdk_mypage_tab'] = $tab;
         unset($data['content']['#secondary'][$key]);
       }
@@ -101,7 +130,6 @@ function bibdk_frontend_form_profile2_form_alter(&$form, &$form_state) {
   unset($form['actions']);
 }
 
-
 /**
  * Implements hook_menu().
  */
@@ -125,15 +153,4 @@ function bibdk_frontend_menu() {
 
   return $items;
 }
-
-
-
-
-
-
-
-
-
-
-
 
