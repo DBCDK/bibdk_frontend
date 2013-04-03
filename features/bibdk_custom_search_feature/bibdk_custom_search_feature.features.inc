@@ -951,8 +951,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = 'a54a7813-741a-f3d4-615d-e60a322df4be';
   $map_element->me_uuid = '4800babd-619d-4344-c1d5-049ce34867b9';
-  $map_element->region = 'expand';
-  $map_element->sort = -48;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['4800babd-619d-4344-c1d5-049ce34867b9'] = $map_element;
 
   $map_element = new stdClass();
@@ -1021,8 +1021,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '7fdbeb0c-99da-df94-0da8-aab74429c5b1';
-  $map_element->region = 'expand';
-  $map_element->sort = -49;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['7fdbeb0c-99da-df94-0da8-aab74429c5b1'] = $map_element;
 
   $map_element = new stdClass();
@@ -1041,8 +1041,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '8a82ae05-e3d7-2cc4-394f-104685da18b8';
   $map_element->me_uuid = '92dabaf1-aa66-6f04-7d67-665ddd749d26';
-  $map_element->region = 'expand';
-  $map_element->sort = -50;
+  $map_element->region = 'main';
+  $map_element->sort = -47;
   $export['92dabaf1-aa66-6f04-7d67-665ddd749d26'] = $map_element;
 
   $map_element = new stdClass();
