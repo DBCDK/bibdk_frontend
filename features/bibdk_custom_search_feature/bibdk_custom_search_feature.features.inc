@@ -822,7 +822,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '9576133e-7fed-45d4-29ec-6920f85c69bb';
   $map_element->me_uuid = '0935ba89-082a-1b84-59f7-757e590e74ad';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -49;
   $export['0935ba89-082a-1b84-59f7-757e590e74ad'] = $map_element;
 
   $map_element = new stdClass();
@@ -831,8 +831,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '553e8edb-bbb1-c6e4-5574-8182d8ed4e15';
   $map_element->me_uuid = '1403d4fc-66a1-0054-9daa-eb0b5e74a776';
-  $map_element->region = 'expand';
-  $map_element->sort = -47;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['1403d4fc-66a1-0054-9daa-eb0b5e74a776'] = $map_element;
 
   $map_element = new stdClass();
@@ -892,7 +892,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '26707474-294f-1c34-e50b-f7831578913d';
   $map_element->me_uuid = '330986ab-3283-1f14-8dca-2464d63799bd';
   $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->sort = -47;
   $export['330986ab-3283-1f14-8dca-2464d63799bd'] = $map_element;
 
   $map_element = new stdClass();
@@ -901,8 +901,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '345b26e3-4a5c-2ab4-3d7d-54ce3e1622f6';
-  $map_element->region = 'expand';
-  $map_element->sort = -46;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['345b26e3-4a5c-2ab4-3d7d-54ce3e1622f6'] = $map_element;
 
   $map_element = new stdClass();
@@ -921,8 +921,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '553e8edb-bbb1-c6e4-5574-8182d8ed4e15';
   $map_element->me_uuid = '407ef899-eab7-b304-c50a-fea95dd922c6';
-  $map_element->region = 'expand';
-  $map_element->sort = -46;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['407ef899-eab7-b304-c50a-fea95dd922c6'] = $map_element;
 
   $map_element = new stdClass();
@@ -951,8 +951,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = 'a54a7813-741a-f3d4-615d-e60a322df4be';
   $map_element->me_uuid = '4800babd-619d-4344-c1d5-049ce34867b9';
-  $map_element->region = 'expand';
-  $map_element->sort = -48;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['4800babd-619d-4344-c1d5-049ce34867b9'] = $map_element;
 
   $map_element = new stdClass();
@@ -961,8 +961,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '1458f855-531f-b484-1df2-1c7762dc339b';
   $map_element->me_uuid = '4a4c9b84-6a7e-c2b4-f1d8-6e94753c372f';
-  $map_element->region = 'expand';
-  $map_element->sort = -47;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['4a4c9b84-6a7e-c2b4-f1d8-6e94753c372f'] = $map_element;
 
   $map_element = new stdClass();
@@ -971,8 +971,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '54d61692-fd9b-07f4-55a0-c1ba3094cbde';
   $map_element->me_uuid = '5129aa2d-2147-4244-0912-75160a741eb0';
-  $map_element->region = 'expand';
-  $map_element->sort = -46;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['5129aa2d-2147-4244-0912-75160a741eb0'] = $map_element;
 
   $map_element = new stdClass();
@@ -981,8 +981,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '5a10f6c1-18fd-a924-2d44-1f5f34e194df';
-  $map_element->region = 'expand';
-  $map_element->sort = -44;
+  $map_element->region = 'main';
+  $map_element->sort = -43;
   $export['5a10f6c1-18fd-a924-2d44-1f5f34e194df'] = $map_element;
 
   $map_element = new stdClass();
@@ -991,8 +991,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '82a9e993-2160-2ac4-a577-4b3d980a815e';
   $map_element->e_uuid = 'cd37520a-f3c2-63a4-9979-416311ef9a2b';
   $map_element->me_uuid = '5cb49f0d-451a-c274-a57b-6585e4e49f1c';
-  $map_element->region = 'expand';
-  $map_element->sort = -48;
+  $map_element->region = 'main';
+  $map_element->sort = -47;
   $export['5cb49f0d-451a-c274-a57b-6585e4e49f1c'] = $map_element;
 
   $map_element = new stdClass();
@@ -1001,8 +1001,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '66d1dd8d-2742-7d64-8d4c-ab7f601a7916';
   $map_element->me_uuid = '5f5d6a16-f03c-b4b4-0909-da8a067e5375';
-  $map_element->region = 'expand';
-  $map_element->sort = -48;
+  $map_element->region = 'main';
+  $map_element->sort = -47;
   $export['5f5d6a16-f03c-b4b4-0909-da8a067e5375'] = $map_element;
 
   $map_element = new stdClass();
@@ -1021,8 +1021,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '7fdbeb0c-99da-df94-0da8-aab74429c5b1';
-  $map_element->region = 'expand';
-  $map_element->sort = -49;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['7fdbeb0c-99da-df94-0da8-aab74429c5b1'] = $map_element;
 
   $map_element = new stdClass();
@@ -1041,8 +1041,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '8a82ae05-e3d7-2cc4-394f-104685da18b8';
   $map_element->me_uuid = '92dabaf1-aa66-6f04-7d67-665ddd749d26';
-  $map_element->region = 'expand';
-  $map_element->sort = -50;
+  $map_element->region = 'main';
+  $map_element->sort = -47;
   $export['92dabaf1-aa66-6f04-7d67-665ddd749d26'] = $map_element;
 
   $map_element = new stdClass();
@@ -1051,8 +1051,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '03d3d960-f884-1fe4-2db0-52e51ac82a6e';
   $map_element->me_uuid = '9d2f1d32-4468-0884-99a9-aabcd9a588ad';
-  $map_element->region = 'expand';
-  $map_element->sort = -45;
+  $map_element->region = 'main';
+  $map_element->sort = -44;
   $export['9d2f1d32-4468-0884-99a9-aabcd9a588ad'] = $map_element;
 
   $map_element = new stdClass();
@@ -1061,8 +1061,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '7b5202bd-ebe9-2344-8d16-1bae6c3ca027';
   $map_element->me_uuid = '9eef86ed-5b62-3fa4-35ab-ac31ce4f021b';
-  $map_element->region = 'expand';
-  $map_element->sort = -45;
+  $map_element->region = 'main';
+  $map_element->sort = -44;
   $export['9eef86ed-5b62-3fa4-35ab-ac31ce4f021b'] = $map_element;
 
   $map_element = new stdClass();
@@ -1071,8 +1071,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = 'd868dbb4-c49f-8674-5560-4b0547a2c9df';
   $map_element->me_uuid = '9f9b636e-2822-5b34-35aa-8fc9d9162266';
-  $map_element->region = 'expand';
-  $map_element->sort = -47;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['9f9b636e-2822-5b34-35aa-8fc9d9162266'] = $map_element;
 
   $map_element = new stdClass();
@@ -1081,8 +1081,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '3bde0fbf-1f9e-d914-61bb-f92ce00fd65c';
   $map_element->me_uuid = '9ffdd8cd-1afa-9af4-e110-00b5122e4531';
-  $map_element->region = 'expand';
-  $map_element->sort = -46;
+  $map_element->region = 'main';
+  $map_element->sort = -45;
   $export['9ffdd8cd-1afa-9af4-e110-00b5122e4531'] = $map_element;
 
   $map_element = new stdClass();
@@ -1102,7 +1102,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'a0e64424-68f9-71f4-1df2-bf0100315aa4';
   $map_element->me_uuid = 'a7706d35-0093-aac4-b9ad-37aeb03c2f55';
   $map_element->region = 'main';
-  $map_element->sort = -49;
+  $map_element->sort = -50;
   $export['a7706d35-0093-aac4-b9ad-37aeb03c2f55'] = $map_element;
 
   $map_element = new stdClass();
@@ -1111,8 +1111,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '2e4be922-5e61-bb64-8123-d9c01c3a1640';
   $map_element->me_uuid = 'a776d9cb-877d-6014-8d4d-31c8ae7fd02e';
-  $map_element->region = 'expand';
-  $map_element->sort = -47;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['a776d9cb-877d-6014-8d4d-31c8ae7fd02e'] = $map_element;
 
   $map_element = new stdClass();
@@ -1162,7 +1162,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '7c3bfbbf-3038-9ca4-952a-85f9785337e2';
   $map_element->me_uuid = 'bd4354cd-4218-daa4-ed8f-94551d65cfac';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -48;
   $export['bd4354cd-4218-daa4-ed8f-94551d65cfac'] = $map_element;
 
   $map_element = new stdClass();
@@ -1172,7 +1172,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '40cb1fd2-d934-0734-69f7-01248b663172';
   $map_element->me_uuid = 'c1631440-1237-4bc4-9d80-4d76c5c839dd';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -49;
   $export['c1631440-1237-4bc4-9d80-4d76c5c839dd'] = $map_element;
 
   $map_element = new stdClass();
@@ -1182,7 +1182,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'b9392a11-5676-3574-fd47-143ad3edcefa';
   $map_element->me_uuid = 'cb531f35-4ef3-bb94-2dfa-14fe18d50cd4';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -48;
   $export['cb531f35-4ef3-bb94-2dfa-14fe18d50cd4'] = $map_element;
 
   $map_element = new stdClass();
@@ -1191,8 +1191,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '6c9427f4-c8da-e4b4-2550-4533080fc500';
   $map_element->e_uuid = '05b8e136-f60b-65d4-edd0-56c69d20ce8d';
   $map_element->me_uuid = 'ccd214a3-acac-c174-d9f6-decdbf73a357';
-  $map_element->region = 'expand';
-  $map_element->sort = -46;
+  $map_element->region = 'main';
+  $map_element->sort = -44;
   $export['ccd214a3-acac-c174-d9f6-decdbf73a357'] = $map_element;
 
   $map_element = new stdClass();
@@ -1202,7 +1202,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'ae797962-8b73-3044-31d3-6eebde66c95f';
   $map_element->me_uuid = 'd03c04e6-eb35-d9e4-6dd8-2fb21bcd99f8';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -48;
   $export['d03c04e6-eb35-d9e4-6dd8-2fb21bcd99f8'] = $map_element;
 
   $map_element = new stdClass();
@@ -1211,8 +1211,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '82a9e993-2160-2ac4-a577-4b3d980a815e';
   $map_element->e_uuid = '3e7a88b5-6ffe-1bb4-d1b7-f218359219ac';
   $map_element->me_uuid = 'd1a76cdc-ec67-bb74-21dd-99b547a3d7bb';
-  $map_element->region = 'expand';
-  $map_element->sort = -47;
+  $map_element->region = 'main';
+  $map_element->sort = -46;
   $export['d1a76cdc-ec67-bb74-21dd-99b547a3d7bb'] = $map_element;
 
   $map_element = new stdClass();
@@ -1251,8 +1251,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '6bfbdc58-a531-19f4-29a2-4e080de94cd8';
   $map_element->me_uuid = 'f324599e-dfd4-32f4-a158-48a0305d0450';
-  $map_element->region = 'expand';
-  $map_element->sort = -48;
+  $map_element->region = 'main';
+  $map_element->sort = -47;
   $export['f324599e-dfd4-32f4-a158-48a0305d0450'] = $map_element;
 
   $map_element = new stdClass();
@@ -1261,8 +1261,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = 'fc1e29fd-3fe1-c574-cdd3-764940c142e5';
-  $map_element->region = 'expand';
-  $map_element->sort = -45;
+  $map_element->region = 'main';
+  $map_element->sort = -44;
   $export['fc1e29fd-3fe1-c574-cdd3-764940c142e5'] = $map_element;
 
   return $export;
@@ -1793,7 +1793,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -70;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
@@ -1892,7 +1892,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0c2d782c-3a28-9d54-4961-d3f814ed8d16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -100;
+  $option->sort = -99;
   $option->label = 'Americana';
   $option->value = 'americana';
   $option->expand = '0';
@@ -2156,7 +2156,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -91;
+  $option->sort = -92;
   $option->label = 'Filmmusik - soundtrack';
   $option->value = 'filmmusik - soundtrack';
   $option->expand = '0';
@@ -2189,7 +2189,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -72;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
@@ -2266,7 +2266,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -86;
   $option->label = 'Hip hop';
   $option->value = 'hip hop';
   $option->expand = '0';
@@ -2277,7 +2277,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -69;
+  $option->sort = -71;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
@@ -2341,6 +2341,17 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '287ba40b-f593-ca14-5943-97e81e88d359';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -79;
+  $option->label = 'rockfilm';
+  $option->value = 'rockfilm';
+  $option->expand = '0';
+  $export['287ba40b-f593-ca14-5943-97e81e88d359'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '28ae7476-e666-e454-397a-db1b37018313';
   $option->v_uuid = 'fbeb5556-778a-ab64-2522-89eeef2793eb';
   $option->sort = -93;
@@ -2387,7 +2398,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -74;
+  $option->sort = -75;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
@@ -2442,7 +2453,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
+  $option->sort = -94;
   $option->label = 'spil på nettet';
   $option->value = '(pc-spil AND term.accessType=online)';
   $option->expand = '0';
@@ -2607,7 +2618,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -91;
   $option->label = 'xbox 360';
   $option->value = '(xbox 360)';
   $option->expand = '0';
@@ -2673,7 +2684,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -59;
+  $option->sort = -62;
   $option->label = 'Verdensmusik';
   $option->value = 'verdensmusik';
   $option->expand = '0';
@@ -2772,7 +2783,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -84;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
@@ -2836,9 +2847,20 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '43f2d208-0bad-2ad4-bd17-b4fdbf20299f';
+  $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
+  $option->sort = -100;
+  $option->label = 'Alle';
+  $option->value = '';
+  $option->expand = '0';
+  $export['43f2d208-0bad-2ad4-bd17-b4fdbf20299f'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
+  $option->sort = -69;
   $option->label = 'RogB';
   $option->value = 'RogB';
   $option->expand = '0';
@@ -2871,7 +2893,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4bb8f91a-1cda-8fc4-1907-33da6e5634d4';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
+  $option->sort = -87;
   $option->label = 'Heavy rock';
   $option->value = 'heavy rock';
   $option->expand = '0';
@@ -2915,7 +2937,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -89;
   $option->label = 'For børn';
   $option->value = 'for børn';
   $option->expand = '0';
@@ -3003,7 +3025,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -89;
+  $option->sort = -90;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
@@ -3071,7 +3093,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -91;
   $option->label = 'polske spillefilm';
-  $option->value = 'poslk';
+  $option->value = 'polsk';
   $option->expand = '0';
   $export['5a9e6dc5-c05f-7a44-0152-d4c1c59cc41b'] = $option;
 
@@ -3080,7 +3102,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5b63b5fd-97e8-f254-3184-8926e6912ad5';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -80;
+  $option->sort = -81;
   $option->label = 'Klaverkoncert';
   $option->value = 'klaverkoncert';
   $option->expand = '0';
@@ -3129,6 +3151,17 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->value = 'komedier';
   $option->expand = '0';
   $export['5faae28a-5305-f8d4-39e5-2e88c130c7c2'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '6001b130-bb51-2194-09c9-c724fd726cc1';
+  $option->v_uuid = 'b056401f-4ff0-a654-55b8-835ad50af150';
+  $option->sort = -100;
+  $option->label = 'Alle lydbøger';
+  $option->value = 'lydbog';
+  $option->expand = '0';
+  $export['6001b130-bb51-2194-09c9-c724fd726cc1'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3223,7 +3256,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -64;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
@@ -3388,7 +3421,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '70ea5cf2-4f16-3a04-4dec-893d03581f05';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -60;
+  $option->sort = -63;
   $option->label = 'Techno - dance';
   $option->value = 'techno - dance';
   $option->expand = '0';
@@ -3421,7 +3454,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -93;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
@@ -3441,9 +3474,20 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -81;
+  $option->label = 'popfilm';
+  $option->value = 'popfilm';
+  $option->expand = '0';
+  $export['7469d725-4e5f-8884-7150-bc8d653adf09'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'wii';
   $option->value = 'wii';
   $option->expand = '0';
@@ -3465,7 +3509,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -68;
   $option->label = 'Salsa - afrocubansk musik';
   $option->value = 'salsa - afrocubansk musik';
   $option->expand = '0';
@@ -3619,7 +3663,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '816fb6c3-1528-a7b4-8590-d6e7f4d25f22';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -87;
+  $option->sort = -88;
   $option->label = 'Heavy metal';
   $option->value = 'heavy metal';
   $option->expand = '0';
@@ -3698,7 +3742,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -92;
   $option->label = 'pakistanske (urdu) spillefilm';
-  $option->value = 'urdu';
+  $option->value = 'pakistansk';
   $option->expand = '0';
   $export['86efe6fa-d2fe-6734-6d6b-dcb9ca7cff7b'] = $option;
 
@@ -3905,7 +3949,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -78;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
@@ -3951,7 +3995,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8c3bba75-59b9-6604-c597-e042f60e6a3b';
   $option->sort = 10;
   $option->label = 'stor skrift';
-  $option->value = 'bog stor skrift';
+  $option->value = 'stor skrift';
   $option->expand = '0';
   $export['92df261f-4aff-94b4-152d-7f51c0639c82'] = $option;
 
@@ -4015,7 +4059,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -77;
   $option->label = 'New age';
   $option->value = 'new age';
   $option->expand = '0';
@@ -4180,7 +4224,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -75;
+  $option->sort = -76;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
@@ -4202,7 +4246,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a57935ad-6759-7364-654e-7a77fd3f46ee';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -58;
+  $option->sort = -61;
   $option->label = 'Violinkoncert';
   $option->value = 'violinkoncert';
   $option->expand = '0';
@@ -4279,7 +4323,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -93;
+  $option->sort = -94;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
@@ -4312,7 +4356,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -84;
+  $option->sort = -85;
   $option->label = 'House - lounge';
   $option->value = 'house lounge';
   $option->expand = '0';
@@ -4400,7 +4444,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -65;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
@@ -4444,7 +4488,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b0d00e57-8eb0-7c84-31b9-8ab9828d2e16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -81;
+  $option->sort = -82;
   $option->label = 'Klassiske symfonier';
   $option->value = 'klassiske symfonier';
   $option->expand = '0';
@@ -4519,6 +4563,17 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'b39cabef-32ca-86d4-550e-80ca652b7e84';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -100;
+  $option->label = 'Alle';
+  $option->value = '';
+  $option->expand = '0';
+  $export['b39cabef-32ca-86d4-550e-80ca652b7e84'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'b406746a-4f49-5f44-adac-3777b1d68cf3';
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -94;
@@ -4565,7 +4620,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -71;
+  $option->sort = -73;
   $option->label = 'Progressiv rock';
   $option->value = 'progressiv rock';
   $option->expand = '0';
@@ -4664,7 +4719,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
+  $option->sort = -95;
   $option->label = 'nintendo ds';
   $option->value = '(nintendo ds)';
   $option->expand = '0';
@@ -4950,7 +5005,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -63;
+  $option->sort = -66;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
@@ -5060,7 +5115,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd00650a6-5d24-9f84-6dc5-7bbfc95e7912';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -82;
+  $option->sort = -83;
   $option->label = 'Klassisk musik';
   $option->value = 'klassisk musik';
   $option->expand = '0';
@@ -5225,7 +5280,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -90;
+  $option->sort = -91;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
@@ -5434,7 +5489,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dfb1e1c3-6a82-abd4-89ef-fbba9289fdce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -99;
+  $option->sort = -98;
   $option->label = 'Blues';
   $option->value = 'blues';
   $option->expand = '0';
@@ -5731,7 +5786,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
+  $option->sort = -67;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
@@ -5764,7 +5819,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f3b8c354-2f94-1c54-5131-88dcefcd9b44';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -73;
+  $option->sort = -74;
   $option->label = 'Pop';
   $option->value = 'pop';
   $option->expand = '0';
@@ -5863,7 +5918,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -92;
   $option->label = 'xbox';
   $option->value = 'xbox';
   $option->expand = '0';
@@ -5874,7 +5929,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -79;
+  $option->sort = -80;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
@@ -6140,7 +6195,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'musikophav';
   $value->sort = -71;
   $value->value_type = 'textfield';
-  $value->search_code = 'dkcclterm.pe';
+  $value->search_code = 'dkcclterm.po';
   $value->default_value = '';
   $value->expand = 0;
   $export['6c8f510b-73e1-9d84-410e-7750c6eb5581'] = $value;
