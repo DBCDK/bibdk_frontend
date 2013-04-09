@@ -24,8 +24,11 @@ function bibdk_frontend_user_login(&$edit, $account) {
       drupal_goto('user');
     }
   }
+  elseif( !isset($_POST['form_id'])  ){
+    drupal_goto('');
+  }  
   // do NOT redirect on password reset
-  elseif (!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') {
+  elseif ( !isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset' )  {
     // go to frontpage on normal login
     drupal_goto('');
   }
