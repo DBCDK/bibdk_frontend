@@ -1,0 +1,89 @@
+<?php
+
+module_load_include('inc', 'worktabs', 'worktabs.field');
+
+/**
+ * Implements hook_theme().
+ */
+function worktabs_theme(){
+  return array(
+    'worktabs' => array(
+      'template' => 'theme/worktabs',
+      'variables' => array('tabs' => array(), 'id' => ''),
+    ),
+  );
+}
+
+/**
+ * @param $entity
+ * @return string
+ */
+function worktabs_get_tabs($entity){
+  dpm($entity);
+  $outertabs = worktabs_get_outer();
+  $content = array();
+  $tabs = worktabs_get_content($content, $entity);
+  dpm($tabs);
+
+  $id = _worktabs_trim_string($entity->id);
+  return theme('worktabs', array('tabs' => $outertabs, 'id' => $id));
+}
+
+/**
+ * @param $tabs
+ * @param $entity
+ * @return array
+ */
+function worktabs_get_content($tabs, $entity) {
+  $content = module_invoke_all('worktabs_items', $tabs, $entity);
+  return worktabs_render_content($content);
+}
+
+/**
+ * @param $content
+ * @internal param array $tabs
+ * @return array
+ */
+function worktabs_render_content($content) {
+  $outertabs = worktabs_get_outer();
+  foreach ($content as $tab => $inner) {
+    $outertabs[$tab]['content'] = array_merge($outertabs[$tab]['content'], $inner);
+  }
+  return $outertabs;
+}
+
+/**
+ * @return array
+ */
+function worktabs_get_outer() {
+  return array(
+    'subjects' => array(
+      'title' => t('Subjects'),
+      'content' => array(),
+      'class' => 'active',
+      'active' => 'active',
+    ),
+    'more-about' => array(
+      'title' => t('More Info'),
+      'content' => array(),
+      'class' => '',
+      'active' => 'visuallyhidden',
+    ),
+    'reviews' => array(
+      'title' => t('Reviews'),
+      'content' => array(),
+      'class' => '',
+      'active' => 'visuallyhidden',
+    ),
+  );
+}
+
+/**
+ * Strips a string (pid) for :, -, __
+ *
+ * @param string $string
+ * @return string
+ */
+function _worktabs_trim_string($string) {
+  return strtolower(strtr($string, array(':' => '', '-' => '', '__' => '')));
+}

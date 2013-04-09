@@ -3,3 +3,10 @@ description = Defines the worktabs on work-level (More information)
 core = 7.x
 version = 7.x-0.1-dev
 package = Bibdk Frontend
+
+dependencies[] = ting_openformat
+dependencies[] = field
+
+files[] = worktabs.field.inc
+
+files[] = theme/worktabs.tpl.php
