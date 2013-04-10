@@ -1,9 +1,25 @@
 (function ($) {
     Drupal.itemClicked = function (element) {
-        element.parent().siblings().children('.tab-content').toggleClass('visuallyhidden');
-        element.next('.tab-content').toggleClass('visuallyhidden');
+        Drupal.hideItems(element);
+        Drupal.showItem(element);
+    };
 
-        element.children('.toggle-text').toggleClass('hidden');
+    Drupal.hideItems = function(items){
+        $(items).parent().siblings('.tab-item').each(function(index, value){
+            if($(value).children('.tab-title').hasClass('active')){
+                $(value).children('.tab-title').toggleClass('active');
+                $(value).children('.tab-content').toggleClass('visuallyhidden');
+                $(value).children('.toggle-text').toggleClass('hidden');
+                $(value).children('.tab-link').children('.toggle-text').toggleClass('hidden');
+            }
+        });
+    };
+
+    Drupal.showItem = function(item){
+        item.toggleClass('toggled');
+        item.parent().children('.tab-title').toggleClass('active');
+        item.next('.tab-content').toggleClass('visuallyhidden');
+        item.children('.toggle-text').toggleClass('hidden');
     };
 
     Drupal.behaviors.worktabs = {

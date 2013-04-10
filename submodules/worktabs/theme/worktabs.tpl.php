@@ -10,7 +10,7 @@
   <div class="tabs-sections">
     <?php foreach ($tabs as $type => $tab) : ?>
       <div id="<?php print $type . $id; ?>" class="tabs-section <?php print $tab['active']; ?>">
-        <div class="padded text clearfix">
+        <div class="text clearfix">
           <?php print $tab['content']; ?>
         </div>
       </div>

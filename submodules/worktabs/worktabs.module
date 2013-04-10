@@ -45,7 +45,6 @@ function worktabs_render_content($tabs) {
   foreach ($tabs as &$tab) {
     $content = '';
     foreach ($tab['content'] as $inner) {
-//      dpm($inner, 'inner');
       $content .= theme('tab-item', array(
         'title' => isset($inner['title']) ? $inner['title'] : '',
         'btn_txt_closed' => isset($inner['btn_txt_closed']) ? $inner['btn_txt_closed'] : t('view_more', array(), array('context' => 'worktabs')),
@@ -77,6 +76,7 @@ function worktabs_merge_content($content) {
  * @return array
  */
 function worktabs_get_outer() {
+  //TODO XXX correct classes // active
   return array(
     'subjects' => array(
       'title' => t('Subjects'),
