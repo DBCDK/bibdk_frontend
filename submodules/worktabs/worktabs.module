@@ -5,11 +5,15 @@ module_load_include('inc', 'worktabs', 'worktabs.field');
 /**
  * Implements hook_theme().
  */
-function worktabs_theme(){
+function worktabs_theme() {
   return array(
     'worktabs' => array(
       'template' => 'theme/worktabs',
       'variables' => array('tabs' => array(), 'id' => ''),
+    ),
+    'tab-item' => array(
+      'template' => 'theme/tab-item',
+      'variables' => array('title' => '', 'btn_txt_closed' => '', 'btn_txt_open' => '', 'content' => ''),
     ),
   );
 }
@@ -18,15 +22,12 @@ function worktabs_theme(){
  * @param $entity
  * @return string
  */
-function worktabs_get_tabs($entity){
-  dpm($entity);
-  $outertabs = worktabs_get_outer();
+function worktabs_get_tabs($entity) {
   $content = array();
   $tabs = worktabs_get_content($content, $entity);
-  dpm($tabs);
-
   $id = _worktabs_trim_string($entity->id);
-  return theme('worktabs', array('tabs' => $outertabs, 'id' => $id));
+  drupal_add_js(drupal_get_path('module', 'worktabs') . '/js/worktabs.js');
+  return theme('worktabs', array('tabs' => $tabs, 'id' => $id));
 }
 
 /**
@@ -36,7 +37,25 @@ function worktabs_get_tabs($entity){
  */
 function worktabs_get_content($tabs, $entity) {
   $content = module_invoke_all('worktabs_items', $tabs, $entity);
-  return worktabs_render_content($content);
+  $tabs = worktabs_merge_content($content);
+  return worktabs_render_content($tabs);
+}
+
+function worktabs_render_content($tabs) {
+  foreach ($tabs as &$tab) {
+    $content = '';
+    foreach ($tab['content'] as $inner) {
+//      dpm($inner, 'inner');
+      $content .= theme('tab-item', array(
+        'title' => isset($inner['title']) ? $inner['title'] : '',
+        'btn_txt_closed' => isset($inner['btn_txt_closed']) ? $inner['btn_txt_closed'] : t('view_more', array(), array('context' => 'worktabs')),
+        'btn_txt_open' => isset($inner['btn_txt_open']) ? $inner['btn_txt_open'] : t('view_less', array(), array('context' => 'worktabs')),
+        'content' => isset($inner['rendered']) ? $inner['rendered'] : '',
+      ));
+    }
+    $tab['content'] = $content;
+  }
+  return $tabs;
 }
 
 /**
@@ -44,10 +63,12 @@ function worktabs_get_content($tabs, $entity) {
  * @internal param array $tabs
  * @return array
  */
-function worktabs_render_content($content) {
+function worktabs_merge_content($content) {
   $outertabs = worktabs_get_outer();
   foreach ($content as $tab => $inner) {
-    $outertabs[$tab]['content'] = array_merge($outertabs[$tab]['content'], $inner);
+    $arr = array_merge($outertabs[$tab]['content'], $inner);
+    uasort($arr, 'drupal_sort_weight');
+    $outertabs[$tab]['content']  = $arr;
   }
   return $outertabs;
 }
@@ -60,14 +81,14 @@ function worktabs_get_outer() {
     'subjects' => array(
       'title' => t('Subjects'),
       'content' => array(),
-      'class' => 'active',
-      'active' => 'active',
+      'class' => '',
+      'active' => 'visuallyhidden',
     ),
     'more-about' => array(
       'title' => t('More Info'),
       'content' => array(),
-      'class' => '',
-      'active' => 'visuallyhidden',
+      'class' => 'active',
+      'active' => 'active',
     ),
     'reviews' => array(
       'title' => t('Reviews'),
