@@ -41,6 +41,10 @@ function worktabs_get_content($tabs, $entity) {
   return worktabs_render_content($tabs);
 }
 
+/**
+ * @param $tabs
+ * @return mixed
+ */
 function worktabs_render_content($tabs) {
   foreach ($tabs as &$tab) {
     $content = '';
@@ -93,7 +97,7 @@ function worktabs_get_outer() {
     'reviews' => array(
       'title' => t('Reviews'),
       'content' => array(),
-      'class' => '',
+      'class' => 'inactive',
       'active' => 'visuallyhidden',
     ),
   );
