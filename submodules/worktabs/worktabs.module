@@ -9,11 +9,11 @@ function worktabs_theme() {
   return array(
     'worktabs' => array(
       'template' => 'theme/worktabs',
-      'variables' => array('tabs' => array(), 'id' => ''),
+      'variables' => array('tabs' => array(), 'pid' => ''),
     ),
     'tab-item' => array(
       'template' => 'theme/tab-item',
-      'variables' => array('title' => '', 'btn_txt_closed' => '', 'btn_txt_open' => '', 'content' => ''),
+      'variables' => array('title' => '', 'btn_txt_closed' => '', 'btn_txt_open' => '', 'content' => '', 'single' => FALSE),
     ),
   );
 }
@@ -27,7 +27,7 @@ function worktabs_get_tabs($entity) {
   $tabs = worktabs_get_content($content, $entity);
   $id = _worktabs_trim_string($entity->id);
   drupal_add_js(drupal_get_path('module', 'worktabs') . '/js/worktabs.js');
-  return theme('worktabs', array('tabs' => $tabs, 'id' => $id));
+  return theme('worktabs', array('tabs' => $tabs, 'pid' => $id));
 }
 
 /**
@@ -44,12 +44,13 @@ function worktabs_get_content($tabs, $entity) {
 function worktabs_render_content($tabs) {
   foreach ($tabs as &$tab) {
     $content = '';
-    foreach ($tab['content'] as $inner) {
+    foreach ($tab['content'] as $inner){
       $content .= theme('tab-item', array(
         'title' => isset($inner['title']) ? $inner['title'] : '',
         'btn_txt_closed' => isset($inner['btn_txt_closed']) ? $inner['btn_txt_closed'] : t('view_more', array(), array('context' => 'worktabs')),
         'btn_txt_open' => isset($inner['btn_txt_open']) ? $inner['btn_txt_open'] : t('view_less', array(), array('context' => 'worktabs')),
         'content' => isset($inner['rendered']) ? $inner['rendered'] : '',
+        'single' => (count($tab['content']) >= 2) ? FALSE : TRUE,
       ));
     }
     $tab['content'] = $content;
@@ -76,19 +77,18 @@ function worktabs_merge_content($content) {
  * @return array
  */
 function worktabs_get_outer() {
-  //TODO XXX correct classes // active
   return array(
     'subjects' => array(
       'title' => t('Subjects'),
       'content' => array(),
-      'class' => '',
-      'active' => 'visuallyhidden',
+      'class' => 'active',
+      'active' => 'active',
     ),
     'more-about' => array(
       'title' => t('More Info'),
       'content' => array(),
-      'class' => 'active',
-      'active' => 'active',
+      'class' => '',
+      'active' => 'visuallyhidden',
     ),
     'reviews' => array(
       'title' => t('Reviews'),
