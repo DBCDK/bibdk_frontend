@@ -9723,10 +9723,9 @@ function bibdk_field_settings_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'bibdk_adhl',
           'settings' => array(),
-          'type' => 'bibdk_adhl_default',
-          'weight' => 3,
+          'type' => 'hidden',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -9794,7 +9793,7 @@ function bibdk_field_settings_field_default_fields() {
             'image_style' => 'medium',
           ),
           'type' => 'ting_cover_work',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'full' => array(
           'label' => 'above',
@@ -9862,7 +9861,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'full' => array(
           'label' => 'above',
@@ -9925,10 +9924,9 @@ function bibdk_field_settings_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'ting_openformat',
           'settings' => array(),
-          'type' => 'ting_openformat_default_formatter',
-          'weight' => 2,
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'above',
