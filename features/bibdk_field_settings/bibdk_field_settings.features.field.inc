@@ -9757,6 +9757,71 @@ function bibdk_field_settings_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bibdkWorkEntity-bibdkWorkEntity-bibdk_furthersearch_options'.
+  $fields['bibdkWorkEntity-bibdkWorkEntity-bibdk_furthersearch_options'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'bibdk_furthersearch_options',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'bibdk_furthersearch',
+      'settings' => array(),
+      'storage' => array(
+        'active' => '1',
+        'module' => 'virtual_field',
+        'settings' => array(),
+        'type' => 'virtual_field',
+      ),
+      'translatable' => '0',
+      'type' => 'bibdk_furthersearch_options',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdkWorkEntity',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'ding_entity_type' => 'bibdkWorkEntity',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'bibdk_furthersearch',
+          'settings' => array(),
+          'type' => 'bibdk_furthersearch_default',
+          'weight' => 4,
+        ),
+        'reservation' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 4,
+        ),
+      ),
+      'entity_type' => 'bibdkWorkEntity',
+      'field_name' => 'bibdk_furthersearch_options',
+      'label' => 'Further search',
+      'required' => FALSE,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'virtual_field',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+  );
+
   // Exported field: 'bibdkWorkEntity-bibdkWorkEntity-ting_cover_work'.
   $fields['bibdkWorkEntity-bibdkWorkEntity-ting_cover_work'] = array(
     'field_config' => array(
@@ -9960,6 +10025,72 @@ function bibdk_field_settings_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bibdkWorkEntity-bibdkWorkEntity-worktabs'.
+  $fields['bibdkWorkEntity-bibdkWorkEntity-worktabs'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'worktabs',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'worktabs',
+      'settings' => array(),
+      'storage' => array(
+        'active' => '1',
+        'module' => 'virtual_field',
+        'settings' => array(),
+        'type' => 'virtual_field',
+      ),
+      'translatable' => '0',
+      'type' => 'worktabs',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdkWorkEntity',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'ding_entity_type' => 'bibdkWorkEntity',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'worktabs',
+          'settings' => array(),
+          'type' => 'worktabs_default',
+          'weight' => '2',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'worktabs',
+          'settings' => array(),
+          'type' => 'worktabs_default',
+          'weight' => 5,
+        ),
+        'reservation' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 5,
+        ),
+      ),
+      'entity_type' => 'bibdkWorkEntity',
+      'field_name' => 'worktabs',
+      'label' => 'Worktabs',
+      'required' => FALSE,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'virtual_field',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('ADHL');
@@ -9978,6 +10109,7 @@ function bibdk_field_settings_field_default_fields() {
   t('Edition');
   t('Format');
   t('Forms');
+  t('Further search');
   t('Genre');
   t('Home at Favourite');
   t('Host Publication');
@@ -10016,6 +10148,7 @@ function bibdk_field_settings_field_default_fields() {
   t('Volume Title');
   t('Work abstract');
   t('Work subjects');
+  t('Worktabs');
   t('add_to_cart');
 
   return $fields;
