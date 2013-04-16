@@ -5,7 +5,7 @@
  */
 function worktabs_ding_entity_fields() {
   $display_full = array(
-    'default' => array (
+    'default' => array(
       'label' => 'hidden',
       'type' => 'default',
     ),
@@ -17,6 +17,7 @@ function worktabs_ding_entity_fields() {
       'type' => 'default',
     ),
   );
+
   return array(
     'worktabs' => array(
       'field' => array(
@@ -39,7 +40,7 @@ function worktabs_ding_entity_fields() {
 /**
  * Implements hook_disable.
  */
-function worktabs_disable(){
+function worktabs_disable() {
   $fields = worktabs_ding_entity_fields();
   foreach ($fields as $field_name => $field) {
     field_delete_instance($field_name);

@@ -43,36 +43,22 @@ function worktabs_field_load($entity_type, $entities, $field, $instances, $langc
 /**
  * Implements hook_field_formatter_view().
  *
- * @param String $entity_type
+ * @param String    $entity_type
  * @param bibdkWork $entity
- * @param array $field
- * @param array $instance
- * @param String $langcode
- * @param array $items
- * @param array $display
+ * @param array     $field
+ * @param array     $instance
+ * @param String    $langcode
+ * @param array     $items
+ * @param array     $display
  * @return array
  */
 function worktabs_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  if($entity){
+  if ($entity) {
     //$table = bibdk_furthersearch_get_table($furtherSearchArray, $entity->getId());
     $element[]['#markup'] = worktabs_get_tabs($entity);
     //$element[]['#markup'] = '';
   }
+
   return $element;
 }
-
-/**
- * @param array $furtherSearches
- * @internal param \bibdkWork $entity
- * @return array
- */
-/*
-function _bibdk_furthersearch_get_further_search($furtherSearches) {
-  $furtherSearchArray = array();
-  $furtherSearchArray['types'] = isset($furtherSearches['furtherSearchType']) ? $furtherSearches['furtherSearchType'] : array();
-  $furtherSearchArray['elements'] = isset($furtherSearches['furtherSearchElement']) ? $furtherSearches['furtherSearchElement'] : array();
-  $furtherSearchArray['fictions'] = isset($furtherSearches['furtherSearchFiction']) ? $furtherSearches['furtherSearchFiction'] : array();
-  return $furtherSearchArray;
-}
-*/
