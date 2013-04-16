@@ -110,5 +110,5 @@ function worktabs_get_outer() {
  * @return string
  */
 function _worktabs_trim_string($string) {
-  return strtolower(strtr($string, array(':' => '', '-' => '', '__' => '')));
+  return strtolower(strtr($string, array(':' => '_', '-' => '_')));
 }

@@ -10,3 +10,4 @@ dependencies[] = field
 files[] = worktabs.field.inc
 
 files[] = theme/worktabs.tpl.php
+files[] = test/worktabs.test
