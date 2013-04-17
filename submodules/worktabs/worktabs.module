@@ -11,7 +11,7 @@ function worktabs_theme() {
       'template' => 'theme/worktabs',
       'variables' => array('tabs' => array(), 'pid' => ''),
     ),
-    'tab_item' => array(
+    'tab-item' => array(
       'template' => 'theme/tab_item',
       'variables' => array('title' => '', 'btn_txt_closed' => '', 'btn_txt_open' => '', 'content' => '', 'single' => FALSE),
     ),
@@ -48,7 +48,6 @@ function worktabs_get_tabs($entity) {
 function worktabs_get_content($tabs, $entity) {
   $content = module_invoke_all('worktabs_items', $tabs, $entity);
   $tabs = worktabs_merge_content($content);
-
   return worktabs_render_content($tabs);
 }
 
@@ -66,7 +65,7 @@ function worktabs_render_content($tabs) {
   foreach ($tabs as &$tab) {
     $content = '';
     foreach ($tab['content'] as $inner) {
-      $content .= theme('tab_item-item', array(
+      $content .= theme('tab-item', array(
         'title' => isset($inner['title']) ? $inner['title'] : '',
         'btn_txt_closed' => isset($inner['btn_txt_closed']) ? $inner['btn_txt_closed'] : t('view_more', array(), array('context' => 'worktabs')),
         'btn_txt_open' => isset($inner['btn_txt_open']) ? $inner['btn_txt_open'] : t('view_less', array(), array('context' => 'worktabs')),
