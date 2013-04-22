@@ -1,0 +1,136 @@
+<?php
+
+module_load_include('inc', 'worktabs', 'worktabs.field');
+
+/**
+ * Implements hook_theme().
+ */
+function worktabs_theme() {
+  return array(
+    'worktabs' => array(
+      'template' => 'theme/worktabs',
+      'variables' => array('tabs' => array(), 'pid' => ''),
+    ),
+    'tab-item' => array(
+      'template' => 'theme/tab_item',
+      'variables' => array('title' => '', 'btn_txt_closed' => '', 'btn_txt_open' => '', 'content' => '', 'single' => FALSE),
+    ),
+  );
+}
+
+/**
+ * Main function for the worktabs.
+ * Has the bibdkWork entity as paramter, which is passed along to modules
+ * implementing the hook_worktabs_items()
+ *
+ * @param bibdkWork $entity
+ * @return string
+ *
+ * @see theme/worktabs.tpl.php
+ */
+function worktabs_get_tabs($entity) {
+  $content = array();
+  $tabs = worktabs_get_content($content, $entity);
+  $id = _worktabs_trim_string($entity->id);
+  drupal_add_js(drupal_get_path('module', 'worktabs') . '/js/worktabs.js');
+
+  return theme('worktabs', array('tabs' => $tabs, 'pid' => $id));
+}
+
+/**
+ * Invokes the hook_worktabs_items() to retrive content for the tabs provided
+ * by other modules.
+ *
+ * @param $tabs
+ * @param $entity
+ * @return array
+ */
+function worktabs_get_content($tabs, $entity) {
+  $content = module_invoke_all('worktabs_items', $tabs, $entity);
+  $tabs = worktabs_merge_content($content);
+  return worktabs_render_content($tabs);
+}
+
+/**
+ * Renders the items for each tab.
+ * One item is one horizontal item that can be folded in/out
+ * If there is no more than on item in a tab the item will be folded out as default
+ *
+ * @param $tabs
+ * @return mixed
+ *
+ * @see theme/tab_item.tpl.php
+ */
+function worktabs_render_content($tabs) {
+  foreach ($tabs as &$tab) {
+    $content = '';
+    foreach ($tab['content'] as $inner) {
+      $content .= theme('tab-item', array(
+        'title' => isset($inner['title']) ? $inner['title'] : '',
+        'btn_txt_closed' => isset($inner['btn_txt_closed']) ? $inner['btn_txt_closed'] : t('view_more', array(), array('context' => 'worktabs')),
+        'btn_txt_open' => isset($inner['btn_txt_open']) ? $inner['btn_txt_open'] : t('view_less', array(), array('context' => 'worktabs')),
+        'content' => isset($inner['rendered']) ? $inner['rendered'] : '',
+        'single' => (count($tab['content']) >= 2) ? FALSE : TRUE,
+      ));
+    }
+    $tab['content'] = $content;
+  }
+
+  return $tabs;
+}
+
+/**
+ * Merges the cotent retreived with the outer tabs
+ *
+ * @param $content
+ * @internal param array $tabs
+ * @return array
+ */
+function worktabs_merge_content($content) {
+  $outertabs = worktabs_get_outer();
+  foreach ($content as $tab => $inner) {
+    $arr = array_merge($outertabs[$tab]['content'], $inner);
+    uasort($arr, 'drupal_sort_weight');
+    $outertabs[$tab]['content'] = $arr;
+  }
+
+  return $outertabs;
+}
+
+/**
+ * Generates the outer tabs with no content
+ *
+ * @return array
+ */
+function worktabs_get_outer() {
+  return array(
+    'subjects' => array(
+      'title' => t('Subjects'),
+      'content' => array(),
+      'class' => 'active',
+      'active' => 'active',
+    ),
+    'more-about' => array(
+      'title' => t('More Info'),
+      'content' => array(),
+      'class' => '',
+      'active' => 'visuallyhidden',
+    ),
+    'reviews' => array(
+      'title' => t('Reviews'),
+      'content' => array(),
+      'class' => 'inactive',
+      'active' => 'visuallyhidden',
+    ),
+  );
+}
+
+/**
+ * Strips a string (pid) for :, -, __
+ *
+ * @param string $string
+ * @return string
+ */
+function _worktabs_trim_string($string) {
+  return strtolower(strtr($string, array(':' => '_', '-' => '_')));
+}

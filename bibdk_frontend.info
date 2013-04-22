@@ -1,7 +1,7 @@
-name = Bibliotek.dk Frontend
+name = Bibliotek.dk - Frontend
 description = Handles visual setup of the bibdk profile such as blocks etc.
 core = 7.x
-version = 7.x-0.13
+version = 7.x-0.14
 package = Bibdk Frontend
 project = bibliotekdk
 
