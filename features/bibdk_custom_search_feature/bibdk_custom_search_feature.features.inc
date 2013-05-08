@@ -20,6 +20,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.workType=article';
   $search_page->expand = FALSE;
   $search_page->sort = -8;
+  $search_page->is_disabled = FALSE;
   $export['535c37b7-2bd4-7254-09f6-1b1285ac5761'] = $search_page;
 
   $search_page = new stdClass();
@@ -32,6 +33,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.workType=music';
   $search_page->expand = FALSE;
   $search_page->sort = -4;
+  $search_page->is_disabled = FALSE;
   $export['6c9427f4-c8da-e4b4-2550-4533080fc500'] = $search_page;
 
   $search_page = new stdClass();
@@ -44,6 +46,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.workType=game';
   $search_page->expand = FALSE;
   $search_page->sort = -5;
+  $search_page->is_disabled = FALSE;
   $export['82a9e993-2160-2ac4-a577-4b3d980a815e'] = $search_page;
 
   $search_page = new stdClass();
@@ -56,6 +59,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.workType=literature';
   $search_page->expand = FALSE;
   $search_page->sort = -9;
+  $search_page->is_disabled = FALSE;
   $export['b29c03e2-f2a9-9504-f97f-2cb529a0dad3'] = $search_page;
 
   $search_page = new stdClass();
@@ -68,6 +72,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = '';
   $search_page->expand = FALSE;
   $search_page->sort = -10;
+  $search_page->is_disabled = FALSE;
   $export['d3099a71-b1b6-f5c4-4170-6b8593ad446b'] = $search_page;
 
   $search_page = new stdClass();
@@ -80,6 +85,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.workType=movie';
   $search_page->expand = FALSE;
   $search_page->sort = -7;
+  $search_page->is_disabled = FALSE;
   $export['eb1079e4-72ae-cb64-8542-0492a206b36e'] = $search_page;
 
   $search_page = new stdClass();
@@ -92,6 +98,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->delimiter = 'term.accessType=online';
   $search_page->expand = FALSE;
   $search_page->sort = -6;
+  $search_page->is_disabled = FALSE;
   $export['f8e34d18-9d09-4c44-8592-99d4c43c7e79'] = $search_page;
 
   return $export;
@@ -114,6 +121,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_element() {
   $element->sort = -89;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['03d3d960-f884-1fe4-2db0-52e51ac82a6e'] = $element;
 
   $element = new stdClass();
@@ -127,6 +135,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_element() {
   $element->sort = -53;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['05b8e136-f60b-65d4-edd0-56c69d20ce8d'] = $element;
 
   $element = new stdClass();
@@ -142,6 +151,7 @@ Skriv dit emne eller starten på det ord du søger noget om - skriver du flere o
   $element->sort = -98;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['062dda99-139c-0484-595b-2ddf7f0b88b9'] = $element;
 
   $element = new stdClass();
@@ -156,6 +166,7 @@ i begge felter kan du søge på musikere, sangere, grupper og komponister. De to
   $element->sort = -59;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['13f9e684-9da0-b9b4-f107-223551514ae2'] = $element;
 
   $element = new stdClass();
@@ -169,6 +180,7 @@ i begge felter kan du søge på musikere, sangere, grupper og komponister. De to
   $element->sort = -62;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['1458f855-531f-b484-1df2-1c7762dc339b'] = $element;
 
   $element = new stdClass();
@@ -183,6 +195,7 @@ neanderthal*';
   $element->sort = -55;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['155a1e44-920c-f014-dd4c-3803c0a3b0e7'] = $element;
 
   $element = new stdClass();
@@ -198,6 +211,7 @@ Sæt evt. * til sidst som joker eller trunkeringstegn, fx indian*';
   $element->sort = -99;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['163167ec-084d-3f54-f9cd-81912e42943f'] = $element;
 
   $element = new stdClass();
@@ -212,6 +226,7 @@ Du finder ikke alle film fra de nævnte lande.';
   $element->sort = -63;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['26707474-294f-1c34-e50b-f7831578913d'] = $element;
 
   $element = new stdClass();
@@ -226,6 +241,7 @@ Du finder ikke alle film fra de nævnte lande.';
   $element->sort = -81;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['2e4be922-5e61-bb64-8123-d9c01c3a1640'] = $element;
 
   $element = new stdClass();
@@ -240,6 +256,7 @@ Hold Ctrl nede for at vælge mere end én.';
   $element->sort = -61;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['3bde0fbf-1f9e-d914-61bb-f92ce00fd65c'] = $element;
 
   $element = new stdClass();
@@ -253,6 +270,7 @@ Hold Ctrl nede for at vælge mere end én.';
   $element->sort = -69;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['3e7a88b5-6ffe-1bb4-d1b7-f218359219ac'] = $element;
 
   $element = new stdClass();
@@ -266,6 +284,7 @@ Hold Ctrl nede for at vælge mere end én.';
   $element->sort = -71;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['40cb1fd2-d934-0734-69f7-01248b663172'] = $element;
 
   $element = new stdClass();
@@ -280,6 +299,7 @@ tryllekunst*';
   $element->sort = -64;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['47c9fbf2-fa7b-11d4-9575-202b97fc228f'] = $element;
 
   $element = new stdClass();
@@ -294,6 +314,7 @@ i begge felter kan du søge på musikere, sangere, grupper og komponister. De to
   $element->sort = -51;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['4a147ba3-9e4e-bef4-75b3-2a1a02a6494d'] = $element;
 
   $element = new stdClass();
@@ -309,6 +330,7 @@ Ex lost fire
   $element->sort = -67;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['4a162155-4f91-d2c4-b9fd-2bd17fcfd9fe'] = $element;
 
   $element = new stdClass();
@@ -324,6 +346,7 @@ Sæt evt. * til sidst som joker (trunkeringstegn), fx drageløber*.';
   $element->sort = -93;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['4fdbf458-35c2-a8d4-f97f-c50ad6286709'] = $element;
 
   $element = new stdClass();
@@ -337,6 +360,7 @@ Sæt evt. * til sidst som joker (trunkeringstegn), fx drageløber*.';
   $element->sort = -88;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['54d61692-fd9b-07f4-55a0-c1ba3094cbde'] = $element;
 
   $element = new stdClass();
@@ -350,6 +374,7 @@ Sæt evt. * til sidst som joker (trunkeringstegn), fx drageløber*.';
   $element->sort = -79;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['553e8edb-bbb1-c6e4-5574-8182d8ed4e15'] = $element;
 
   $element = new stdClass();
@@ -363,6 +388,7 @@ Sæt evt. * til sidst som joker (trunkeringstegn), fx drageløber*.';
   $element->sort = -95;
   $element->tab_index = 0;
   $element->access_key = 'y';
+  $element->is_disabled = FALSE;
   $export['56558f6c-0175-3a14-71c9-eac27a76cc85'] = $element;
 
   $element = new stdClass();
@@ -380,6 +406,7 @@ Ex: pisa? per';
   $element->sort = -82;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['56b9e76e-8fb6-6ab4-c93e-2d3bee53a7f0'] = $element;
 
   $element = new stdClass();
@@ -394,6 +421,7 @@ Søg i stedet i fritekst og klik dig frem blandt mulighederne under Flere søgem
   $element->sort = -54;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['57308136-ba7d-8224-19af-26b0f6567f77'] = $element;
 
   $element = new stdClass();
@@ -408,6 +436,7 @@ Hvis du skriver flere ord, kombinerer systemet dem med og.';
   $element->sort = -84;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['61b61f9b-531d-4914-11d4-75430ea98677'] = $element;
 
   $element = new stdClass();
@@ -421,6 +450,7 @@ Hvis du skriver flere ord, kombinerer systemet dem med og.';
   $element->sort = -74;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['66d1dd8d-2742-7d64-8d4c-ab7f601a7916'] = $element;
 
   $element = new stdClass();
@@ -435,6 +465,7 @@ E-bøger kan ikke kombineres med Litterær form eller Målgruppe.';
   $element->sort = -90;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['6bfbdc58-a531-19f4-29a2-4e080de94cd8'] = $element;
 
   $element = new stdClass();
@@ -449,6 +480,7 @@ synge*';
   $element->sort = -72;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['75b1623e-766e-f814-e5ae-aa0ccd0d0adf'] = $element;
 
   $element = new stdClass();
@@ -465,6 +497,7 @@ Ex: samvirke';
   $element->sort = -86;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['7b391b37-7099-50a4-e1f6-0a3623de1421'] = $element;
 
   $element = new stdClass();
@@ -478,6 +511,7 @@ Ex: samvirke';
   $element->sort = -60;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['7b5202bd-ebe9-2344-8d16-1bae6c3ca027'] = $element;
 
   $element = new stdClass();
@@ -491,6 +525,7 @@ Ex: samvirke';
   $element->sort = -70;
   $element->tab_index = 0;
   $element->access_key = 's';
+  $element->is_disabled = FALSE;
   $export['7c3bfbbf-3038-9ca4-952a-85f9785337e2'] = $element;
 
   $element = new stdClass();
@@ -505,6 +540,7 @@ Skriv den eller de dele af navnet, du er sikker på. Kombiner evt. med et ord fr
   $element->sort = -100;
   $element->tab_index = 0;
   $element->access_key = 'f';
+  $element->is_disabled = FALSE;
   $export['81335603-ae1d-5de4-25c7-a1538e7ad8f5'] = $element;
 
   $element = new stdClass();
@@ -519,6 +555,7 @@ Kombiner evt. med et ord fra titlen - det skal skrives i titelboksen.';
   $element->sort = -94;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['886babfd-dc9f-eaa4-99df-0ba94265ac17'] = $element;
 
   $element = new stdClass();
@@ -533,6 +570,7 @@ Der sættes - og - mellem de ord du skriver.';
   $element->sort = -66;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['88b1285a-384d-b874-7d8b-ec675f89ade7'] = $element;
 
   $element = new stdClass();
@@ -547,6 +585,7 @@ Der sættes - og - mellem de ord du skriver.';
   $element->sort = -96;
   $element->tab_index = 0;
   $element->access_key = 'm';
+  $element->is_disabled = FALSE;
   $export['8a82ae05-e3d7-2cc4-394f-104685da18b8'] = $element;
 
   $element = new stdClass();
@@ -562,6 +601,7 @@ Ex. pisa*';
   $element->sort = -83;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['8e5ca7c5-c063-4824-15c3-eef91eb682e8'] = $element;
 
   $element = new stdClass();
@@ -575,6 +615,7 @@ Ex. pisa*';
   $element->sort = -77;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['9576133e-7fed-45d4-29ec-6920f85c69bb'] = $element;
 
   $element = new stdClass();
@@ -589,6 +630,7 @@ Ex. pisa*';
   $element->sort = -78;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['a0e64424-68f9-71f4-1df2-bf0100315aa4'] = $element;
 
   $element = new stdClass();
@@ -602,6 +644,7 @@ Ex. pisa*';
   $element->sort = -80;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['a1beb6bb-b22f-80d4-e5ff-2c191909a51a'] = $element;
 
   $element = new stdClass();
@@ -615,6 +658,7 @@ Ex. pisa*';
   $element->sort = -52;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['a54a7813-741a-f3d4-615d-e60a322df4be'] = $element;
 
   $element = new stdClass();
@@ -628,6 +672,7 @@ Ex. pisa*';
   $element->sort = -57;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['acdb74f6-dd28-81c4-5190-af28a09e5d47'] = $element;
 
   $element = new stdClass();
@@ -641,6 +686,7 @@ Ex. pisa*';
   $element->sort = -65;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['ae797962-8b73-3044-31d3-6eebde66c95f'] = $element;
 
   $element = new stdClass();
@@ -655,6 +701,7 @@ Her finder du kun det som kunstneren, komponisten eller gruppen er hovedansvarli
   $element->sort = -58;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['b0289528-53b4-2074-258c-735b863085e1'] = $element;
 
   $element = new stdClass();
@@ -669,6 +716,7 @@ Ex: mette højbjerg';
   $element->sort = -85;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['b35762f5-54c6-4044-355a-96a20c9d21dc'] = $element;
 
   $element = new stdClass();
@@ -682,6 +730,7 @@ Ex: mette højbjerg';
   $element->sort = -75;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['b9392a11-5676-3574-fd47-143ad3edcefa'] = $element;
 
   $element = new stdClass();
@@ -695,6 +744,7 @@ Ex: mette højbjerg';
   $element->sort = -73;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['bf216dfd-13d9-e774-01c6-b7ef6d7eb3a9'] = $element;
 
   $element = new stdClass();
@@ -710,6 +760,7 @@ Du skal ikke skrive &#039;og&#039; mellem ordene.';
   $element->sort = -76;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['bfba5600-ce4d-48d4-6d5e-289878f1889c'] = $element;
 
   $element = new stdClass();
@@ -724,6 +775,7 @@ Skriv dit emne eller starten på det ord du søger noget om - skriver du flere o
   $element->sort = -92;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['c15df474-dc7b-9b74-ad02-0efe8b6fe29d'] = $element;
 
   $element = new stdClass();
@@ -739,6 +791,7 @@ Du skal ikke skrive og mellem ordene.';
   $element->sort = -91;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['ccec6101-d44c-1484-edd8-bab3e529b0e7'] = $element;
 
   $element = new stdClass();
@@ -752,6 +805,7 @@ Du skal ikke skrive og mellem ordene.';
   $element->sort = -56;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['ccf7115d-8830-57f4-21c4-4b7a9c204e9b'] = $element;
 
   $element = new stdClass();
@@ -767,6 +821,7 @@ Læs mere om PEGI-afmærkning. link';
   $element->sort = -68;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['cd37520a-f3c2-63a4-9979-416311ef9a2b'] = $element;
 
   $element = new stdClass();
@@ -781,6 +836,7 @@ Her søger du i de fleste oplysninger i posterne. Du kan sætte en joker (trunke
   $element->sort = -97;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['d061e38c-7c6a-9014-bd32-00a60a45e2d1'] = $element;
 
   $element = new stdClass();
@@ -794,6 +850,7 @@ Her søger du i de fleste oplysninger i posterne. Du kan sætte en joker (trunke
   $element->sort = -87;
   $element->tab_index = 0;
   $element->access_key = '';
+  $element->is_disabled = FALSE;
   $export['d868dbb4-c49f-8674-5560-4b0547a2c9df'] = $element;
 
   return $export;
@@ -822,7 +879,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '9576133e-7fed-45d4-29ec-6920f85c69bb';
   $map_element->me_uuid = '0935ba89-082a-1b84-59f7-757e590e74ad';
   $map_element->region = 'main';
-  $map_element->sort = -49;
+  $map_element->sort = -48;
   $export['0935ba89-082a-1b84-59f7-757e590e74ad'] = $map_element;
 
   $map_element = new stdClass();
@@ -831,8 +888,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '553e8edb-bbb1-c6e4-5574-8182d8ed4e15';
   $map_element->me_uuid = '1403d4fc-66a1-0054-9daa-eb0b5e74a776';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -47;
   $export['1403d4fc-66a1-0054-9daa-eb0b5e74a776'] = $map_element;
 
   $map_element = new stdClass();
@@ -892,7 +949,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '26707474-294f-1c34-e50b-f7831578913d';
   $map_element->me_uuid = '330986ab-3283-1f14-8dca-2464d63799bd';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -46;
   $export['330986ab-3283-1f14-8dca-2464d63799bd'] = $map_element;
 
   $map_element = new stdClass();
@@ -901,8 +958,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '345b26e3-4a5c-2ab4-3d7d-54ce3e1622f6';
-  $map_element->region = 'main';
-  $map_element->sort = -45;
+  $map_element->region = 'expand';
+  $map_element->sort = -46;
   $export['345b26e3-4a5c-2ab4-3d7d-54ce3e1622f6'] = $map_element;
 
   $map_element = new stdClass();
@@ -921,8 +978,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '553e8edb-bbb1-c6e4-5574-8182d8ed4e15';
   $map_element->me_uuid = '407ef899-eab7-b304-c50a-fea95dd922c6';
-  $map_element->region = 'main';
-  $map_element->sort = -45;
+  $map_element->region = 'expand';
+  $map_element->sort = -46;
   $export['407ef899-eab7-b304-c50a-fea95dd922c6'] = $map_element;
 
   $map_element = new stdClass();
@@ -951,8 +1008,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = 'a54a7813-741a-f3d4-615d-e60a322df4be';
   $map_element->me_uuid = '4800babd-619d-4344-c1d5-049ce34867b9';
-  $map_element->region = 'main';
-  $map_element->sort = -45;
+  $map_element->region = 'expand';
+  $map_element->sort = -48;
   $export['4800babd-619d-4344-c1d5-049ce34867b9'] = $map_element;
 
   $map_element = new stdClass();
@@ -961,8 +1018,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '1458f855-531f-b484-1df2-1c7762dc339b';
   $map_element->me_uuid = '4a4c9b84-6a7e-c2b4-f1d8-6e94753c372f';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -47;
   $export['4a4c9b84-6a7e-c2b4-f1d8-6e94753c372f'] = $map_element;
 
   $map_element = new stdClass();
@@ -971,8 +1028,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '54d61692-fd9b-07f4-55a0-c1ba3094cbde';
   $map_element->me_uuid = '5129aa2d-2147-4244-0912-75160a741eb0';
-  $map_element->region = 'main';
-  $map_element->sort = -45;
+  $map_element->region = 'expand';
+  $map_element->sort = -46;
   $export['5129aa2d-2147-4244-0912-75160a741eb0'] = $map_element;
 
   $map_element = new stdClass();
@@ -981,8 +1038,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '5a10f6c1-18fd-a924-2d44-1f5f34e194df';
-  $map_element->region = 'main';
-  $map_element->sort = -43;
+  $map_element->region = 'expand';
+  $map_element->sort = -44;
   $export['5a10f6c1-18fd-a924-2d44-1f5f34e194df'] = $map_element;
 
   $map_element = new stdClass();
@@ -991,8 +1048,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '82a9e993-2160-2ac4-a577-4b3d980a815e';
   $map_element->e_uuid = 'cd37520a-f3c2-63a4-9979-416311ef9a2b';
   $map_element->me_uuid = '5cb49f0d-451a-c274-a57b-6585e4e49f1c';
-  $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->region = 'expand';
+  $map_element->sort = -48;
   $export['5cb49f0d-451a-c274-a57b-6585e4e49f1c'] = $map_element;
 
   $map_element = new stdClass();
@@ -1001,8 +1058,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '66d1dd8d-2742-7d64-8d4c-ab7f601a7916';
   $map_element->me_uuid = '5f5d6a16-f03c-b4b4-0909-da8a067e5375';
-  $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->region = 'expand';
+  $map_element->sort = -48;
   $export['5f5d6a16-f03c-b4b4-0909-da8a067e5375'] = $map_element;
 
   $map_element = new stdClass();
@@ -1021,8 +1078,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = '7fdbeb0c-99da-df94-0da8-aab74429c5b1';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -49;
   $export['7fdbeb0c-99da-df94-0da8-aab74429c5b1'] = $map_element;
 
   $map_element = new stdClass();
@@ -1041,8 +1098,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'd3099a71-b1b6-f5c4-4170-6b8593ad446b';
   $map_element->e_uuid = '8a82ae05-e3d7-2cc4-394f-104685da18b8';
   $map_element->me_uuid = '92dabaf1-aa66-6f04-7d67-665ddd749d26';
-  $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->region = 'expand';
+  $map_element->sort = -50;
   $export['92dabaf1-aa66-6f04-7d67-665ddd749d26'] = $map_element;
 
   $map_element = new stdClass();
@@ -1051,8 +1108,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '03d3d960-f884-1fe4-2db0-52e51ac82a6e';
   $map_element->me_uuid = '9d2f1d32-4468-0884-99a9-aabcd9a588ad';
-  $map_element->region = 'main';
-  $map_element->sort = -44;
+  $map_element->region = 'expand';
+  $map_element->sort = -45;
   $export['9d2f1d32-4468-0884-99a9-aabcd9a588ad'] = $map_element;
 
   $map_element = new stdClass();
@@ -1061,8 +1118,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '7b5202bd-ebe9-2344-8d16-1bae6c3ca027';
   $map_element->me_uuid = '9eef86ed-5b62-3fa4-35ab-ac31ce4f021b';
-  $map_element->region = 'main';
-  $map_element->sort = -44;
+  $map_element->region = 'expand';
+  $map_element->sort = -45;
   $export['9eef86ed-5b62-3fa4-35ab-ac31ce4f021b'] = $map_element;
 
   $map_element = new stdClass();
@@ -1071,8 +1128,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = 'd868dbb4-c49f-8674-5560-4b0547a2c9df';
   $map_element->me_uuid = '9f9b636e-2822-5b34-35aa-8fc9d9162266';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -47;
   $export['9f9b636e-2822-5b34-35aa-8fc9d9162266'] = $map_element;
 
   $map_element = new stdClass();
@@ -1081,8 +1138,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'eb1079e4-72ae-cb64-8542-0492a206b36e';
   $map_element->e_uuid = '3bde0fbf-1f9e-d914-61bb-f92ce00fd65c';
   $map_element->me_uuid = '9ffdd8cd-1afa-9af4-e110-00b5122e4531';
-  $map_element->region = 'main';
-  $map_element->sort = -45;
+  $map_element->region = 'expand';
+  $map_element->sort = -46;
   $export['9ffdd8cd-1afa-9af4-e110-00b5122e4531'] = $map_element;
 
   $map_element = new stdClass();
@@ -1102,7 +1159,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'a0e64424-68f9-71f4-1df2-bf0100315aa4';
   $map_element->me_uuid = 'a7706d35-0093-aac4-b9ad-37aeb03c2f55';
   $map_element->region = 'main';
-  $map_element->sort = -50;
+  $map_element->sort = -49;
   $export['a7706d35-0093-aac4-b9ad-37aeb03c2f55'] = $map_element;
 
   $map_element = new stdClass();
@@ -1111,8 +1168,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '2e4be922-5e61-bb64-8123-d9c01c3a1640';
   $map_element->me_uuid = 'a776d9cb-877d-6014-8d4d-31c8ae7fd02e';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -47;
   $export['a776d9cb-877d-6014-8d4d-31c8ae7fd02e'] = $map_element;
 
   $map_element = new stdClass();
@@ -1162,7 +1219,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '7c3bfbbf-3038-9ca4-952a-85f9785337e2';
   $map_element->me_uuid = 'bd4354cd-4218-daa4-ed8f-94551d65cfac';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -47;
   $export['bd4354cd-4218-daa4-ed8f-94551d65cfac'] = $map_element;
 
   $map_element = new stdClass();
@@ -1172,7 +1229,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '40cb1fd2-d934-0734-69f7-01248b663172';
   $map_element->me_uuid = 'c1631440-1237-4bc4-9d80-4d76c5c839dd';
   $map_element->region = 'main';
-  $map_element->sort = -49;
+  $map_element->sort = -48;
   $export['c1631440-1237-4bc4-9d80-4d76c5c839dd'] = $map_element;
 
   $map_element = new stdClass();
@@ -1182,7 +1239,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'b9392a11-5676-3574-fd47-143ad3edcefa';
   $map_element->me_uuid = 'cb531f35-4ef3-bb94-2dfa-14fe18d50cd4';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -47;
   $export['cb531f35-4ef3-bb94-2dfa-14fe18d50cd4'] = $map_element;
 
   $map_element = new stdClass();
@@ -1191,8 +1248,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '6c9427f4-c8da-e4b4-2550-4533080fc500';
   $map_element->e_uuid = '05b8e136-f60b-65d4-edd0-56c69d20ce8d';
   $map_element->me_uuid = 'ccd214a3-acac-c174-d9f6-decdbf73a357';
-  $map_element->region = 'main';
-  $map_element->sort = -44;
+  $map_element->region = 'expand';
+  $map_element->sort = -46;
   $export['ccd214a3-acac-c174-d9f6-decdbf73a357'] = $map_element;
 
   $map_element = new stdClass();
@@ -1202,7 +1259,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'ae797962-8b73-3044-31d3-6eebde66c95f';
   $map_element->me_uuid = 'd03c04e6-eb35-d9e4-6dd8-2fb21bcd99f8';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -47;
   $export['d03c04e6-eb35-d9e4-6dd8-2fb21bcd99f8'] = $map_element;
 
   $map_element = new stdClass();
@@ -1211,8 +1268,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '82a9e993-2160-2ac4-a577-4b3d980a815e';
   $map_element->e_uuid = '3e7a88b5-6ffe-1bb4-d1b7-f218359219ac';
   $map_element->me_uuid = 'd1a76cdc-ec67-bb74-21dd-99b547a3d7bb';
-  $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->region = 'expand';
+  $map_element->sort = -47;
   $export['d1a76cdc-ec67-bb74-21dd-99b547a3d7bb'] = $map_element;
 
   $map_element = new stdClass();
@@ -1251,8 +1308,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = 'b29c03e2-f2a9-9504-f97f-2cb529a0dad3';
   $map_element->e_uuid = '6bfbdc58-a531-19f4-29a2-4e080de94cd8';
   $map_element->me_uuid = 'f324599e-dfd4-32f4-a158-48a0305d0450';
-  $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->region = 'expand';
+  $map_element->sort = -48;
   $export['f324599e-dfd4-32f4-a158-48a0305d0450'] = $map_element;
 
   $map_element = new stdClass();
@@ -1261,8 +1318,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $map_element->e_uuid = '56558f6c-0175-3a14-71c9-eac27a76cc85';
   $map_element->me_uuid = 'fc1e29fd-3fe1-c574-cdd3-764940c142e5';
-  $map_element->region = 'main';
-  $map_element->sort = -44;
+  $map_element->region = 'expand';
+  $map_element->sort = -45;
   $export['fc1e29fd-3fe1-c574-cdd3-764940c142e5'] = $map_element;
 
   return $export;
@@ -1742,6 +1799,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'engelsk';
   $option->value = 'eng';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['00a9186a-34b4-1d04-559b-84254e8975ea'] = $option;
 
   $option = new stdClass();
@@ -1753,6 +1811,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'noveller';
   $option->value = 'noveller';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0102b87c-cee2-2474-a555-c526a32fe0d3'] = $option;
 
   $option = new stdClass();
@@ -1764,6 +1823,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'kinesisk';
   $option->value = 'chi';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['01cb27f7-17f2-4784-01ac-3b10f34f4865'] = $option;
 
   $option = new stdClass();
@@ -1775,6 +1835,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tjekkisk';
   $option->value = '(cze OR ces)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['021049fe-ac98-4234-29b6-8dcfe6af72f8'] = $option;
 
   $option = new stdClass();
@@ -1786,6 +1847,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 12 år';
   $option->value = '(Fra 12 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['02962364-d00d-6aa4-051d-a0170dfdb12d'] = $option;
 
   $option = new stdClass();
@@ -1793,10 +1855,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -68;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['02ad0103-7096-4474-a1c8-612d07eb7acf'] = $option;
 
   $option = new stdClass();
@@ -1808,6 +1871,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2008';
   $option->value = '2008';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['04a25dc9-3dd5-76d4-b1db-d36dfba45e7f'] = $option;
 
   $option = new stdClass();
@@ -1819,6 +1883,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'musik på nettet';
   $option->value = '(musik AND term.accessType=online) ';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['04e1ad22-c09f-19c4-25f0-c8cbb3cfc80c'] = $option;
 
   $option = new stdClass();
@@ -1830,6 +1895,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 12 år';
   $option->value = '(Fra 12 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['05c94334-b903-7204-c139-c82bdc9b68ae'] = $option;
 
   $option = new stdClass();
@@ -1841,6 +1907,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1980';
   $option->value = '1980';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['07b223be-e00c-4654-d511-8cd8726fdf37'] = $option;
 
   $option = new stdClass();
@@ -1852,6 +1919,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Science fiction';
   $option->value = '(science fiction)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0981bf00-199a-3134-ed87-8a8cb76dc8c8'] = $option;
 
   $option = new stdClass();
@@ -1863,6 +1931,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'portugisisk';
   $option->value = 'por';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0a640dca-4e71-5194-d9e9-deb2c0fba93a'] = $option;
 
   $option = new stdClass();
@@ -1874,6 +1943,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1901';
   $option->value = '1901';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0be18392-79b6-02c4-c18e-7149947f0a5f'] = $option;
 
   $option = new stdClass();
@@ -1885,6 +1955,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'spil på nettet';
   $option->value = 'pc-spil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0bebddf4-1d90-0e14-e1ea-98948056f902'] = $option;
 
   $option = new stdClass();
@@ -1892,10 +1963,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0c2d782c-3a28-9d54-4961-d3f814ed8d16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -99;
+  $option->sort = -100;
   $option->label = 'Americana';
   $option->value = 'americana';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0c2d782c-3a28-9d54-4961-d3f814ed8d16'] = $option;
 
   $option = new stdClass();
@@ -1907,6 +1979,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1978';
   $option->value = '1978';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0c85730a-ab99-f254-713c-fb23f5561bf0'] = $option;
 
   $option = new stdClass();
@@ -1918,6 +1991,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1963';
   $option->value = '1963';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['0da5b6ed-259e-a524-114d-4cbfa06fa9ba'] = $option;
 
   $option = new stdClass();
@@ -1929,6 +2003,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'cd - mp3';
   $option->value = '(cd-mp3)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['10103f6e-431b-9094-c193-0e934986ee6a'] = $option;
 
   $option = new stdClass();
@@ -1940,6 +2015,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 2 år';
   $option->value = '(Fra 2 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['121adc7f-242e-eb84-0545-f4ba6cc3e1f2'] = $option;
 
   $option = new stdClass();
@@ -1951,6 +2027,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'serbisk';
   $option->value = 'scc';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['136e3a23-c968-bac4-19cc-967c3969a983'] = $option;
 
   $option = new stdClass();
@@ -1962,6 +2039,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2009';
   $option->value = '2009';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['14dad616-4848-e334-0123-874033a23e7f'] = $option;
 
   $option = new stdClass();
@@ -1973,6 +2051,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1919';
   $option->value = '1919';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1642c8b5-1a24-1304-255e-2a473731c94b'] = $option;
 
   $option = new stdClass();
@@ -1984,6 +2063,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Politifilm';
   $option->value = 'politifilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['173d181f-3013-06b4-2153-a5f2eafb0876'] = $option;
 
   $option = new stdClass();
@@ -1995,6 +2075,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1995';
   $option->value = '1995';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['17bfc996-7f89-77e4-d521-2ab315cd9f5d'] = $option;
 
   $option = new stdClass();
@@ -2006,6 +2087,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1959';
   $option->value = '1959';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['17cff911-5212-95b4-f58b-68eb33ae20fd'] = $option;
 
   $option = new stdClass();
@@ -2017,6 +2099,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1970';
   $option->value = '1970';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['183f3e7d-7bcb-0f34-cd3b-f48aa8caf338'] = $option;
 
   $option = new stdClass();
@@ -2028,6 +2111,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1981';
   $option->value = '1981';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['19144f39-4e0a-e6e4-0d2e-5e19684430b7'] = $option;
 
   $option = new stdClass();
@@ -2039,6 +2123,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Operafilm';
   $option->value = 'operafilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['19fde25a-29c6-9bf4-31a2-ec3037108a0c'] = $option;
 
   $option = new stdClass();
@@ -2050,6 +2135,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'bulgarsk';
   $option->value = 'bul';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1a08671b-8407-7ab4-51ea-7d95322dc90a'] = $option;
 
   $option = new stdClass();
@@ -2061,6 +2147,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1bfe0889-237f-a034-4d00-3b12c38c93c5'] = $option;
 
   $option = new stdClass();
@@ -2072,6 +2159,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'computerspil';
   $option->value = 'spil';
   $option->expand = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->is_disabled = FALSE;
   $export['1c025dad-6622-7a74-f5cb-3f86dfdc241a'] = $option;
 
   $option = new stdClass();
@@ -2083,6 +2171,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'artikler';
   $option->value = '(avisartikel OR tidsskriftartikel)';
   $option->expand = '479cc87e-3ff3-d124-5567-e03e00ef3169';
+  $option->is_disabled = FALSE;
   $export['1c7e81d5-661c-31b4-0134-357fc0d1a646'] = $option;
 
   $option = new stdClass();
@@ -2094,6 +2183,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tidsskriftsartikler';
   $option->value = 'tidsskriftsartikel';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1d6019b5-c9ca-8634-e1e2-56c2fe9d421d'] = $option;
 
   $option = new stdClass();
@@ -2105,6 +2195,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1992';
   $option->value = '1992';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1d8d0ee6-a3a2-52c4-d163-98ea3935a898'] = $option;
 
   $option = new stdClass();
@@ -2116,6 +2207,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'danske spillefilm';
   $option->value = 'dansk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1da795ff-dcd9-0544-f5d4-94559b67aab6'] = $option;
 
   $option = new stdClass();
@@ -2127,6 +2219,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'hollandsk';
   $option->value = '(dut OR fle)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1ed2a1de-ba07-7174-e147-525624d93ecf'] = $option;
 
   $option = new stdClass();
@@ -2138,6 +2231,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1951';
   $option->value = '1951';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1eda01eb-11c8-4794-91b6-fde1628bfdbd'] = $option;
 
   $option = new stdClass();
@@ -2149,6 +2243,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1f6f893b-3711-8d24-19a8-a00d711cf225'] = $option;
 
   $option = new stdClass();
@@ -2156,10 +2251,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -91;
   $option->label = 'Filmmusik - soundtrack';
   $option->value = 'filmmusik - soundtrack';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9'] = $option;
 
   $option = new stdClass();
@@ -2171,6 +2267,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1948';
   $option->value = '1948';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['202f664b-bb2f-f494-b9df-dd05607b69ad'] = $option;
 
   $option = new stdClass();
@@ -2182,6 +2279,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'svensk';
   $option->value = '(swe OR sve)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2132a4bc-74b9-31a4-d91e-177decac5196'] = $option;
 
   $option = new stdClass();
@@ -2189,10 +2287,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -72;
+  $option->sort = -70;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2149d559-7ce8-e3c4-a561-ac3278c22661'] = $option;
 
   $option = new stdClass();
@@ -2204,6 +2303,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 6 år';
   $option->value = '(Fra 6 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2151d98f-bff7-f4a4-815c-9ede6fccd28d'] = $option;
 
   $option = new stdClass();
@@ -2215,6 +2315,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'færøsk';
   $option->value = '(far OR fao)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['22837940-734a-4bf4-3d3d-b9dd680b100d'] = $option;
 
   $option = new stdClass();
@@ -2226,6 +2327,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1965';
   $option->value = '1965';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['232a057c-503c-41a4-f558-1c6488af4ebb'] = $option;
 
   $option = new stdClass();
@@ -2237,6 +2339,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 7 år';
   $option->value = '(Fra 7 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2335d70a-1b68-cde4-2d44-6ac3787e69aa'] = $option;
 
   $option = new stdClass();
@@ -2248,6 +2351,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1933';
   $option->value = '1933';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['23402893-d3a7-3164-a550-ee70ff64c90b'] = $option;
 
   $option = new stdClass();
@@ -2259,6 +2363,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'engelsk';
   $option->value = 'eng';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['23d48bf0-07a3-3b74-3de3-77b918d1426d'] = $option;
 
   $option = new stdClass();
@@ -2266,10 +2371,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
+  $option->sort = -85;
   $option->label = 'Hip hop';
   $option->value = 'hip hop';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['23f98cea-867b-4844-bdac-a4cf6e54efcd'] = $option;
 
   $option = new stdClass();
@@ -2277,10 +2383,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -71;
+  $option->sort = -69;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d'] = $option;
 
   $option = new stdClass();
@@ -2292,6 +2399,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'dvd';
   $option->value = 'dvd';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['240ae559-eafd-d7d4-a156-ed562f3c4946'] = $option;
 
   $option = new stdClass();
@@ -2303,6 +2411,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1955';
   $option->value = '1955';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['24832085-9f0e-b024-fd2f-e06d9bd3f587'] = $option;
 
   $option = new stdClass();
@@ -2314,6 +2423,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1999';
   $option->value = '1999';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['269037c4-a599-3374-ed64-4111e7f4183d'] = $option;
 
   $option = new stdClass();
@@ -2325,6 +2435,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 4 år';
   $option->value = '(Fra 4 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['26fa21f8-7adb-9d44-29f8-553b68730fd8'] = $option;
 
   $option = new stdClass();
@@ -2336,18 +2447,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'dansk';
   $option->value = 'dan';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['27be38b8-2b2f-9ca4-31b3-0cb4840bb570'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '287ba40b-f593-ca14-5943-97e81e88d359';
-  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -79;
-  $option->label = 'rockfilm';
-  $option->value = 'rockfilm';
-  $option->expand = '0';
-  $export['287ba40b-f593-ca14-5943-97e81e88d359'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2358,6 +2459,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'platformspil';
   $option->value = 'platformspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['28ae7476-e666-e454-397a-db1b37018313'] = $option;
 
   $option = new stdClass();
@@ -2369,6 +2471,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1986';
   $option->value = '1986';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['29d5c60a-73a9-50e4-dd83-38b9e28f9cf1'] = $option;
 
   $option = new stdClass();
@@ -2380,6 +2483,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 7 år';
   $option->value = '(Fra 7 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['29f9816f-2778-7084-651e-340aad0fef00'] = $option;
 
   $option = new stdClass();
@@ -2391,6 +2495,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1944';
   $option->value = '1944';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2a42fba4-8ff8-c794-6d94-d39df70e95c0'] = $option;
 
   $option = new stdClass();
@@ -2398,10 +2503,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -75;
+  $option->sort = -74;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2a55c4ce-15c8-c274-9930-3027f2e9ca66'] = $option;
 
   $option = new stdClass();
@@ -2413,6 +2519,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2b47c980-b31b-0ad4-9569-04ef73133df7'] = $option;
 
   $option = new stdClass();
@@ -2424,6 +2531,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 7 år';
   $option->value = '(Fra 7 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2c0d6436-a072-0024-2934-3c70f1077783'] = $option;
 
   $option = new stdClass();
@@ -2435,6 +2543,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'på nettet';
   $option->value = 'lydbog AND term.accessType=online';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2c43ecd8-4671-ce84-cd4d-7405dd5fb741'] = $option;
 
   $option = new stdClass();
@@ -2446,6 +2555,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'portugisisk';
   $option->value = 'por';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2c622624-22ad-8664-d58e-07809a75c48b'] = $option;
 
   $option = new stdClass();
@@ -2453,10 +2563,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -95;
   $option->label = 'spil på nettet';
   $option->value = '(pc-spil AND term.accessType=online)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2e1186cb-6a2c-9c54-dd1a-6172443fc570'] = $option;
 
   $option = new stdClass();
@@ -2468,6 +2579,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'somali';
   $option->value = 'som';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2e137bb2-3835-fc34-c959-8e740005c21a'] = $option;
 
   $option = new stdClass();
@@ -2479,6 +2591,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'farsi';
   $option->value = 'per';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2f1986f4-c08a-b044-95ad-464501323bd7'] = $option;
 
   $option = new stdClass();
@@ -2490,6 +2603,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 14 år';
   $option->value = '(Fra 14 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2f492b72-8d01-9c74-6916-4b099428e81d'] = $option;
 
   $option = new stdClass();
@@ -2501,6 +2615,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1972';
   $option->value = '1972';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2f60a039-3e3c-44a4-c9e6-66548746c30b'] = $option;
 
   $option = new stdClass();
@@ -2512,6 +2627,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1958';
   $option->value = '1958';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['2fd43324-f814-d184-e9a2-90b910309dcc'] = $option;
 
   $option = new stdClass();
@@ -2523,6 +2639,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'digte';
   $option->value = 'digte';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['30f6d776-852b-ee74-c51b-d8d363d8bf95'] = $option;
 
   $option = new stdClass();
@@ -2534,6 +2651,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'norsk';
   $option->value = 'nor';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['316a7dea-9c98-70e4-a9b1-03767f6e368e'] = $option;
 
   $option = new stdClass();
@@ -2545,6 +2663,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'synge- og dansespil';
   $option->value = 'karaokespil OR dans';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['31a940f6-cb40-4134-1507-51827bdec651'] = $option;
 
   $option = new stdClass();
@@ -2556,6 +2675,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 15 år';
   $option->value = '(Fra 15 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['336f07d5-1dbd-8d94-550c-0426aa516bf1'] = $option;
 
   $option = new stdClass();
@@ -2567,6 +2687,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'ungarsk';
   $option->value = 'ung';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['33f4a211-7b06-2a74-594d-71ef52132a7b'] = $option;
 
   $option = new stdClass();
@@ -2578,6 +2699,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Actionfilm';
   $option->value = 'actionfilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3425031e-72e4-0484-5570-eee2f7d96810'] = $option;
 
   $option = new stdClass();
@@ -2589,6 +2711,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1994';
   $option->value = '1994';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['34d43ebd-ef9a-ea74-418c-df26f7b1be75'] = $option;
 
   $option = new stdClass();
@@ -2600,6 +2723,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'blu-ray';
   $option->value = 'blu-ray';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['350ab740-dea3-a1e4-a9cf-bb5f6aee3763'] = $option;
 
   $option = new stdClass();
@@ -2611,6 +2735,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'vhs';
   $option->value = 'video';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['35af48c9-0b22-7e14-5986-56bf507da0d0'] = $option;
 
   $option = new stdClass();
@@ -2618,10 +2743,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -91;
+  $option->sort = -92;
   $option->label = 'xbox 360';
   $option->value = '(xbox 360)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3689ff50-3c68-8c44-59f0-63246f074c2a'] = $option;
 
   $option = new stdClass();
@@ -2633,6 +2759,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'År lig med';
   $option->value = 'year_eq';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['36d207fa-72a6-2f94-7de7-455c9836ab71'] = $option;
 
   $option = new stdClass();
@@ -2644,6 +2771,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'arabisk';
   $option->value = 'ara';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['37416938-5d08-3a24-b1ef-91cb82d5732c'] = $option;
 
   $option = new stdClass();
@@ -2655,6 +2783,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'adventurespil';
   $option->value = 'adventurespil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['37aa8e3e-7ed2-a8f4-dd70-743758a0c28c'] = $option;
 
   $option = new stdClass();
@@ -2666,6 +2795,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1982';
   $option->value = '1982';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['37ce90d0-4329-0004-6516-87a8f3115fbb'] = $option;
 
   $option = new stdClass();
@@ -2677,6 +2807,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1920';
   $option->value = '1920';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['380912a7-9c5b-5c54-f5e7-40fb8b2fa208'] = $option;
 
   $option = new stdClass();
@@ -2684,10 +2815,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -59;
   $option->label = 'Verdensmusik';
   $option->value = 'verdensmusik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['380a95e5-72a6-e4f4-d927-f04c627a79eb'] = $option;
 
   $option = new stdClass();
@@ -2699,6 +2831,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1924';
   $option->value = '1924';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['386b4e52-6666-3354-3127-8fb68db0e1ac'] = $option;
 
   $option = new stdClass();
@@ -2710,6 +2843,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Tilladt for alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['39c56404-f046-0ad4-4d5b-de9d1d614677'] = $option;
 
   $option = new stdClass();
@@ -2721,6 +2855,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'norske spillefilm';
   $option->value = 'norsk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3a7b312c-5082-8474-a9b3-b70a3a5035c0'] = $option;
 
   $option = new stdClass();
@@ -2732,6 +2867,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'polsk';
   $option->value = 'pol';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3b73e77a-12a0-1d84-8523-57ce326ef281'] = $option;
 
   $option = new stdClass();
@@ -2743,6 +2879,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Biografiske film';
   $option->value = '(biografiske film)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3bd90cc6-cd99-c434-2121-953316c7bc32'] = $option;
 
   $option = new stdClass();
@@ -2754,6 +2891,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 3 år';
   $option->value = '(Fra 3 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3be22425-6b3c-6c94-0df0-f9afa77f7877'] = $option;
 
   $option = new stdClass();
@@ -2765,6 +2903,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1911';
   $option->value = '1911';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3c6bc3ed-54d9-27a4-410c-48e3070c8d83'] = $option;
 
   $option = new stdClass();
@@ -2776,6 +2915,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1985';
   $option->value = '1985';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3f2e9dd3-22a9-a7e4-6df8-bfe3514f0ed1'] = $option;
 
   $option = new stdClass();
@@ -2783,10 +2923,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -84;
+  $option->sort = -83;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3f4f8622-e29f-3444-79c0-ae5951830826'] = $option;
 
   $option = new stdClass();
@@ -2798,6 +2939,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'russiske spillefilm';
   $option->value = 'russisk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['3fd98de8-29af-c9d4-0576-0cd072d675d5'] = $option;
 
   $option = new stdClass();
@@ -2809,6 +2951,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'italienske spillefilm';
   $option->value = 'italiensk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['401add77-651a-ee24-a5bc-340b15d31dab'] = $option;
 
   $option = new stdClass();
@@ -2820,6 +2963,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'koreanske spillefilm';
   $option->value = 'koreansk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['40e11f9d-2c9a-f4a4-7960-0ef9a1ad10ed'] = $option;
 
   $option = new stdClass();
@@ -2831,6 +2975,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'rumænsk';
   $option->value = 'rum';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['41a0ca6b-d9f2-6c94-b974-4c13a2dcfd11'] = $option;
 
   $option = new stdClass();
@@ -2842,28 +2987,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'musik';
   $option->value = 'musik';
   $option->expand = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
+  $option->is_disabled = FALSE;
   $export['423d2d19-4bdb-ab44-5927-dc27f3652f31'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '43f2d208-0bad-2ad4-bd17-b4fdbf20299f';
-  $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -100;
-  $option->label = 'Alle';
-  $option->value = '';
-  $option->expand = '0';
-  $export['43f2d208-0bad-2ad4-bd17-b4fdbf20299f'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -69;
+  $option->sort = -66;
   $option->label = 'RogB';
   $option->value = 'RogB';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['454f4227-4d9f-3414-c90a-71a304f4dd31'] = $option;
 
   $option = new stdClass();
@@ -2875,6 +3011,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'kinesiske spillefilm';
   $option->value = 'kinesisk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['47ecae57-cd12-d2c4-210f-c59826958d20'] = $option;
 
   $option = new stdClass();
@@ -2886,6 +3023,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1934';
   $option->value = '1934';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['48e0627a-0fe9-2594-998f-b10d2535cf70'] = $option;
 
   $option = new stdClass();
@@ -2893,10 +3031,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4bb8f91a-1cda-8fc4-1907-33da6e5634d4';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -87;
+  $option->sort = -86;
   $option->label = 'Heavy rock';
   $option->value = 'heavy rock';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4bb8f91a-1cda-8fc4-1907-33da6e5634d4'] = $option;
 
   $option = new stdClass();
@@ -2908,6 +3047,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1960';
   $option->value = '1960';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4bc41f0e-0503-8554-d922-884a90b1678e'] = $option;
 
   $option = new stdClass();
@@ -2919,6 +3059,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Voksne';
   $option->value = 'voksenmaterialer';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4c7d9190-bf59-f4b4-b56d-cfad7ebc705b'] = $option;
 
   $option = new stdClass();
@@ -2930,6 +3071,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'kinesisk';
   $option->value = 'chi';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4ca8354d-2a97-e5f4-f1fa-80229c9b2ff4'] = $option;
 
   $option = new stdClass();
@@ -2937,10 +3079,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -89;
+  $option->sort = -88;
   $option->label = 'For børn';
   $option->value = 'for børn';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4ebd873c-5a7d-e614-4544-8f6b40c40f11'] = $option;
 
   $option = new stdClass();
@@ -2952,6 +3095,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle typer materiale';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4fabac7e-b37b-2114-e5a9-00aeb4f46c0a'] = $option;
 
   $option = new stdClass();
@@ -2963,6 +3107,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'playstation 2';
   $option->value = '(playstation 2)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4fbde02a-5c8a-8b44-a189-a9961bf5d83a'] = $option;
 
   $option = new stdClass();
@@ -2974,6 +3119,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1909';
   $option->value = '1909';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['4ff0b3fc-d0a1-c644-29a3-98eed5001e01'] = $option;
 
   $option = new stdClass();
@@ -2985,6 +3131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Danske filmklassikere';
   $option->value = '(danske filmklassikere)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['51a8db89-a998-4ab4-fd72-22b345e27d21'] = $option;
 
   $option = new stdClass();
@@ -2996,6 +3143,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2003';
   $option->value = '2003';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['523987c0-06d5-9994-812d-24328a1f1cba'] = $option;
 
   $option = new stdClass();
@@ -3007,6 +3155,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['528af37a-2cf0-f9c4-e1ac-bcb3c81bcd61'] = $option;
 
   $option = new stdClass();
@@ -3018,6 +3167,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'fransk';
   $option->value = '(fra OR fre)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['533b4694-b2c4-3fe4-a910-df0e1945ed67'] = $option;
 
   $option = new stdClass();
@@ -3025,10 +3175,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -90;
+  $option->sort = -89;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['565280cd-c6a5-ebf4-99dc-9c4a0e02d898'] = $option;
 
   $option = new stdClass();
@@ -3040,6 +3191,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1900';
   $option->value = '1900';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['57ab90ca-d98c-7354-d1d3-4287b916b6df'] = $option;
 
   $option = new stdClass();
@@ -3051,6 +3203,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1977';
   $option->value = '1977';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['57fece46-741d-a144-a18f-304820bc59bc'] = $option;
 
   $option = new stdClass();
@@ -3062,6 +3215,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['584f7d7f-791f-1474-a9c0-ec0b30964e42'] = $option;
 
   $option = new stdClass();
@@ -3073,6 +3227,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1925';
   $option->value = '1925';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['59ea0d53-325c-d6f4-3954-01cd3a9d87aa'] = $option;
 
   $option = new stdClass();
@@ -3084,6 +3239,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle typer film';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5a049365-84a7-9bb4-b9c9-fbf585bcb97a'] = $option;
 
   $option = new stdClass();
@@ -3093,8 +3249,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -91;
   $option->label = 'polske spillefilm';
-  $option->value = 'polsk';
+  $option->value = 'poslk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5a9e6dc5-c05f-7a44-0152-d4c1c59cc41b'] = $option;
 
   $option = new stdClass();
@@ -3102,10 +3259,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5b63b5fd-97e8-f254-3184-8926e6912ad5';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -81;
+  $option->sort = -80;
   $option->label = 'Klaverkoncert';
   $option->value = 'klaverkoncert';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5b63b5fd-97e8-f254-3184-8926e6912ad5'] = $option;
 
   $option = new stdClass();
@@ -3117,6 +3275,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'russisk';
   $option->value = 'rus';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5de14e11-f071-b804-9982-8f846a064768'] = $option;
 
   $option = new stdClass();
@@ -3128,6 +3287,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 18 år';
   $option->value = '(Fra 18 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5ef537e2-644c-cf54-913f-ee2a304c4fd9'] = $option;
 
   $option = new stdClass();
@@ -3139,6 +3299,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'hebræisk';
   $option->value = 'heb';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5f242142-3055-49d4-dd7f-00c6caf78cbf'] = $option;
 
   $option = new stdClass();
@@ -3150,18 +3311,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Komedier';
   $option->value = 'komedier';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['5faae28a-5305-f8d4-39e5-2e88c130c7c2'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '6001b130-bb51-2194-09c9-c724fd726cc1';
-  $option->v_uuid = 'b056401f-4ff0-a654-55b8-835ad50af150';
-  $option->sort = -100;
-  $option->label = 'Alle lydbøger';
-  $option->value = 'lydbog';
-  $option->expand = '0';
-  $export['6001b130-bb51-2194-09c9-c724fd726cc1'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3172,6 +3323,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1912';
   $option->value = '1912';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6038c9b8-3f37-6954-fdf3-5cc7ef263698'] = $option;
 
   $option = new stdClass();
@@ -3183,6 +3335,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1973';
   $option->value = '1973';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['605aeaeb-f676-8fe4-e9d5-4f7579d76052'] = $option;
 
   $option = new stdClass();
@@ -3194,6 +3347,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Dansk pop';
   $option->value = 'dansk pop';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['608695b8-a23c-1cf4-7156-a18c5fc12338'] = $option;
 
   $option = new stdClass();
@@ -3205,6 +3359,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1949';
   $option->value = '1949';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['60a8d35c-1823-94d4-59e0-9617bc880a54'] = $option;
 
   $option = new stdClass();
@@ -3216,6 +3371,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1954';
   $option->value = '1954';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['639b37a6-fece-dcb4-21fe-262f34644f82'] = $option;
 
   $option = new stdClass();
@@ -3227,6 +3383,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2002';
   $option->value = '2002';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['64748fa8-dc65-cc34-adec-86a2a69bb45e'] = $option;
 
   $option = new stdClass();
@@ -3238,6 +3395,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1921';
   $option->value = '1921';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['64eeddd6-917d-e044-1194-d3b827e49d78'] = $option;
 
   $option = new stdClass();
@@ -3249,6 +3407,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Danske viser';
   $option->value = 'danske viser';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['667b9ec6-30c1-bd64-9958-863de345ddce'] = $option;
 
   $option = new stdClass();
@@ -3256,10 +3415,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
+  $option->sort = -61;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['67700ffd-7443-aea4-0d74-0a36f834097d'] = $option;
 
   $option = new stdClass();
@@ -3271,6 +3431,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tyske spillefilm';
   $option->value = 'tysk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['67cad172-efc3-4444-59a2-1590bb53bd83'] = $option;
 
   $option = new stdClass();
@@ -3282,6 +3443,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1922';
   $option->value = '1922';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['68bd5a42-2f8b-e434-8141-97061d44eddb'] = $option;
 
   $option = new stdClass();
@@ -3293,6 +3455,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1998';
   $option->value = '1998';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['68f7e7fe-d5dd-8434-997a-959e777dbe47'] = $option;
 
   $option = new stdClass();
@@ -3304,6 +3467,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1956';
   $option->value = '1956';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6978c229-80fd-48b4-35ea-8741d346c5cd'] = $option;
 
   $option = new stdClass();
@@ -3315,6 +3479,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'romaner';
   $option->value = 'romaner';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6a988e81-8fea-8d64-1d06-a7159dd72e6e'] = $option;
 
   $option = new stdClass();
@@ -3326,6 +3491,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'fransk';
   $option->value = '(fre OR fra)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6c48c5ac-7a71-1d64-2dd8-4e6477c505bc'] = $option;
 
   $option = new stdClass();
@@ -3337,6 +3503,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1945';
   $option->value = '1945';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6c8c225a-ac31-c1d4-cd06-ea3c8b9ed12c'] = $option;
 
   $option = new stdClass();
@@ -3348,6 +3515,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'År før';
   $option->value = 'year_lt';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6cd16de7-c667-ee94-e149-b538e4063b8b'] = $option;
 
   $option = new stdClass();
@@ -3359,6 +3527,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'e-bøger';
   $option->value = 'ebog';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6d38c576-ff8a-4d24-8937-5d3e4d954fc7'] = $option;
 
   $option = new stdClass();
@@ -3370,6 +3539,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1903';
   $option->value = '1903';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6dd989df-1478-0ff4-a5a5-e518aa5dfb77'] = $option;
 
   $option = new stdClass();
@@ -3381,6 +3551,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1990';
   $option->value = '1990';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['6fb3a821-5cad-8654-8d6e-8a3d93ab11b5'] = $option;
 
   $option = new stdClass();
@@ -3392,6 +3563,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'finsk';
   $option->value = 'fin';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['701db998-d8c5-1824-9d4d-f19d481cdde2'] = $option;
 
   $option = new stdClass();
@@ -3403,6 +3575,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Kærlighed';
   $option->value = 'kærlighed';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['707209a6-5118-8af4-e5ef-6c76e84c61da'] = $option;
 
   $option = new stdClass();
@@ -3414,6 +3587,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 13 år';
   $option->value = '(Fra 13 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['70b03352-39db-0824-29c4-50cfa976d5c0'] = $option;
 
   $option = new stdClass();
@@ -3421,10 +3595,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '70ea5cf2-4f16-3a04-4dec-893d03581f05';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -63;
+  $option->sort = -60;
   $option->label = 'Techno - dance';
   $option->value = 'techno - dance';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['70ea5cf2-4f16-3a04-4dec-893d03581f05'] = $option;
 
   $option = new stdClass();
@@ -3436,6 +3611,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1975';
   $option->value = '1975';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['71594c39-5887-46a4-dd5a-f63665ba8f49'] = $option;
 
   $option = new stdClass();
@@ -3447,6 +3623,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'shooters';
   $option->value = 'shooters';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7238ce8a-8e15-a3f4-090e-038755436af3'] = $option;
 
   $option = new stdClass();
@@ -3454,10 +3631,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -93;
+  $option->sort = -92;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['72e49d31-5a93-7b64-2133-f3cb22d04c9a'] = $option;
 
   $option = new stdClass();
@@ -3469,28 +3647,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'hovedbrudsspil';
   $option->value = 'hovedbrudsspil OR brætspil OR quiz OR puslespil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['73c4c721-838c-0f24-0107-0d4128301f5d'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
-  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -81;
-  $option->label = 'popfilm';
-  $option->value = 'popfilm';
-  $option->expand = '0';
-  $export['7469d725-4e5f-8884-7150-bc8d653adf09'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -94;
   $option->label = 'wii';
   $option->value = 'wii';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['74a3b752-7fe7-4f44-753b-5bfc468555a6'] = $option;
 
   $option = new stdClass();
@@ -3502,6 +3671,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'svensk';
   $option->value = '(swe OR sve)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7500eb47-bedc-ad54-2da0-f3c6809128fc'] = $option;
 
   $option = new stdClass();
@@ -3509,10 +3679,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -65;
   $option->label = 'Salsa - afrocubansk musik';
   $option->value = 'salsa - afrocubansk musik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['754e67ca-964c-bce4-119b-b950192d3cfa'] = $option;
 
   $option = new stdClass();
@@ -3524,6 +3695,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'polsk';
   $option->value = 'pol';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['75e5df4f-aaa3-bc34-a96e-2937b653f4d4'] = $option;
 
   $option = new stdClass();
@@ -3535,6 +3707,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1941';
   $option->value = '1941';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7626c629-fb2a-1944-71a2-6fbb57093422'] = $option;
 
   $option = new stdClass();
@@ -3546,6 +3719,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'finsk';
   $option->value = 'fin';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7725de77-b75d-aaa4-6906-3170a680ac7f'] = $option;
 
   $option = new stdClass();
@@ -3557,6 +3731,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'bånd';
   $option->value = '(bånd)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['77bf813c-95e6-a2f4-91ed-145d7be6d490'] = $option;
 
   $option = new stdClass();
@@ -3568,6 +3743,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'punktskrift (braille)';
   $option->value = 'punktskrift';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['79bbb10e-a743-e4d4-7db6-0a1de3b0f967'] = $option;
 
   $option = new stdClass();
@@ -3579,6 +3755,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1926';
   $option->value = '1926';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7b056400-add8-beb4-ad47-a04a758de6f9'] = $option;
 
   $option = new stdClass();
@@ -3590,6 +3767,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'fjhfjhgfjh';
   $option->value = 'nnj';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7b0c9fa4-620e-0214-ed72-23c5bad62648'] = $option;
 
   $option = new stdClass();
@@ -3601,6 +3779,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 13 år';
   $option->value = '(Fra 13 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7b33e683-5d1e-64c4-3d80-54dfa937fb12'] = $option;
 
   $option = new stdClass();
@@ -3612,6 +3791,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'musik på nettet';
   $option->value = 'musik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7c16db30-ece8-aff4-895b-a29c47adf457'] = $option;
 
   $option = new stdClass();
@@ -3623,6 +3803,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1936';
   $option->value = '1936';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7cecf3c9-99ef-2774-2dc9-2af4c80204c4'] = $option;
 
   $option = new stdClass();
@@ -3634,6 +3815,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'noder på nettet';
   $option->value = 'node';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['7e5e55cf-039c-11e4-89e6-dee2f54d82b0'] = $option;
 
   $option = new stdClass();
@@ -3645,6 +3827,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1962';
   $option->value = '1962';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['80487da9-f769-a984-99e2-f5894ffc6737'] = $option;
 
   $option = new stdClass();
@@ -3656,6 +3839,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Skønlitteratur';
   $option->value = 'fiktion';
   $option->expand = '1c0066cf-f6cb-8694-b102-24a394e912d5';
+  $option->is_disabled = FALSE;
   $export['81178722-f2eb-9cf4-390c-c3a2d88dba34'] = $option;
 
   $option = new stdClass();
@@ -3663,10 +3847,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '816fb6c3-1528-a7b4-8590-d6e7f4d25f22';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -87;
   $option->label = 'Heavy metal';
   $option->value = 'heavy metal';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['816fb6c3-1528-a7b4-8590-d6e7f4d25f22'] = $option;
 
   $option = new stdClass();
@@ -3678,6 +3863,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 2 år';
   $option->value = '(Fra 2 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['819af23c-2e96-1224-995a-d78405694ca8'] = $option;
 
   $option = new stdClass();
@@ -3689,6 +3875,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 10 år';
   $option->value = '(Fra 10 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['81c9a75b-2835-a334-3505-c96a56eb9cd0'] = $option;
 
   $option = new stdClass();
@@ -3700,6 +3887,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['835f62f8-c2fc-0cf4-9537-6068ca5b93b1'] = $option;
 
   $option = new stdClass();
@@ -3711,6 +3899,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1939';
   $option->value = '1939';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['84195ddc-e237-0664-1dcc-1c15ec465e2e'] = $option;
 
   $option = new stdClass();
@@ -3722,6 +3911,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1928';
   $option->value = '1928';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['841ea809-d8f9-2e64-19f2-c8cdee0c20e3'] = $option;
 
   $option = new stdClass();
@@ -3733,6 +3923,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1946';
   $option->value = '1946';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['84a44e93-93f1-b3b4-9da2-698a45b3c6a0'] = $option;
 
   $option = new stdClass();
@@ -3742,8 +3933,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -92;
   $option->label = 'pakistanske (urdu) spillefilm';
-  $option->value = 'pakistansk';
+  $option->value = 'urdu';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['86efe6fa-d2fe-6734-6d6b-dcb9ca7cff7b'] = $option;
 
   $option = new stdClass();
@@ -3755,6 +3947,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1916';
   $option->value = '1916';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['873bc1c0-3b80-8fb4-1964-78fba3047807'] = $option;
 
   $option = new stdClass();
@@ -3766,6 +3959,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle e-materialer';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['874424e0-4039-6884-3578-008349b2fbde'] = $option;
 
   $option = new stdClass();
@@ -3777,6 +3971,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['87f0cc87-f579-8034-d5a6-fe85c004b864'] = $option;
 
   $option = new stdClass();
@@ -3788,6 +3983,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'urdu';
   $option->value = 'urd';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['880be159-017e-0ce4-dd6c-a788c95f1bae'] = $option;
 
   $option = new stdClass();
@@ -3799,6 +3995,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'leg og lær';
   $option->value = '(leg og lær) OR leg';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['881ef1f5-ac13-9354-9106-a03112786a4d'] = $option;
 
   $option = new stdClass();
@@ -3810,6 +4007,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'lydbøger';
   $option->value = 'lydbog';
   $option->expand = 'b056401f-4ff0-a654-55b8-835ad50af150';
+  $option->is_disabled = FALSE;
   $export['8a23f15d-55b9-0654-55c1-8ac01c12741e'] = $option;
 
   $option = new stdClass();
@@ -3821,6 +4019,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1923';
   $option->value = '1923';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8b122891-e93c-28a4-39eb-94509fb94b0d'] = $option;
 
   $option = new stdClass();
@@ -3832,6 +4031,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Socialrealisme';
   $option->value = 'socialrealisme';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8b442f0f-07a4-c124-1958-01cac9498a93'] = $option;
 
   $option = new stdClass();
@@ -3843,6 +4043,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 5 år';
   $option->value = '(Fra 5 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8b4c3c07-93e3-d664-f599-ed93dd65a185'] = $option;
 
   $option = new stdClass();
@@ -3854,6 +4055,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tyrkisk';
   $option->value = 'tur';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8b8646ab-b23d-0574-25e9-9680d86025c7'] = $option;
 
   $option = new stdClass();
@@ -3865,6 +4067,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2004';
   $option->value = '2004';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8bf9f673-1e8d-2014-894c-24f5d4b8df8b'] = $option;
 
   $option = new stdClass();
@@ -3876,6 +4079,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1997';
   $option->value = '1997';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8c366ab9-009f-e384-6dec-7a482ee2c092'] = $option;
 
   $option = new stdClass();
@@ -3887,6 +4091,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Drama';
   $option->value = 'drama';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8dfc5958-129f-4844-cd06-68d3a6599635'] = $option;
 
   $option = new stdClass();
@@ -3898,6 +4103,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tegneserier';
   $option->value = 'tegneserier';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['8eda79e6-8d41-1804-ed41-16fc659fc232'] = $option;
 
   $option = new stdClass();
@@ -3909,6 +4115,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'thai';
   $option->value = 'tha';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['91381e4b-b3f9-0d84-1d43-bee4d0234e15'] = $option;
 
   $option = new stdClass();
@@ -3920,6 +4127,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'arabisk';
   $option->value = 'ara';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['91a976b7-5e74-1824-39f6-27f8f392279e'] = $option;
 
   $option = new stdClass();
@@ -3931,6 +4139,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1971';
   $option->value = '1971';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['91e4cac4-276e-0de4-f15c-492d3a8ef578'] = $option;
 
   $option = new stdClass();
@@ -3942,6 +4151,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1931';
   $option->value = '1931';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['91e552d5-40c6-d9c4-7d56-8967d10386ab'] = $option;
 
   $option = new stdClass();
@@ -3949,10 +4159,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -78;
+  $option->sort = -77;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['91ede760-aa7f-73b4-a593-2a3756fe1b84'] = $option;
 
   $option = new stdClass();
@@ -3964,6 +4175,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 8 år';
   $option->value = '(Fra 8 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9225aa47-9ab3-bc54-51fc-16614a652545'] = $option;
 
   $option = new stdClass();
@@ -3975,6 +4187,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 12 år';
   $option->value = '(Fra 12 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['92673cb9-d0f8-7d84-195b-14556c004621'] = $option;
 
   $option = new stdClass();
@@ -3986,6 +4199,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tysk';
   $option->value = '(ger OR deu)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['92d882e0-03e9-6534-d951-4b15016e7ff6'] = $option;
 
   $option = new stdClass();
@@ -3995,8 +4209,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '8c3bba75-59b9-6604-c597-e042f60e6a3b';
   $option->sort = 10;
   $option->label = 'stor skrift';
-  $option->value = 'stor skrift';
+  $option->value = 'bog stor skrift';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['92df261f-4aff-94b4-152d-7f51c0639c82'] = $option;
 
   $option = new stdClass();
@@ -4008,6 +4223,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'eventyrspil';
   $option->value = 'eventyrspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['93811015-9a63-ac34-d9c3-c33b5d8c4d92'] = $option;
 
   $option = new stdClass();
@@ -4019,6 +4235,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Tegnefilm';
   $option->value = 'tegnefilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['93c3c006-33ef-5174-4d8f-1522208e4d4d'] = $option;
 
   $option = new stdClass();
@@ -4030,6 +4247,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'film på nettet';
   $option->value = 'film AND term.accessType=online';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9603f424-38cc-b004-b1a1-342cf9792cbe'] = $option;
 
   $option = new stdClass();
@@ -4041,6 +4259,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2006';
   $option->value = '2006';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['961cd4ce-fd18-9634-b9c6-de35c62083f6'] = $option;
 
   $option = new stdClass();
@@ -4052,6 +4271,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 3 år';
   $option->value = '(Fra 3 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['98693da7-620c-a174-9d36-4f06a7ff9928'] = $option;
 
   $option = new stdClass();
@@ -4059,10 +4279,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -76;
   $option->label = 'New age';
   $option->value = 'new age';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['98d32763-d0e5-16f4-2566-d2a2d2abb170'] = $option;
 
   $option = new stdClass();
@@ -4074,6 +4295,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'engelsk';
   $option->value = 'eng';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9947585b-b40d-f444-6d69-80402a0f0224'] = $option;
 
   $option = new stdClass();
@@ -4085,6 +4307,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1906';
   $option->value = '1906';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9a3dbdc4-5582-fee4-351e-17511c851c62'] = $option;
 
   $option = new stdClass();
@@ -4096,6 +4319,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1984';
   $option->value = '1984';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9b33b447-3074-d254-71b3-f238446dd6c9'] = $option;
 
   $option = new stdClass();
@@ -4107,6 +4331,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'japanske spillefilm';
   $option->value = 'japansk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9b4d82fb-1e86-c774-61e2-0b139eab7ad8'] = $option;
 
   $option = new stdClass();
@@ -4118,6 +4343,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Folkekomedier';
   $option->value = 'folkekomedier';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9d8e4436-74ce-9704-8d42-3fcafbdb35eb'] = $option;
 
   $option = new stdClass();
@@ -4129,6 +4355,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'grammofonplader';
   $option->value = 'grammofonplade';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9dc38888-1f28-6554-89ed-473d9e41f3d6'] = $option;
 
   $option = new stdClass();
@@ -4140,6 +4367,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle typer artikler';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9eeaca66-940e-b1e4-252a-a7c6c96b3816'] = $option;
 
   $option = new stdClass();
@@ -4151,6 +4379,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1913';
   $option->value = '1913';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9eefa885-93d9-eb94-15cd-6a26c1f646be'] = $option;
 
   $option = new stdClass();
@@ -4162,6 +4391,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1957';
   $option->value = '1957';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9f708012-2c04-ea34-f1c0-fa76d96a6d66'] = $option;
 
   $option = new stdClass();
@@ -4173,6 +4403,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1947';
   $option->value = '1947';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['9fdf9930-a827-e834-3d2f-14cbe44aed57'] = $option;
 
   $option = new stdClass();
@@ -4184,6 +4415,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'svenske spillefilm';
   $option->value = 'svensk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a180dbaa-b9db-7474-8107-156f3be0b527'] = $option;
 
   $option = new stdClass();
@@ -4195,6 +4427,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'simulationspil';
   $option->value = 'simulationsspil OR managerspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a24fef0c-5b25-da24-810d-d927ec434b09'] = $option;
 
   $option = new stdClass();
@@ -4206,6 +4439,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'strategispil';
   $option->value = 'strategispil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a295b637-e039-5bf4-ed7f-18b9d8ebfece'] = $option;
 
   $option = new stdClass();
@@ -4217,6 +4451,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Erotik';
   $option->value = 'erotik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a33807f6-1028-c654-dd6a-cc71fe74ef48'] = $option;
 
   $option = new stdClass();
@@ -4224,10 +4459,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -75;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a460c46b-af28-d1b4-a1c9-e923ae7e6017'] = $option;
 
   $option = new stdClass();
@@ -4239,6 +4475,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1918';
   $option->value = '1918';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a5544d27-38fd-eb64-29a8-924ed0ff45ed'] = $option;
 
   $option = new stdClass();
@@ -4246,10 +4483,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a57935ad-6759-7364-654e-7a77fd3f46ee';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -58;
   $option->label = 'Violinkoncert';
   $option->value = 'violinkoncert';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a57935ad-6759-7364-654e-7a77fd3f46ee'] = $option;
 
   $option = new stdClass();
@@ -4261,6 +4499,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Musicalfilm';
   $option->value = 'musicalfilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a5b66943-98cf-ddd4-a9f0-5e63ab4b6f9b'] = $option;
 
   $option = new stdClass();
@@ -4272,6 +4511,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1929';
   $option->value = '1929';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a5c66137-5a81-9474-65a4-64a784e39d5b'] = $option;
 
   $option = new stdClass();
@@ -4283,6 +4523,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'artikler på nettet';
   $option->value = '((avisartikel OR tidsskriftsartikel) AND term.accessType=online)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a6020901-708b-2e04-c9f7-9d2936b2848d'] = $option;
 
   $option = new stdClass();
@@ -4294,6 +4535,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Dokumentarfilm';
   $option->value = 'dokumentarfilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a6257666-c86e-f144-894e-4feddd43f726'] = $option;
 
   $option = new stdClass();
@@ -4305,6 +4547,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Biblioteket anbefaler';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a795d499-64e0-6f14-81b0-ee859df959ad'] = $option;
 
   $option = new stdClass();
@@ -4316,6 +4559,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Biblioteket anbefaler';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a863e932-0a8b-1214-4117-f6a6b658cf50'] = $option;
 
   $option = new stdClass();
@@ -4323,10 +4567,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a8a12369-bdd5-6654-69d0-bebd0500542f'] = $option;
 
   $option = new stdClass();
@@ -4338,6 +4583,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'bøger';
   $option->value = '(bog OR term.workType=literature)';
   $option->expand = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
+  $option->is_disabled = FALSE;
   $export['a961f2fc-d0d7-af14-2988-e53f804724c5'] = $option;
 
   $option = new stdClass();
@@ -4349,6 +4595,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1953';
   $option->value = '1953';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['a9792dc0-b73e-9024-adf7-4edacb091c90'] = $option;
 
   $option = new stdClass();
@@ -4356,10 +4603,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -84;
   $option->label = 'House - lounge';
   $option->value = 'house lounge';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['aa1ae4e9-5bf3-19e4-e546-1c764aeb7363'] = $option;
 
   $option = new stdClass();
@@ -4371,6 +4619,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2001';
   $option->value = '2001';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['abf00406-3fb4-e7b4-2dea-7fc2cf913b31'] = $option;
 
   $option = new stdClass();
@@ -4382,6 +4631,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1914';
   $option->value = '1914';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['abf72f58-f0f4-c624-05fb-c644183f4979'] = $option;
 
   $option = new stdClass();
@@ -4393,6 +4643,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'urdu';
   $option->value = 'urd';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ac2e6822-aed4-c7e4-3970-7ade71e61637'] = $option;
 
   $option = new stdClass();
@@ -4404,6 +4655,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 11 år';
   $option->value = '(Fra 11 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['acce13e1-d768-8174-0dec-5d0ee485f01e'] = $option;
 
   $option = new stdClass();
@@ -4415,6 +4667,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1991';
   $option->value = '1991';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ad4b1005-6743-1674-691c-3e155b72d5e9'] = $option;
 
   $option = new stdClass();
@@ -4426,6 +4679,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 10 år';
   $option->value = '(Fra 10 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['adb50128-d88d-3aa4-71d8-35523a330ec9'] = $option;
 
   $option = new stdClass();
@@ -4437,6 +4691,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2000';
   $option->value = '2000';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ae4c2f64-e1f9-7754-4948-902f02ddd150'] = $option;
 
   $option = new stdClass();
@@ -4444,10 +4699,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -62;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ae8f6c82-72e4-53f4-6126-2904f7563408'] = $option;
 
   $option = new stdClass();
@@ -4459,6 +4715,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 15 år';
   $option->value = '(Fra 15 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['af10d043-4c89-5ef4-c15a-e04e5e2c82cd'] = $option;
 
   $option = new stdClass();
@@ -4470,6 +4727,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1987';
   $option->value = '1987';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['afabf934-cf42-9204-bd42-432092564006'] = $option;
 
   $option = new stdClass();
@@ -4481,6 +4739,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'pc-spil';
   $option->value = 'pc-spil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b07250fa-3e30-61c4-5956-51ef022564a9'] = $option;
 
   $option = new stdClass();
@@ -4488,10 +4747,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b0d00e57-8eb0-7c84-31b9-8ab9828d2e16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -82;
+  $option->sort = -81;
   $option->label = 'Klassiske symfonier';
   $option->value = 'klassiske symfonier';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b0d00e57-8eb0-7c84-31b9-8ab9828d2e16'] = $option;
 
   $option = new stdClass();
@@ -4503,6 +4763,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Faglitteratur';
   $option->value = 'nonfiktion';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b0d0b825-be32-1b24-c14b-2b1a3064da2d'] = $option;
 
   $option = new stdClass();
@@ -4514,6 +4775,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1938';
   $option->value = '1938';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b193e4cd-5858-1b24-1d30-fed0016b543f'] = $option;
 
   $option = new stdClass();
@@ -4525,6 +4787,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'russisk';
   $option->value = 'rus';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b1cea512-2100-7854-d1a6-c74e53c923ae'] = $option;
 
   $option = new stdClass();
@@ -4536,6 +4799,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'spanske og latinamerikanske spillefilm';
   $option->value = 'spansk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b2d97282-5b5e-11e4-198f-178112fdfbea'] = $option;
 
   $option = new stdClass();
@@ -4547,6 +4811,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'sportsspil';
   $option->value = 'sportsspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b3486c62-2bc3-7544-1196-26a387b6c0e1'] = $option;
 
   $option = new stdClass();
@@ -4558,18 +4823,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'lydbøger på nettet';
   $option->value = 'lydbog';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b34f8a5e-2c4e-3664-0128-434ec4777a9e'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'b39cabef-32ca-86d4-550e-80ca652b7e84';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -100;
-  $option->label = 'Alle';
-  $option->value = '';
-  $option->expand = '0';
-  $export['b39cabef-32ca-86d4-550e-80ca652b7e84'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4580,6 +4835,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'italiensk';
   $option->value = 'ita';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b406746a-4f49-5f44-adac-3777b1d68cf3'] = $option;
 
   $option = new stdClass();
@@ -4591,6 +4847,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'norsk';
   $option->value = 'nor';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b4e9afa1-3fc3-07d4-41e0-e2ee3f6175c3'] = $option;
 
   $option = new stdClass();
@@ -4602,6 +4859,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 9 år';
   $option->value = '(Fra 9 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b573ba7c-3c55-c334-89cd-ac91504efd68'] = $option;
 
   $option = new stdClass();
@@ -4613,6 +4871,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2011';
   $option->value = '2011';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b5838439-2576-8d74-ad7b-9b1b4d9e1464'] = $option;
 
   $option = new stdClass();
@@ -4620,10 +4879,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -73;
+  $option->sort = -71;
   $option->label = 'Progressiv rock';
   $option->value = 'progressiv rock';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b6cadeed-5e48-ef04-ad15-1c6f719013df'] = $option;
 
   $option = new stdClass();
@@ -4635,6 +4895,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Krimi';
   $option->value = 'krimi';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b716e371-671f-e364-2df6-bdc0220b1d65'] = $option;
 
   $option = new stdClass();
@@ -4646,6 +4907,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1915';
   $option->value = '1915';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b75a1834-35b8-ee44-7d83-325fb337b20d'] = $option;
 
   $option = new stdClass();
@@ -4657,6 +4919,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'farsi';
   $option->value = 'per';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b766ca42-7778-76a4-1d6f-1091c9d3a3db'] = $option;
 
   $option = new stdClass();
@@ -4668,6 +4931,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'svensk';
   $option->value = '(swe OR sve)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b8085e36-a519-6cf4-59e9-d8c015ab5569'] = $option;
 
   $option = new stdClass();
@@ -4679,6 +4943,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Thriller';
   $option->value = 'thriller';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b9241a28-bd21-2354-e1e9-653722dd5ab1'] = $option;
 
   $option = new stdClass();
@@ -4690,6 +4955,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1993';
   $option->value = '1993';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b94c3cbc-61c2-4f04-1525-27e7e85f05ea'] = $option;
 
   $option = new stdClass();
@@ -4701,6 +4967,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1902';
   $option->value = '1902';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['b9e532eb-5a2c-4f54-e115-606a174b5f7c'] = $option;
 
   $option = new stdClass();
@@ -4712,6 +4979,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 11 år';
   $option->value = '(Fra 11 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ba15d0ec-86ff-f754-69e7-12a652ae3a83'] = $option;
 
   $option = new stdClass();
@@ -4719,10 +4987,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
+  $option->sort = -96;
   $option->label = 'nintendo ds';
   $option->value = '(nintendo ds)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bc004777-0729-d974-c5c0-4ccf0b6881c2'] = $option;
 
   $option = new stdClass();
@@ -4734,6 +5003,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'ungarsk';
   $option->value = 'ung';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bc0d7849-9216-5904-95d1-3ed519d163f9'] = $option;
 
   $option = new stdClass();
@@ -4745,6 +5015,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1961';
   $option->value = '1961';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bc18d25c-00cc-6594-ad90-e38e22697efc'] = $option;
 
   $option = new stdClass();
@@ -4756,6 +5027,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1967';
   $option->value = '1967';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bc3d4e0e-6da5-62a4-7926-41ef7e3f0f82'] = $option;
 
   $option = new stdClass();
@@ -4767,6 +5039,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1966';
   $option->value = '1966';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bd551fb5-e1b7-6b34-f9c4-699e0d11a206'] = $option;
 
   $option = new stdClass();
@@ -4778,6 +5051,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'cd-rom - men ikke spil';
   $option->value = 'cd-rom';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['be868e4b-ccf5-3c84-5548-60aef49deeae'] = $option;
 
   $option = new stdClass();
@@ -4789,6 +5063,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1952';
   $option->value = '1952';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bee8ef28-bf7f-4ac4-4ddf-c0835d99c6b2'] = $option;
 
   $option = new stdClass();
@@ -4800,6 +5075,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bf053754-56a8-4754-751f-4383e9ee4714'] = $option;
 
   $option = new stdClass();
@@ -4811,6 +5087,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 15 år';
   $option->value = '(Fra 15 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bf34da08-c742-5a74-219b-cdb97867dc7b'] = $option;
 
   $option = new stdClass();
@@ -4822,6 +5099,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'racerspil';
   $option->value = 'racerspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['bf793eba-5623-32a4-2d53-e3beb1d40bdf'] = $option;
 
   $option = new stdClass();
@@ -4833,6 +5111,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'trykte bøger';
   $option->value = 'bog';
   $option->expand = '8c3bba75-59b9-6604-c597-e042f60e6a3b';
+  $option->is_disabled = FALSE;
   $export['bfd897e3-8379-11c4-a5eb-bf280d12ec0e'] = $option;
 
   $option = new stdClass();
@@ -4844,6 +5123,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'serbiske spillefilm';
   $option->value = 'serbisk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c046291c-1669-4584-8995-eb8c951a9392'] = $option;
 
   $option = new stdClass();
@@ -4855,6 +5135,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'dvd';
   $option->value = 'dvd';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c1254cd1-3b2f-da34-750e-af4862402978'] = $option;
 
   $option = new stdClass();
@@ -4866,6 +5147,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Road movies';
   $option->value = '(road movies)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c1f171a4-4f5f-4194-6522-dcd248294e5e'] = $option;
 
   $option = new stdClass();
@@ -4877,6 +5159,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'spansk';
   $option->value = '(spa OR esl)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c27fef62-9e01-ec54-e185-775d04fcb050'] = $option;
 
   $option = new stdClass();
@@ -4888,6 +5171,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'lydbøger - NOTA';
   $option->value = 'lydbog AND dkcclterm.fl=(nota OR blindebibliotek)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c305d70d-2803-d4f4-3d03-82161b29cfe8'] = $option;
 
   $option = new stdClass();
@@ -4899,6 +5183,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'playstation 3';
   $option->value = '(playstation 3)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c344326f-e7fb-c8d4-4136-c2c71895b5a9'] = $option;
 
   $option = new stdClass();
@@ -4910,6 +5195,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle typer musik';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c42f35ee-d57b-5dd4-8960-ea0a431f12b2'] = $option;
 
   $option = new stdClass();
@@ -4921,6 +5207,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'franske spillefilm';
   $option->value = 'fransk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c60ce4e1-aca1-4bb4-c9a4-62139d9a2612'] = $option;
 
   $option = new stdClass();
@@ -4932,6 +5219,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1983';
   $option->value = '1983';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c71b8854-ac72-cb94-659e-5a7944ebb7ef'] = $option;
 
   $option = new stdClass();
@@ -4943,6 +5231,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1937';
   $option->value = '1937';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c73d9689-9353-1044-e9eb-c8b24da5a5a1'] = $option;
 
   $option = new stdClass();
@@ -4954,6 +5243,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Børnefilm';
   $option->value = 'børnefilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c77767d1-cb8e-26d4-8d8f-6118a3426fce'] = $option;
 
   $option = new stdClass();
@@ -4965,6 +5255,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'noder';
   $option->value = 'node';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c8a69486-92ae-fdc4-758a-cbb68bc14e54'] = $option;
 
   $option = new stdClass();
@@ -4976,6 +5267,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 11 år';
   $option->value = '(Fra 11 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['c901dd30-d26f-19d4-21e7-8e9910574a5d'] = $option;
 
   $option = new stdClass();
@@ -4987,6 +5279,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tekster på nettet';
   $option->value = 'netdokument';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ca3b0cba-e9c6-5ee4-45b1-e67097be1ef5'] = $option;
 
   $option = new stdClass();
@@ -4998,6 +5291,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Country';
   $option->value = 'country';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ca5177cd-9784-68a4-7d84-9da83e4b757f'] = $option;
 
   $option = new stdClass();
@@ -5005,10 +5299,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
+  $option->sort = -63;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ca6790b9-1c58-a904-c170-e822ead44c13'] = $option;
 
   $option = new stdClass();
@@ -5020,6 +5315,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 17 år';
   $option->value = '(Fra 17 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ca712ece-da2f-ee54-8935-7921a030572a'] = $option;
 
   $option = new stdClass();
@@ -5031,6 +5327,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1976';
   $option->value = '1976';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cb07e197-7d9a-0c54-f5f2-7a2629747dae'] = $option;
 
   $option = new stdClass();
@@ -5042,6 +5339,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'fransk';
   $option->value = '(fra OR fra)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cb75ed6d-0a8d-e624-0d26-8929e18564d9'] = $option;
 
   $option = new stdClass();
@@ -5053,6 +5351,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 16 år';
   $option->value = '(Fra 16 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cca03716-e90e-b224-ed12-220ef3968cd7'] = $option;
 
   $option = new stdClass();
@@ -5064,6 +5363,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'PEGI aldersmærkning';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cd8beb6b-d0c4-9a94-cd4a-980cd2435a3e'] = $option;
 
   $option = new stdClass();
@@ -5075,6 +5375,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 14 år';
   $option->value = '(Fra 14 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cdb0db97-9176-59f4-51be-6f471c501808'] = $option;
 
   $option = new stdClass();
@@ -5086,6 +5387,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1907';
   $option->value = '1907';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cdebad84-7064-6704-c93d-8118ef2410ea'] = $option;
 
   $option = new stdClass();
@@ -5097,6 +5399,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1974';
   $option->value = '1974';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['cfc0bacb-030f-96a4-4dc9-e418861cd1b4'] = $option;
 
   $option = new stdClass();
@@ -5108,6 +5411,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2012';
   $option->value = '2012';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d0054bdd-7436-6e74-498f-36665612de0a'] = $option;
 
   $option = new stdClass();
@@ -5115,10 +5419,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd00650a6-5d24-9f84-6dc5-7bbfc95e7912';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -82;
   $option->label = 'Klassisk musik';
   $option->value = 'klassisk musik';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d00650a6-5d24-9f84-6dc5-7bbfc95e7912'] = $option;
 
   $option = new stdClass();
@@ -5130,6 +5435,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'avisartikler';
   $option->value = 'avisartikel';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d06faef6-4fd2-04a4-6993-685bb252bd9f'] = $option;
 
   $option = new stdClass();
@@ -5141,6 +5447,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1989';
   $option->value = '1989';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d1848562-f163-3c54-ad56-9459beb52f7d'] = $option;
 
   $option = new stdClass();
@@ -5152,6 +5459,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1935';
   $option->value = '1935';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d26d349d-4a68-5994-498e-e15d2a8fba28'] = $option;
 
   $option = new stdClass();
@@ -5163,6 +5471,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'spansk';
   $option->value = '(spa OR esl)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d2bff843-77c0-2b24-318d-692c9d6305d6'] = $option;
 
   $option = new stdClass();
@@ -5174,6 +5483,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'kassettebånd';
   $option->value = 'bånd';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d2c5643e-8407-2944-e91d-310fd3b90134'] = $option;
 
   $option = new stdClass();
@@ -5185,6 +5495,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1979';
   $option->value = '1979';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d305a53d-a9c6-c734-0976-635cb20ad18a'] = $option;
 
   $option = new stdClass();
@@ -5196,6 +5507,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1917';
   $option->value = '1917';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d394c9fa-6e58-86f4-095e-685f399f0ac1'] = $option;
 
   $option = new stdClass();
@@ -5207,6 +5519,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'hollandsk';
   $option->value = '(dut OR fle)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d3f4f0e3-cdd7-b174-59b2-96afb155a93a'] = $option;
 
   $option = new stdClass();
@@ -5218,6 +5531,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Tv-serier';
   $option->value = 'tvserier';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d4173a4c-3c03-2f94-dd81-56ff83728e1d'] = $option;
 
   $option = new stdClass();
@@ -5229,6 +5543,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2013';
   $option->value = '2013';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d4410e76-900e-4184-9546-7cdcaed93dbc'] = $option;
 
   $option = new stdClass();
@@ -5240,6 +5555,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1950';
   $option->value = '1950';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d483e140-8fca-e2f4-f55c-21ec78823c46'] = $option;
 
   $option = new stdClass();
@@ -5251,6 +5567,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'rollespil';
   $option->value = 'rollespil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d49139c8-4318-79c4-4999-f1c224e7a118'] = $option;
 
   $option = new stdClass();
@@ -5262,6 +5579,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'År efter';
   $option->value = 'year_gt';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d4b47388-b49e-47a4-21e8-9eb8c7519140'] = $option;
 
   $option = new stdClass();
@@ -5273,6 +5591,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1969';
   $option->value = '1969';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d54f4b58-0fe6-1914-2944-bca532f313ab'] = $option;
 
   $option = new stdClass();
@@ -5280,10 +5599,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -91;
+  $option->sort = -90;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d617e830-2cae-a074-4d03-63822deef1c8'] = $option;
 
   $option = new stdClass();
@@ -5295,6 +5615,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1940';
   $option->value = '1940';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d691ab0b-2e38-dde4-f1e5-9daa55afefee'] = $option;
 
   $option = new stdClass();
@@ -5306,6 +5627,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'actionspil';
   $option->value = 'actionspil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d6ae951f-d849-6024-15c7-5942b651091f'] = $option;
 
   $option = new stdClass();
@@ -5317,6 +5639,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'russisk';
   $option->value = 'rus';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d6d472cc-889e-9c44-813b-1762db4053df'] = $option;
 
   $option = new stdClass();
@@ -5328,6 +5651,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'italiensk';
   $option->value = 'ita';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d7a82e8c-d8db-7d34-5d45-773837ceda52'] = $option;
 
   $option = new stdClass();
@@ -5339,6 +5663,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 7 år';
   $option->value = '(Fra 7 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d8b75efd-2948-7664-0dee-2709db4ed51a'] = $option;
 
   $option = new stdClass();
@@ -5350,6 +5675,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'italiensk';
   $option->value = 'ita';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d93646ef-5f1d-2494-dd2a-5cb5616161b0'] = $option;
 
   $option = new stdClass();
@@ -5361,6 +5687,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1910';
   $option->value = '1910';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['d993f485-cdf7-3324-199b-70c70b1ad8e2'] = $option;
 
   $option = new stdClass();
@@ -5372,6 +5699,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2007';
   $option->value = '2007';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['da0cb37a-44b1-6a44-21b2-78d8f38f986e'] = $option;
 
   $option = new stdClass();
@@ -5383,6 +5711,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['daa6ccc2-6fb9-8434-016b-76182091b65a'] = $option;
 
   $option = new stdClass();
@@ -5394,6 +5723,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'vietnamesisk';
   $option->value = 'vie';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dd1dd4d0-869e-5554-4d1a-5c2d16193d9f'] = $option;
 
   $option = new stdClass();
@@ -5405,6 +5735,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'e-bøger';
   $option->value = 'ebog';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dd426e9b-de57-a084-119c-6f21259ee71f'] = $option;
 
   $option = new stdClass();
@@ -5416,6 +5747,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'minispil';
   $option->value = 'minispil';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dd713554-009a-f8a4-b53d-0d8d2be0d21a'] = $option;
 
   $option = new stdClass();
@@ -5427,6 +5759,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Alle platforme';
   $option->value = '';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ddd6ce1d-4389-9994-b1bb-6315da843d89'] = $option;
 
   $option = new stdClass();
@@ -5438,6 +5771,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tyrkisk';
   $option->value = 'tur';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['de1ec428-a519-9384-95b4-926c8b511c87'] = $option;
 
   $option = new stdClass();
@@ -5449,6 +5783,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'lydbøger';
   $option->value = 'lydbog';
   $option->expand = 'b056401f-4ff0-a654-55b8-835ad50af150';
+  $option->is_disabled = FALSE;
   $export['de9e9d31-c4b4-6da4-35fc-b410171b0144'] = $option;
 
   $option = new stdClass();
@@ -5460,6 +5795,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Dukkefilm';
   $option->value = 'dukkefilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dedf91bd-47b3-3964-1d60-9c9f31d41089'] = $option;
 
   $option = new stdClass();
@@ -5471,6 +5807,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'cd musik';
   $option->value = '(cd (musik))';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dee76133-eebc-1384-7501-d9955a2b55da'] = $option;
 
   $option = new stdClass();
@@ -5482,6 +5819,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 9 år';
   $option->value = '(Fra 9 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['df34e023-e678-47d4-6dba-a1ffae5f7111'] = $option;
 
   $option = new stdClass();
@@ -5489,10 +5827,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dfb1e1c3-6a82-abd4-89ef-fbba9289fdce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -98;
+  $option->sort = -99;
   $option->label = 'Blues';
   $option->value = 'blues';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['dfb1e1c3-6a82-abd4-89ef-fbba9289fdce'] = $option;
 
   $option = new stdClass();
@@ -5504,6 +5843,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tysk';
   $option->value = '(ger OR deu)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e0202101-6715-9ab4-9959-9b31ac45a183'] = $option;
 
   $option = new stdClass();
@@ -5515,6 +5855,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1943';
   $option->value = '1943';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e0f2ed1d-8b50-c164-9906-46c502c759ef'] = $option;
 
   $option = new stdClass();
@@ -5526,6 +5867,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'dansk';
   $option->value = 'dan';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e11c22da-d437-6984-4155-3855b6b28a05'] = $option;
 
   $option = new stdClass();
@@ -5537,6 +5879,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'bosnisk';
   $option->value = 'bos';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e1b4aa08-4fa3-62a4-e1e4-b5152e1bbb94'] = $option;
 
   $option = new stdClass();
@@ -5548,6 +5891,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'persisk';
   $option->value = 'per';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e20787ad-330c-9044-b16c-3968c2dd2af8'] = $option;
 
   $option = new stdClass();
@@ -5559,6 +5903,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Børn';
   $option->value = 'børnematerialer';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e30efcf2-705c-29f4-d19c-ff620a8fa142'] = $option;
 
   $option = new stdClass();
@@ -5570,6 +5915,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 18 år';
   $option->value = '(Fra 18 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e3dfc2eb-c2f1-fc04-2966-07fd5c8a2aa6'] = $option;
 
   $option = new stdClass();
@@ -5581,6 +5927,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Krigsfilm';
   $option->value = 'krigsfilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e40d3af1-5b81-40b4-b15e-a65194d28f10'] = $option;
 
   $option = new stdClass();
@@ -5592,6 +5939,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'dansk';
   $option->value = 'dan';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e41da0d5-7d4a-f6f4-b55f-a7d286963ac0'] = $option;
 
   $option = new stdClass();
@@ -5603,6 +5951,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'film';
   $option->value = 'film';
   $option->expand = 'f79c6d0f-effe-6944-7951-211d70e904d7';
+  $option->is_disabled = FALSE;
   $export['e43b1e46-554b-b494-61ac-9ff35f97d543'] = $option;
 
   $option = new stdClass();
@@ -5614,6 +5963,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'cd - audio';
   $option->value = '(cd)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e43fa7cf-08e4-c834-29ac-3b3a0fc875be'] = $option;
 
   $option = new stdClass();
@@ -5625,6 +5975,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1968';
   $option->value = '1968';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e555a481-fd49-9694-0105-52d5c18bb961'] = $option;
 
   $option = new stdClass();
@@ -5636,6 +5987,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'aviser og tidsskrifter';
   $option->value = '(avis OR tidsskrift)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e5c230e1-770f-5aa4-65dd-c1db58c60c32'] = $option;
 
   $option = new stdClass();
@@ -5647,6 +5999,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 5 år';
   $option->value = '(Fra 5 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e7bfc2ae-cc0d-2d04-7955-d82021a5f2e5'] = $option;
 
   $option = new stdClass();
@@ -5658,6 +6011,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2010';
   $option->value = '2010';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['e84335f1-6280-19b4-fdbd-be6cb5a780d0'] = $option;
 
   $option = new stdClass();
@@ -5669,6 +6023,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1908';
   $option->value = '1908';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ea3f71aa-56ab-9d44-d10a-b8494727db4a'] = $option;
 
   $option = new stdClass();
@@ -5680,6 +6035,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 3 år';
   $option->value = '(Fra 3 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ecd70480-9e1a-e444-f158-2e200dcdf86e'] = $option;
 
   $option = new stdClass();
@@ -5691,6 +6047,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1927';
   $option->value = '1927';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ecf90a3c-4ebc-eee4-05f6-e8d55bb4b068'] = $option;
 
   $option = new stdClass();
@@ -5702,6 +6059,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tyrkiske spillefilm';
   $option->value = 'tyrkisk';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ed56dda3-4c0b-8c64-65a9-01a041863113'] = $option;
 
   $option = new stdClass();
@@ -5713,6 +6071,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'islandsk';
   $option->value = '(ice OR isl)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ee176ca0-7de0-09e4-f5ad-6a3cd43d156e'] = $option;
 
   $option = new stdClass();
@@ -5724,6 +6083,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'norsk';
   $option->value = 'nor';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ee309163-b72e-02a4-5d53-03271178944e'] = $option;
 
   $option = new stdClass();
@@ -5735,6 +6095,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1905';
   $option->value = '1905';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['eecf27fe-2015-a724-357d-3a6da53bc303'] = $option;
 
   $option = new stdClass();
@@ -5746,6 +6107,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Adventurefilm';
   $option->value = 'adventurefilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['eef9cd90-c843-4494-8574-d092a177fa43'] = $option;
 
   $option = new stdClass();
@@ -5757,6 +6119,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'grønlandsk';
   $option->value = 'kal';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ef468366-590a-94b4-e963-98c373ca4c6f'] = $option;
 
   $option = new stdClass();
@@ -5768,6 +6131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1904';
   $option->value = '1904';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['efb629c5-89be-4f24-e17d-974356a844c8'] = $option;
 
   $option = new stdClass();
@@ -5779,6 +6143,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1964';
   $option->value = '1964';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f022a03b-34c6-8b84-bd12-5372c5cfab36'] = $option;
 
   $option = new stdClass();
@@ -5786,10 +6151,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -67;
+  $option->sort = -64;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f03f34fb-4d58-d894-7190-75b10fc32917'] = $option;
 
   $option = new stdClass();
@@ -5801,6 +6167,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1988';
   $option->value = '1988';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f21fdbac-0e6a-f794-9516-53c3708bcdc0'] = $option;
 
   $option = new stdClass();
@@ -5812,6 +6179,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1996';
   $option->value = '1996';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f37e1d88-c442-81d4-8554-b21bec3858b9'] = $option;
 
   $option = new stdClass();
@@ -5819,10 +6187,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f3b8c354-2f94-1c54-5131-88dcefcd9b44';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -74;
+  $option->sort = -73;
   $option->label = 'Pop';
   $option->value = 'pop';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f3b8c354-2f94-1c54-5131-88dcefcd9b44'] = $option;
 
   $option = new stdClass();
@@ -5834,6 +6203,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'e-materialer';
   $option->value = 'netdokument';
   $option->expand = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
+  $option->is_disabled = FALSE;
   $export['f6ce0727-9bb5-de84-f5a7-3a210c9ef9de'] = $option;
 
   $option = new stdClass();
@@ -5845,6 +6215,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tysk';
   $option->value = '(ger OR deu)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f7753574-f55f-cbb4-253e-5f60c9be868a'] = $option;
 
   $option = new stdClass();
@@ -5856,6 +6227,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Gyserfilm';
   $option->value = 'gyserfilm';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f7ad177a-625c-52c4-ad82-57b45445cfcc'] = $option;
 
   $option = new stdClass();
@@ -5867,6 +6239,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'fra NOTA';
   $option->value = 'lydbog AND dkcclterm.fl=(nota OR blindebibliotek)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f8859abd-84a7-1e74-ad35-596e1731acf0'] = $option;
 
   $option = new stdClass();
@@ -5878,6 +6251,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1932';
   $option->value = '1932';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f8fa84bc-e82e-58c4-4d6f-a5575d51b05c'] = $option;
 
   $option = new stdClass();
@@ -5889,6 +6263,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'spansk';
   $option->value = 'spa';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['f92de73b-8c43-aba4-edf1-52b336f0e1c2'] = $option;
 
   $option = new stdClass();
@@ -5900,6 +6275,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'video';
   $option->value = 'video';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fa52fa54-1334-7014-313e-17fce62dc6f1'] = $option;
 
   $option = new stdClass();
@@ -5911,6 +6287,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 4 år';
   $option->value = '(Fra 4 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fa74e669-6750-e144-d183-d9192df30082'] = $option;
 
   $option = new stdClass();
@@ -5918,10 +6295,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -93;
   $option->label = 'xbox';
   $option->value = 'xbox';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fab66772-bda7-3ab4-4904-f0d0f91a2891'] = $option;
 
   $option = new stdClass();
@@ -5929,10 +6307,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -80;
+  $option->sort = -79;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fc0fd781-c3b8-8864-b527-b73bb75359af'] = $option;
 
   $option = new stdClass();
@@ -5944,6 +6323,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 6 år';
   $option->value = '(Fra 6 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fc2162ad-9939-f554-41ca-693e2b4f5cd4'] = $option;
 
   $option = new stdClass();
@@ -5955,6 +6335,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '2005';
   $option->value = '2005';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fd0e7f20-8ed0-f5d4-89f0-a7d23d48af33'] = $option;
 
   $option = new stdClass();
@@ -5966,6 +6347,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'film på nettet';
   $option->value = 'film';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fd68aaf3-4782-9aa4-e178-1ce51442eaa5'] = $option;
 
   $option = new stdClass();
@@ -5977,6 +6359,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'islandsk';
   $option->value = '(ice OR isl)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fd6b4c9d-6d2d-b414-d9e0-5c0bd1263e65'] = $option;
 
   $option = new stdClass();
@@ -5988,6 +6371,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 16 år';
   $option->value = '(Fra 16 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fdab4ace-6564-6494-1512-4505c7e1ea4a'] = $option;
 
   $option = new stdClass();
@@ -5999,6 +6383,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1942';
   $option->value = '1942';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fe627c1e-f85d-5204-e151-019941198851'] = $option;
 
   $option = new stdClass();
@@ -6010,6 +6395,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Fra 8 år';
   $option->value = '(Fra 8 år)';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['fe67f3b8-c3aa-4bf4-edc3-42338575feda'] = $option;
 
   $option = new stdClass();
@@ -6021,6 +6407,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = '1930';
   $option->value = '1930';
   $option->expand = '0';
+  $option->is_disabled = FALSE;
   $export['ff464b3d-ef03-3854-e11e-574c70138f9c'] = $option;
 
   return $export;
@@ -6042,6 +6429,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.default';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['0d6ffeb4-4c40-1bc4-0d0b-4c2a8d2465b5'] = $value;
 
   $value = new stdClass();
@@ -6054,6 +6442,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.fo';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['1150ebb6-8e38-27d4-b929-840f71d17137'] = $value;
 
   $value = new stdClass();
@@ -6066,6 +6455,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.language';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['12a1e89e-1274-a394-a12a-588d3abde6e9'] = $value;
 
   $value = new stdClass();
@@ -6078,6 +6468,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.literaryForm';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['1be4292d-14b0-f334-a1af-e1e349550f3c'] = $value;
 
   $value = new stdClass();
@@ -6090,6 +6481,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['1c0066cf-f6cb-8694-b102-24a394e912d5'] = $value;
 
   $value = new stdClass();
@@ -6102,6 +6494,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.creator';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['28c5d5d3-761a-5e24-fdef-88e47f135dd1'] = $value;
 
   $value = new stdClass();
@@ -6114,6 +6507,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['3021bc15-1305-10f4-2112-d08af39718bf'] = $value;
 
   $value = new stdClass();
@@ -6126,6 +6520,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.audience';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['3389bb76-ad3a-5c94-81de-2bfc154f8298'] = $value;
 
   $value = new stdClass();
@@ -6138,6 +6533,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['3c0f6ff4-63f2-8a54-4500-6198904477ba'] = $value;
 
   $value = new stdClass();
@@ -6150,6 +6546,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['479cc87e-3ff3-d124-5567-e03e00ef3169'] = $value;
 
   $value = new stdClass();
@@ -6162,6 +6559,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.language';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['4ed2c5d5-656b-be14-b55f-fbc7c1aff047'] = $value;
 
   $value = new stdClass();
@@ -6174,6 +6572,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['604357bb-a73b-65c4-11d8-cf798b7eabe1'] = $value;
 
   $value = new stdClass();
@@ -6186,6 +6585,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.audience';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['6918cf0f-f206-d494-f9da-32aa0d945ab9'] = $value;
 
   $value = new stdClass();
@@ -6195,9 +6595,10 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'musikophav';
   $value->sort = -71;
   $value->value_type = 'textfield';
-  $value->search_code = 'dkcclterm.po';
+  $value->search_code = 'dkcclterm.pe';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['6c8f510b-73e1-9d84-410e-7750c6eb5581'] = $value;
 
   $value = new stdClass();
@@ -6210,6 +6611,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.ht';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['70391b7f-5ccc-e634-657a-5a51ef315920'] = $value;
 
   $value = new stdClass();
@@ -6222,6 +6624,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.audience';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['7b0919f2-915d-0484-6da0-a54570056151'] = $value;
 
   $value = new stdClass();
@@ -6234,6 +6637,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['819ed112-ec85-8f64-2573-a5a88f7ac3d9'] = $value;
 
   $value = new stdClass();
@@ -6246,6 +6650,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['8c3bba75-59b9-6604-c597-e042f60e6a3b'] = $value;
 
   $value = new stdClass();
@@ -6258,6 +6663,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.nationality';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['8e7bda97-5430-9774-e54c-4d2b0005a06b'] = $value;
 
   $value = new stdClass();
@@ -6270,6 +6676,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.em';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['90655745-f61d-ac84-c54e-d7907d159271'] = $value;
 
   $value = new stdClass();
@@ -6282,6 +6689,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.language';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['95788824-6d40-ebd4-8912-ce2194f48d62'] = $value;
 
   $value = new stdClass();
@@ -6294,6 +6702,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.fo';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['a0ba26ef-efb3-1d14-f567-3ae2e36b3bd8'] = $value;
 
   $value = new stdClass();
@@ -6306,6 +6715,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = 'lydbog';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['b056401f-4ff0-a654-55b8-835ad50af150'] = $value;
 
   $value = new stdClass();
@@ -6318,6 +6728,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.fo';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['c62bd379-2702-ff84-6573-85e7627d257d'] = $value;
 
   $value = new stdClass();
@@ -6330,6 +6741,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.audience';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['ceae1f55-323f-9774-250b-4b39f9b0bf91'] = $value;
 
   $value = new stdClass();
@@ -6342,6 +6754,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.ti';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['d119b2ef-6c7d-0c04-a105-f1628434e336'] = $value;
 
   $value = new stdClass();
@@ -6354,6 +6767,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.category';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['d5bd0d72-c9ca-8e54-41a1-05d9b65cea77'] = $value;
 
   $value = new stdClass();
@@ -6366,6 +6780,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['da48923f-e5ba-5ef4-ad4f-c8aab6767a83'] = $value;
 
   $value = new stdClass();
@@ -6378,6 +6793,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.vp';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['dbbf0b74-887b-ea84-99e3-45edc72bdae7'] = $value;
 
   $value = new stdClass();
@@ -6390,6 +6806,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = 'bog';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['e1bf5870-5dec-51d4-a968-5a9c01b08d89'] = $value;
 
   $value = new stdClass();
@@ -6402,6 +6819,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['e23b14bf-2112-19c4-41a7-64c531a76301'] = $value;
 
   $value = new stdClass();
@@ -6414,6 +6832,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.genre';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['e8258795-3bbe-5e34-fda2-04a8b420d93f'] = $value;
 
   $value = new stdClass();
@@ -6426,6 +6845,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclterm.ti';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['ea7df21c-2bab-3874-15a9-bc8e4afed0d9'] = $value;
 
   $value = new stdClass();
@@ -6438,6 +6858,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.type';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['f79c6d0f-effe-6944-7951-211d70e904d7'] = $value;
 
   $value = new stdClass();
@@ -6450,6 +6871,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'term.genre';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['f81d0c50-5f4b-d1f4-f11f-c000c901c841'] = $value;
 
   $value = new stdClass();
@@ -6462,6 +6884,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->search_code = 'dkcclphrase.lem';
   $value->default_value = '';
   $value->expand = 0;
+  $value->is_disabled = FALSE;
   $export['fbeb5556-778a-ab64-2522-89eeef2793eb'] = $value;
 
   return $export;
