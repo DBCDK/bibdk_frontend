@@ -104,6 +104,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_search_region',
     'bibdk_custom_search_feature',
     'bibdk_field_settings',
+    'bibliotek_dk_lightbox2_settings',
     //Content
     'bibdk_article',
   );
