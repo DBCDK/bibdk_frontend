@@ -322,7 +322,7 @@ function bibliotek_dk_lightbox2_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'lightbox2_top_position';
-  $strongarm->value = '';
+  $strongarm->value = '10';
   $export['lightbox2_top_position'] = $strongarm;
 
   $strongarm = new stdClass();

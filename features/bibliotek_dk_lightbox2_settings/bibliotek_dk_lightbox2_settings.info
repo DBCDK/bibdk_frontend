@@ -1,7 +1,7 @@
 name = Bibliotek.dk lightbox2 settings
 description = Settings for modal windows, and other lightbox2 settings
 core = 7.x
-package = Features
+package = Bibliotek.dk
 version = 7.x-1.0
 project = bibliotek_dk_lightbox2_settings
 dependencies[] = ctools
