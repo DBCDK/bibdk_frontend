@@ -144,7 +144,6 @@ features[field][] = bibdkManifestationVolume-bibdkManifestationVolume-bibdk_mani
 features[field][] = bibdkManifestationVolume-bibdkManifestationVolume-bibdk_volume_creators
 features[field][] = bibdkManifestationVolume-bibdkManifestationVolume-bibdk_volume_title
 features[field][] = bibdkSubwork-bibdkSubwork-bibdk_sub_reservation_button
-features[field][] = bibdkWorkEntity-bibdkWorkEntity-bibdk_adhl_info
 features[field][] = bibdkWorkEntity-bibdkWorkEntity-bibdk_furthersearch_options
 features[field][] = bibdkWorkEntity-bibdkWorkEntity-ting_cover_work
 features[field][] = bibdkWorkEntity-bibdkWorkEntity-ting_openformat_work_abstract
