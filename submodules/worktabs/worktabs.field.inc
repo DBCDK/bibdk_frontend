@@ -44,7 +44,7 @@ function worktabs_field_load($entity_type, $entities, $field, $instances, $langc
  * Implements hook_field_formatter_view().
  *
  * @param String    $entity_type
- * @param bibdkWork $entity
+ * @param BibdkWork $entity
  * @param array     $field
  * @param array     $instance
  * @param String    $langcode
