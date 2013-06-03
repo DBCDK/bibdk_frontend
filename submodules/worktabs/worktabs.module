@@ -119,7 +119,7 @@ function worktabs_get_outer() {
     'reviews' => array(
       'title' => t('Reviews'),
       'content' => array(),
-      'class' => 'inactive',
+      'class' => '',
       'active' => 'visuallyhidden',
     ),
   );
