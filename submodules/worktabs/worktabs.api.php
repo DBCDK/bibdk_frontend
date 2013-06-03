@@ -25,7 +25,7 @@
  *
  *
  * @param array $tabs Array describing the maintabs
- * @param bibdkWork $entity
+ * @param BibdkWork $entity
  *
  * @return array
  *
