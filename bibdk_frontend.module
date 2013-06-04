@@ -26,7 +26,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
   }
   elseif( !isset($_POST['form_id'])  ){
     drupal_goto('');
-  }  
+  }
   // do NOT redirect on password reset
   elseif ( !isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset' )  {
     // go to frontpage on normal login
@@ -155,5 +155,37 @@ function bibdk_frontend_menu() {
   }
 
   return $items;
+}
+
+
+
+/**
+ * Implementation of hook_form_alter().
+ *
+ * Update the page action : add destination parameter in order to return to referrer.
+ *
+ * @param &$form
+ * @param $form_state
+ * @param $form_id
+ * @return
+ *   Return the structure of the form.
+ */
+function bibdk_frontend_form_user_login_alter(&$form, $form_state, $form_id) {
+  $form['#action'] = url('user/login', array('query' => array('destination' => ( isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '' )));
+}
+function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_id) {
+  $form['#action'] = url('user/login', array('query' => array('destination' =>  ( isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '' )));
+}
+
+
+/**
+ * Implements hook_exit().
+ *
+ * Saves the path a user visited on page exit.
+ */
+function bibdk_frontend_exit() {
+  if ( drupal_get_path_alias() != 'user/login' ) {
+    $_SESSION['referrer'] = drupal_get_path_alias();
+  }
 }
 
