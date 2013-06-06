@@ -184,8 +184,8 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
  * Saves the path a user visited on page exit.
  */
 function bibdk_frontend_exit() {
-  if ( drupal_get_path_alias() != 'user/login' ) {
-    $_SESSION['referrer'] = drupal_get_path_alias();
+  $path = drupal_get_path_alias();
+  if ( strpos($path, 'search/') === 0 || ( strpos($path, 'user/') === 0 && $path != 'user/login' ) ) {
+      $_SESSION['referrer'] = drupal_get_path_alias();
   }
 }
-
