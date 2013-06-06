@@ -18,7 +18,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
     // remind user to add favourites
     drupal_set_message(_bibdk_frontend_remember_favourites_message());
     if (module_exists('bibdk_mypage')) {
-      drupal_goto('/user/' . $account->uid . '/edit/bibdk_mypage');
+      drupal_goto('user/' . $account->uid . '/edit/bibdk_mypage');
     }
     else {
       drupal_goto('user');
