@@ -71,6 +71,7 @@ function _bibdk_frontend_set_variables() {
   variable_set('page_manager_search_disabled_ting_openformat', 0);
   // Set front page.
   variable_set('site_frontpage', 'bibdk_frontpage');
+  variable_set('bibdk_behavoir_url', 'http://guesstimate.dbc.dk/~mmj/playground/test_log_ws.php');
 }
 
 /** \brief default cache setup
