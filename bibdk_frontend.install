@@ -105,6 +105,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_custom_search_feature',
     'bibdk_field_settings',
     'bibliotek_dk_lightbox2_settings',
+    'bibliotek_dk_usersettings',
     //Content
     'bibdk_article',
   );
@@ -145,4 +146,11 @@ function bibdk_frontend_update_7006(&$sandbox) {
  */
 function bibdk_frontend_update_7007(&$sandbox) {
   module_enable(array('bibdk_field_settings'));
+}
+
+/**
+ * Enable feature bibliotek_dk_usersettings
+ */
+function bibdk_frontend_update_7008(&$sandbox) {
+  module_enable(array('bibliotek_dk_usersettings'));
 }
