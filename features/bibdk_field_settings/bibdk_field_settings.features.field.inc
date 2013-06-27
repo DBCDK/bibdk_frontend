@@ -4207,7 +4207,7 @@ function bibdk_field_settings_field_default_fields() {
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
-      'module' => 'ting_covers',
+      'module' => 'ting_covers_field',
       'settings' => array(),
       'storage' => array(
         'active' => '1',
@@ -8096,7 +8096,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 33,
+          'weight' => '33',
         ),
         'full' => array(
           'label' => 'above',
@@ -8125,7 +8125,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 33,
+        'weight' => '33',
       ),
     ),
   );
@@ -8164,7 +8164,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 34,
+          'weight' => '34',
         ),
         'full' => array(
           'label' => 'above',
@@ -8193,7 +8193,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 34,
+        'weight' => '34',
       ),
     ),
   );
@@ -8232,7 +8232,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 35,
+          'weight' => '35',
         ),
         'full' => array(
           'label' => 'above',
@@ -8261,7 +8261,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 35,
+        'weight' => '35',
       ),
     ),
   );
@@ -8436,7 +8436,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'full' => array(
           'label' => 'above',
@@ -8465,7 +8465,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 0,
+        'weight' => '0',
       ),
     ),
   );
@@ -8572,7 +8572,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 32,
+          'weight' => '32',
         ),
         'full' => array(
           'label' => 'above',
@@ -8601,7 +8601,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 32,
+        'weight' => '32',
       ),
     ),
   );
@@ -9524,7 +9524,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => 31,
+          'weight' => '31',
         ),
         'full' => array(
           'label' => 'above',
@@ -9553,7 +9553,7 @@ function bibdk_field_settings_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => 31,
+        'weight' => '31',
       ),
     ),
   );
@@ -9768,7 +9768,7 @@ function bibdk_field_settings_field_default_fields() {
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
-      'module' => 'ting_covers',
+      'module' => 'ting_covers_field',
       'settings' => array(),
       'storage' => array(
         'active' => '1',
@@ -9861,7 +9861,7 @@ function bibdk_field_settings_field_default_fields() {
           'module' => 'ting_openformat',
           'settings' => array(),
           'type' => 'ting_openformat_default_formatter',
-          'weight' => '1',
+          'weight' => 1,
         ),
         'full' => array(
           'label' => 'above',
@@ -10028,7 +10028,6 @@ function bibdk_field_settings_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('ADHL');
   t('Access Information');
   t('Actor Note');
   t('Alternative title');
