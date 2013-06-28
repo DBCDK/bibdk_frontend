@@ -31,7 +31,7 @@ $handler->conf = array(
   'no_blocks' => 0,
   'pipeline' => 'standard',
   'body_classes_to_remove' => '',
-  'body_classes_to_add' => 'testhest',
+  'body_classes_to_add' => '',
   'css_id' => '',
   'css' => '',
   'contexts' => array(),
@@ -49,7 +49,7 @@ $display->panel_settings = array(
   ),
 );
 $display->cache = array();
-$display->title = 'Information';
+$display->title = 'bibliotek.dk';
 $display->content = array();
 $display->panels = array();
   $pane = new stdClass();
