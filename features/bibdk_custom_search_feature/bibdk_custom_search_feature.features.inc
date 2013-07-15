@@ -6840,7 +6840,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'år, operator';
   $value->sort = -96;
   $value->value_type = 'select';
-  $value->search_code = '';
+  $value->search_code = 'year.op';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
@@ -7113,7 +7113,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'år, årstal';
   $value->sort = -95;
   $value->value_type = 'select';
-  $value->search_code = '';
+  $value->search_code = 'year.value';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
