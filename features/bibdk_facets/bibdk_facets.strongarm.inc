@@ -66,14 +66,24 @@ function bibdk_facets_strongarm() {
       'weight' => '-1',
     ),
     10 => array(
-      'name' => 'facet.let',
-      'title' => 'Let-tal',
-      'weight' => '0',
+      'name' => 'facet.titleSeries',
+      'title' => 'Serietitel',
+      'weight' => '1',
     ),
     11 => array(
+      'name' => 'facet.let',
+      'title' => 'Let-tal',
+      'weight' => '5',
+    ),
+    12 => array(
       'name' => 'facet.lix',
       'title' => 'Lix-tal',
-      'weight' => '1',
+      'weight' => '6',
+    ),
+    13 => array(
+      'name' => 'facet.partOf',
+      'title' => 'Tidsskrift, avis eller årbog',
+      'weight' => '10',
     ),
   );
   $export['ding_facetbrowser_facets'] = $strongarm;
