@@ -1,5 +1,5 @@
 name = Bibliotek.dk - search controls
-description = Manage sort, size & format controls
+description = Feature : Parameters for sort, size & format controls
 core = 7.x
 package = Bibdk features
 php = 5.2.4
