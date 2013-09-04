@@ -26,7 +26,7 @@ function bibdk_language_settings_locale_default_languages() {
   // Exported language: en.
   $languages['en'] = array(
     'language' => 'en',
-    'name' => 'English',
+    'name' => 'English (Drupal)',
     'native' => 'English',
     'direction' => '0',
     'enabled' => '0',
