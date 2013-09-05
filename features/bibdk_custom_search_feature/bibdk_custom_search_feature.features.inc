@@ -4785,7 +4785,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -98;
   $option->label = 'bøger';
-  $option->value = '(bog OR term.workType=literature)';
+  $option->value = 'bog OR term.workType=literature';
   $option->expand = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->is_disabled = FALSE;
   $export['a961f2fc-d0d7-af14-2988-e53f804724c5'] = $option;
