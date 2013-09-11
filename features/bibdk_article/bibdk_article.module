@@ -32,7 +32,7 @@ function bibdk_article_block_view($delta = '') {
         if ($articles = bibdk_article_get_rendered_articles()) {
           $block['content'] = array(
             '#theme' => 'bibdk_frontpage_4_columns',
-            '#articles' => $articles,
+            '#items' => $articles,
           );
         }
         else {
@@ -54,7 +54,6 @@ function bibdk_article_get_rendered_articles() {
   $rendered_articles = array();
   foreach ($article_values as $article_value) {
     $article = bibdk_article_set_column($article_value);
-    dpm($article);
     $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget',current($article));
   }
   return $rendered_articles;
