@@ -1,15 +1,16 @@
 <?php
+
 /**
  * @file
  * Code for the bibdk_article feature.
  */
-
 include_once 'bibdk_article.features.inc';
 
 /*
  * Implements hook_block_info
  */
-function bibdk_article_block_info(){
+
+function bibdk_article_block_info() {
 
   $blocks['bibdk_articles'] = array(
     'info' => t('Bibdk Article Frontpage teaser'),
@@ -21,8 +22,9 @@ function bibdk_article_block_info(){
 /*
  * Implements hook_block_view
  */
-function bibdk_article_block_view($delta = ''){
-   $block = array();
+
+function bibdk_article_block_view($delta = '') {
+  $block = array();
   switch ($delta) {
     case 'bibdk_articles':
       if (user_access('access content')) {
@@ -47,7 +49,9 @@ function bibdk_article_block_view($delta = ''){
 /*
  * Implements hook_block_configure
  */
-function bibdk_article_block_configure($delta = ''){
+
+function bibdk_article_block_configure($delta = '') {
+  
 }
 
 /*
@@ -74,10 +78,10 @@ function bibdk_article_theme() {
       'template' => 'theme/bibdk-articles-block-widget'
     ),
     'bibdk_frontpage_4_columns' => array(
-       'variables' => array(
+      'variables' => array(
         'title' => '',
         'items' => array(),
-        ), 
+      ),
       'template' => 'theme/bibdk_frontpage_4_columns',
     ),
   );
@@ -87,55 +91,46 @@ function bibdk_article_theme() {
 /*
  * Fetch nodes of type bibdk_article from db
  */
-function bibdk_article_get_block_posts(){
+
+function bibdk_article_get_article_values() {
   //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
   $columns = array();
   $query = new EntityFieldQuery();
 
   $query
-    ->entityCondition('entity_type', 'node', '=')
-    ->propertyCondition('type', 'bibdk_article', '=')
-    ->propertyCondition('status', '1', '=');
+      ->entityCondition('entity_type', 'node', '=')
+      ->propertyCondition('type', 'bibdk_article', '=')
+      ->propertyCondition('status', '1', '=');
 
   $result = $query->execute();
-  
+
   if (!isset($result['node']))
     return;
-  
-  $ids = array();
-  if ( isset($result['node']) ) {
-    foreach($result['node'] as $record) {
-      $ids[] = $record->nid;
-    }
-  }
-  $articles = entity_load('node', $ids);
-  foreach($articles as $article){
-    $placement = isset($article->field_layout_placement['und'][0])? $article->field_layout_placement['und'][0]['value'] : 1;
-    $classes = bibdk_article_get_classes($article->field_layout_columns['und'][0]['value'], $article->field_layout_rows['und'][0]['value']);
-    $article_render_array = array(
-      'title' => $article->title,
-      'body' => isset($article->body['und'][0])? $article->body['und'][0]['value'] : "",
-      'link' => isset($article->field_bibdk_article_link['und'][0]['value']) ? $article->field_bibdk_article_link['und'][0]['value'] : "",
-      'link_text' => isset($article->field_bibdk_article_link_text['und'][0])? $article->field_bibdk_article_link_text['und'][0]['value'] : t("Read more"),
-      'class' => $classes['height'],
-      'rows' =>  $article->field_layout_rows['und'][0]['value'],
-    );
-    if (empty($columns[$placement]['width']))
-      $columns[$placement]['width'] = $classes['width'];
 
-    $columns[$placement]['articles'][] = theme('bibdk_articles_block_widget', $article_render_array);
+  $articles = node_load_multiple(array_keys($result['node']));
+  $article_fields = field_info_instances('node', 'bibdk_article');
+
+  $values = array();
+  foreach ($articles as $article) {
+    $value = array();
+    foreach ($article_fields as $name => $field) {
+      $value[$name] = field_get_items('node', $article, $name);
+      $value['title'] = $article->title;
+    }
+    $values[] = $value;
   }
-  ksort($columns);
-  return $columns;
+
+  return $values;
 }
 
 /*
  * Add necessary classes for bibdk_theme
  */
-function bibdk_article_get_classes($columns, $rows){
+
+function bibdk_article_get_classes($columns, $rows) {
   $classes = array(
     'width' => ($columns == 2) ? 'span9' : 'span5',
-    'height' => ($rows == 2) ? 'widget-light-grey widget-height-'.$rows : 'widget-dark-grey widget-height-'.$rows
+    'height' => ($rows == 2) ? 'widget-light-grey widget-height-' . $rows : 'widget-dark-grey widget-height-' . $rows
   );
   return $classes;
 }
