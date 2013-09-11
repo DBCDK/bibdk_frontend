@@ -14,6 +14,7 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
   }
 
   public function setUp() {
+    module_load_include('module', 'worktabs', 'worktabs');
     parent::setUp('worktabs');
   }
 

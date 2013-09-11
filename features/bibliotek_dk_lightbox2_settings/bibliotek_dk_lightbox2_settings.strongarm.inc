@@ -284,7 +284,7 @@ function bibliotek_dk_lightbox2_settings_strongarm() {
   $export['lightbox2_page_init_action'] = $strongarm;
 
   $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially  */
   $strongarm->api_version = 1;
   $strongarm->name = 'lightbox2_page_list';
   $strongarm->value = '';
@@ -308,7 +308,7 @@ function bibliotek_dk_lightbox2_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'lightbox2_show_caption';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['lightbox2_show_caption'] = $strongarm;
 
   $strongarm = new stdClass();
