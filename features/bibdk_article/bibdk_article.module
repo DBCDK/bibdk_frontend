@@ -29,7 +29,7 @@ function bibdk_article_block_view($delta = '') {
     case 'bibdk_articles':
       if (user_access('access content')) {
         $block['subject'] = t('Recent content');
-        if ($articles = bibdk_article_get_block_posts()) {
+        if ($articles = bibdk_article_get_article_values()) {
           $block['content'] = array(
             '#theme' => 'bibdk_articles_block',
             '#articles' => $articles,
@@ -42,8 +42,6 @@ function bibdk_article_block_view($delta = '') {
       break;
   }
   return $block;
-  $articles = _bibdk_article_get_block_posts();
-  drupal_render($articles);
 }
 
 /*
@@ -100,7 +98,8 @@ function bibdk_article_get_article_values() {
   $query
       ->entityCondition('entity_type', 'node', '=')
       ->propertyCondition('type', 'bibdk_article', '=')
-      ->propertyCondition('status', '1', '=');
+      ->propertyCondition('status', '1', '=')
+      ->propertyOrderBy('changed', 'DESC');
 
   $result = $query->execute();
 
@@ -119,7 +118,7 @@ function bibdk_article_get_article_values() {
     }
     $values[] = $value;
   }
-
+//dpm($values);
   return $values;
 }
 
