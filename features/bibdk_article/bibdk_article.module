@@ -53,7 +53,11 @@ function bibdk_article_block_configure($delta = ''){
 /*
  * Implements hook_theme
  */
-function bibdk_article_theme(){
+/*
+ * Implements hook_theme
+ */
+
+function bibdk_article_theme() {
   $themes = array(
     'bibdk_articles_block' => array(
       'variables' => array('articles' => NULL),
@@ -66,8 +70,15 @@ function bibdk_article_theme(){
         'link' => NULL,
         'class' => NULL,
         'rows' => NULL,
-        ),
+      ),
       'template' => 'theme/bibdk-articles-block-widget'
+    ),
+    'bibdk_frontpage_4_columns' => array(
+       'variables' => array(
+        'title' => '',
+        'items' => array(),
+        ), 
+      'template' => 'theme/bibdk_frontpage_4_columns',
     ),
   );
   return $themes;
