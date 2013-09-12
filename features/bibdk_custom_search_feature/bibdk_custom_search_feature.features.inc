@@ -2181,7 +2181,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -94;
   $option->label = 'artikler';
-  $option->value = '(avisartikel OR tidsskriftartikel)';
+  $option->value = 'artikel OR term.workType=article';
   $option->expand = '479cc87e-3ff3-d124-5567-e03e00ef3169';
   $option->is_disabled = FALSE;
   $export['1c7e81d5-661c-31b4-0134-357fc0d1a646'] = $option;
@@ -2623,7 +2623,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
+  $option->sort = -94;
   $option->label = 'e-spil';
   $option->value = '(pc-spil (net))';
   $option->expand = '0';
@@ -2815,7 +2815,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -90;
   $option->label = 'xbox 360';
   $option->value = '(xbox 360)';
   $option->expand = '0';
@@ -3029,6 +3029,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '3ffa308b-9344-4969-a5b4-31cff8427b81';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -95;
+  $option->label = 'psp';
+  $option->value = 'psp';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3ffa308b-9344-4969-a5b4-31cff8427b81'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '401add77-651a-ee24-a5bc-340b15d31dab';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -97;
@@ -3095,7 +3107,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'RogB';
   $option->value = 'RogB';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['454f4227-4d9f-3414-c90a-71a304f4dd31'] = $option;
 
   $option = new stdClass();
@@ -3199,7 +3211,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4fbde02a-5c8a-8b44-a189-a9961bf5d83a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -98;
+  $option->sort = -99;
   $option->label = 'playstation 2';
   $option->value = '(playstation 2)';
   $option->expand = '0';
@@ -3701,18 +3713,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = '70ea5cf2-4f16-3a04-4dec-893d03581f05';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -60;
-  $option->label = 'Techno - dance';
-  $option->value = 'techno - dance';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['70ea5cf2-4f16-3a04-4dec-893d03581f05'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = '71594c39-5887-46a4-dd5a-f63665ba8f49';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -61;
@@ -3775,7 +3775,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'wii';
   $option->value = 'wii';
   $option->expand = '0';
@@ -3871,7 +3871,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '79bbb10e-a743-e4d4-7db6-0a1de3b0f967';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -96;
+  $option->sort = -97;
   $option->label = 'punktskrift';
   $option->value = 'punktskrift';
   $option->expand = '0';
@@ -3983,7 +3983,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Skønlitteratur';
   $option->value = 'fiktion';
   $option->expand = '1c0066cf-f6cb-8694-b102-24a394e912d5';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['81178722-f2eb-9cf4-390c-c3a2d88dba34'] = $option;
 
   $option = new stdClass();
@@ -4039,7 +4039,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '83a1904f-c4a7-4e77-aa92-29872cd53a9d';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -98;
+  $option->sort = -99;
   $option->label = 'stor skrift';
   $option->value = '(bog stor skrift)';
   $option->expand = '0';
@@ -4183,7 +4183,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8a23f15d-55b9-0654-55c1-8ac01c12741e';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -97;
+  $option->sort = -98;
   $option->label = 'lydbøger';
   $option->value = 'lydbog';
   $option->expand = 'b056401f-4ff0-a654-55b8-835ad50af150';
@@ -4771,7 +4771,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8c2773f-e491-43a1-866a-e2db6c0e14cc';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -99;
+  $option->sort = -100;
   $option->label = 'trykte bøger ';
   $option->value = 'bog';
   $option->expand = '0';
@@ -4963,7 +4963,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b07250fa-3e30-61c4-5956-51ef022564a9';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -99;
+  $option->sort = -100;
   $option->label = 'pc-spil';
   $option->value = 'pc-spil';
   $option->expand = '0';
@@ -4991,7 +4991,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Faglitteratur';
   $option->value = 'nonfiktion';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['b0d0b825-be32-1b24-c14b-2b1a3064da2d'] = $option;
 
   $option = new stdClass();
@@ -5227,7 +5227,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
+  $option->sort = -97;
   $option->label = 'nintendo ds';
   $option->value = '(nintendo ds)';
   $option->expand = '0';
@@ -5407,7 +5407,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c344326f-e7fb-c8d4-4136-c2c71895b5a9';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -97;
+  $option->sort = -98;
   $option->label = 'playstation 3';
   $option->value = '(playstation 3)';
   $option->expand = '0';
@@ -6007,7 +6007,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dd426e9b-de57-a084-119c-6f21259ee71f';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -95;
+  $option->sort = -96;
   $option->label = 'e-bøger';
   $option->value = 'ebog';
   $option->expand = '0';
@@ -6511,11 +6511,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f41b6a91-d6fd-4587-8f43-d3e084f5730c';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -92;
+  $option->sort = -95;
   $option->label = 'billedbøger';
-  $option->value = 'billedbøger';
+  $option->value = 'billedbog';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['f41b6a91-d6fd-4587-8f43-d3e084f5730c'] = $option;
 
   $option = new stdClass();
@@ -6631,7 +6631,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -91;
   $option->label = 'xbox';
   $option->value = 'xbox';
   $option->expand = '0';
