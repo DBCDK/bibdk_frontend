@@ -56,7 +56,7 @@ function bibdk_article_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -85,6 +85,76 @@ function bibdk_article_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-bibdk_article-field_bibdk_article_color'.
+  $fields['node-bibdk_article-field_bibdk_article_color'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_bibdk_article_color',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'light-grey' => 'Light',
+          'dark-grey' => 'Dark',
+        ),
+        'allowed_values_function' => '',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdk_article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bibdk_help_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '10',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_bibdk_article_color',
+      'label' => 'Background color',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '9',
       ),
     ),
   );
@@ -132,14 +202,14 @@ function bibdk_article_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -219,11 +289,11 @@ function bibdk_article_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -299,11 +369,11 @@ function bibdk_article_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -332,6 +402,89 @@ function bibdk_article_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-bibdk_article-field_bibdk_article_weight'.
+  $fields['node-bibdk_article-field_bibdk_article_weight'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_bibdk_article_weight',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+          5 => '5',
+          6 => '6',
+          7 => '7',
+          8 => '8',
+          9 => '9',
+          10 => '10',
+          11 => '11',
+          12 => '12',
+          13 => '13',
+          14 => '14',
+          15 => '15',
+        ),
+        'allowed_values_function' => '',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdk_article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bibdk_help_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '9',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_bibdk_article_weight',
+      'label' => 'bibdk_article_weight',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '8',
+      ),
+    ),
+  );
+
   // Exported field: 'node-bibdk_article-field_layout_columns'.
   $fields['node-bibdk_article-field_layout_columns'] = array(
     'field_config' => array(
@@ -350,8 +503,14 @@ function bibdk_article_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          1 => '1 column',
-          2 => '2 columns',
+          1 => 'span 3',
+          2 => 'span 6',
+          3 => 'span 9',
+          4 => 'span 12',
+          5 => 'span 15',
+          6 => 'span 18',
+          7 => 'span 21',
+          8 => 'span 24',
         ),
         'allowed_values_function' => '',
         'profile2_private' => FALSE,
@@ -376,11 +535,11 @@ function bibdk_article_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -406,79 +565,6 @@ function bibdk_article_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-bibdk_article-field_layout_placement'.
-  $fields['node-bibdk_article-field_layout_placement'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_layout_placement',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          1 => '1. column',
-          2 => '2. column',
-          3 => '3. column',
-          4 => '4. column',
-          5 => '5. column',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'bibdk_article',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Define column to add info-box. ',
-      'display' => array(
-        'bibdk_help_list' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 5,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_layout_placement',
-      'label' => 'Layout placement',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '7',
-      ),
-    ),
-  );
-
   // Exported field: 'node-bibdk_article-field_layout_rows'.
   $fields['node-bibdk_article-field_layout_rows'] = array(
     'field_config' => array(
@@ -497,8 +583,10 @@ function bibdk_article_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          1 => '1 row (dark)',
-          2 => '2 rows (light)',
+          1 => '1 row',
+          2 => '2 rows',
+          3 => '3 rows',
+          4 => '4 rows',
         ),
         'allowed_values_function' => '',
         'profile2_private' => FALSE,
@@ -523,11 +611,11 @@ function bibdk_article_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -555,17 +643,17 @@ function bibdk_article_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Background color');
   t('Body');
-  t('Define column to add info-box. ');
   t('Define height of info-box');
   t('Define width of info-box ');
   t('Image');
   t('Layout Columns');
-  t('Layout placement');
   t('Layout rows');
   t('Link');
   t('Link text');
   t('Specify a read more link');
+  t('bibdk_article_weight');
   t('define link text');
 
   return $fields;

@@ -31,7 +31,7 @@ function bibdk_article_block_view($delta = '') {
         $block['subject'] = t('Recent content');
         if ($articles = bibdk_article_get_rendered_articles()) {
           $block['content'] = array(
-            '#theme' => 'bibdk_frontpage_4_columns',
+            '#theme' => 'bibdk_article_frontpage',
             '#items' => $articles,
           );
         }
@@ -52,11 +52,24 @@ function bibdk_article_get_rendered_articles() {
   }
   
   $rendered_articles = array();
+  //insert bibdk_helpdesk FIRST in array
+  $rendered_articles[0] = bibdk_article_render_helpdesk();
+
   foreach ($article_values as $article_value) {
     $article = bibdk_article_set_column($article_value);
     $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget',current($article));
   }
+  // default sort by key (weight)  
+  ksort($rendered_articles);
   return $rendered_articles;
+}
+
+
+function bibdk_article_render_helpdesk(){
+  if (module_exists('bibdk_helpdesk')) {    
+    $block = module_invoke('bibdk_helpdesk','block_view','bibdk_helpdesk_teaser');
+    return array(0 => $block['content']);
+  }
 }
 
 /** set a single article
@@ -65,19 +78,23 @@ function bibdk_article_get_rendered_articles() {
  * @return array (column number  => article)
  */
 function bibdk_article_set_column($value) {
-  $classes = bibdk_article_get_classes($value['field_layout_columns'][0]['value'], $value['field_layout_rows'][0]['value']);
-  $column = $value['field_layout_placement'][0]['value'];
+  $columns = $value['field_layout_columns']['#items'][0]['value'];
+  $rows = $value['field_layout_rows']['#items'][0]['value'];
+  $color = isset($value['field_bibdk_article_color']['#items'][0]['value']) ? $value['field_bibdk_article_color']['#items'][0]['value'] : 'light-grey';
+  $classes = bibdk_article_get_classes ($columns,$rows,$color);
+  $weight = isset($value['field_bibdk_article_weight']['#items'][0]['value']) ? $value['field_bibdk_article_weight']['#items'][0]['value'] : 1;
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => $value['field_bibdk_article_link'][0]['value'], //drupal_render($value['field_bibdk_article_link']),
-    'link_text' => $value['field_bibdk_article_link_text'][0]['value'], //drupal_render($value['field_bibdk_articfle_link_text']),
+    'link' => $value['field_bibdk_article_link']['#items'][0]['value'], //drupal_render($value['field_bibdk_article_link']),
+    'link_text' => $value['field_bibdk_article_link_text']['#items'][0]['value'], //drupal_render($value['field_bibdk_articfle_link_text']),
     'image' => drupal_render($value['field_bibdk_article_image']),
     'class' => $classes['height'],
-    'rows' => $value['field_layout_rows'][0]['value'],
+    'rows' => $value['field_layout_rows']['#items'][0]['value'],
+    'span' => $classes['width'],
   );  
 
-  return array($column => $item);
+  return array($weight => $item);
 }
 
 /*
@@ -108,15 +125,16 @@ function bibdk_article_theme() {
         'link' => NULL,
         'class' => NULL,
         'rows' => NULL,
+        'span' => NULL,
       ),
       'template' => 'theme/bibdk-articles-block-widget'
     ),
-    'bibdk_frontpage_4_columns' => array(
+    'bibdk_article_frontpage' => array(
       'variables' => array(
         'title' => '',
         'items' => array(),
       ),
-      'template' => 'theme/bibdk_frontpage_4_columns',
+      'template' => 'theme/bibdk_article_frontpage',
     ),
   );
   return $themes;
@@ -149,25 +167,23 @@ function bibdk_article_get_article_values() {
   foreach ($articles as $article) {
     $value = array();
     foreach ($article_fields as $name => $field) {
-      $value[$name] = field_get_items('node', $article, $name);
+      $value[$name] = field_view_field('node', $article, $name);
       $value['title'] = $article->title;
     }
     $values[] = $value;
   }
-
-  // @TODO sort by weight
-  
   return $values;
 }
-
 /*
  * Add necessary classes for bibdk_theme
  */
 
-function bibdk_article_get_classes($columns, $rows) {
+function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-    'width' => ($columns == 2) ? 'span9' : 'span5',
-    'height' => ($rows == 2) ? 'widget-light-grey widget-height-' . $rows : 'widget-dark-grey widget-height-' . $rows
+   // 'width' => ($columns == 2) ? 'span9' : 'span5',
+   // 'height' => ($rows == 2) ? 'widget-light-grey widget-height-' . $rows : 'widget-dark-grey widget-height-' . $rows
+    'width' => 'span'.(3*$columns),
+    'height' => 'widget-'.$color. ' widget-height-' . $rows,
   );
   return $classes;
 }

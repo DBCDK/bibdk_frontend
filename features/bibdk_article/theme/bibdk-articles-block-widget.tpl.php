@@ -1,9 +1,14 @@
-<article class="widget-wrapper">
-	<div class="widget <?php print $class ?>">
+<article class="article-widget <?php print $class ?> <?php print !empty($span) ? $span : 'span5';?>" >
+	
 	  <div class="inner">
 				<div class="field-title">
 					<h3><a href="<?php print $link; ?>"><?php print $title; ?></a></h3>
 				</div>
+      <?php if (!empty($image)) : ?>
+      <div class="field-image">
+				  <?php print $image; ?>
+				</div>
+			<?php endif; ?>
 			<?php if (!empty($body) && $rows > 1): ?>
 				<div class="field-body">
 				  <?php print $body; ?>
@@ -20,7 +25,7 @@
       <?php endif; ?>
 		</div>
 		<!-- inner -->
-  </div>
+  
   <!-- widget -->
 
 </article>
