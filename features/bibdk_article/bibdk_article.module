@@ -67,7 +67,7 @@ function bibdk_article_get_rendered_articles() {
 
 function bibdk_article_render_helpdesk(){
   if (module_exists('bibdk_helpdesk')) {    
-    $block = module_invoke('bibdk_helpdesk','block_view','bibdk_helpdesk_teaser');
+    $block = module_invoke('bibdk_helpdesk','block_view','bibdk-helpdesk-teaser');
     return array(0 => $block['content']);
   }
 }
@@ -180,8 +180,6 @@ function bibdk_article_get_article_values() {
 
 function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-   // 'width' => ($columns == 2) ? 'span9' : 'span5',
-   // 'height' => ($rows == 2) ? 'widget-light-grey widget-height-' . $rows : 'widget-dark-grey widget-height-' . $rows
     'width' => 'span'.(3*$columns),
     'height' => 'widget-'.$color. ' widget-height-' . $rows,
   );
