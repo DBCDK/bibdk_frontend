@@ -1,5 +1,22 @@
 <?php
-
+$page = new stdClass();
+$page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+$page->api_version = 1;
+$page->name = 'bibdk_frontpage';
+$page->task = 'page';
+$page->admin_title = 'bibdk_frontpage';
+$page->admin_description = '';
+$page->path = 'bibdk_frontpage';
+$page->access = array(
+  'plugins' => array(),
+  'logic' => 'and',
+);
+$page->menu = array();
+$page->arguments = array();
+$page->conf = array(
+  'admin_paths' => FALSE,
+);
+$page->default_handlers = array();
 $handler = new stdClass();
 $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
 $handler->api_version = 1;
@@ -58,3 +75,4 @@ $display->panels = array();
 $display->hide_title = PANELS_TITLE_FIXED;
 $display->title_pane = '0';
 $handler->conf['display'] = $display;
+$page->default_handlers[$handler->name] = $handler;
