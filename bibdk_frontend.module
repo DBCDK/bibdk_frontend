@@ -34,6 +34,22 @@ function bibdk_frontend_user_login(&$edit, $account) {
   }
 }
 
+/**
+ * Implements hook_l10n_update_projects_alter().
+ * @see l10n_update.api.php
+ * @param $projects
+ */
+function bibdk_frontend_l10n_update_projects_alter(&$projects) {
+  $projects['bibliotekdk'] = array(
+    'info' => array(
+      'l10n server' => 'dringo2.ding.dbc.dk',
+      'l10n url' => 'http://dringo2.ding.dbc.dk/sites/default/files/l10n_packager/l10n_server.xml',
+      'l10n path' => 'http://dringo2.ding.dbc.dk/sites/default/files/l10n_packager/7.x/bibliotekdk/bibliotekdk-7.x-0.1.%language.po',
+    ),
+  );
+}
+
+
 function _bibdk_frontend_remember_favourites_message() {
   $link = l(t('add_favourites'), 'vejviser');
   return t('remember_to_add_favourite_libraries') . ' ' . $link;
