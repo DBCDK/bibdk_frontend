@@ -9,7 +9,7 @@
 				  <?php print $image; ?>
 				</div>
 			<?php endif; ?>
-			<?php if (!empty($body) && $rows > 1): ?>
+			<?php if (!empty($body)): ?>
 				<div class="field-body">
 				  <?php print $body; ?>
 				</div>
