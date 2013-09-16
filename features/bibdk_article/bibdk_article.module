@@ -19,6 +19,58 @@ function bibdk_article_block_info() {
   return $blocks;
 }
 
+/**
+ * Implements hook_permission().
+ */
+function bibdk_article_permission() {
+  return array(
+    'create bibdk articles' => array(
+      'title' => t('create bibdk articles'),
+      'description' => t('Allow users to create articles.'),
+    ),
+    'delete bibdk articles' => array(
+      'title' => t('delete bibdk articles'),
+      'description' => t('Allow users to delete articles.'),
+    ),
+    'edit bibdk articles' => array(
+      'title' => t('edit bibdk articles'),
+      'description' => t('Allow users to edit articles.'),
+    ),
+  );
+}
+
+/** Implements hook_node_access
+ *  custom permissions for bibdk_articles .. made for test-purposes, but
+ * might come in usefull for some other admin-type
+ */
+function bibdk_article_node_access($node, $op, $account) {
+  $type = is_string($node) ? $node : $node->type;
+  if ($type != 'bibdk_article') {
+    return NODE_ACCESS_IGNORE;
+  }
+  switch ($op) {
+    case 'create':
+      if (user_access('create bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'update':
+      if (user_access('edit bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'delete':
+      if (user_access('delete bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'view' :
+      return NODE_ACCESS_ALLOW;
+  }
+  // if none of the conditions above are met .. deny access
+  return NODE_ACCESS_DENY;
+}
+
 /*
  * Implements hook_block_view
  */
@@ -50,24 +102,23 @@ function bibdk_article_get_rendered_articles() {
   if (empty($article_values)) {
     return;
   }
-  
+
   $rendered_articles = array();
   //insert bibdk_helpdesk FIRST in array
   $rendered_articles[0] = bibdk_article_render_helpdesk();
 
   foreach ($article_values as $article_value) {
     $article = bibdk_article_set_column($article_value);
-    $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget',current($article));
+    $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget', current($article));
   }
   // default sort by key (weight)  
   ksort($rendered_articles);
   return $rendered_articles;
 }
 
-
-function bibdk_article_render_helpdesk(){
-  if (module_exists('bibdk_helpdesk')) {    
-    $block = module_invoke('bibdk_helpdesk','block_view','bibdk-helpdesk-teaser');
+function bibdk_article_render_helpdesk() {
+  if (module_exists('bibdk_helpdesk')) {
+    $block = module_invoke('bibdk_helpdesk', 'block_view', 'bibdk-helpdesk-teaser');
     return array(0 => $block['content']);
   }
 }
@@ -81,7 +132,7 @@ function bibdk_article_set_column($value) {
   $columns = isset($value['field_columns']['#items'][0]['value']) ? $value['field_columns']['#items'][0]['value'] : '2';
   $rows = isset($value['field_rows']['#items'][0]['value']) ? $value['field_rows']['#items'][0]['value'] : '2';
   $color = isset($value['field_color']['#items'][0]['value']) ? $value['field_color']['#items'][0]['value'] : 'light-grey';
-  $classes = bibdk_article_get_classes ($columns,$rows,$color);
+  $classes = bibdk_article_get_classes($columns, $rows, $color);
   $weight = isset($value['field_weight']['#items'][0]['value']) ? $value['field_weight']['#items'][0]['value'] : 1;
   $item = array(
     'title' => $value['title'],
@@ -90,22 +141,11 @@ function bibdk_article_set_column($value) {
     'link_text' => isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_articfle_link_text']),
     'image' => drupal_render($value['field_image']),
     'class' => $classes['height'],
-  );  
+  );
 
   return array($weight => $item);
 }
 
-/*
- * Implements hook_block_configure
- */
-
-function bibdk_article_block_configure($delta = '') {
-  
-}
-
-/*
- * Implements hook_theme
- */
 /*
  * Implements hook_theme
  */
@@ -172,14 +212,15 @@ function bibdk_article_get_article_values() {
   }
   return $values;
 }
+
 /*
  * Add necessary classes for bibdk_theme
  */
 
 function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-    'width' => 'span'.(3*$columns),
-    'height' => 'widget-'.$color. ' widget-height-' . $rows,
+    'width' => 'span' . (3 * $columns),
+    'height' => 'widget-' . $color . ' widget-height-' . $rows,
   );
   return $classes;
 }
