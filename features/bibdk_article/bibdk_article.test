@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Class bibdkArticleWebtestCase
+ */
+class bibdkArticleWebtestCase extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => t('bibdk_article - Webtest'),
+      'description' => t('Testing the bibdk articles functionality'),
+      'group' => t('Bibliotek.dk - Frontend'),
+    );
+  }
+
+  public function setUp() {
+    parent::setUp('bibdk_article');
+  }
+
+  public function testHest() {
+    $this->assertTrue(TRUE);
+  }
+
+  public function testRunner() {
+    // Create and log in our privileged user.
+    $this->admin_user = $this->drupalCreateUser(array(
+      'create bibdk articles',
+      'administer content types',
+      'delete bibdk articles',
+      'edit bibdk articles',
+        ));
+    $this->drupalLogin($this->admin_user);
+    $this->CreateArticleTest();
+    $this->GetArticle();
+  }
+
+  /** Test create bibdk_article
+   * 
+   */
+  public function CreateArticleTest() {
+    // Create node to edit.
+    $edit = array();
+    $edit['title'] = $this->randomName(8);
+    $edit["body[und][0][value]"] = $this->randomName(16);
+    $this->drupalPost('node/add/bibdk_article', $edit, t('Save'));
+    $this->assertText(t('@title has been created.', array('@title' => $edit['title'])));
+  }
+  
+  /** Test retrival of bibdk_article
+   * 
+   */
+  public function GetArticle() {
+    $article = bibdk_article_get_article_values();
+    $fieldname = array('title','field_weight','field_link_text','field_link','field_image','field_columns');
+    foreach($fieldname as $key => $value) {
+      $this->assertTrue(isset($article[0][$value]),t('%field found',array('%field'=>$value)));
+    }
+  }
+}
+
+?>
