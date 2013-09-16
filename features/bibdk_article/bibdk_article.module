@@ -78,20 +78,18 @@ function bibdk_article_render_helpdesk(){
  * @return array (column number  => article)
  */
 function bibdk_article_set_column($value) {
-  $columns = $value['field_layout_columns']['#items'][0]['value'];
-  $rows = $value['field_layout_rows']['#items'][0]['value'];
-  $color = isset($value['field_bibdk_article_color']['#items'][0]['value']) ? $value['field_bibdk_article_color']['#items'][0]['value'] : 'light-grey';
+  $columns = isset($value['field_columns']['#items'][0]['value']) ? $value['field_columns']['#items'][0]['value'] : '2';
+  $rows = isset($value['field_rows']['#items'][0]['value']) ? $value['field_rows']['#items'][0]['value'] : '2';
+  $color = isset($value['field_color']['#items'][0]['value']) ? $value['field_color']['#items'][0]['value'] : 'light-grey';
   $classes = bibdk_article_get_classes ($columns,$rows,$color);
-  $weight = isset($value['field_bibdk_article_weight']['#items'][0]['value']) ? $value['field_bibdk_article_weight']['#items'][0]['value'] : 1;
+  $weight = isset($value['field_weight']['#items'][0]['value']) ? $value['field_weight']['#items'][0]['value'] : 1;
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => $value['field_bibdk_article_link']['#items'][0]['value'], //drupal_render($value['field_bibdk_article_link']),
-    'link_text' => $value['field_bibdk_article_link_text']['#items'][0]['value'], //drupal_render($value['field_bibdk_articfle_link_text']),
-    'image' => drupal_render($value['field_bibdk_article_image']),
+    'link' => isset($value['field_link']['#items'][0]['value']) ? $value['field_link']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_article_link']),
+    'link_text' => isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_articfle_link_text']),
+    'image' => drupal_render($value['field_image']),
     'class' => $classes['height'],
-    'rows' => $value['field_layout_rows']['#items'][0]['value'],
-    'span' => $classes['width'],
   );  
 
   return array($weight => $item);
