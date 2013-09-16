@@ -26,3 +26,5 @@ features[variable][] = menu_parent_bibdk_article
 features[variable][] = node_options_bibdk_article
 features[variable][] = node_preview_bibdk_article
 features[variable][] = node_submitted_bibdk_article
+
+files[] = bibdk_article.test
