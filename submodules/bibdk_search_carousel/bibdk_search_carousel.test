@@ -1,0 +1,81 @@
+<?php
+/**
+ * @file
+ * Bibliotek.dk search carousel tests.
+ */
+
+/**
+ * Class BibdkCarouselUnitTestCase
+ */
+class BibdkCarouselUnitTestCase extends DrupalUnitTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => t('Bibliotek.dk search carousel - Unittest'),
+      'description' => t('Testing Bibliotek.dk search carousel functionality'),
+      'group' => t('Bibliotek.dk - Frontend'),
+    );
+  }
+
+  public function setUp() {
+    module_load_include('module', 'ting_search_carousel');
+    parent::setUp('ting_search_carousel');
+  }
+
+  /**
+   * Testing form_alter of carousel admin form.
+   */
+  public function test_bibdk_search_carousel_admin_form_alter() {
+    $form_state = array();
+    $form['ting_search_carousel']['ting_searches']['search_0'] = array();
+
+    $period = array(
+      '#title' => 'Period',
+      '#type' => 'select',
+    );
+
+    $offset = array(
+      '#title' => 'Offset',
+      '#type' => 'select',
+    );
+
+    bibdk_search_carousel_form_ting_search_carousel_admin_form_alter($form, $form_state, 'form-ting-search-carousel-admin');
+
+    $this->assertEqual(
+      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#type'],
+      $period['#title'] . '+' . $period['#type'],
+      'Period select added to carousel form.'
+    );
+
+    $this->assertEqual(
+      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#type'],
+      $offset['#title'] . '+' . $offset['#type'],
+      'Offset select added to carousel form.'
+    );
+
+    $this->assertEqual($form['#submit'], array('bibdk_search_carousel_search_submit'), 'Custom submit function set.');
+  }
+
+}
+
+/**
+ * Class BibdkCarouselWebtestCase
+ */
+class BibdkCarouselWebtestCase extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => t('Bibliotek.dk search carousel - Webtest'),
+      'description' => t('Testing Bibliotek.dk search carousel functionality'),
+      'group' => t('Bibliotek.dk - Frontend'),
+    );
+  }
+
+  public function setUp() {
+    parent::setUp('ting_search_carousel');
+  }
+
+  public function testFoo() {
+    $this->assertEqual(1, 1, 'Web test case OK.');
+  }
+}

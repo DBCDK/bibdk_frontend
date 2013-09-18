@@ -87,8 +87,8 @@ function bibdk_search_carousel_form_ting_search_carousel_admin_form_alter(&$form
     $period['#default_value']    = isset($searches[$i]['period'])    ? $searches[$i]['period']    : '';
     $offset['#default_value']    = isset($searches[$i]['offset'])    ? $searches[$i]['offset']    : '';
 
-    $form['ting_search_carousel']['ting_searches']['search_' . $i]['bibdk_search_carousel']['period[]']     = $period;
-    $form['ting_search_carousel']['ting_searches']['search_' . $i]['bibdk_search_carousel']['offset[]']     = $offset;
+    $form['ting_search_carousel']['ting_searches']['search_' . $i]['bibdk_search_carousel']['period[]'] = $period;
+    $form['ting_search_carousel']['ting_searches']['search_' . $i]['bibdk_search_carousel']['offset[]'] = $offset;
 
     $form['ting_search_carousel']['ting_searches']['search_' . $i]['remove[]']['#suffix'] = '';
   }
@@ -148,7 +148,7 @@ function bibdk_search_carousel_search_submit($form, &$form_state) {
  */
 function bibdk_search_carousel_ting_search_carousel_query($query) {
 
-  $bibdk_query_prefix = ' ' . t('BOOLEAN_AND') . ' ' .  variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk') . '=(';
+  $bibdk_query_prefix = ' ' . t('BOOLEAN_AND') . ' ' . variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk') . '=(';
   $bibdk_query_suffix = ')';
   $bibdk_dateformat = variable_get('bibdk_search_carousel_dateformat', 'bk\mYW');
   $today = time();
