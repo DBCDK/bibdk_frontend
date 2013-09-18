@@ -4,3 +4,5 @@ core = 7.x
 version = 7.x-0.22
 package = Bibdk Frontend
 project = bibliotekdk
+
+l10n path = http://dringo2.ding.dbc.dk/sites/default/files/l10n_packager/7.x/bibliotekdk/bibliotekdk-7.x-0.1.%language.po
