@@ -6,6 +6,6 @@ core = "7.x"
 
 dependencies[] = ting_search_carousel
 
-files[] = bibdk_search_carousel.test
+files[] = test/bibdk_search_carousel.test
 
 configure = admin/config/ting/ting_search_carousel
