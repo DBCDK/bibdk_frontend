@@ -19,7 +19,7 @@ class BibdkCarouselUnitTestCase extends DrupalUnitTestCase {
 
   public function setUp() {
     module_load_include('module', 'ting_search_carousel');
-    parent::setUp('ting_search_carousel');
+    parent::setUp('ting_search_carousel', 'bibdk_search_carousel');
   }
 
   /**
@@ -100,7 +100,7 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
   }
 
   public function setUp() {
-    parent::setUp('ting_search_carousel', 'ting_openformat', 'ting_covers');
+    parent::setUp('ting_search_carousel', 'bibdk_search_carousel', 'ting_openformat', 'ting_covers');
     variable_set('ting_search_url', 'http://lakiseks.dbc.dk/openbibdk/0.5/');
     variable_set('bibdk_provider_security_code', 'testhest');
     variable_set('search_active_modules', array('ting_openformat' => 'ting_openformat'));
@@ -115,11 +115,14 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
       'administer search',
       'administer blocks',
       'search content',
+      'administer site configuration',
+      'access administration pages',
     ));
     $this->drupalLogin($this->privileged_user);
 
     $this->_testCarouselBlock();
     $this->_testSearchSettings();
+    $this->_testBibdkSettings();
     return TRUE;
   }
 
@@ -136,11 +139,20 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
   private function _testSearchSettings() {
 
     $this->drupalPost('admin/config/ting/ting_search_carousel/search_settings', array('ting_search_carousel_covers_max' => '10'), t('Save configuration'));
-    $this->assertText('The block settings have been updated.', t('The configuration options have been saved.'));
+    $this->assertText('The configuration options have been saved', t('The maximum covers configuration have been saved.'));
 
     $this->drupalPost('admin/config/ting/ting_search_carousel/search_settings', array('ting_search_carousel_queries_max' => '100'), t('Save configuration'));
-    $this->assertText('The block settings have been updated.', t('The configuration options have been saved.'));
+    $this->assertText('The configuration options have been saved', t('The maximum queries configuration have been saved.'));
 
+  }
+
+  private function _testBibdkSettings() {
+
+    $this->drupalPost('admin/config/ting/ting_search_carousel/bibdk_settings', array('bibdk_search_carousel_dateformat' => '10'), t('Save configuration'));
+    $this->assertText('The configuration options have been saved', t('The date format configuration have been saved.'));
+
+    $this->drupalPost('admin/config/ting/ting_search_carousel/bibdk_settings', array('bibdk_search_carousel_week_search_code' => '100'), t('Save configuration'));
+    $this->assertText('The configuration options have been saved', t('The week search code configuration have been saved.'));
 
   }
 

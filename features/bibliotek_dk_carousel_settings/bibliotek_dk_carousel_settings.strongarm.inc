@@ -18,7 +18,7 @@ function bibliotek_dk_carousel_settings_strongarm() {
     0 => array(
       'title' => 'Foo',
       'subtitle' => 'Bar',
-      'query' => '(term.language=dan ELLER term.language=eng) OG (dkcclterm.fo=Edgar Rice Burroughs) OG (term.workType=literature)',
+      'query' => '(term.language=dan ELLER term.language=eng) OG (term.workType=literature)',
       'period' => '4',
       'offset' => '2',
     ),
