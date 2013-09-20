@@ -108,14 +108,17 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_search_controls',
     //Content
     'bibdk_article',
+    'bibdk_adhl',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
 
 }
-
-function bibdk_frontend_update_7003(&$sandbox) {
+/**
+* Enable default modules
+**/
+function bibdk_frontend_update_7009(&$sandbox) {
   _bibdk_frontend_enable_modules();
 }
 
