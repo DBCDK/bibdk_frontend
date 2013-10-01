@@ -110,7 +110,6 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_search_controls',
     //Content
     'bibdk_article',
-    'l10n_update',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
@@ -149,8 +148,4 @@ function bibdk_frontend_update_7006(&$sandbox) {
  */
 function bibdk_frontend_update_7008(&$sandbox) {
   module_enable(array('bibliotek_dk_usersettings'));
-}
-
-function bibdk_frontend_update_7009(&$sandbox){
-  module_enable(array('l10n_update'));
 }
