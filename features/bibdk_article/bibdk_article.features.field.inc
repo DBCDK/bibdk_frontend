@@ -466,6 +466,73 @@ function bibdk_article_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-bibdk_article-field_page'.
+  $fields['node-bibdk_article-field_page'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_page',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => bibdk_article_get_page_paths(),
+        'allowed_values_function' => '',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdk_article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'on which page to display this article',
+      'display' => array(
+        'bibdk_help_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 19,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_page',
+      'label' => 'page type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '18',
+      ),
+    ),
+  );
+
   // Exported field: 'node-bibdk_article-field_rows'.
   $fields['node-bibdk_article-field_rows'] = array(
     'field_config' => array(
@@ -625,6 +692,8 @@ function bibdk_article_field_default_fields() {
   t('image');
   t('link');
   t('link text');
+  t('on which page to display this article');
+  t('page type');
   t('rows');
   t('weight');
 
