@@ -51,6 +51,17 @@ function _bibdk_frontend_set_blocks() {
       'cache' => -1,
       'title' => '<none>',
     ),
+    array(
+      'module' => 'ting_search_carousel',
+      'delta' => 'ting_search_carousel',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'carousel',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
   );
 
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
