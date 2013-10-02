@@ -1,4 +1,6 @@
-<article class="article-widget <?php print $class ?> <?php print !empty($span) ? $span : 'span5';?>" >
+
+<article <?php print $class; ?> >
+  
 	
 	  <div class="inner">
 				<div class="field-title">
