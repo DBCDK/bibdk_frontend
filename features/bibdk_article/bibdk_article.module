@@ -196,16 +196,32 @@ function bibdk_article_set_column($value) {
   $color = isset($value['field_color']['#items'][0]['value']) ? $value['field_color']['#items'][0]['value'] : 'light-grey';
   $classes = bibdk_article_get_classes($columns, $rows, $color);
   $weight = isset($value['field_weight']['#items'][0]['value']) ? $value['field_weight']['#items'][0]['value'] : 1;
+  $url = isset($value['field_bibdk_article_link']['#items'][0]['value']) ? $value['field_bibdk_article_link']['#items'][0]['value'] : NULL;
+  $text = isset($value['field_bibdk_article_link_text']['#items'][0]['value']) ? $value['field_bibdk_article_link_text']['#items'][0]['value'] : NULL;
+
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => isset($value['field_bibdk_article_link']['#items'][0]['value']) ? $value['field_bibdk_article_link']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_article_link']),
-    'link_text' => isset($value['field_bibdk_article_link_text']['#items'][0]['value']) ? $value['field_bibdk_article_link_text']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_articfle_link_text']),
+    'link' => (isset($url) && isset($text)) ? drupal_render(_bibdk_article_render_link($url, $text)) : '',
     'image' => drupal_render($value['field_image']),
     'class' => drupal_attributes($classes),
   );
 
   return array($weight => $item);
+}
+
+function _bibdk_article_render_link($url, $text){
+  $link = array(
+    '#type' => 'link',
+    '#href' => $url,
+    '#title' => $text,
+    '#attributes' => array(
+      'id' => array(
+        'selid_' . drupal_html_id($url),
+      ),
+    ),
+  );
+  return $link;
 }
 
 /*
