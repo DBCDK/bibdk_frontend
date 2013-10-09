@@ -1,7 +1,4 @@
-
 <article <?php print $class; ?> >
-  
-	
 	  <div class="inner">
 				<div class="field-title">
 					<h3><a href="<?php print $link; ?>"><?php print $title; ?></a></h3>
@@ -19,15 +16,14 @@
       <?php if (!empty($link)): ?>
 			<footer class="footer">
 					<div class="field-read-more">
-						<a href="<?php print $link; ?>">
-							<span class="icon icon-left icon-blue-right">&nbsp;</span><?php print $link_text; ?>
-						</a>
+            <?php print $link; ?>
+            <span class="icon icon-left icon-blue-right">&nbsp;</span>
 					</div>
 			</footer>
       <?php endif; ?>
 		</div>
 		<!-- inner -->
-  
+
   <!-- widget -->
 
 </article>
