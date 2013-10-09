@@ -187,7 +187,7 @@ function bibdk_article_render_helpdesk() {
 
 /** set a single article
  *
- * @param  array bibdk_article entity from database
+ * @param  array $value entity from database
  * @return array (column number  => article)
  */
 function bibdk_article_set_column($value) {
@@ -199,8 +199,8 @@ function bibdk_article_set_column($value) {
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => isset($value['field_link']['#items'][0]['value']) ? $value['field_link']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_article_link']),
-    'link_text' => isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_articfle_link_text']),
+    'link' => isset($value['field_bibdk_article_link']['#items'][0]['value']) ? $value['field_bibdk_article_link']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_article_link']),
+    'link_text' => isset($value['field_bibdk_article_link_text']['#items'][0]['value']) ? $value['field_bibdk_article_link_text']['#items'][0]['value'] : NULL, //drupal_render($value['field_bibdk_articfle_link_text']),
     'image' => drupal_render($value['field_image']),
     'class' => drupal_attributes($classes),
   );
