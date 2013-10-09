@@ -90,6 +90,7 @@ function bibdk_frontend_block_view($delta = '') {
       if (is_array($block['content']['#secondary'])) {
         foreach ($block['content']['#secondary'] as $n => $tab) {
           $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
+          $block['content']['#secondary'][$n]['#link']['localized_options']['attributes']['id'][] = drupal_html_id('selid-tabs-' . $block['content']['#secondary'][$n]['#link']['title']);
         }
       }
       drupal_alter('bibdk_tabs', $block);
