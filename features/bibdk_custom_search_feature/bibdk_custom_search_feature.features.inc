@@ -1811,7 +1811,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'noveller';
   $option->value = 'noveller';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['0102b87c-cee2-2474-a555-c526a32fe0d3'] = $option;
 
   $option = new stdClass();
@@ -2699,7 +2699,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'digte';
   $option->value = 'digte';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['30f6d776-852b-ee74-c51b-d8d363d8bf95'] = $option;
 
   $option = new stdClass();
@@ -3599,7 +3599,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'romaner';
   $option->value = 'romaner';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['6a988e81-8fea-8d64-1d06-a7159dd72e6e'] = $option;
 
   $option = new stdClass();
