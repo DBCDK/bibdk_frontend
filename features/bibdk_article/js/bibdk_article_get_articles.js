@@ -7,18 +7,17 @@
  */
 (function($) {
     
-    Drupal.behaviors.GetArticlesOnClick = {
-        attach: function(context, settings) {
-            $('#search-form .horizontal-nav li', context).click(function(e) {
-                e.preventDefault();
-                Drupal.bibdkArticlesGet($(this));
-            });
-        }
-    };
+Drupal.behaviors.GetArticlesOnClick = {
+    attach: function(context) {
+        $('#search-form .horizontal-nav li', context).click(function(e) {
+            e.preventDefault();
+            Drupal.bibdkArticlesGet($(this));
+        });
+    }
+};
 
 Drupal.bibdkArticlesGet = function(element) {
     var type = element.find('input').attr('data-type');
-    // $('.bibdk_article_ajax_replace').text(type);
     $.ajax({
         url: Drupal.settings.basePath + Drupal.settings.pathPrefix + 'bibdk_article/searchpage_callback',
         type: 'GET',
