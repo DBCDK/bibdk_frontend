@@ -104,6 +104,8 @@ function bibdk_frontend_setup_cache() {
   variable_set('bibdk_borchk_cache_lifetime', 60);
 }
 
+
+//TODO move modules to .info file as dependcies and only enable new ones through hook_update_N().
 function _bibdk_frontend_enable_modules() {
   $modules = array(
     //Features
