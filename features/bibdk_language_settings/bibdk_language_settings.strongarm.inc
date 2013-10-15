@@ -26,13 +26,13 @@ function bibdk_language_settings_strongarm() {
     'name' => 'Danish',
     'native' => 'Dansk',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
     'prefix' => 'da',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => '5gGobYWLl-XIpJgyjhYuT_iTXr74ZY5xlmZzCelWNF8',
   );
   $export['language_default'] = $strongarm;
 
