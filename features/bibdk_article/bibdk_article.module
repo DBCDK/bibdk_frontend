@@ -217,8 +217,9 @@ function _bibdk_article_render_link($url, $text){
     '#title' => $text,
     '#attributes' => array(
       'id' => array(
-        'selid-' . drupal_html_id($url),
+        'selid-' . drupal_html_id($url),        
       ),
+      'target' => '_blank',      
     ),
   );
   return $link;

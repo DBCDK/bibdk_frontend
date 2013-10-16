@@ -1,7 +1,7 @@
 <article <?php print $class; ?> >
   <div class="inner">
     <div class="field-title">
-      <h3><a href="<?php print $link; ?>"><?php print $title; ?></a></h3>
+      <h3><?php print $title; ?></h3>
     </div>
     <?php if (!empty($image)) : ?>
       <div class="field-image">
