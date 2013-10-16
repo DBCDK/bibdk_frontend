@@ -34,6 +34,26 @@ function bibdk_frontend_user_login(&$edit, $account) {
   }
 }
 
+/**
+ * Implements hook_l10n_update_projects_alter().
+ * @see l10n_update.api.php
+ * @param $projects
+ */
+function bibdk_frontend_l10n_update_projects_alter(&$projects) {
+  $projects['bibliotekdk'] = array(
+    'project_type'  => 'module',
+    'name' => 'bibliotekdk',
+    'info' => array(
+      'version' => '7.x-0.1',
+      'core' => '7.x',
+      'l10n server' => 'dringo2.ding.dbc.dk',
+      'l10n url' => 'http://dringo2.ding.dbc.dk/sites/default/files/l10n_packager/l10n_server.xml',
+      'l10n path' => 'http://dringo2.ding.dbc.dk/sites/default/files/l10n_packager/7.x/bibliotekdk/bibliotekdk-7.x-0.1.%language.po',
+    ),
+  );
+}
+
+
 function _bibdk_frontend_remember_favourites_message() {
   $link = l(t('add_favourites'), 'vejviser');
   return t('remember_to_add_favourite_libraries') . ' ' . $link;
@@ -90,6 +110,7 @@ function bibdk_frontend_block_view($delta = '') {
       if (is_array($block['content']['#secondary'])) {
         foreach ($block['content']['#secondary'] as $n => $tab) {
           $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
+          $block['content']['#secondary'][$n]['#link']['localized_options']['attributes']['id'][] = drupal_html_id('selid-tabs-' . $block['content']['#secondary'][$n]['#link']['title']);
         }
       }
       drupal_alter('bibdk_tabs', $block);
