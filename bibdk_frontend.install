@@ -51,6 +51,17 @@ function _bibdk_frontend_set_blocks() {
       'cache' => -1,
       'title' => '<none>',
     ),
+    array(
+      'module' => 'ting_search_carousel',
+      'delta' => 'ting_search_carousel',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'carousel',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
   );
 
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
@@ -108,9 +119,12 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_lightbox2_settings',
     'bibliotek_dk_usersettings',
     'bibliotek_dk_search_controls',
+    'bibliotek_dk_carousel_settings',
     //Content
     'bibdk_article',
     'bibdk_adhl',
+    //Submodule
+    'bibdk_search_carousel',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
