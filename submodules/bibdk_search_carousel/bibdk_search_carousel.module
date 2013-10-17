@@ -24,6 +24,19 @@ function bibdk_search_carousel_menu() {
 
 
 /**
+ * Implements hook_help().
+ */
+function bibdk_search_carousel_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#bibdk_search_carousel';
+      $file = drupal_get_path('module', 'bibdk_search_carousel') . "/help/bibdk_search_carousel.php";
+      return $output = file_get_contents($file);
+    break;
+  }
+}
+
+
+/**
  * Implements hook_form_id_alter().
  */
 function bibdk_search_carousel_form_ting_search_carousel_admin_form_alter(&$form, &$form_state, $form_id) {
