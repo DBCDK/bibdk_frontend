@@ -1,0 +1,39 @@
+<?php
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/** Implements hook_update_N
+ * Delete tables and fields for deprecated fields 
+ */
+function bibdk_article_update_7009() {
+  $field_names = array
+    (
+    'field_bibdk_article_image',
+    'field_bibdk_article_link ',
+    'field_bibdk_article_link_text',
+    'field_layout_columns',
+    'field_layout_placement',
+    'field_layout_rows',
+    'field_bibdk_article_image',
+  );
+
+  
+  foreach ($field_names as $field_name) {
+    // delete from field_config
+    db_delete('field_config')
+        ->condition('field_name', $field_name)
+        ->execute();
+    //delete from field_config_instance
+    db_delete('field_config_instance')
+        ->condition('field_name', $field_name)
+        ->execute();
+    // drop revision tables
+    $table_name = 'field_revision_'.$field_name;
+    db_drop_table($table_name);
+    // drop data-table
+    $table_name = 'field_data_'.$field_name;
+    db_drop_table($table_name);
+  }
+}

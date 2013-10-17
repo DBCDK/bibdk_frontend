@@ -1,15 +1,16 @@
 <?php
+
 /**
  * @file
  * Code for the bibdk_article feature.
  */
-
 include_once 'bibdk_article.features.inc';
 
 /*
  * Implements hook_block_info
  */
-function bibdk_article_block_info(){
+
+function bibdk_article_block_info() {
 
   $blocks['bibdk_articles'] = array(
     'info' => t('Bibdk Article Frontpage teaser'),
@@ -18,42 +19,217 @@ function bibdk_article_block_info(){
   return $blocks;
 }
 
+/** Implements hook_menu
+ * 
+ */
+function bibdk_article_menu() {
+  $items['bibdk_article/searchpage_callback'] = array(
+    'title' => 'Custom searchpage AJAX callback for articles',
+    'page callback' => 'bibdk_article_searchpage_ajax_callback',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/** Ajax callback function to get articles by searchpage type (film, bøger, net etc.)
+ * 
+ */
+function bibdk_article_searchpage_ajax_callback() {
+  $type = $_GET['type'];
+  $block = bibdk_article_block_view('bibdk_articles', $type);
+  $out = drupal_render($block);
+  drupal_json_output(array('output' => $out));
+  exit;
+}
+
+/**
+ * Implements hook_form_FÒRM_ID_alter (search_block_form) 
+ * 
+ * add javascript for getting bibdk_articles
+ */
+function bibdk_article_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  if (module_exists('bibdk_custom_search')) {
+    $path = drupal_get_path('module', 'bibdk_article');
+    $form['#attached']['js'][] = 
+       $path . '/js/bibdk_article_get_articles.js';
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function bibdk_article_permission() {
+  return array(
+    'create bibdk articles' => array(
+      'title' => t('create bibdk articles'),
+      'description' => t('Allow users to create articles.'),
+    ),
+    'delete bibdk articles' => array(
+      'title' => t('delete bibdk articles'),
+      'description' => t('Allow users to delete articles.'),
+    ),
+    'edit bibdk articles' => array(
+      'title' => t('edit bibdk articles'),
+      'description' => t('Allow users to edit articles.'),
+    ),
+  );
+}
+
+/** Implements hook_node_access
+ *  custom permissions for bibdk_articles .. made for test-purposes, but
+ * might come in usefull for some other admin-type
+ */
+function bibdk_article_node_access($node, $op, $account) {
+  $type = is_string($node) ? $node : $node->type;
+  if ($type != 'bibdk_article') {
+    return NODE_ACCESS_IGNORE;
+  }
+  switch ($op) {
+    case 'create':
+      if (user_access('create bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'update':
+      if (user_access('edit bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'delete':
+      if (user_access('delete bibdk articles', $account)) {
+        return NODE_ACCESS_ALLOW;
+      }
+      break;
+    case 'view' :
+      return NODE_ACCESS_ALLOW;
+  }
+  // if none of the conditions above are met .. deny access
+  return NODE_ACCESS_DENY;
+}
+
 /*
  * Implements hook_block_view
  */
-function bibdk_article_block_view($delta = ''){
-   $block = array();
+
+function bibdk_article_block_view($delta = '', $path = NULL) {
+  $block = array();
+
+  if (!isset($path)) {
+    $path = current_path();
+  }
+
   switch ($delta) {
     case 'bibdk_articles':
       if (user_access('access content')) {
         $block['subject'] = t('Recent content');
-        if ($articles = bibdk_article_get_block_posts()) {
-          $block['content'] = array(
-            '#theme' => 'bibdk_articles_block',
-            '#articles' => $articles,
-          );
-        }
-        else {
-          $block['content'] = t('No content available.');
-        }
+        $articles = bibdk_article_get_rendered_articles($path);
+
+        $block['content'] = array(
+          '#theme' => 'bibdk_article_frontpage',
+          '#items' => $articles,
+          '#prefix' => '<div class="bibdk_article_ajax_replace">',
+          '#suffix' => '</div>',
+        );
       }
       break;
   }
+
   return $block;
-  $articles = _bibdk_article_get_block_posts();
-  drupal_render($articles);
 }
 
-/*
- * Implements hook_block_configure
+function bibdk_article_get_rendered_articles($path) {
+  $rendered_articles = array();
+  //insert bibdk_helpdesk FIRST in array
+  $rendered_articles[0] = bibdk_article_render_helpdesk();
+
+
+  $article_nodes = bibdk_article_get_article_values();
+  // datacheck
+  if (empty($article_nodes)) {
+    return $rendered_articles;
+  }
+  // filter by path
+  foreach ($article_nodes as $article_node) {
+    // if no path is set for article ; set default path:bibdk_frontpage
+    $page_path = !empty($article_node['field_page']) ? $article_node['field_page']['#items'][0]['value'] : 'bibdk_frontpage';
+
+    if ($page_path == $path) {
+      $article_values[] = $article_node;
+    }
+  }
+
+  if (empty($article_values)) {
+    return $rendered_articles;
+  }
+
+  foreach ($article_values as $article_value) {
+    $article = bibdk_article_set_column($article_value);
+    $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget', current($article));
+  }
+  // default sort by key (weight)  
+  ksort($rendered_articles);
+
+  return $rendered_articles;
+}
+
+/** get helpdesk block from bibdk_helpdesk module
+ *
+ * @return array(weight=>helpdesk_block)
  */
-function bibdk_article_block_configure($delta = ''){
+function bibdk_article_render_helpdesk() {
+  if (module_exists('bibdk_helpdesk')) {
+    $block = module_invoke('bibdk_helpdesk', 'block_view', 'bibdk-helpdesk-teaser');
+    return array(0 => $block['content']);
+  }
+}
+
+/** set a single article
+ *
+ * @param  array $value entity from database
+ * @return array (column number  => article)
+ */
+function bibdk_article_set_column($value) {
+  $columns = isset($value['field_columns']['#items'][0]['value']) ? $value['field_columns']['#items'][0]['value'] : '2';
+  $rows = isset($value['field_rows']['#items'][0]['value']) ? $value['field_rows']['#items'][0]['value'] : '2';
+  $color = isset($value['field_color']['#items'][0]['value']) ? $value['field_color']['#items'][0]['value'] : 'light-grey';
+  $classes = bibdk_article_get_classes($columns, $rows, $color);
+  $weight = isset($value['field_weight']['#items'][0]['value']) ? $value['field_weight']['#items'][0]['value'] : 1;
+  $url = isset($value['field_link']['#items'][0]['value']) ? $value['field_link']['#items'][0]['value'] : NULL;
+  $text = isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL;
+
+  $item = array(
+    'title' => $value['title'],
+    'body' => drupal_render($value['body']),
+    'link' => (isset($url) && isset($text)) ? drupal_render(_bibdk_article_render_link($url, $text)) : '',
+    'image' => drupal_render($value['field_image']),
+    'class' => drupal_attributes($classes),
+  );
+
+  return array($weight => $item);
+}
+
+function _bibdk_article_render_link($url, $text){
+  $link = array(
+    '#type' => 'link',
+    '#href' => $url,
+    '#title' => $text,
+    '#attributes' => array(
+      'id' => array(
+        'selid-' . drupal_html_id($url),        
+      ),
+      'target' => '_blank',      
+    ),
+  );
+  return $link;
 }
 
 /*
  * Implements hook_theme
  */
-function bibdk_article_theme(){
+
+function bibdk_article_theme() {
   $themes = array(
     'bibdk_articles_block' => array(
       'variables' => array('articles' => NULL),
@@ -66,8 +242,16 @@ function bibdk_article_theme(){
         'link' => NULL,
         'class' => NULL,
         'rows' => NULL,
-        ),
+        'span' => NULL,
+      ),
       'template' => 'theme/bibdk-articles-block-widget'
+    ),
+    'bibdk_article_frontpage' => array(
+      'variables' => array(
+        'title' => '',
+        'items' => array(),
+      ),
+      'template' => 'theme/bibdk_article_frontpage',
     ),
   );
   return $themes;
@@ -76,55 +260,64 @@ function bibdk_article_theme(){
 /*
  * Fetch nodes of type bibdk_article from db
  */
-function bibdk_article_get_block_posts(){
+
+function bibdk_article_get_article_values() {
   //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
   $columns = array();
   $query = new EntityFieldQuery();
 
   $query
-    ->entityCondition('entity_type', 'node', '=')
-    ->propertyCondition('type', 'bibdk_article', '=')
-    ->propertyCondition('status', '1', '=');
+      ->entityCondition('entity_type', 'node', '=')
+      ->propertyCondition('type', 'bibdk_article', '=')
+      ->propertyCondition('status', '1', '=')
+      ->propertyOrderBy('changed', 'DESC');
 
   $result = $query->execute();
-  
+
   if (!isset($result['node']))
     return;
-  
-  $ids = array();
-  if ( isset($result['node']) ) {
-    foreach($result['node'] as $record) {
-      $ids[] = $record->nid;
+
+  $articles = node_load_multiple(array_keys($result['node']));
+  $article_fields = field_info_instances('node', 'bibdk_article');
+
+  $values = array();
+  foreach ($articles as $article) {
+    $value = array();
+    foreach ($article_fields as $name => $field) {
+      $value[$name] = field_view_field('node', $article, $name);
+      $value['title'] = $article->title;
+    }
+    $values[] = $value;
+  }
+  return $values;
+}
+
+/**
+ *
+ * @return array [page_path]=>[page_title] 
+ */
+function bibdk_article_get_page_paths() {
+  $ret = array();
+  if (module_exists('bibdk_custom_search')) {
+    if (function_exists('bibdk_custom_search_get_custom_search_pages')) {
+      $elements = bibdk_custom_search_get_custom_search_pages();
+      foreach ($elements as $key => $element) {
+        $ret[$element['page_path']] = $element['page_title'];
+      }
     }
   }
-  $articles = entity_load('node', $ids);
-  foreach($articles as $article){
-    $placement = isset($article->field_layout_placement['und'][0])? $article->field_layout_placement['und'][0]['value'] : 1;
-    $classes = bibdk_article_get_classes($article->field_layout_columns['und'][0]['value'], $article->field_layout_rows['und'][0]['value']);
-    $article_render_array = array(
-      'title' => $article->title,
-      'body' => isset($article->body['und'][0])? $article->body['und'][0]['value'] : "",
-      'link' => isset($article->field_bibdk_article_link['und'][0]['value']) ? $article->field_bibdk_article_link['und'][0]['value'] : "",
-      'link_text' => isset($article->field_bibdk_article_link_text['und'][0])? $article->field_bibdk_article_link_text['und'][0]['value'] : t("Read more"),
-      'class' => $classes['height'],
-      'rows' =>  $article->field_layout_rows['und'][0]['value'],
-    );
-    if (empty($columns[$placement]['width']))
-      $columns[$placement]['width'] = $classes['width'];
-
-    $columns[$placement]['articles'][] = theme('bibdk_articles_block_widget', $article_render_array);
-  }
-  ksort($columns);
-  return $columns;
+  return $ret;
 }
 
 /*
  * Add necessary classes for bibdk_theme
  */
-function bibdk_article_get_classes($columns, $rows){
+
+function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-    'width' => ($columns == 2) ? 'span9' : 'span5',
-    'height' => ($rows == 2) ? 'widget-light-grey widget-height-'.$rows : 'widget-dark-grey widget-height-'.$rows
+    'type' => 'article-widget',
+    'width' => 'span' . (3 * $columns),
+    'height' => 'widget-' . $color . ' widget-height-' . $rows,
   );
-  return $classes;
+  return array('class' => $classes);
 }
