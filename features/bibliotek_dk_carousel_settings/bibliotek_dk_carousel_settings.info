@@ -2,6 +2,7 @@ name = Bibliotek.dk - Carousel settings
 description = Settings for carousel, and carousel searches
 core = 7.x
 package = Bibdk features
+php = 5.2.4
 version = 7.x-1.0
 project = bibliotek_dk_carousel_settings
 dependencies[] = ctools
