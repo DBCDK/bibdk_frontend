@@ -131,11 +131,30 @@ function _bibdk_frontend_enable_modules() {
   }
 
 }
-/**
-* Enable default modules
-**/
-function bibdk_frontend_update_7009(&$sandbox) {
-  _bibdk_frontend_enable_modules();
+
+
+/** \brief
+ * define and set carousel block
+ */
+function _bibdk_search_carousel_set_blocks_7009() {
+  $values = array(
+    array(
+      'module' => 'ting_search_carousel',
+      'delta' => 'ting_search_carousel',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'carousel',
+      'pages' => '',
+      'cache' => -1,
+      'title' => '<none>',
+    ),
+  );
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
 }
 
 /**
@@ -166,3 +185,26 @@ function bibdk_frontend_update_7006(&$sandbox) {
 function bibdk_frontend_update_7008(&$sandbox) {
   module_enable(array('bibliotek_dk_usersettings'));
 }
+
+/**
+ * Enable feature bibliotek_dk_usersettings
+ */
+function bibdk_frontend_update_7009(&$sandbox) {
+  module_enable(array('bibdk_search_carousel'));
+}
+
+/**
+* Enable default modules
+**/
+function bibdk_frontend_update_7009(&$sandbox) {
+  _bibdk_frontend_enable_modules();
+}
+
+/**
+* Enable bibdk_search_carousel modules
+**/
+function bibdk_frontend_update_7009(&$sandbox) {
+  _bibdk_frontend_enable_modules();
+  _bibdk_search_carousel_set_blocks_7009();
+}
+
