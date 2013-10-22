@@ -315,8 +315,8 @@ function bibdk_article_get_page_paths() {
 
 function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-    'type' => 'article-widget',
     'width' => 'span' . (3 * $columns),
+    'type' => 'article-widget',
     'height' => 'widget-' . $color . ' widget-height-' . $rows,
   );
   return array('class' => $classes);
