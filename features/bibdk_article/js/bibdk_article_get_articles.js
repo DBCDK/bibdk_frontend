@@ -30,7 +30,7 @@ Drupal.bibdkArticlesGet = function(element) {
 };
     
 Drupal.bibdkArticlesReplace = function(response) {
-    $('.bibdk_article_ajax_replace').html(response.output);
+    $('.bibdk_article_ajax_replace').replaceWith(response.output);
 }
 
 }(jQuery));
