@@ -27,7 +27,7 @@ function html_5_text_format_filter_default_formats() {
         'weight' => '-48',
         'status' => '1',
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <div> <span> <hr> <img> <br>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <div> <span> <hr> <img> <br><h1><h2><h3><h4>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
