@@ -120,6 +120,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_usersettings',
     'bibliotek_dk_search_controls',
     'bibliotek_dk_carousel_settings',
+    'bibdk_field_settings',
     //Content
     'bibdk_article',
     'bibdk_adhl',
@@ -205,4 +206,11 @@ function _bibdk_search_carousel_set_blocks_7011() {
     $query->values($record);
   }
   $query->execute();
+}
+
+/**
+ * Enable feature: bibdk_field_settings
+ **/
+function bibdk_frontend_update_7012(&$sandbox) {
+  module_enable(array('bibdk_field_settings'));
 }
