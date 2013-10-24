@@ -1855,7 +1855,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
+  $option->sort = -65;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
@@ -2263,7 +2263,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -84;
   $option->label = 'Filmmusik - soundtrack';
   $option->value = '(filmmusik - soundtrack)';
   $option->expand = '0';
@@ -2299,7 +2299,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
+  $option->sort = -67;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
@@ -2407,7 +2407,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -78;
   $option->label = 'Hip hop';
   $option->value = '(hip hop)';
   $option->expand = '0';
@@ -2419,7 +2419,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -66;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
@@ -2551,7 +2551,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -48;
+  $option->sort = -47;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
@@ -2887,7 +2887,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -58;
+  $option->sort = -57;
   $option->label = 'Verdensmusik - world music';
   $option->value = '(verdensmusik - world music)';
   $option->expand = '0';
@@ -2995,7 +2995,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -74;
+  $option->sort = -75;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
@@ -3103,11 +3103,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -63;
-  $option->label = 'R&amp;B';
-  $option->value = 'r&amp;b';
+  $option->sort = -64;
+  $option->label = 'RogB';
+  $option->value = 'RogB';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['454f4227-4d9f-3414-c90a-71a304f4dd31'] = $option;
 
   $option = new stdClass();
@@ -3133,18 +3133,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['48e0627a-0fe9-2594-998f-b10d2535cf70'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '4bb8f91a-1cda-8fc4-1907-33da6e5634d4';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -78;
-  $option->label = 'Heavy rock';
-  $option->value = '(heavy rock)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['4bb8f91a-1cda-8fc4-1907-33da6e5634d4'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3187,7 +3175,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -81;
+  $option->sort = -80;
   $option->label = 'For børn';
   $option->value = '(for børn)';
   $option->expand = '0';
@@ -3283,7 +3271,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -82;
+  $option->sort = -81;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
@@ -3367,7 +3355,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5b63b5fd-97e8-f254-3184-8926e6912ad5';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -55;
+  $option->sort = -54;
   $option->label = 'Klaverkoncerter';
   $option->value = 'klaverkoncert';
   $option->expand = '0';
@@ -3449,18 +3437,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = '608695b8-a23c-1cf4-7156-a18c5fc12338';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -94;
-  $option->label = 'Dansk pop';
-  $option->value = '(dansk pop)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['608695b8-a23c-1cf4-7156-a18c5fc12338'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = '6098c202-8a5a-4d83-8cbc-475d11e581ac';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -95;
@@ -3523,7 +3499,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '667b9ec6-30c1-bd64-9958-863de345ddce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -91;
   $option->label = 'Danske viser';
   $option->value = '(danske viser)';
   $option->expand = '0';
@@ -3535,7 +3511,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -59;
+  $option->sort = -60;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
@@ -3739,7 +3715,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
+  $option->sort = -85;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
@@ -3811,7 +3787,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -63;
   $option->label = 'Salsa - afrocubansk musik';
   $option->value = '(salsa - afrocubansk musik)';
   $option->expand = '0';
@@ -3985,18 +3961,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '1c0066cf-f6cb-8694-b102-24a394e912d5';
   $option->is_disabled = FALSE;
   $export['81178722-f2eb-9cf4-390c-c3a2d88dba34'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '816fb6c3-1528-a7b4-8590-d6e7f4d25f22';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -79;
-  $option->label = 'Heavy metal';
-  $option->value = '(heavy metal)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['816fb6c3-1528-a7b4-8590-d6e7f4d25f22'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4339,7 +4303,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -71;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
@@ -4471,7 +4435,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -69;
+  $option->sort = -70;
   $option->label = 'New age';
   $option->value = '(new age)';
   $option->expand = '0';
@@ -4639,7 +4603,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -50;
+  $option->sort = -49;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
@@ -4663,7 +4627,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a57935ad-6759-7364-654e-7a77fd3f46ee';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -54;
+  $option->sort = -53;
   $option->label = 'Violinkoncerter';
   $option->value = 'violinkoncert';
   $option->expand = '0';
@@ -4759,7 +4723,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -87;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
@@ -4807,7 +4771,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -77;
   $option->label = 'House ';
   $option->value = 'house';
   $option->expand = '0';
@@ -4915,7 +4879,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -60;
+  $option->sort = -61;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
@@ -4927,7 +4891,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'af073db2-d4b8-49ca-a1b3-c3a18d99d74a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -51;
+  $option->sort = -50;
   $option->label = 'Orgelmusik';
   $option->value = 'orgelmusik';
   $option->expand = '0';
@@ -4975,7 +4939,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b0d00e57-8eb0-7c84-31b9-8ab9828d2e16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -57;
+  $option->sort = -56;
   $option->label = 'Klassiske symfonier';
   $option->value = '(klassiske symfonier)';
   $option->expand = '0';
@@ -5119,7 +5083,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -67;
+  $option->sort = -68;
   $option->label = 'Progressiv rock';
   $option->value = '(progressiv rock)';
   $option->expand = '0';
@@ -5503,7 +5467,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca5177cd-9784-68a4-7d84-9da83e4b757f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -97;
+  $option->sort = -96;
   $option->label = 'Country';
   $option->value = 'country';
   $option->expand = '0';
@@ -5515,7 +5479,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -45;
+  $option->sort = -44;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
@@ -5563,7 +5527,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'cc6af89b-8aac-4bd8-b7c7-3f6fee90a7f2';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -46;
+  $option->sort = -45;
   $option->label = 'Korsang';
   $option->value = 'korsang';
   $option->expand = '0';
@@ -5624,7 +5588,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'ce06eb6c-386c-41eb-84ea-f2a9aa0fbfa9';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -92;
-  $option->label = 'Computeranimeret film';
+  $option->label = 'Computeranimerede film';
   $option->value = '(computeranimeret film)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -5839,7 +5803,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -82;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
@@ -6451,7 +6415,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -62;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
@@ -6463,7 +6427,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f1c2841b-b00f-45b0-ba43-cc98eed95af9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -52;
+  $option->sort = -51;
   $option->label = 'Kammermusik';
   $option->value = 'kammermusik';
   $option->expand = '0';
@@ -6499,7 +6463,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f3b8c354-2f94-1c54-5131-88dcefcd9b44';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -69;
   $option->label = 'Pop';
   $option->value = 'pop';
   $option->expand = '0';
@@ -6643,7 +6607,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -72;
+  $option->sort = -73;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
