@@ -1855,7 +1855,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -64;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
@@ -1915,7 +1915,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0981bf00-199a-3134-ed87-8a8cb76dc8c8';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -74;
+  $option->sort = -70;
   $option->label = 'Science fiction';
   $option->value = '(science fiction)';
   $option->expand = '0';
@@ -1963,7 +1963,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0c2d782c-3a28-9d54-4961-d3f814ed8d16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -100;
+  $option->sort = -99;
   $option->label = 'Americana';
   $option->value = 'americana';
   $option->expand = '0';
@@ -2035,7 +2035,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '13e9c659-5d7c-4fd9-b8a9-634363b8b3f3';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -69;
+  $option->sort = -64;
   $option->label = 'Jazzfilm';
   $option->value = 'jazzfilm';
   $option->expand = '0';
@@ -2071,7 +2071,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '173d181f-3013-06b4-2153-a5f2eafb0876';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -76;
+  $option->sort = -73;
   $option->label = 'Politifilm';
   $option->value = 'politifilm';
   $option->expand = '0';
@@ -2131,7 +2131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '19fde25a-29c6-9bf4-31a2-ec3037108a0c';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -67;
+  $option->sort = -60;
   $option->label = 'Operafilm';
   $option->value = 'operafilm';
   $option->expand = '0';
@@ -2263,9 +2263,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -91;
+  $option->sort = -85;
   $option->label = 'Filmmusik - soundtrack';
-  $option->value = 'filmmusik - soundtrack';
+  $option->value = '(filmmusik - soundtrack)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9'] = $option;
@@ -2299,7 +2299,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -66;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
@@ -2407,9 +2407,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -77;
   $option->label = 'Hip hop';
-  $option->value = 'hip hop';
+  $option->value = '(hip hop)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['23f98cea-867b-4844-bdac-a4cf6e54efcd'] = $option;
@@ -2419,7 +2419,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -69;
+  $option->sort = -65;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
@@ -2491,7 +2491,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '287ba40b-f593-ca14-5943-97e81e88d359';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -64;
+  $option->sort = -57;
   $option->label = 'Rockfilm';
   $option->value = 'rockfilm';
   $option->expand = '0';
@@ -2551,7 +2551,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -44;
+  $option->sort = -48;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
@@ -2599,7 +2599,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2c584806-b4a2-4eba-839d-a70146fc85ea';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -84;
+  $option->sort = -80;
   $option->label = 'Horror';
   $option->value = 'horror';
   $option->expand = '0';
@@ -2887,9 +2887,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -59;
-  $option->label = 'Verdensmusik';
-  $option->value = 'verdensmusik';
+  $option->sort = -58;
+  $option->label = 'Verdensmusik - world music';
+  $option->value = '(verdensmusik - world music)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['380a95e5-72a6-e4f4-d927-f04c627a79eb'] = $option;
@@ -2947,7 +2947,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3bd90cc6-cd99-c434-2121-953316c7bc32';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -97;
+  $option->sort = -94;
   $option->label = 'Biografiske film';
   $option->value = '(biografiske film)';
   $option->expand = '0';
@@ -2995,7 +2995,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -74;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
@@ -3091,7 +3091,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '43562684-e584-48d4-be43-ea2ce40dad06';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -94;
+  $option->sort = -91;
   $option->label = 'Dansk filmkanon';
   $option->value = '(dansk filmkanon)';
   $option->expand = '0';
@@ -3103,11 +3103,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
-  $option->label = 'RogB';
-  $option->value = 'RogB';
+  $option->sort = -63;
+  $option->label = 'R&amp;B';
+  $option->value = 'r&amp;b';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['454f4227-4d9f-3414-c90a-71a304f4dd31'] = $option;
 
   $option = new stdClass();
@@ -3139,9 +3139,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4bb8f91a-1cda-8fc4-1907-33da6e5634d4';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
+  $option->sort = -78;
   $option->label = 'Heavy rock';
-  $option->value = 'heavy rock';
+  $option->value = '(heavy rock)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4bb8f91a-1cda-8fc4-1907-33da6e5634d4'] = $option;
@@ -3187,9 +3187,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -81;
   $option->label = 'For børn';
-  $option->value = 'for børn';
+  $option->value = '(for børn)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4ebd873c-5a7d-e614-4544-8f6b40c40f11'] = $option;
@@ -3235,7 +3235,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '51a8db89-a998-4ab4-fd72-22b345e27d21';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -93;
+  $option->sort = -90;
   $option->label = 'Danske filmklassikere';
   $option->value = '(danske filmklassikere)';
   $option->expand = '0';
@@ -3283,7 +3283,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -89;
+  $option->sort = -82;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
@@ -3415,7 +3415,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5faae28a-5305-f8d4-39e5-2e88c130c7c2';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -83;
+  $option->sort = -79;
   $option->label = 'Komedier';
   $option->value = 'komedier';
   $option->expand = '0';
@@ -3451,9 +3451,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '608695b8-a23c-1cf4-7156-a18c5fc12338';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -96;
+  $option->sort = -94;
   $option->label = 'Dansk pop';
-  $option->value = 'dansk pop';
+  $option->value = '(dansk pop)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['608695b8-a23c-1cf4-7156-a18c5fc12338'] = $option;
@@ -3523,9 +3523,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '667b9ec6-30c1-bd64-9958-863de345ddce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -95;
+  $option->sort = -92;
   $option->label = 'Danske viser';
-  $option->value = 'danske viser';
+  $option->value = '(danske viser)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['667b9ec6-30c1-bd64-9958-863de345ddce'] = $option;
@@ -3535,7 +3535,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -59;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
@@ -3691,7 +3691,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '707209a6-5118-8af4-e5ef-6c76e84c61da';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -78;
+  $option->sort = -75;
   $option->label = 'Kærlighed';
   $option->value = 'kærlighed';
   $option->expand = '0';
@@ -3739,7 +3739,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -86;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
@@ -3763,7 +3763,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -65;
+  $option->sort = -58;
   $option->label = 'Popfilm';
   $option->value = 'popfilm';
   $option->expand = '0';
@@ -3811,9 +3811,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -62;
   $option->label = 'Salsa - afrocubansk musik';
-  $option->value = 'salsa - afrocubansk musik';
+  $option->value = '(salsa - afrocubansk musik)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['754e67ca-964c-bce4-119b-b950192d3cfa'] = $option;
@@ -3991,9 +3991,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '816fb6c3-1528-a7b4-8590-d6e7f4d25f22';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -87;
+  $option->sort = -79;
   $option->label = 'Heavy metal';
-  $option->value = 'heavy metal';
+  $option->value = '(heavy metal)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['816fb6c3-1528-a7b4-8590-d6e7f4d25f22'] = $option;
@@ -4123,7 +4123,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '876fa643-58b8-4951-8636-9804f7bf9796';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -66;
+  $option->sort = -59;
   $option->label = 'Operetteklassikere';
   $option->value = 'operetteklassikere';
   $option->expand = '0';
@@ -4171,7 +4171,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '88c3c543-9aef-4463-a408-4d168ca2e5b8';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -77;
+  $option->sort = -74;
   $option->label = 'Novellefilm';
   $option->value = 'novellefilm';
   $option->expand = '0';
@@ -4207,7 +4207,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8b442f0f-07a4-c124-1958-01cac9498a93';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -73;
+  $option->sort = -69;
   $option->label = 'Socialrealisme';
   $option->value = 'socialrealisme';
   $option->expand = '0';
@@ -4267,7 +4267,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8dfc5958-129f-4844-cd06-68d3a6599635';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -91;
+  $option->sort = -88;
   $option->label = 'Drama';
   $option->value = 'drama';
   $option->expand = '0';
@@ -4339,7 +4339,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -70;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
@@ -4411,7 +4411,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '93c3c006-33ef-5174-4d8f-1522208e4d4d';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -72;
+  $option->sort = -68;
   $option->label = 'Tegnefilm';
   $option->value = 'tegnefilm';
   $option->expand = '0';
@@ -4459,7 +4459,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98ac7f85-2930-4576-b855-af0a431f0a38';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -82;
+  $option->sort = -62;
   $option->label = 'Korfilm';
   $option->value = 'korfilm';
   $option->expand = '0';
@@ -4471,9 +4471,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -69;
   $option->label = 'New age';
-  $option->value = 'new age';
+  $option->value = '(new age)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['98d32763-d0e5-16f4-2566-d2a2d2abb170'] = $option;
@@ -4531,7 +4531,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '9d8e4436-74ce-9704-8d42-3fcafbdb35eb';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -86;
+  $option->sort = -82;
   $option->label = 'Folkekomedier';
   $option->value = 'folkekomedier';
   $option->expand = '0';
@@ -4627,7 +4627,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a33807f6-1028-c654-dd6a-cc71fe74ef48';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -89;
+  $option->sort = -86;
   $option->label = 'Erotik';
   $option->value = 'erotik';
   $option->expand = '0';
@@ -4639,7 +4639,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -46;
+  $option->sort = -50;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
@@ -4675,7 +4675,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a5b66943-98cf-ddd4-a9f0-5e63ab4b6f9b';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -68;
+  $option->sort = -61;
   $option->label = 'Musicalfilm';
   $option->value = 'musicalfilm';
   $option->expand = '0';
@@ -4711,7 +4711,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a6257666-c86e-f144-894e-4feddd43f726';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -92;
+  $option->sort = -89;
   $option->label = 'Dokumentarfilm';
   $option->value = 'dokumentarfilm';
   $option->expand = '0';
@@ -4723,7 +4723,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a62c3640-de7c-4b14-af13-7157b9ddbb02';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -88;
+  $option->sort = -85;
   $option->label = 'Europæiske klassikere';
   $option->value = '(europæiske klassikere)';
   $option->expand = '0';
@@ -4759,7 +4759,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -93;
+  $option->sort = -88;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
@@ -4807,9 +4807,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -84;
-  $option->label = 'House - lounge';
-  $option->value = 'house lounge';
+  $option->sort = -76;
+  $option->label = 'House ';
+  $option->value = 'house';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['aa1ae4e9-5bf3-19e4-e546-1c764aeb7363'] = $option;
@@ -4915,7 +4915,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -60;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
@@ -4927,7 +4927,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'af073db2-d4b8-49ca-a1b3-c3a18d99d74a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -50;
+  $option->sort = -51;
   $option->label = 'Orgelmusik';
   $option->value = 'orgelmusik';
   $option->expand = '0';
@@ -4977,7 +4977,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -57;
   $option->label = 'Klassiske symfonier';
-  $option->value = 'klassiske symfonier';
+  $option->value = '(klassiske symfonier)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b0d00e57-8eb0-7c84-31b9-8ab9828d2e16'] = $option;
@@ -5119,9 +5119,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -71;
+  $option->sort = -67;
   $option->label = 'Progressiv rock';
-  $option->value = 'progressiv rock';
+  $option->value = '(progressiv rock)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b6cadeed-5e48-ef04-ad15-1c6f719013df'] = $option;
@@ -5131,7 +5131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b716e371-671f-e364-2df6-bdc0220b1d65';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -80;
+  $option->sort = -77;
   $option->label = 'Krimi';
   $option->value = 'krimi';
   $option->expand = '0';
@@ -5179,7 +5179,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b9241a28-bd21-2354-e1e9-653722dd5ab1';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -71;
+  $option->sort = -67;
   $option->label = 'Thriller';
   $option->value = 'thriller';
   $option->expand = '0';
@@ -5371,7 +5371,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c1f171a4-4f5f-4194-6522-dcd248294e5e';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -75;
+  $option->sort = -71;
   $option->label = 'Road movies';
   $option->value = '(road movies)';
   $option->expand = '0';
@@ -5455,7 +5455,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c77767d1-cb8e-26d4-8d8f-6118a3426fce';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -96;
+  $option->sort = -93;
   $option->label = 'Børnefilm';
   $option->value = 'børnefilm';
   $option->expand = '0';
@@ -5515,7 +5515,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -42;
+  $option->sort = -45;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
@@ -5563,7 +5563,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'cc6af89b-8aac-4bd8-b7c7-3f6fee90a7f2';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -43;
+  $option->sort = -46;
   $option->label = 'Korsang';
   $option->value = 'korsang';
   $option->expand = '0';
@@ -5623,7 +5623,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ce06eb6c-386c-41eb-84ea-f2a9aa0fbfa9';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -95;
+  $option->sort = -92;
   $option->label = 'Computeranimeret film';
   $option->value = '(computeranimeret film)';
   $option->expand = '0';
@@ -5743,7 +5743,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd3b1b655-3c40-40e9-a578-0231f38789df';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -87;
+  $option->sort = -83;
   $option->label = 'Farcer';
   $option->value = 'farcer';
   $option->expand = '0';
@@ -5767,7 +5767,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd4173a4c-3c03-2f94-dd81-56ff83728e1d';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -70;
+  $option->sort = -66;
   $option->label = 'Tv-serier';
   $option->value = 'tvserier';
   $option->expand = '0';
@@ -5839,7 +5839,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -90;
+  $option->sort = -83;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
@@ -5899,7 +5899,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd79b0d76-4e44-49ff-a5da-aa382427f45b';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -79;
+  $option->sort = -76;
   $option->label = 'Kunst og kunstnere';
   $option->value = '(kunst og kunstnere)';
   $option->expand = '0';
@@ -6055,7 +6055,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dedf91bd-47b3-3964-1d60-9c9f31d41089';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -90;
+  $option->sort = -87;
   $option->label = 'Dukkefilm';
   $option->value = 'dukkefilm';
   $option->expand = '0';
@@ -6091,7 +6091,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dfb1e1c3-6a82-abd4-89ef-fbba9289fdce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -99;
+  $option->sort = -98;
   $option->label = 'Blues';
   $option->value = 'blues';
   $option->expand = '0';
@@ -6211,7 +6211,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e40d3af1-5b81-40b4-b15e-a65194d28f10';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -81;
+  $option->sort = -78;
   $option->label = 'Krigsfilm';
   $option->value = 'krigsfilm';
   $option->expand = '0';
@@ -6451,7 +6451,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
+  $option->sort = -61;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
@@ -6499,7 +6499,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f3b8c354-2f94-1c54-5131-88dcefcd9b44';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -73;
+  $option->sort = -68;
   $option->label = 'Pop';
   $option->value = 'pop';
   $option->expand = '0';
@@ -6559,7 +6559,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f7ad177a-625c-52c4-ad82-57b45445cfcc';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -85;
+  $option->sort = -81;
   $option->label = 'Gyserfilm';
   $option->value = 'gyserfilm';
   $option->expand = '0';
@@ -6643,7 +6643,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -79;
+  $option->sort = -72;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
