@@ -10,7 +10,6 @@
 Drupal.behaviors.GetArticlesOnClick = {
     attach: function(context) {
         $('#search-form .horizontal-nav li', context).click(function(e) {
-            e.preventDefault();
             Drupal.bibdkArticlesGet($(this));
         });
     }
