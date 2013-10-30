@@ -202,7 +202,13 @@ function _bibdk_search_carousel_set_blocks_7011() {
   );
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
   foreach ($values as $record) {
+try{
     $query->values($record);
+$query->execute();
+
+}
+catch(Exception $e){
+// do nothing
+}
   }
-  $query->execute();
 }
