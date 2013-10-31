@@ -1,6 +1,5 @@
 <?php
 
-
 function bibdk_frontend_install() {
   _bibdk_frontend_set_variables();
   _bibdk_frontend_set_blocks();
@@ -71,7 +70,6 @@ function _bibdk_frontend_set_blocks() {
   $query->execute();
 }
 
-
 function _bibdk_frontend_set_variables() {
   variable_set('theme_default', 'bibdk_theme');
   $search_active_modules = variable_get('search_active_modules');
@@ -104,7 +102,6 @@ function bibdk_frontend_setup_cache() {
   variable_set('bibdk_borchk_cache_lifetime', 60);
 }
 
-
 //TODO move modules to .info file as dependcies and only enable new ones through hook_update_N().
 function _bibdk_frontend_enable_modules() {
   $modules = array(
@@ -129,7 +126,6 @@ function _bibdk_frontend_enable_modules() {
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
-
 }
 
 /**
@@ -138,6 +134,7 @@ function _bibdk_frontend_enable_modules() {
  *  function _bibdk_frontend_setup_captcha() removed - setup added to bibdkcaptcha module.
  */
 function bibdk_frontend_update_7004(&$sandbox) {
+  
 }
 
 /** Implements hook_update_N
@@ -169,15 +166,15 @@ function bibdk_frontend_update_7009(&$sandbox) {
 }
 
 /**
-* Enable default modules
-**/
+ * Enable default modules
+ * */
 function bibdk_frontend_update_7010(&$sandbox) {
   _bibdk_frontend_enable_modules();
 }
 
 /**
-* Enable bibdk_search_carousel modules
-**/
+ * Enable bibdk_search_carousel modules
+ * */
 function bibdk_frontend_update_7011(&$sandbox) {
   _bibdk_frontend_enable_modules();
   _bibdk_search_carousel_set_blocks_7011();
@@ -202,13 +199,11 @@ function _bibdk_search_carousel_set_blocks_7011() {
   );
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
   foreach ($values as $record) {
-try{
-    $query->values($record);
-$query->execute();
-
-}
-catch(Exception $e){
+    try {
+      $query->values($record);
+      $query->execute();
+    } catch (Exception $e) {
 // do nothing
-}
+    }
   }
 }
