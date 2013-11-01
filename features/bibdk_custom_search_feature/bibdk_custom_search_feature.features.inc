@@ -13,6 +13,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page = new stdClass();
   $search_page->disabled = FALSE; /* Edit this to true to make a default search_page disabled initially */
   $search_page->api_version = 1;
+  $search_page->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
+  $search_page->page_title = 'Noder';
+  $search_page->page_path = 'bibdk_frontpage/noder';
+  $search_page->menu_title = 'Noder';
+  $search_page->delimiter = 'term.workType=sheetmusic';
+  $search_page->expand = FALSE;
+  $search_page->sort = 10;
+  $search_page->is_disabled = FALSE;
+  $export['28226dd7-3165-49d8-a8e1-f9f82a44f418'] = $search_page;
+
+  $search_page = new stdClass();
+  $search_page->disabled = FALSE; /* Edit this to true to make a default search_page disabled initially */
+  $search_page->api_version = 1;
   $search_page->p_uuid = '535c37b7-2bd4-7254-09f6-1b1285ac5761';
   $search_page->page_title = 'Artikler';
   $search_page->page_path = 'bibdk_frontpage/artikel';
@@ -243,6 +256,20 @@ Du finder ikke alle film fra de nævnte lande.';
   $element->access_key = '';
   $element->is_disabled = FALSE;
   $export['2e4be922-5e61-bb64-8123-d9c01c3a1640'] = $element;
+
+  $element = new stdClass();
+  $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
+  $element->api_version = 1;
+  $element->e_uuid = '3a3e8914-dd72-488d-a816-6f9f4141d701';
+  $element->element_title = 'noder, hæftetitel';
+  $element->element_label = 'Titel på nodehæfte';
+  $element->description = '';
+  $element->help_text = 'fx 555 sange';
+  $element->sort = 10;
+  $element->tab_index = 0;
+  $element->access_key = '';
+  $element->is_disabled = FALSE;
+  $export['3a3e8914-dd72-488d-a816-6f9f4141d701'] = $element;
 
   $element = new stdClass();
   $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
@@ -486,6 +513,20 @@ synge*';
   $element = new stdClass();
   $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
   $element->api_version = 1;
+  $element->e_uuid = '76a5db8e-179c-4c8b-bd60-4864ba5e6132';
+  $element->element_title = 'noder, alle titler';
+  $element->element_label = 'Titel på sang eller musik';
+  $element->description = '';
+  $element->help_text = '';
+  $element->sort = 10;
+  $element->tab_index = 0;
+  $element->access_key = '';
+  $element->is_disabled = FALSE;
+  $export['76a5db8e-179c-4c8b-bd60-4864ba5e6132'] = $element;
+
+  $element = new stdClass();
+  $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
+  $element->api_version = 1;
   $element->e_uuid = '7b391b37-7099-50a4-e1f6-0a3623de1421';
   $element->element_title = 'artikel_tidsskrift_avis';
   $element->element_label = 'Tidsskrift eller avis';
@@ -678,6 +719,20 @@ Ex. pisa*';
   $element = new stdClass();
   $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
   $element->api_version = 1;
+  $element->e_uuid = 'ad54f1ac-2da3-475c-9d56-38896ad7cae0';
+  $element->element_title = 'noder_materialetyper';
+  $element->element_label = 'Materiale';
+  $element->description = '';
+  $element->help_text = '';
+  $element->sort = 10;
+  $element->tab_index = 0;
+  $element->access_key = '';
+  $element->is_disabled = FALSE;
+  $export['ad54f1ac-2da3-475c-9d56-38896ad7cae0'] = $element;
+
+  $element = new stdClass();
+  $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
+  $element->api_version = 1;
   $element->e_uuid = 'ae797962-8b73-3044-31d3-6eebde66c95f';
   $element->element_title = 'film_genre';
   $element->element_label = 'Genre, type';
@@ -718,6 +773,20 @@ Ex: mette højbjerg';
   $element->access_key = '';
   $element->is_disabled = FALSE;
   $export['b35762f5-54c6-4044-355a-96a20c9d21dc'] = $element;
+
+  $element = new stdClass();
+  $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
+  $element->api_version = 1;
+  $element->e_uuid = 'b4fe23ee-b461-4b68-813a-d9a32a637bfe';
+  $element->element_title = 'noder_ophav';
+  $element->element_label = 'Komponist eller gruppe';
+  $element->description = '';
+  $element->help_text = 'fx fuzzy';
+  $element->sort = 10;
+  $element->tab_index = 0;
+  $element->access_key = '';
+  $element->is_disabled = FALSE;
+  $export['b4fe23ee-b461-4b68-813a-d9a32a637bfe'] = $element;
 
   $element = new stdClass();
   $element->disabled = FALSE; /* Edit this to true to make a default element disabled initially */
@@ -885,6 +954,16 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element = new stdClass();
   $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
   $map_element->api_version = 1;
+  $map_element->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
+  $map_element->e_uuid = '3a3e8914-dd72-488d-a816-6f9f4141d701';
+  $map_element->me_uuid = '0eda4c93-f14d-4e04-be5a-5e4ff97a4163';
+  $map_element->region = 'main';
+  $map_element->sort = -50;
+  $export['0eda4c93-f14d-4e04-be5a-5e4ff97a4163'] = $map_element;
+
+  $map_element = new stdClass();
+  $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
+  $map_element->api_version = 1;
   $map_element->p_uuid = 'f8e34d18-9d09-4c44-8592-99d4c43c7e79';
   $map_element->e_uuid = '553e8edb-bbb1-c6e4-5574-8182d8ed4e15';
   $map_element->me_uuid = '1403d4fc-66a1-0054-9daa-eb0b5e74a776';
@@ -931,6 +1010,16 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->region = 'main';
   $map_element->sort = -49;
   $export['22948d61-f9b3-a514-851e-9316e9e7d045'] = $map_element;
+
+  $map_element = new stdClass();
+  $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
+  $map_element->api_version = 1;
+  $map_element->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
+  $map_element->e_uuid = '76a5db8e-179c-4c8b-bd60-4864ba5e6132';
+  $map_element->me_uuid = '2c372bfe-36b6-4b09-aee8-f4254ba51b96';
+  $map_element->region = 'main';
+  $map_element->sort = -48;
+  $export['2c372bfe-36b6-4b09-aee8-f4254ba51b96'] = $map_element;
 
   $map_element = new stdClass();
   $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
@@ -1205,6 +1294,16 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element = new stdClass();
   $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
   $map_element->api_version = 1;
+  $map_element->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
+  $map_element->e_uuid = 'ad54f1ac-2da3-475c-9d56-38896ad7cae0';
+  $map_element->me_uuid = 'b3b1c65d-1d48-4add-9bb4-15c9dcb30ef9';
+  $map_element->region = 'expand';
+  $map_element->sort = 10;
+  $export['b3b1c65d-1d48-4add-9bb4-15c9dcb30ef9'] = $map_element;
+
+  $map_element = new stdClass();
+  $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
+  $map_element->api_version = 1;
   $map_element->p_uuid = '6c9427f4-c8da-e4b4-2550-4533080fc500';
   $map_element->e_uuid = 'b0289528-53b4-2074-258c-735b863085e1';
   $map_element->me_uuid = 'b8e42a9f-1bdf-f424-21dd-0aaf7aa70682';
@@ -1275,6 +1374,16 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element = new stdClass();
   $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
   $map_element->api_version = 1;
+  $map_element->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
+  $map_element->e_uuid = 'b4fe23ee-b461-4b68-813a-d9a32a637bfe';
+  $map_element->me_uuid = 'd430ed0e-74d1-4eb5-a65c-5e3f5d33592b';
+  $map_element->region = 'main';
+  $map_element->sort = -49;
+  $export['d430ed0e-74d1-4eb5-a65c-5e3f5d33592b'] = $map_element;
+
+  $map_element = new stdClass();
+  $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
+  $map_element->api_version = 1;
   $map_element->p_uuid = '6c9427f4-c8da-e4b4-2550-4533080fc500';
   $map_element->e_uuid = 'acdb74f6-dd28-81c4-5190-af28a09e5d47';
   $map_element->me_uuid = 'da97cc66-0faa-3314-61f1-b90dcb80d330';
@@ -1339,6 +1448,15 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_value() {
   $map_values->v_uuid = '90655745-f61d-ac84-c54e-d7907d159271';
   $map_values->sort = 10;
   $export['025ba21d-159e-ed54-657f-9d212d77762d'] = $map_values;
+
+  $map_values = new stdClass();
+  $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
+  $map_values->api_version = 1;
+  $map_values->mv_uuid = '03738e98-1b99-4b39-a56d-b1d01dc4283f';
+  $map_values->e_uuid = 'ad54f1ac-2da3-475c-9d56-38896ad7cae0';
+  $map_values->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $map_values->sort = 10;
+  $export['03738e98-1b99-4b39-a56d-b1d01dc4283f'] = $map_values;
 
   $map_values = new stdClass();
   $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
@@ -1559,6 +1677,15 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_value() {
   $map_values = new stdClass();
   $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
   $map_values->api_version = 1;
+  $map_values->mv_uuid = '4f30fadb-5df2-473f-992d-8e5768728a07';
+  $map_values->e_uuid = '3a3e8914-dd72-488d-a816-6f9f4141d701';
+  $map_values->v_uuid = 'c065cb77-6f6d-42ff-b6e1-c70b48cab17b';
+  $map_values->sort = 10;
+  $export['4f30fadb-5df2-473f-992d-8e5768728a07'] = $map_values;
+
+  $map_values = new stdClass();
+  $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
+  $map_values->api_version = 1;
   $map_values->mv_uuid = '6792fd4b-dd3e-7b04-597d-883d6a0a22e6';
   $map_values->e_uuid = '54d61692-fd9b-07f4-55a0-c1ba3094cbde';
   $map_values->v_uuid = 'd5bd0d72-c9ca-8e54-41a1-05d9b65cea77';
@@ -1685,6 +1812,15 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_value() {
   $map_values = new stdClass();
   $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
   $map_values->api_version = 1;
+  $map_values->mv_uuid = 'bca31175-51a6-49de-9a8c-50fc3ee625a0';
+  $map_values->e_uuid = 'b4fe23ee-b461-4b68-813a-d9a32a637bfe';
+  $map_values->v_uuid = '1150ebb6-8e38-27d4-b929-840f71d17137';
+  $map_values->sort = 10;
+  $export['bca31175-51a6-49de-9a8c-50fc3ee625a0'] = $map_values;
+
+  $map_values = new stdClass();
+  $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
+  $map_values->api_version = 1;
   $map_values->mv_uuid = 'c6ccecf4-5c51-dfd4-c9af-47915f004cc8';
   $map_values->e_uuid = '062dda99-139c-0484-595b-2ddf7f0b88b9';
   $map_values->v_uuid = '90655745-f61d-ac84-c54e-d7907d159271';
@@ -1781,6 +1917,15 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_value() {
   $map_values->sort = 10;
   $export['f182d62c-a1fa-6104-8910-7b1622198614'] = $map_values;
 
+  $map_values = new stdClass();
+  $map_values->disabled = FALSE; /* Edit this to true to make a default map_values disabled initially */
+  $map_values->api_version = 1;
+  $map_values->mv_uuid = 'f9f2a603-b1ca-4b8c-8ac8-eded98b7c430';
+  $map_values->e_uuid = '76a5db8e-179c-4c8b-bd60-4864ba5e6132';
+  $map_values->v_uuid = 'e4539af4-043f-49d4-ab45-379299f73085';
+  $map_values->sort = 10;
+  $export['f9f2a603-b1ca-4b8c-8ac8-eded98b7c430'] = $map_values;
+
   return $export;
 }
 
@@ -1833,7 +1978,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -73;
   $option->label = 'tjekkisk';
-  $option->value = '(cze OR ces)';
+  $option->value = '(cze ELLER ces)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['021049fe-ac98-4234-29b6-8dcfe6af72f8'] = $option;
@@ -1855,7 +2000,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -65;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
@@ -1881,7 +2026,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -98;
   $option->label = 'e-musik';
-  $option->value = '(musik AND term.accessType=online) ';
+  $option->value = '(musik OG term.accessType=online) ';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['04e1ad22-c09f-19c4-25f0-c8cbb3cfc80c'] = $option;
@@ -1901,6 +2046,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '079e4b9e-9c02-4ee5-b30e-c812bfc15931';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -79;
+  $option->label = 'Goth';
+  $option->value = 'goth';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['079e4b9e-9c02-4ee5-b30e-c812bfc15931'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '07b223be-e00c-4654-d511-8cd8726fdf37';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -66;
@@ -1913,9 +2070,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '096f7b5b-6695-476b-aad7-526a761dd035';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -76;
+  $option->label = 'Indietronica';
+  $option->value = 'indietronica';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['096f7b5b-6695-476b-aad7-526a761dd035'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '0981bf00-199a-3134-ed87-8a8cb76dc8c8';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -74;
+  $option->sort = -70;
   $option->label = 'Science fiction';
   $option->value = '(science fiction)';
   $option->expand = '0';
@@ -1951,7 +2120,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0bebddf4-1d90-0e14-e1ea-98948056f902';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -99;
+  $option->sort = -93;
   $option->label = 'e-spil';
   $option->value = 'pc-spil';
   $option->expand = '0';
@@ -1963,7 +2132,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0c2d782c-3a28-9d54-4961-d3f814ed8d16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -100;
+  $option->sort = -99;
   $option->label = 'Americana';
   $option->value = 'americana';
   $option->expand = '0';
@@ -1993,6 +2162,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['0da5b6ed-259e-a524-114d-4cbfa06fa9ba'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '0dd49630-3980-4ae9-aa6d-81a449c7783f';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -52;
+  $option->label = 'Andre koncerter';
+  $option->value = '(andre koncerter)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['0dd49630-3980-4ae9-aa6d-81a449c7783f'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2033,9 +2214,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '139b5c34-932e-44fa-8192-55576b202b15';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -96;
+  $option->label = 'Animationsfilm (voksne)';
+  $option->value = '(animationsfilm mest for voksne)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['139b5c34-932e-44fa-8192-55576b202b15'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '13e9c659-5d7c-4fd9-b8a9-634363b8b3f3';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -69;
+  $option->sort = -64;
   $option->label = 'Jazzfilm';
   $option->value = 'jazzfilm';
   $option->expand = '0';
@@ -2071,7 +2264,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '173d181f-3013-06b4-2153-a5f2eafb0876';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -76;
+  $option->sort = -73;
   $option->label = 'Politifilm';
   $option->value = 'politifilm';
   $option->expand = '0';
@@ -2131,7 +2324,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '19fde25a-29c6-9bf4-31a2-ec3037108a0c';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -67;
+  $option->sort = -60;
   $option->label = 'Operafilm';
   $option->value = 'operafilm';
   $option->expand = '0';
@@ -2181,7 +2374,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -94;
   $option->label = 'artikler';
-  $option->value = 'artikel OR term.workType=article';
+  $option->value = 'artikel ELLER term.workType=article';
   $option->expand = '479cc87e-3ff3-d124-5567-e03e00ef3169';
   $option->is_disabled = FALSE;
   $export['1c7e81d5-661c-31b4-0134-357fc0d1a646'] = $option;
@@ -2229,7 +2422,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -88;
   $option->label = 'hollandsk';
-  $option->value = '(dut OR fle)';
+  $option->value = '(dut ELLER fle)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1ed2a1de-ba07-7174-e147-525624d93ecf'] = $option;
@@ -2263,9 +2456,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -91;
+  $option->sort = -84;
   $option->label = 'Filmmusik - soundtrack';
-  $option->value = 'filmmusik - soundtrack';
+  $option->value = '(filmmusik - soundtrack)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9'] = $option;
@@ -2289,7 +2482,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -75;
   $option->label = 'svensk';
-  $option->value = '(swe OR sve)';
+  $option->value = '(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2132a4bc-74b9-31a4-d91e-177decac5196'] = $option;
@@ -2299,7 +2492,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -67;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
@@ -2321,6 +2514,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '21b84c1a-a013-4f35-9fa3-ec3ac06f0179';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -97;
+  $option->label = 'Animationsfilm (børn)';
+  $option->value = '(animationsfilm mest for børn)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['21b84c1a-a013-4f35-9fa3-ec3ac06f0179'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '21f6c940-699c-aaa4-f5e0-b70d62f7aebd';
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -97;
@@ -2337,7 +2542,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -91;
   $option->label = 'færøsk';
-  $option->value = '(far OR fao)';
+  $option->value = '(far ELLER fao)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['22837940-734a-4bf4-3d3d-b9dd680b100d'] = $option;
@@ -2407,9 +2612,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -78;
   $option->label = 'Hip hop';
-  $option->value = 'hip hop';
+  $option->value = '(hip hop)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['23f98cea-867b-4844-bdac-a4cf6e54efcd'] = $option;
@@ -2419,7 +2624,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -69;
+  $option->sort = -66;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
@@ -2489,9 +2694,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '27e48668-09a1-4ab5-a7be-0b2dfe3240c2';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -99;
+  $option->label = 'Alle partiturer';
+  $option->value = '(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['27e48668-09a1-4ab5-a7be-0b2dfe3240c2'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '287ba40b-f593-ca14-5943-97e81e88d359';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -64;
+  $option->sort = -57;
   $option->label = 'Rockfilm';
   $option->value = 'rockfilm';
   $option->expand = '0';
@@ -2551,7 +2768,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -44;
+  $option->sort = -47;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
@@ -2589,9 +2806,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'b056401f-4ff0-a654-55b8-835ad50af150';
   $option->sort = -97;
   $option->label = 'på nettet';
-  $option->value = 'lydbog AND term.accessType=online';
+  $option->value = 'lydbog OG term.accessType=online';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['2c43ecd8-4671-ce84-cd4d-7405dd5fb741'] = $option;
 
   $option = new stdClass();
@@ -2599,7 +2816,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2c584806-b4a2-4eba-839d-a70146fc85ea';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -84;
+  $option->sort = -80;
   $option->label = 'Horror';
   $option->value = 'horror';
   $option->expand = '0';
@@ -2641,6 +2858,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2e137bb2-3835-fc34-c959-8e740005c21a'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '2f0a7fa2-5a91-4e45-ba0e-860b759f1c14';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -43;
+  $option->label = 'Orgel solo';
+  $option->value = '(orgel solo)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['2f0a7fa2-5a91-4e45-ba0e-860b759f1c14'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2777,6 +3006,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '34fa1c8d-267f-4a5e-9ffd-52458e94d627';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -100;
+  $option->label = 'Noder på nettet';
+  $option->value = '(mu OG xe)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['34fa1c8d-267f-4a5e-9ffd-52458e94d627'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '3504a246-1dae-4b06-8895-998f43fbaead';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -98;
@@ -2887,9 +3128,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -59;
-  $option->label = 'Verdensmusik';
-  $option->value = 'verdensmusik';
+  $option->sort = -57;
+  $option->label = 'Verdensmusik-world music';
+  $option->value = '(verdensmusik - world music)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['380a95e5-72a6-e4f4-d927-f04c627a79eb'] = $option;
@@ -2945,9 +3186,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '3ba4096a-04c6-4ad0-a54f-9aec40c6670c';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -65;
+  $option->label = 'Westerns';
+  $option->value = 'westerns';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3ba4096a-04c6-4ad0-a54f-9aec40c6670c'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '3bd90cc6-cd99-c434-2121-953316c7bc32';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -97;
+  $option->sort = -94;
   $option->label = 'Biografiske film';
   $option->value = '(biografiske film)';
   $option->expand = '0';
@@ -2995,7 +3248,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -75;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
@@ -3091,7 +3344,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '43562684-e584-48d4-be43-ea2ce40dad06';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -94;
+  $option->sort = -91;
   $option->label = 'Dansk filmkanon';
   $option->value = '(dansk filmkanon)';
   $option->expand = '0';
@@ -3101,9 +3354,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '442ba4b3-fce3-4d77-a242-4dd2bf147b96';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -74;
+  $option->label = 'Jazz - dansk';
+  $option->value = '(jazz - dansk)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['442ba4b3-fce3-4d77-a242-4dd2bf147b96'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
+  $option->sort = -64;
   $option->label = 'RogB';
   $option->value = 'RogB';
   $option->expand = '0';
@@ -3125,6 +3390,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '481f8701-65f3-433f-ad99-9e2634939275';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -95;
+  $option->label = 'Music-minus-one';
+  $option->value = 'mm';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['481f8701-65f3-433f-ad99-9e2634939275'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '48e0627a-0fe9-2594-998f-b10d2535cf70';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -20;
@@ -3133,18 +3410,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['48e0627a-0fe9-2594-998f-b10d2535cf70'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '4bb8f91a-1cda-8fc4-1907-33da6e5634d4';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
-  $option->label = 'Heavy rock';
-  $option->value = 'heavy rock';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['4bb8f91a-1cda-8fc4-1907-33da6e5634d4'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3187,9 +3452,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -80;
   $option->label = 'For børn';
-  $option->value = 'for børn';
+  $option->value = '(for børn)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4ebd873c-5a7d-e614-4544-8f6b40c40f11'] = $option;
@@ -3233,9 +3498,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '50f987d4-fb53-4fc0-b6b3-4820be2e9da9';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -95;
+  $option->label = 'Dance';
+  $option->value = 'dance';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['50f987d4-fb53-4fc0-b6b3-4820be2e9da9'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '51a8db89-a998-4ab4-fd72-22b345e27d21';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -93;
+  $option->sort = -90;
   $option->label = 'Danske filmklassikere';
   $option->value = '(danske filmklassikere)';
   $option->expand = '0';
@@ -3269,11 +3546,23 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '532bd727-dbf1-4b81-bc91-0b1bb5ae3b54';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -83;
+  $option->label = 'Fitness musik';
+  $option->value = '(fitness musik)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['532bd727-dbf1-4b81-bc91-0b1bb5ae3b54'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '533b4694-b2c4-3fe4-a910-df0e1945ed67';
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -92;
   $option->label = 'fransk';
-  $option->value = '(fra OR fre)';
+  $option->value = '(fra ELLER fre)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['533b4694-b2c4-3fe4-a910-df0e1945ed67'] = $option;
@@ -3283,7 +3572,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -89;
+  $option->sort = -81;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
@@ -3367,9 +3656,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5b63b5fd-97e8-f254-3184-8926e6912ad5';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -55;
+  $option->sort = -54;
   $option->label = 'Klaverkoncerter';
-  $option->value = 'klaverkoncert';
+  $option->value = 'klaverkoncerter';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5b63b5fd-97e8-f254-3184-8926e6912ad5'] = $option;
@@ -3415,7 +3704,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5faae28a-5305-f8d4-39e5-2e88c130c7c2';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -83;
+  $option->sort = -79;
   $option->label = 'Komedier';
   $option->value = 'komedier';
   $option->expand = '0';
@@ -3445,18 +3734,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['605aeaeb-f676-8fe4-e9d5-4f7579d76052'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '608695b8-a23c-1cf4-7156-a18c5fc12338';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -96;
-  $option->label = 'Dansk pop';
-  $option->value = 'dansk pop';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['608695b8-a23c-1cf4-7156-a18c5fc12338'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3523,9 +3800,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '667b9ec6-30c1-bd64-9958-863de345ddce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -95;
+  $option->sort = -91;
   $option->label = 'Danske viser';
-  $option->value = 'danske viser';
+  $option->value = '(danske viser)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['667b9ec6-30c1-bd64-9958-863de345ddce'] = $option;
@@ -3535,7 +3812,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -60;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
@@ -3605,11 +3882,23 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '6bbc6142-d2c9-47ce-bc96-164167b500b6';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -97;
+  $option->label = 'Chill';
+  $option->value = 'chill';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['6bbc6142-d2c9-47ce-bc96-164167b500b6'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '6c48c5ac-7a71-1d64-2dd8-4e6477c505bc';
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -96;
   $option->label = 'fransk';
-  $option->value = '(fre OR fra)';
+  $option->value = '(fre ELLER fra)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['6c48c5ac-7a71-1d64-2dd8-4e6477c505bc'] = $option;
@@ -3643,7 +3932,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '6d38c576-ff8a-4d24-8937-5d3e4d954fc7';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -91;
+  $option->sort = -100;
   $option->label = 'e-bøger';
   $option->value = 'ebog';
   $option->expand = '0';
@@ -3661,6 +3950,30 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['6dd989df-1478-0ff4-a5a5-e518aa5dfb77'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '6f4e965e-d180-4a53-bee3-ed7a61375397';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -46;
+  $option->label = 'Kor';
+  $option->value = 'kor';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['6f4e965e-d180-4a53-bee3-ed7a61375397'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '6fa651ad-4aa8-46f2-94a0-790663faf303';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -89;
+  $option->label = 'Dubstep-bass';
+  $option->value = '(dubstep-bass)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['6fa651ad-4aa8-46f2-94a0-790663faf303'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3689,9 +4002,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '7067c647-eb62-4319-8474-934da929cb30';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -96;
+  $option->label = 'Stemmer';
+  $option->value = '(pd ELLER pl ELLER so ELLER st ELLER sv)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['7067c647-eb62-4319-8474-934da929cb30'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '707209a6-5118-8af4-e5ef-6c76e84c61da';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -78;
+  $option->sort = -75;
   $option->label = 'Kærlighed';
   $option->value = 'kærlighed';
   $option->expand = '0';
@@ -3737,9 +4062,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '7244e0ab-ff90-49e1-8b3e-497913a2deb1';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -59;
+  $option->label = 'Synthpop';
+  $option->value = 'synthpop';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['7244e0ab-ff90-49e1-8b3e-497913a2deb1'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -85;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
@@ -3753,7 +4090,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'fbeb5556-778a-ab64-2522-89eeef2793eb';
   $option->sort = -96;
   $option->label = 'hovedbrudsspil';
-  $option->value = 'hovedbrudsspil OR brætspil OR quiz OR puslespil';
+  $option->value = '(hovedbrudsspil ELLER brætspil ELLER quiz ELLER puslespil)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['73c4c721-838c-0f24-0107-0d4128301f5d'] = $option;
@@ -3763,7 +4100,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -65;
+  $option->sort = -58;
   $option->label = 'Popfilm';
   $option->value = 'popfilm';
   $option->expand = '0';
@@ -3789,7 +4126,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -85;
   $option->label = 'svensk';
-  $option->value = '(swe OR sve)';
+  $option->value = '(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7500eb47-bedc-ad54-2da0-f3c6809128fc'] = $option;
@@ -3811,9 +4148,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -63;
   $option->label = 'Salsa - afrocubansk musik';
-  $option->value = 'salsa - afrocubansk musik';
+  $option->value = '(salsa - afrocubansk musik)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['754e67ca-964c-bce4-119b-b950192d3cfa'] = $option;
@@ -3919,7 +4256,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7c16db30-ece8-aff4-895b-a29c47adf457';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -96;
+  $option->sort = -95;
   $option->label = 'e-musik';
   $option->value = 'musik';
   $option->expand = '0';
@@ -3943,11 +4280,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7d9ddc21-de30-48d4-999e-28be1c16b3ec';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -97;
+  $option->sort = -98;
   $option->label = 'e-dokumenter frit tilgængelige';
-  $option->value = 'netdokumenter';
+  $option->value = 'netdokument OG ou';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['7d9ddc21-de30-48d4-999e-28be1c16b3ec'] = $option;
 
   $option = new stdClass();
@@ -3955,7 +4292,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7e5e55cf-039c-11e4-89e6-dee2f54d82b0';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -92;
+  $option->sort = -94;
   $option->label = 'e-noder';
   $option->value = 'node';
   $option->expand = '0';
@@ -3977,6 +4314,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '804a40a6-8952-4230-b818-b47aead1bace';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -58;
+  $option->label = 'Teenpop';
+  $option->value = 'teenpop';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['804a40a6-8952-4230-b818-b47aead1bace'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '81178722-f2eb-9cf4-390c-c3a2d88dba34';
   $option->v_uuid = '1be4292d-14b0-f334-a1af-e1e349550f3c';
   $option->sort = 10;
@@ -3985,18 +4334,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '1c0066cf-f6cb-8694-b102-24a394e912d5';
   $option->is_disabled = FALSE;
   $export['81178722-f2eb-9cf4-390c-c3a2d88dba34'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '816fb6c3-1528-a7b4-8590-d6e7f4d25f22';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -87;
-  $option->label = 'Heavy metal';
-  $option->value = 'heavy metal';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['816fb6c3-1528-a7b4-8590-d6e7f4d25f22'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4123,7 +4460,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '876fa643-58b8-4951-8636-9804f7bf9796';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -66;
+  $option->sort = -59;
   $option->label = 'Operetteklassikere';
   $option->value = 'operetteklassikere';
   $option->expand = '0';
@@ -4161,7 +4498,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'fbeb5556-778a-ab64-2522-89eeef2793eb';
   $option->sort = -95;
   $option->label = 'leg og lær';
-  $option->value = '(leg og lær) OR leg';
+  $option->value = '(leg og lær) ELLER leg';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['881ef1f5-ac13-9354-9106-a03112786a4d'] = $option;
@@ -4171,7 +4508,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '88c3c543-9aef-4463-a408-4d168ca2e5b8';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -77;
+  $option->sort = -74;
   $option->label = 'Novellefilm';
   $option->value = 'novellefilm';
   $option->expand = '0';
@@ -4193,6 +4530,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '8ae8deac-d243-4fee-a578-3acb0b740c00';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -97;
+  $option->label = 'Klaverpartiturer';
+  $option->value = 'pp';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['8ae8deac-d243-4fee-a578-3acb0b740c00'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '8b122891-e93c-28a4-39eb-94509fb94b0d';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -9;
@@ -4207,7 +4556,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8b442f0f-07a4-c124-1958-01cac9498a93';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -73;
+  $option->sort = -69;
   $option->label = 'Socialrealisme';
   $option->value = 'socialrealisme';
   $option->expand = '0';
@@ -4267,7 +4616,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8dfc5958-129f-4844-cd06-68d3a6599635';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -91;
+  $option->sort = -88;
   $option->label = 'Drama';
   $option->value = 'drama';
   $option->expand = '0';
@@ -4285,6 +4634,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = TRUE;
   $export['8eda79e6-8d41-1804-ed41-16fc659fc232'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '90c833d5-e0f7-4d9a-b434-8d97e32c32f2';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -92;
+  $option->label = 'Dansk pop/rock';
+  $option->value = '(dansk pop/rock)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['90c833d5-e0f7-4d9a-b434-8d97e32c32f2'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4339,7 +4700,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -71;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
@@ -4377,7 +4738,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -71;
   $option->label = 'tysk';
-  $option->value = '(ger OR deu)';
+  $option->value = '(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['92d882e0-03e9-6534-d951-4b15016e7ff6'] = $option;
@@ -4411,7 +4772,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '93c3c006-33ef-5174-4d8f-1522208e4d4d';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -72;
+  $option->sort = -68;
   $option->label = 'Tegnefilm';
   $option->value = 'tegnefilm';
   $option->expand = '0';
@@ -4445,6 +4806,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '974f0aff-f3e7-434d-bc57-151ab9100eac';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -84;
+  $option->label = 'Eventyr';
+  $option->value = 'eventyr';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['974f0aff-f3e7-434d-bc57-151ab9100eac'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '98693da7-620c-a174-9d36-4f06a7ff9928';
   $option->v_uuid = '3389bb76-ad3a-5c94-81de-2bfc154f8298';
   $option->sort = -98;
@@ -4459,7 +4832,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98ac7f85-2930-4576-b855-af0a431f0a38';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -82;
+  $option->sort = -62;
   $option->label = 'Korfilm';
   $option->value = 'korfilm';
   $option->expand = '0';
@@ -4471,9 +4844,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -70;
   $option->label = 'New age';
-  $option->value = 'new age';
+  $option->value = '(new age)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['98d32763-d0e5-16f4-2566-d2a2d2abb170'] = $option;
@@ -4529,9 +4902,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '9c334088-901d-4211-9a66-7f97b75b85e3';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -95;
+  $option->label = 'Animé';
+  $option->value = 'anime';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['9c334088-901d-4211-9a66-7f97b75b85e3'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '9d8e4436-74ce-9704-8d42-3fcafbdb35eb';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -86;
+  $option->sort = -82;
   $option->label = 'Folkekomedier';
   $option->value = 'folkekomedier';
   $option->expand = '0';
@@ -4589,6 +4974,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'a05914d9-5d26-49e0-a177-6c88c1383211';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -86;
+  $option->label = 'Emo';
+  $option->value = 'emo';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['a05914d9-5d26-49e0-a177-6c88c1383211'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'a180dbaa-b9db-7474-8107-156f3be0b527';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -87;
@@ -4605,7 +5002,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'fbeb5556-778a-ab64-2522-89eeef2793eb';
   $option->sort = -89;
   $option->label = 'simulationspil';
-  $option->value = 'simulationsspil OR managerspil';
+  $option->value = 'simulationsspil ELLER managerspil';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['a24fef0c-5b25-da24-810d-d927ec434b09'] = $option;
@@ -4627,7 +5024,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a33807f6-1028-c654-dd6a-cc71fe74ef48';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -89;
+  $option->sort = -86;
   $option->label = 'Erotik';
   $option->value = 'erotik';
   $option->expand = '0';
@@ -4639,7 +5036,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -46;
+  $option->sort = -49;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
@@ -4663,9 +5060,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a57935ad-6759-7364-654e-7a77fd3f46ee';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -54;
+  $option->sort = -53;
   $option->label = 'Violinkoncerter';
-  $option->value = 'violinkoncert';
+  $option->value = 'violinkoncerter';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['a57935ad-6759-7364-654e-7a77fd3f46ee'] = $option;
@@ -4675,7 +5072,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a5b66943-98cf-ddd4-a9f0-5e63ab4b6f9b';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -68;
+  $option->sort = -61;
   $option->label = 'Musicalfilm';
   $option->value = 'musicalfilm';
   $option->expand = '0';
@@ -4701,9 +5098,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '479cc87e-3ff3-d124-5567-e03e00ef3169';
   $option->sort = -97;
   $option->label = 'e-artikler';
-  $option->value = '((avisartikel OR tidsskriftsartikel) AND term.accessType=online)';
+  $option->value = '((avisartikel ELLER tidsskriftsartikel) OG term.accessType=online)';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['a6020901-708b-2e04-c9f7-9d2936b2848d'] = $option;
 
   $option = new stdClass();
@@ -4711,7 +5108,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a6257666-c86e-f144-894e-4feddd43f726';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -92;
+  $option->sort = -89;
   $option->label = 'Dokumentarfilm';
   $option->value = 'dokumentarfilm';
   $option->expand = '0';
@@ -4723,7 +5120,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a62c3640-de7c-4b14-af13-7157b9ddbb02';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -88;
+  $option->sort = -85;
   $option->label = 'Europæiske klassikere';
   $option->value = '(europæiske klassikere)';
   $option->expand = '0';
@@ -4759,7 +5156,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -93;
+  $option->sort = -87;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
@@ -4785,7 +5182,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -98;
   $option->label = 'bøger';
-  $option->value = 'bog OR term.workType=literature';
+  $option->value = 'bog ELLER term.workType=literature';
   $option->expand = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->is_disabled = FALSE;
   $export['a961f2fc-d0d7-af14-2988-e53f804724c5'] = $option;
@@ -4807,9 +5204,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -84;
-  $option->label = 'House - lounge';
-  $option->value = 'house lounge';
+  $option->sort = -77;
+  $option->label = 'House ';
+  $option->value = 'house';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['aa1ae4e9-5bf3-19e4-e546-1c764aeb7363'] = $option;
@@ -4889,6 +5286,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'ad804fc3-4a37-49cf-82bf-0f263909927b';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -88;
+  $option->label = 'Electro';
+  $option->value = 'electro';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['ad804fc3-4a37-49cf-82bf-0f263909927b'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'adb50128-d88d-3aa4-71d8-35523a330ec9';
   $option->v_uuid = '3389bb76-ad3a-5c94-81de-2bfc154f8298';
   $option->sort = -91;
@@ -4915,24 +5324,12 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -61;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ae8f6c82-72e4-53f4-6126-2904f7563408'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'af073db2-d4b8-49ca-a1b3-c3a18d99d74a';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -50;
-  $option->label = 'Orgelmusik';
-  $option->value = 'orgelmusik';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['af073db2-d4b8-49ca-a1b3-c3a18d99d74a'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4975,9 +5372,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b0d00e57-8eb0-7c84-31b9-8ab9828d2e16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -57;
+  $option->sort = -56;
   $option->label = 'Klassiske symfonier';
-  $option->value = 'klassiske symfonier';
+  $option->value = '(klassiske symfonier)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b0d00e57-8eb0-7c84-31b9-8ab9828d2e16'] = $option;
@@ -5021,6 +5418,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'b1d09bde-480b-437a-9689-d4df58b5ebb8';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -48;
+  $option->label = 'Operaarier';
+  $option->value = 'operaarier';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['b1d09bde-480b-437a-9689-d4df58b5ebb8'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'b2d97282-5b5e-11e4-198f-178112fdfbea';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -88;
@@ -5047,7 +5456,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b34f8a5e-2c4e-3664-0128-434ec4777a9e';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -94;
+  $option->sort = -97;
   $option->label = 'e-lydbøger';
   $option->value = 'lydbog';
   $option->expand = '0';
@@ -5119,9 +5528,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -71;
+  $option->sort = -68;
   $option->label = 'Progressiv rock';
-  $option->value = 'progressiv rock';
+  $option->value = '(progressiv rock)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b6cadeed-5e48-ef04-ad15-1c6f719013df'] = $option;
@@ -5131,7 +5540,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b716e371-671f-e364-2df6-bdc0220b1d65';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -80;
+  $option->sort = -77;
   $option->label = 'Krimi';
   $option->value = 'krimi';
   $option->expand = '0';
@@ -5169,7 +5578,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -91;
   $option->label = 'svensk';
-  $option->value = '(swe OR sve)';
+  $option->value = '(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b8085e36-a519-6cf4-59e9-d8c015ab5569'] = $option;
@@ -5179,7 +5588,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b9241a28-bd21-2354-e1e9-653722dd5ab1';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -71;
+  $option->sort = -67;
   $option->label = 'Thriller';
   $option->value = 'thriller';
   $option->expand = '0';
@@ -5273,6 +5682,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'bc80c239-fe6d-4fe5-9254-84cba151648b';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -72;
+  $option->label = 'Politik og politikere';
+  $option->value = '(politik og politikere)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['bc80c239-fe6d-4fe5-9254-84cba151648b'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'bd551fb5-e1b7-6b34-f9c4-699e0d11a206';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -52;
@@ -5281,6 +5702,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bd551fb5-e1b7-6b34-f9c4-699e0d11a206'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'bde43043-5498-4b53-83b4-2b5eccc2b82e';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -72;
+  $option->label = 'Metal';
+  $option->value = 'metal';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['bde43043-5498-4b53-83b4-2b5eccc2b82e'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5371,7 +5804,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c1f171a4-4f5f-4194-6522-dcd248294e5e';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -75;
+  $option->sort = -71;
   $option->label = 'Road movies';
   $option->value = '(road movies)';
   $option->expand = '0';
@@ -5385,7 +5818,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -76;
   $option->label = 'spansk';
-  $option->value = '(spa OR esl)';
+  $option->value = '(spa ELLER esl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['c27fef62-9e01-ec54-e185-775d04fcb050'] = $option;
@@ -5395,11 +5828,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c305d70d-2803-d4f4-3d03-82161b29cfe8';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -93;
+  $option->sort = -96;
   $option->label = 'e-lydbøger NOTA';
-  $option->value = 'lydbog AND dkcclterm.fl=(nota OR blindebibliotek)';
+  $option->value = '(term.type=lydbog OG (dkcclterm.fl=nota ELLER dkcclterm.fl=blindebibliotek))';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['c305d70d-2803-d4f4-3d03-82161b29cfe8'] = $option;
 
   $option = new stdClass();
@@ -5413,6 +5846,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['c344326f-e7fb-c8d4-4136-c2c71895b5a9'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'c4462408-24db-4e3b-9e1a-a112d54e67b4';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -90;
+  $option->label = 'Dansktop';
+  $option->value = 'dansktop';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['c4462408-24db-4e3b-9e1a-a112d54e67b4'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5455,7 +5900,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c77767d1-cb8e-26d4-8d8f-6118a3426fce';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -96;
+  $option->sort = -93;
   $option->label = 'Børnefilm';
   $option->value = 'børnefilm';
   $option->expand = '0';
@@ -5491,7 +5936,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca3b0cba-e9c6-5ee4-45b1-e67097be1ef5';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -98;
+  $option->sort = -99;
   $option->label = 'e-dokumenter';
   $option->value = 'netdokument';
   $option->expand = '0';
@@ -5503,7 +5948,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca5177cd-9784-68a4-7d84-9da83e4b757f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -97;
+  $option->sort = -96;
   $option->label = 'Country';
   $option->value = 'country';
   $option->expand = '0';
@@ -5515,7 +5960,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -42;
+  $option->sort = -44;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
@@ -5553,22 +5998,10 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -95;
   $option->label = 'fransk';
-  $option->value = '(fre OR fra)';
+  $option->value = '(fre ELLER fra)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['cb75ed6d-0a8d-e624-0d26-8929e18564d9'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'cc6af89b-8aac-4bd8-b7c7-3f6fee90a7f2';
-  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -43;
-  $option->label = 'Korsang';
-  $option->value = 'korsang';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['cc6af89b-8aac-4bd8-b7c7-3f6fee90a7f2'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5623,8 +6056,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ce06eb6c-386c-41eb-84ea-f2a9aa0fbfa9';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -95;
-  $option->label = 'Computeranimeret film';
+  $option->sort = -92;
+  $option->label = 'Computeranimerede film';
   $option->value = '(computeranimeret film)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -5697,7 +6130,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -86;
   $option->label = 'spansk';
-  $option->value = '(spa OR esl)';
+  $option->value = '(spa ELLER esl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d2bff843-77c0-2b24-318d-692c9d6305d6'] = $option;
@@ -5743,7 +6176,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd3b1b655-3c40-40e9-a578-0231f38789df';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -87;
+  $option->sort = -83;
   $option->label = 'Farcer';
   $option->value = 'farcer';
   $option->expand = '0';
@@ -5757,7 +6190,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -94;
   $option->label = 'hollandsk';
-  $option->value = '(dut OR fle)';
+  $option->value = '(dut ELLER fle)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d3f4f0e3-cdd7-b174-59b2-96afb155a93a'] = $option;
@@ -5767,7 +6200,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd4173a4c-3c03-2f94-dd81-56ff83728e1d';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -70;
+  $option->sort = -66;
   $option->label = 'Tv-serier';
   $option->value = 'tvserier';
   $option->expand = '0';
@@ -5839,7 +6272,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -90;
+  $option->sort = -82;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
@@ -5873,6 +6306,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'd6d1e41a-a59d-4136-8b03-5a6aeb52c932';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -94;
+  $option->label = 'Dancehall';
+  $option->value = 'dancehall';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['d6d1e41a-a59d-4136-8b03-5a6aeb52c932'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'd6d472cc-889e-9c44-813b-1762db4053df';
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -79;
@@ -5899,7 +6344,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd79b0d76-4e44-49ff-a5da-aa382427f45b';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -79;
+  $option->sort = -76;
   $option->label = 'Kunst og kunstnere';
   $option->value = '(kunst og kunstnere)';
   $option->expand = '0';
@@ -6055,7 +6500,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dedf91bd-47b3-3964-1d60-9c9f31d41089';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -90;
+  $option->sort = -87;
   $option->label = 'Dukkefilm';
   $option->value = 'dukkefilm';
   $option->expand = '0';
@@ -6091,7 +6536,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dfb1e1c3-6a82-abd4-89ef-fbba9289fdce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -99;
+  $option->sort = -98;
   $option->label = 'Blues';
   $option->value = 'blues';
   $option->expand = '0';
@@ -6105,10 +6550,22 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -90;
   $option->label = 'tysk';
-  $option->value = '(ger OR deu)';
+  $option->value = '(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e0202101-6715-9ab4-9959-9b31ac45a183'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'e08eb838-6d08-4e2a-b466-0493812129db';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -41;
+  $option->label = 'Andre soloinstrumenter';
+  $option->value = '(andre soloinstrumenter)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['e08eb838-6d08-4e2a-b466-0493812129db'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -6145,6 +6602,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = TRUE;
   $export['e12fa2f8-c2e6-ee54-29dc-5860e95905c5'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'e15443d9-2092-4e17-a922-bd6050ef4a72';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -55;
+  $option->label = 'Cellokoncerter';
+  $option->value = 'cellokoncerter';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['e15443d9-2092-4e17-a922-bd6050ef4a72'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -6211,7 +6680,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e40d3af1-5b81-40b4-b15e-a65194d28f10';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -81;
+  $option->sort = -78;
   $option->label = 'Krigsfilm';
   $option->value = 'krigsfilm';
   $option->expand = '0';
@@ -6285,10 +6754,22 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -97;
   $option->label = 'aviser og tidsskrifter';
-  $option->value = '(avis OR tidsskrift)';
+  $option->value = '(avis ELLER tidsskrift)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e5c230e1-770f-5aa4-65dd-c1db58c60c32'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'e5fc3b36-0007-4532-8242-f3c448e0efac';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -98;
+  $option->label = 'Studiepartiturer';
+  $option->value = 'ps';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['e5fc3b36-0007-4532-8242-f3c448e0efac'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -6369,7 +6850,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -87;
   $option->label = 'islandsk';
-  $option->value = '(ice OR isl)';
+  $option->value = '(ice ELLER isl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ee176ca0-7de0-09e4-f5ad-6a3cd43d156e'] = $option;
@@ -6451,7 +6932,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
+  $option->sort = -62;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
@@ -6463,7 +6944,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f1c2841b-b00f-45b0-ba43-cc98eed95af9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -52;
+  $option->sort = -51;
   $option->label = 'Kammermusik';
   $option->value = 'kammermusik';
   $option->expand = '0';
@@ -6497,14 +6978,14 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = 'f3b8c354-2f94-1c54-5131-88dcefcd9b44';
+  $option->o_uuid = 'f3878cde-262b-4319-9a1c-680c773723de';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -73;
-  $option->label = 'Pop';
-  $option->value = 'pop';
+  $option->sort = -42;
+  $option->label = 'Klaver solo';
+  $option->value = '(klaver solo)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
-  $export['f3b8c354-2f94-1c54-5131-88dcefcd9b44'] = $option;
+  $export['f3878cde-262b-4319-9a1c-680c773723de'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -6549,7 +7030,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -83;
   $option->label = 'tysk';
-  $option->value = '(ger OR deu)';
+  $option->value = '(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['f7753574-f55f-cbb4-253e-5f60c9be868a'] = $option;
@@ -6557,9 +7038,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'f798b11c-a17e-435e-a252-230f5374e053';
+  $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
+  $option->sort = -63;
+  $option->label = 'Koncertfilm';
+  $option->value = 'koncertfilm';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['f798b11c-a17e-435e-a252-230f5374e053'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'f7ad177a-625c-52c4-ad82-57b45445cfcc';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
-  $option->sort = -85;
+  $option->sort = -81;
   $option->label = 'Gyserfilm';
   $option->value = 'gyserfilm';
   $option->expand = '0';
@@ -6573,9 +7066,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'b056401f-4ff0-a654-55b8-835ad50af150';
   $option->sort = -95;
   $option->label = 'fra NOTA';
-  $option->value = 'lydbog AND dkcclterm.fl=(nota OR blindebibliotek)';
+  $option->value = 'lydbog OG dkcclterm.fl=(nota ELLER blindebibliotek)';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['f8859abd-84a7-1e74-ad35-596e1731acf0'] = $option;
 
   $option = new stdClass();
@@ -6643,7 +7136,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -79;
+  $option->sort = -73;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
@@ -6679,7 +7172,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fd68aaf3-4782-9aa4-e178-1ce51442eaa5';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
-  $option->sort = -95;
+  $option->sort = -92;
   $option->label = 'film på nettet';
   $option->value = 'film';
   $option->expand = '0';
@@ -6693,7 +7186,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -93;
   $option->label = 'islandsk';
-  $option->value = '(ice OR isl)';
+  $option->value = '(ice ELLER isl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fd6b4c9d-6d2d-b414-d9e0-5c0bd1263e65'] = $option;
@@ -6832,6 +7325,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['28c5d5d3-761a-5e24-fdef-88e47f135dd1'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
+  $value->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $value->value_title = 'noder, materialetyper';
+  $value->sort = 10;
+  $value->value_type = 'checkboxes';
+  $value->search_code = 'dkcclterm.ma';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1'] = $value;
 
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
@@ -7057,6 +7563,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
   $value->api_version = 1;
+  $value->v_uuid = 'c065cb77-6f6d-42ff-b6e1-c70b48cab17b';
+  $value->value_title = 'noder, hæftetitel';
+  $value->sort = 10;
+  $value->value_type = 'textfield';
+  $value->search_code = 'dkcclterm.ht';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['c065cb77-6f6d-42ff-b6e1-c70b48cab17b'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
   $value->v_uuid = 'c62bd379-2702-ff84-6573-85e7627d257d';
   $value->value_title = 'musik, alle ophav2';
   $value->sort = -36;
@@ -7157,6 +7676,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['e23b14bf-2112-19c4-41a7-64c531a76301'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
+  $value->v_uuid = 'e4539af4-043f-49d4-ab45-379299f73085';
+  $value->value_title = 'noder, alle titler';
+  $value->sort = 10;
+  $value->value_type = 'textfield';
+  $value->search_code = 'dkcclterm.ti';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['e4539af4-043f-49d4-ab45-379299f73085'] = $value;
 
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
