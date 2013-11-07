@@ -202,7 +202,7 @@ function bibdk_article_set_column($value) {
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => (isset($url) && isset($text)) ? drupal_render(_bibdk_article_render_link($url, $text)) : '',
+    'link' => (isset($url) && isset($text)) ? _bibdk_article_render_link($url, $text) : '',
     'image' => drupal_render($value['field_image']),
     'class' => drupal_attributes($classes),
   );
@@ -222,7 +222,7 @@ function _bibdk_article_render_link($url, $text){
       'target' => '_blank',      
     ),
   );
-  return $link;
+  return drupal_render($link);
 }
 
 /*
