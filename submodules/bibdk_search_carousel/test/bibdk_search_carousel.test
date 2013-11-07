@@ -22,66 +22,6 @@ class BibdkCarouselUnitTestCase extends DrupalUnitTestCase {
     parent::setUp('ting_search_carousel', 'bibdk_search_carousel');
   }
 
-  /**
-   * Testing form_alter of carousel admin form.
-   */
-  public function test_bibdk_search_carousel_admin_form_alter() {
-    $form_state = array();
-    $form['ting_search_carousel']['ting_searches']['search_0'] = array();
-
-    $period = array(
-      '#title' => 'Period',
-      '#type' => 'select',
-    );
-
-    $offset = array(
-      '#title' => 'Offset',
-      '#type' => 'select',
-    );
-
-    bibdk_search_carousel_form_ting_search_carousel_admin_form_alter($form, $form_state, 'form-ting-search-carousel-admin');
-
-    $this->assertEqual(
-      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#type'],
-      $period['#title'] . '+' . $period['#type'],
-      'Period select added to carousel form.'
-    );
-
-    $this->assertEqual(
-      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#type'],
-      $offset['#title'] . '+' . $offset['#type'],
-      'Offset select added to carousel form.'
-    );
-
-    $this->assertEqual($form['#submit'], array('bibdk_search_carousel_search_submit'), 'Custom submit function set.');
-  }
-
-  /**
-   * Testing form_alter of carousel admin form.
-   */
-  public function test_bibdk_search_carousel_ting_search_carousel_query() {
-    $query['query'] = 'foo';
-    $query['period'] = 2;
-    $query['offset'] = 3;
-
-    $new_query = bibdk_search_carousel_ting_search_carousel_query($query);
-
-    $bibdk_dateformat  = variable_get('bibdk_search_carousel_dateformat', 'bk\mYW');
-    $bibdk_search_code = variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk');
-
-    $today = time();
-    $week = 7 * 24 * 60 * 60; // 7 days; 24 hours; 60 mins; 60secs
-
-    $periods = array();
-    for ($n = 0; $n < $query['period']; $n++) {
-      $weeks = $week * ( $n + $query['offset'] );
-      $periods[] = date($bibdk_dateformat, $today - $weeks);
-    }
-    $expected_query = 'foo OG ' . $bibdk_search_code . '=(' . implode(' ELLER ', $periods) . ')';
-
-    $this->assertEqual($expected_query, $new_query['query'], 'Query string formatted correctly.');
-  }
-
 }
 
 /**
@@ -123,6 +63,8 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
     $this->_testCarouselBlock();
     $this->_testSearchSettings();
     $this->_testBibdkSettings();
+    $this->_test_bibdk_search_carousel_admin_form_alter();
+    $this->_test_bibdk_search_carousel_ting_search_carousel_query();
     return TRUE;
   }
 
@@ -155,5 +97,66 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
     $this->assertText('The configuration options have been saved', t('The week search code configuration have been saved.'));
 
   }
+
+  /**
+   * Testing form_alter of carousel admin form.
+   */
+  public function _test_bibdk_search_carousel_admin_form_alter() {
+    $form_state = array();
+    $form['ting_search_carousel']['ting_searches']['search_0'] = array();
+
+    $period = array(
+      '#title' => 'Period',
+      '#type' => 'select',
+    );
+
+    $offset = array(
+      '#title' => 'Offset',
+      '#type' => 'select',
+    );
+
+    bibdk_search_carousel_form_ting_search_carousel_admin_form_alter($form, $form_state, 'ting-search-carousel-admin-form');
+
+    $this->assertEqual(
+      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['period[]']['#type'],
+      $period['#title'] . '+' . $period['#type'],
+      'Period select added to carousel form.'
+    );
+
+    $this->assertEqual(
+      $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#title'] . '+' . $form['ting_search_carousel']['ting_searches']['search_0']['bibdk_search_carousel']['offset[]']['#type'],
+      $offset['#title'] . '+' . $offset['#type'],
+      'Offset select added to carousel form.'
+    );
+
+    $this->assertEqual($form['#submit'], array('bibdk_search_carousel_search_submit'), 'Custom submit function set.');
+  }
+
+  /**
+   * Testing form_alter of carousel admin form.
+   */
+  public function _test_bibdk_search_carousel_ting_search_carousel_query() {
+    $query['query'] = 'foo';
+    $query['period'] = 2;
+    $query['offset'] = 3;
+
+    $new_query = bibdk_search_carousel_ting_search_carousel_query($query);
+
+    $bibdk_dateformat  = variable_get('bibdk_search_carousel_dateformat', 'bk\mYW');
+    $bibdk_search_code = variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk');
+
+    $today = time();
+    $week = 7 * 24 * 60 * 60; // 7 days; 24 hours; 60 mins; 60secs
+
+    $periods = array();
+    for ($n = 0; $n < $query['period']; $n++) {
+      $weeks = $week * ( $n + $query['offset'] );
+      $periods[] = date($bibdk_dateformat, $today - $weeks);
+    }
+    $expected_query = 'foo BOOLEAN_AND ' . $bibdk_search_code . '=(' . implode(' BOOLEAN_OR ', $periods) . ')';
+
+    $this->assertEqual($expected_query, $new_query['query'], 'Query string formatted correctly.');
+  }
+
 
 }

@@ -444,7 +444,7 @@ Ex: pisa? per';
   $element->element_label = 'Musikgenre';
   $element->description = 'fx jazz';
   $element->help_text = 'Finder du ikke den type musik du leder efter vist som genre?
-Søg i stedet i fritekst og klik dig frem blandt mulighederne under Flere søgemuligheder.';
+Søg i stedet i fritekst og brug afgrænsningsmuligheder i spalten til venstre.';
   $element->sort = -54;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -517,7 +517,7 @@ synge*';
   $element->element_title = 'noder, alle titler';
   $element->element_label = 'Titel på sang eller musik';
   $element->description = '';
-  $element->help_text = '';
+  $element->help_text = 'Her kan du søge på alle titler, både enkeltnumre, albumtitler og værktitler';
   $element->sort = 10;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -723,7 +723,7 @@ Ex. pisa*';
   $element->element_title = 'noder_materialetyper';
   $element->element_label = 'Materiale';
   $element->description = '';
-  $element->help_text = '';
+  $element->help_text = 'Tjek en materialetype af hvis du kun ønsker en bestemt type';
   $element->sort = 10;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -750,9 +750,9 @@ Ex. pisa*';
   $element->e_uuid = 'b0289528-53b4-2074-258c-735b863085e1';
   $element->element_title = 'musik_hovedophav';
   $element->element_label = 'Hovedkunstner/-komponist';
-  $element->description = 'fx: medina';
+  $element->description = 'fx: nøhr';
   $element->help_text = 'Brug Hovedkunstner, hvis du får alt for mange fund ved at bruge Medvirkende.
-Her finder du kun det som kunstneren, komponisten eller gruppen er hovedansvarlig for - fx kun Medinas egne plader - og ikke alle dem hvor hun (eller en anden med samme navn) blot bidrager.';
+Her finder du kun det som kunstneren, komponisten eller gruppen er hovedansvarlig for - fx kun Rasmus Nøhrs egne plader - og ikke alle dem hvor han blot bidrager.';
   $element->sort = -58;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -884,9 +884,8 @@ Du skal ikke skrive og mellem ordene.';
   $element->element_title = 'spil_medierådets_aldersanbefaling';
   $element->element_label = 'Medierådets aldersanbefalinger';
   $element->description = 'PEGI aldersmærkning';
-  $element->help_text = 'Her kan du søge på hvilken aldersgruppe Medierådet vurderer spillets indhold er passende for.
-PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende.
-Læs mere om PEGI-afmærkning. link';
+  $element->help_text = 'PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende, anstødeligt e.l.
+';
   $element->sort = -68;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -2000,7 +1999,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '02ad0103-7096-4474-a1c8-612d07eb7acf';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -65;
+  $option->sort = -63;
   $option->label = 'Rock';
   $option->value = 'rock';
   $option->expand = '0';
@@ -2048,7 +2047,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '079e4b9e-9c02-4ee5-b30e-c812bfc15931';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -79;
+  $option->sort = -76;
   $option->label = 'Goth';
   $option->value = 'goth';
   $option->expand = '0';
@@ -2072,7 +2071,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '096f7b5b-6695-476b-aad7-526a761dd035';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -76;
+  $option->sort = -73;
   $option->label = 'Indietronica';
   $option->value = 'indietronica';
   $option->expand = '0';
@@ -2122,7 +2121,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -93;
   $option->label = 'e-spil';
-  $option->value = 'pc-spil';
+  $option->value = 'term.type=pc-spil';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['0bebddf4-1d90-0e14-e1ea-98948056f902'] = $option;
@@ -2132,7 +2131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0c2d782c-3a28-9d54-4961-d3f814ed8d16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -99;
+  $option->sort = -95;
   $option->label = 'Americana';
   $option->value = 'americana';
   $option->expand = '0';
@@ -2168,7 +2167,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '0dd49630-3980-4ae9-aa6d-81a449c7783f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -52;
+  $option->sort = -48;
   $option->label = 'Andre koncerter';
   $option->value = '(andre koncerter)';
   $option->expand = '0';
@@ -2456,7 +2455,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -84;
+  $option->sort = -81;
   $option->label = 'Filmmusik - soundtrack';
   $option->value = '(filmmusik - soundtrack)';
   $option->expand = '0';
@@ -2492,7 +2491,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2149d559-7ce8-e3c4-a561-ac3278c22661';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -67;
+  $option->sort = -65;
   $option->label = 'Punk';
   $option->value = 'punk';
   $option->expand = '0';
@@ -2546,6 +2545,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['22837940-734a-4bf4-3d3d-b9dd680b100d'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '22909313-574f-4f0c-9fde-d13f1e28ad3b';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -96;
+  $option->label = '80\'er musik';
+  $option->value = '80\'er musik';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['22909313-574f-4f0c-9fde-d13f1e28ad3b'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2612,7 +2623,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '23f98cea-867b-4844-bdac-a4cf6e54efcd';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -78;
+  $option->sort = -75;
   $option->label = 'Hip hop';
   $option->value = '(hip hop)';
   $option->expand = '0';
@@ -2624,7 +2635,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2400c0a2-bfbb-2cd4-a903-6d0472e5fa7d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -66;
+  $option->sort = -64;
   $option->label = 'Reggae';
   $option->value = 'reggae';
   $option->expand = '0';
@@ -2696,7 +2707,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '27e48668-09a1-4ab5-a7be-0b2dfe3240c2';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -99;
+  $option->sort = -98;
   $option->label = 'Alle partiturer';
   $option->value = '(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
   $option->expand = '0';
@@ -2768,7 +2779,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2a55c4ce-15c8-c274-9930-3027f2e9ca66';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -47;
+  $option->sort = -44;
   $option->label = 'Operetter';
   $option->value = 'operetter';
   $option->expand = '0';
@@ -2862,9 +2873,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '2ee2a274-57be-4096-9818-512f37df8bb4';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -100;
+  $option->label = 'Alle noder';
+  $option->value = 'mu';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['2ee2a274-57be-4096-9818-512f37df8bb4'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '2f0a7fa2-5a91-4e45-ba0e-860b759f1c14';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -43;
+  $option->sort = -41;
   $option->label = 'Orgel solo';
   $option->value = '(orgel solo)';
   $option->expand = '0';
@@ -3008,8 +3031,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '34fa1c8d-267f-4a5e-9ffd-52458e94d627';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -100;
-  $option->label = 'Noder på nettet';
+  $option->sort = -99;
+  $option->label = 'E-noder';
   $option->value = '(mu OG xe)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3128,7 +3151,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '380a95e5-72a6-e4f4-d927-f04c627a79eb';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -57;
+  $option->sort = -54;
   $option->label = 'Verdensmusik-world music';
   $option->value = '(verdensmusik - world music)';
   $option->expand = '0';
@@ -3146,6 +3169,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['386b4e52-6666-3354-3127-8fb68db0e1ac'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '3992e7b1-9f8d-40ad-af50-4db6a8e477df';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -97;
+  $option->label = '70\'er rock';
+  $option->value = '70\'er rock';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3992e7b1-9f8d-40ad-af50-4db6a8e477df'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3248,7 +3283,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3f4f8622-e29f-3444-79c0-ae5951830826';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -75;
+  $option->sort = -72;
   $option->label = 'Jazz';
   $option->value = 'jazz';
   $option->expand = '0';
@@ -3356,7 +3391,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '442ba4b3-fce3-4d77-a242-4dd2bf147b96';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -74;
+  $option->sort = -71;
   $option->label = 'Jazz - dansk';
   $option->value = '(jazz - dansk)';
   $option->expand = '0';
@@ -3368,11 +3403,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '454f4227-4d9f-3414-c90a-71a304f4dd31';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -64;
-  $option->label = 'RogB';
-  $option->value = 'RogB';
+  $option->sort = -61;
+  $option->label = 'R&B';
+  $option->value = 'R&B';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['454f4227-4d9f-3414-c90a-71a304f4dd31'] = $option;
 
   $option = new stdClass();
@@ -3392,8 +3427,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '481f8701-65f3-433f-ad99-9e2634939275';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -95;
-  $option->label = 'Music-minus-one';
+  $option->sort = -94;
+  $option->label = 'Music-minus-one - karaoke';
   $option->value = 'mm';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3452,7 +3487,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ebd873c-5a7d-e614-4544-8f6b40c40f11';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -80;
+  $option->sort = -77;
   $option->label = 'For børn';
   $option->value = '(for børn)';
   $option->expand = '0';
@@ -3500,7 +3535,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '50f987d4-fb53-4fc0-b6b3-4820be2e9da9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -95;
+  $option->sort = -91;
   $option->label = 'Dance';
   $option->value = 'dance';
   $option->expand = '0';
@@ -3548,7 +3583,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '532bd727-dbf1-4b81-bc91-0b1bb5ae3b54';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -83;
+  $option->sort = -80;
   $option->label = 'Fitness musik';
   $option->value = '(fitness musik)';
   $option->expand = '0';
@@ -3572,7 +3607,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '565280cd-c6a5-ebf4-99dc-9c4a0e02d898';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -81;
+  $option->sort = -78;
   $option->label = 'Folkemusik';
   $option->value = 'folkemusik';
   $option->expand = '0';
@@ -3656,7 +3691,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5b63b5fd-97e8-f254-3184-8926e6912ad5';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -54;
+  $option->sort = -50;
   $option->label = 'Klaverkoncerter';
   $option->value = 'klaverkoncerter';
   $option->expand = '0';
@@ -3800,7 +3835,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '667b9ec6-30c1-bd64-9958-863de345ddce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -91;
+  $option->sort = -88;
   $option->label = 'Danske viser';
   $option->value = '(danske viser)';
   $option->expand = '0';
@@ -3810,9 +3845,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '66c0d95a-089e-4cfb-a9ca-b0983aef601d';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -37;
+  $option->label = 'Klassisk musik 1950 ->';
+  $option->value = 'klassisk musik 1950->';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['66c0d95a-089e-4cfb-a9ca-b0983aef601d'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '67700ffd-7443-aea4-0d74-0a36f834097d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -60;
+  $option->sort = -57;
   $option->label = 'Swing';
   $option->value = 'swing';
   $option->expand = '0';
@@ -3884,7 +3931,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '6bbc6142-d2c9-47ce-bc96-164167b500b6';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -97;
+  $option->sort = -93;
   $option->label = 'Chill';
   $option->value = 'chill';
   $option->expand = '0';
@@ -3934,7 +3981,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -100;
   $option->label = 'e-bøger';
-  $option->value = 'ebog';
+  $option->value = 'term.type=ebog';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['6d38c576-ff8a-4d24-8937-5d3e4d954fc7'] = $option;
@@ -3956,7 +4003,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '6f4e965e-d180-4a53-bee3-ed7a61375397';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -46;
+  $option->sort = -43;
   $option->label = 'Kor';
   $option->value = 'kor';
   $option->expand = '0';
@@ -3968,7 +4015,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '6fa651ad-4aa8-46f2-94a0-790663faf303';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -89;
+  $option->sort = -86;
   $option->label = 'Dubstep-bass';
   $option->value = '(dubstep-bass)';
   $option->expand = '0';
@@ -4004,7 +4051,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7067c647-eb62-4319-8474-934da929cb30';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -96;
+  $option->sort = -95;
   $option->label = 'Stemmer';
   $option->value = '(pd ELLER pl ELLER so ELLER st ELLER sv)';
   $option->expand = '0';
@@ -4064,7 +4111,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7244e0ab-ff90-49e1-8b3e-497913a2deb1';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -59;
+  $option->sort = -56;
   $option->label = 'Synthpop';
   $option->value = 'synthpop';
   $option->expand = '0';
@@ -4076,7 +4123,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '72e49d31-5a93-7b64-2133-f3cb22d04c9a';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -85;
+  $option->sort = -82;
   $option->label = 'Evergreen';
   $option->value = 'evergreen';
   $option->expand = '0';
@@ -4148,7 +4195,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '754e67ca-964c-bce4-119b-b950192d3cfa';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -63;
+  $option->sort = -60;
   $option->label = 'Salsa - afrocubansk musik';
   $option->value = '(salsa - afrocubansk musik)';
   $option->expand = '0';
@@ -4254,11 +4301,23 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '7b3e78d2-8581-4c68-9ed6-97d8b938d35b';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -38;
+  $option->label = 'Renæssance -> 1600';
+  $option->value = 'renæssance -> 1600';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['7b3e78d2-8581-4c68-9ed6-97d8b938d35b'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '7c16db30-ece8-aff4-895b-a29c47adf457';
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -95;
   $option->label = 'e-musik';
-  $option->value = 'musik';
+  $option->value = 'term.type=musik';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7c16db30-ece8-aff4-895b-a29c47adf457'] = $option;
@@ -4282,7 +4341,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -98;
   $option->label = 'e-dokumenter frit tilgængelige';
-  $option->value = 'netdokument OG ou';
+  $option->value = 'term.type=netdokument OG dkcclterm.ma=ou';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7d9ddc21-de30-48d4-999e-28be1c16b3ec'] = $option;
@@ -4294,7 +4353,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -94;
   $option->label = 'e-noder';
-  $option->value = 'node';
+  $option->value = 'term.type=node';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7e5e55cf-039c-11e4-89e6-dee2f54d82b0'] = $option;
@@ -4316,7 +4375,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '804a40a6-8952-4230-b818-b47aead1bace';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -58;
+  $option->sort = -55;
   $option->label = 'Teenpop';
   $option->value = 'teenpop';
   $option->expand = '0';
@@ -4532,7 +4591,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8ae8deac-d243-4fee-a578-3acb0b740c00';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -97;
+  $option->sort = -96;
   $option->label = 'Klaverpartiturer';
   $option->value = 'pp';
   $option->expand = '0';
@@ -4640,7 +4699,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '90c833d5-e0f7-4d9a-b434-8d97e32c32f2';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -92;
+  $option->sort = -89;
   $option->label = 'Dansk pop/rock';
   $option->value = '(dansk pop/rock)';
   $option->expand = '0';
@@ -4700,7 +4759,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '91ede760-aa7f-73b4-a593-2a3756fe1b84';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -71;
+  $option->sort = -68;
   $option->label = 'Musicals';
   $option->value = 'musicals';
   $option->expand = '0';
@@ -4844,7 +4903,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '98d32763-d0e5-16f4-2566-d2a2d2abb170';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -70;
+  $option->sort = -67;
   $option->label = 'New age';
   $option->value = '(new age)';
   $option->expand = '0';
@@ -4976,7 +5035,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a05914d9-5d26-49e0-a177-6c88c1383211';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -86;
+  $option->sort = -83;
   $option->label = 'Emo';
   $option->value = 'emo';
   $option->expand = '0';
@@ -5034,9 +5093,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'a34b968a-8fd2-4f96-b28f-88dbf2342b6f';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -98;
+  $option->label = '60\'er soul';
+  $option->value = '60\'er soul';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['a34b968a-8fd2-4f96-b28f-88dbf2342b6f'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'a460c46b-af28-d1b4-a1c9-e923ae7e6017';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -49;
+  $option->sort = -46;
   $option->label = 'Opera';
   $option->value = 'opera';
   $option->expand = '0';
@@ -5060,7 +5131,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a57935ad-6759-7364-654e-7a77fd3f46ee';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -53;
+  $option->sort = -49;
   $option->label = 'Violinkoncerter';
   $option->value = 'violinkoncerter';
   $option->expand = '0';
@@ -5156,7 +5227,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8a12369-bdd5-6654-69d0-bebd0500542f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -87;
+  $option->sort = -84;
   $option->label = 'Electronica';
   $option->value = 'electronica';
   $option->expand = '0';
@@ -5204,7 +5275,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'aa1ae4e9-5bf3-19e4-e546-1c764aeb7363';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -77;
+  $option->sort = -74;
   $option->label = 'House ';
   $option->value = 'house';
   $option->expand = '0';
@@ -5288,7 +5359,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ad804fc3-4a37-49cf-82bf-0f263909927b';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -88;
+  $option->sort = -85;
   $option->label = 'Electro';
   $option->value = 'electro';
   $option->expand = '0';
@@ -5324,7 +5395,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ae8f6c82-72e4-53f4-6126-2904f7563408';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -61;
+  $option->sort = -58;
   $option->label = 'Soul';
   $option->value = 'soul';
   $option->expand = '0';
@@ -5372,7 +5443,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b0d00e57-8eb0-7c84-31b9-8ab9828d2e16';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -56;
+  $option->sort = -52;
   $option->label = 'Klassiske symfonier';
   $option->value = '(klassiske symfonier)';
   $option->expand = '0';
@@ -5420,7 +5491,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b1d09bde-480b-437a-9689-d4df58b5ebb8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -48;
+  $option->sort = -45;
   $option->label = 'Operaarier';
   $option->value = 'operaarier';
   $option->expand = '0';
@@ -5458,7 +5529,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -97;
   $option->label = 'e-lydbøger';
-  $option->value = 'lydbog';
+  $option->value = 'term.type=lydbog';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b34f8a5e-2c4e-3664-0128-434ec4777a9e'] = $option;
@@ -5474,6 +5545,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b39cabef-32ca-86d4-550e-80ca652b7e84'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'b402bba1-5e59-4cd9-a0d2-af74685baaad';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -99;
+  $option->label = '60\'er rock';
+  $option->value = '60\'er rock';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['b402bba1-5e59-4cd9-a0d2-af74685baaad'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5528,7 +5611,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'b6cadeed-5e48-ef04-ad15-1c6f719013df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -68;
+  $option->sort = -66;
   $option->label = 'Progressiv rock';
   $option->value = '(progressiv rock)';
   $option->expand = '0';
@@ -5634,6 +5717,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'bb597965-709c-43eb-8431-f3ec368ddd68';
+  $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
+  $option->sort = -62;
+  $option->label = 'Rock\'n\'roll';
+  $option->value = 'rock\'n\'roll';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['bb597965-709c-43eb-8431-f3ec368ddd68'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
   $option->sort = -97;
@@ -5708,7 +5803,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bde43043-5498-4b53-83b4-2b5eccc2b82e';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -72;
+  $option->sort = -69;
   $option->label = 'Metal';
   $option->value = 'metal';
   $option->expand = '0';
@@ -5832,7 +5927,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'e-lydbøger NOTA';
   $option->value = '(term.type=lydbog OG (dkcclterm.fl=nota ELLER dkcclterm.fl=blindebibliotek))';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['c305d70d-2803-d4f4-3d03-82161b29cfe8'] = $option;
 
   $option = new stdClass();
@@ -5852,7 +5947,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'c4462408-24db-4e3b-9e1a-a112d54e67b4';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -90;
+  $option->sort = -87;
   $option->label = 'Dansktop';
   $option->value = 'dansktop';
   $option->expand = '0';
@@ -5938,7 +6033,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -99;
   $option->label = 'e-dokumenter';
-  $option->value = 'netdokument';
+  $option->value = 'term.type=netdokument';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ca3b0cba-e9c6-5ee4-45b1-e67097be1ef5'] = $option;
@@ -5948,7 +6043,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca5177cd-9784-68a4-7d84-9da83e4b757f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -96;
+  $option->sort = -92;
   $option->label = 'Country';
   $option->value = 'country';
   $option->expand = '0';
@@ -5960,7 +6055,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'ca6790b9-1c58-a904-c170-e822ead44c13';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -44;
+  $option->sort = -42;
   $option->label = 'Solosang';
   $option->value = 'solosang';
   $option->expand = '0';
@@ -6272,7 +6367,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd617e830-2cae-a074-4d03-63822deef1c8';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -82;
+  $option->sort = -79;
   $option->label = 'Folk';
   $option->value = 'folk';
   $option->expand = '0';
@@ -6308,7 +6403,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd6d1e41a-a59d-4136-8b03-5a6aeb52c932';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -94;
+  $option->sort = -90;
   $option->label = 'Dancehall';
   $option->value = 'dancehall';
   $option->expand = '0';
@@ -6536,7 +6631,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dfb1e1c3-6a82-abd4-89ef-fbba9289fdce';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -98;
+  $option->sort = -94;
   $option->label = 'Blues';
   $option->value = 'blues';
   $option->expand = '0';
@@ -6560,7 +6655,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e08eb838-6d08-4e2a-b466-0493812129db';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -41;
+  $option->sort = -39;
   $option->label = 'Andre soloinstrumenter';
   $option->value = '(andre soloinstrumenter)';
   $option->expand = '0';
@@ -6608,7 +6703,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e15443d9-2092-4e17-a922-bd6050ef4a72';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -55;
+  $option->sort = -51;
   $option->label = 'Cellokoncerter';
   $option->value = 'cellokoncerter';
   $option->expand = '0';
@@ -6764,7 +6859,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e5fc3b36-0007-4532-8242-f3c448e0efac';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -98;
+  $option->sort = -97;
   $option->label = 'Studiepartiturer';
   $option->value = 'ps';
   $option->expand = '0';
@@ -6932,7 +7027,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f03f34fb-4d58-d894-7190-75b10fc32917';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -62;
+  $option->sort = -59;
   $option->label = 'Singer/songwriter';
   $option->value = 'singer/songwriter';
   $option->expand = '0';
@@ -6944,7 +7039,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f1c2841b-b00f-45b0-ba43-cc98eed95af9';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -51;
+  $option->sort = -47;
   $option->label = 'Kammermusik';
   $option->value = 'kammermusik';
   $option->expand = '0';
@@ -6980,7 +7075,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f3878cde-262b-4319-9a1c-680c773723de';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -42;
+  $option->sort = -40;
   $option->label = 'Klaver solo';
   $option->value = '(klaver solo)';
   $option->expand = '0';
@@ -7136,7 +7231,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
-  $option->sort = -73;
+  $option->sort = -70;
   $option->label = 'Latin';
   $option->value = 'latin';
   $option->expand = '0';
@@ -7174,7 +7269,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
   $option->sort = -92;
   $option->label = 'film på nettet';
-  $option->value = 'film';
+  $option->value = 'term.type=film';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fd68aaf3-4782-9aa4-e178-1ce51442eaa5'] = $option;
@@ -7334,7 +7429,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->sort = 10;
   $value->value_type = 'checkboxes';
   $value->search_code = 'dkcclterm.ma';
-  $value->default_value = '';
+  $value->default_value = 'mu';
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1'] = $value;
@@ -7437,7 +7532,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'musikophav';
   $value->sort = -40;
   $value->value_type = 'textfield';
-  $value->search_code = 'dkcclterm.pe';
+  $value->search_code = 'dkcclterm.po';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
@@ -7476,7 +7571,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'net, materialetyper';
   $value->sort = -62;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.type';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
