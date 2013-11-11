@@ -1,7 +1,7 @@
-name = Bibliotek.dk - Carousel settings
+name = Bibliotek.dk - Carousel Settings
 description = Settings for carousel, and carousel searches
 core = 7.x
-package = Bibdk features
+package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = bibliotek_dk_carousel_settings
