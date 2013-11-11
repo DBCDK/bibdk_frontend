@@ -1,4 +1,4 @@
-name = bibdk_article
+name = Bibliotek.dk - Article
 description = Small articles for bibliotek.dk
 core = 7.x
 package = Bibliotek.dk
