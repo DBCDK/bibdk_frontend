@@ -1,7 +1,7 @@
-name = HTML 5 text format
+name = Bibliotek.dk - HTML5 Text Format
 description = Add a HTML 5 text format for administrators
 core = 7.x
-package = Bibdk features
+package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = html_5_text_format
