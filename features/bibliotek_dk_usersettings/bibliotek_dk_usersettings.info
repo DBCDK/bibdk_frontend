@@ -1,7 +1,7 @@
 name = Bibliotek.dk - Usersettings
 description = Stores the settings, mails inclusive, found at admin/config/people/accounts
 core = 7.x
-package = Features
+package = Bibliotek.dk
 version = 7.x-0.1
 project = bibliotek_dk_usersettings
 dependencies[] = ctools
