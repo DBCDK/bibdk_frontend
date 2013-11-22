@@ -52,7 +52,7 @@ function bibdk_facets_strongarm() {
     ),
     7 => array(
       'name' => 'facet.access',
-      'title' => 'Adgang',
+      'title' => 'Adgang - net',
       'weight' => '-3',
     ),
     8 => array(
@@ -116,13 +116,13 @@ function bibdk_facets_strongarm() {
       'weight' => '9',
     ),
     20 => array(
-      'name' => 'facet.primaryCreator',
-      'title' => 'Hovedansvar',
+      'name' => 'facet.dk5',
+      'title' => 'Opstilling i folkebiblioteker',
       'weight' => '10',
     ),
     21 => array(
-      'name' => 'facet.dk5',
-      'title' => 'Opstilling i folkebiblioteker',
+      'name' => 'facet.primaryCreator',
+      'title' => 'Hovedansvar',
       'weight' => '10',
     ),
   );
