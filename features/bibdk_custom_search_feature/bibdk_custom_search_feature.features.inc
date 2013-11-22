@@ -43,7 +43,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_page() {
   $search_page->page_title = 'Musik';
   $search_page->page_path = 'bibdk_frontpage/musik';
   $search_page->menu_title = 'Musik';
-  $search_page->delimiter = 'term.workType=music';
+  $search_page->delimiter = 'dkcclterm.ma=lm';
   $search_page->expand = FALSE;
   $search_page->sort = -4;
   $search_page->is_disabled = FALSE;
@@ -487,7 +487,7 @@ Hvis du skriver flere ord, kombinerer systemet dem med og.';
   $element->element_title = 'bog_materialer';
   $element->element_label = 'Materialetype';
   $element->description = 'fx trykte bøger';
-  $element->help_text = 'Vælg et andet materiale hvis du ikke kun ønsker Trykte bøger. Ønsker du helt andre materialer: Brug søgning Alle materialer.
+  $element->help_text = 'Hvis du ikke ønsker Alle typer bøger: sæt tjek ved den type du ønsker. Ønsker du helt andre materialer: Brug søgning Alle materialer.
 E-bøger kan ikke kombineres med Litterær form eller Målgruppe.';
   $element->sort = -90;
   $element->tab_index = 0;
@@ -2351,7 +2351,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -88;
   $option->label = 'computerspil';
-  $option->value = 'term.type=spil';
+  $option->value = 'term.type=spil ELLER term.workType=game';
   $option->expand = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
   $option->is_disabled = FALSE;
   $export['1c025dad-6622-7a74-f5cb-3f86dfdc241a'] = $option;
@@ -2519,7 +2519,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -97;
   $option->label = 'blu-ray';
-  $option->value = 'blu-ray';
+  $option->value = 'dkcclterm.ts=blu-ray';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['21f6c940-699c-aaa4-f5e0-b70d62f7aebd'] = $option;
@@ -3299,9 +3299,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -94;
   $option->label = 'billedbøger';
-  $option->value = 'billedbøger';
+  $option->value = 'term.type=billedbog';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['3fee7c7b-5292-4af3-b2d0-d32689e9772f'] = $option;
 
   $option = new stdClass();
@@ -3359,7 +3359,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -83;
   $option->label = 'musik';
-  $option->value = 'term.type=musik';
+  $option->value = 'term.type=musik ELLER term.workType=music';
   $option->expand = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->is_disabled = FALSE;
   $export['423d2d19-4bdb-ab44-5927-dc27f3652f31'] = $option;
@@ -3669,11 +3669,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5ac6a51b-9f40-429e-bb9a-9a4c2e8e5ee4';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'børnebøger';
-  $option->value = 'term.category=børnematerialer';
+  $option->value = 'dkcclterm.ma=bø ELLER dkcclterm.ka=b';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['5ac6a51b-9f40-429e-bb9a-9a4c2e8e5ee4'] = $option;
 
   $option = new stdClass();
@@ -4187,7 +4187,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -97;
   $option->label = 'e-bøger';
-  $option->value = 'ebog';
+  $option->value = 'term.type=ebog';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['750b3939-6e55-4e7b-bf08-54b8971890b1'] = $option;
@@ -4257,7 +4257,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '79bbb10e-a743-e4d4-7db6-0a1de3b0f967';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -97;
+  $option->sort = -96;
   $option->label = 'punktskrift';
   $option->value = 'term.type=punktskrift';
   $option->expand = '0';
@@ -4437,7 +4437,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '83a1904f-c4a7-4e77-aa92-29872cd53a9d';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -99;
+  $option->sort = -98;
   $option->label = 'stor skrift';
   $option->value = 'term.type=(bog stor skrift)';
   $option->expand = '0';
@@ -4475,7 +4475,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -100;
   $option->label = 'trykte bøger ';
-  $option->value = 'bog';
+  $option->value = 'term.type=bog';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['8436cfef-8427-4882-9d65-a6576bec019a'] = $option;
@@ -4581,7 +4581,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '8a23f15d-55b9-0654-55c1-8ac01c12741e';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -98;
+  $option->sort = -97;
   $option->label = 'lydbøger';
   $option->value = 'term.type=lydbog';
   $option->expand = 'b056401f-4ff0-a654-55b8-835ad50af150';
@@ -4693,7 +4693,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'tegneserier';
   $option->value = 'tegneserier';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['8eda79e6-8d41-1804-ed41-16fc659fc232'] = $option;
 
   $option = new stdClass();
@@ -4991,7 +4991,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -95;
   $option->label = 'grammofonplader';
-  $option->value = 'grammofonplade';
+  $option->value = 'term.type=grammofonplade';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['9dc38888-1f28-6554-89ed-473d9e41f3d6'] = $option;
@@ -5241,7 +5241,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'a8c2773f-e491-43a1-866a-e2db6c0e14cc';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -100;
+  $option->sort = -99;
   $option->label = 'trykte bøger ';
   $option->value = 'term.type=bog';
   $option->expand = '0';
@@ -5255,7 +5255,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -98;
   $option->label = 'bøger';
-  $option->value = 'term.type=bog ELLER term.workType=literature';
+  $option->value = 'term.workType=literature';
   $option->expand = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->is_disabled = FALSE;
   $export['a961f2fc-d0d7-af14-2988-e53f804724c5'] = $option;
@@ -5351,7 +5351,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -98;
   $option->label = 'punktskrift';
-  $option->value = 'punktskrift';
+  $option->value = 'term.type=punktskrift';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ad6f8a16-9275-41fd-a206-236723fcce48'] = $option;
@@ -5891,7 +5891,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -97;
   $option->label = 'dvd';
-  $option->value = 'dvd';
+  $option->value = 'term.type=dvd';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['c1254cd1-3b2f-da34-750e-af4862402978'] = $option;
@@ -6011,7 +6011,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -82;
   $option->label = 'noder';
-  $option->value = 'term.type=node';
+  $option->value = 'term.type=node ELLER term.workType=sheetmusic';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['c8a69486-92ae-fdc4-758a-cbb68bc14e54'] = $option;
@@ -6239,7 +6239,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -94;
   $option->label = 'kassettebånd';
-  $option->value = 'bånd';
+  $option->value = 'term.type=bånd';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d2c5643e-8407-2944-e91d-310fd3b90134'] = $option;
@@ -6301,7 +6301,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Tv-serier';
   $option->value = 'tvserier';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['d4173a4c-3c03-2f94-dd81-56ff83728e1d'] = $option;
 
   $option = new stdClass();
@@ -6431,7 +6431,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -99;
   $option->label = 'stor skrift';
-  $option->value = '(bog stor skrift)';
+  $option->value = 'term.type=(bog stor skrift)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d758e756-a0d3-4b93-aa72-342d9cc19342'] = $option;
@@ -6467,9 +6467,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -96;
   $option->label = 'skolematerialer';
-  $option->value = 'skolematerialer';
+  $option->value = 'dkcclterm.ma=bs ELLER dkcclterm.ka=s';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['d7faf5aa-f4fc-4f5c-845a-4a98cfac0fab'] = $option;
 
   $option = new stdClass();
@@ -6549,7 +6549,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'dd426e9b-de57-a084-119c-6f21259ee71f';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -96;
+  $option->sort = -95;
   $option->label = 'e-bøger';
   $option->value = 'term.type=ebog';
   $option->expand = '0';
@@ -6611,7 +6611,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -99;
   $option->label = 'cd musik';
-  $option->value = '(cd (musik))';
+  $option->value = 'term.type=(cd (musik))';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['dee76133-eebc-1384-7501-d9955a2b55da'] = $option;
@@ -6753,11 +6753,11 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e34857a0-60fa-4e14-81be-3c010f5026db';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -93;
+  $option->sort = -92;
   $option->label = 'skolematerialer';
-  $option->value = 'facet.form=undervisningsmaterialer';
+  $option->value = 'dkcclterm.ma=bs ELLER dkcclterm.ka=s';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['e34857a0-60fa-4e14-81be-3c010f5026db'] = $option;
 
   $option = new stdClass();
@@ -6803,7 +6803,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -85;
   $option->label = 'film';
-  $option->value = 'term.type=film';
+  $option->value = 'term.type=film ELLER term.workType=movie';
   $option->expand = 'f79c6d0f-effe-6944-7951-211d70e904d7';
   $option->is_disabled = FALSE;
   $export['e43b1e46-554b-b494-61ac-9ff35f97d543'] = $option;
@@ -7089,7 +7089,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'f41b6a91-d6fd-4587-8f43-d3e084f5730c';
   $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
-  $option->sort = -95;
+  $option->sort = -94;
   $option->label = 'billedbøger';
   $option->value = 'term.type=billedbog';
   $option->expand = '0';
@@ -7103,9 +7103,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f6e38171-96d3-4852-9dcc-f66cb3a6a13f';
   $option->sort = -95;
   $option->label = 'børnebøger';
-  $option->value = 'børnebøger';
+  $option->value = 'dkcclterm.ma=bø ELLER dkcclterm.ka=b';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['f6caec37-fc4a-498f-9527-0f23aa69acab'] = $option;
 
   $option = new stdClass();
@@ -7163,7 +7163,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'b056401f-4ff0-a654-55b8-835ad50af150';
   $option->sort = -95;
   $option->label = 'fra NOTA';
-  $option->value = '(term.type=lydbog OG (dkcclterm.fl=nota ELLER dkcclterm.fl=blindebibliotek))';
+  $option->value = 'term.type=lydbog OG (dkcclterm.fl=nota ELLER dkcclterm.fl=blindebibliotek)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['f8859abd-84a7-1e74-ad35-596e1731acf0'] = $option;
@@ -7199,7 +7199,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -96;
   $option->label = 'video';
-  $option->value = 'video';
+  $option->value = 'term.type=video';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fa52fa54-1334-7014-313e-17fce62dc6f1'] = $option;
@@ -7508,7 +7508,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'musik, materialetyper';
   $value->sort = -28;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.type';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
@@ -7756,7 +7756,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->sort = -82;
   $value->value_type = 'checkboxes';
   $value->search_code = '';
-  $value->default_value = 'term.type=bog';
+  $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['e1bf5870-5dec-51d4-a968-5a9c01b08d89'] = $value;
@@ -7820,7 +7820,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'bøger, materialetyper, alle søgeside';
   $value->sort = -84;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.type';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
