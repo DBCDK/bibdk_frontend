@@ -205,7 +205,15 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
  * Saves the path a user visited on page exit.
  */
 function bibdk_frontend_exit() {
-  $path = drupal_get_path_alias();
+  // drupal is not fulle bootstrapped on cached pages 
+  // @see https://drupal.org/node/2060613
+  // Do not continue if not fully bootstrapped.
+ /* if (drupal_get_bootstrap_phase() < DRUPAL_BOOTSTRAP_FULL) {
+    return;
+  }*/
+  
+  //$path = drupal_get_path_alias();
+  $path = current_path();
   if ( (strpos($path, 'search/') === 0 || strpos($path, 'vejviser') === 0) || ( strpos($path, 'user/') === 0  && $path != 'user/login' && $path != 'user/logout' ) ) {
       $_SESSION['referrer'] = current_path().'?'.drupal_http_build_query($_GET);
   }
