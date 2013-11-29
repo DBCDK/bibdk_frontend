@@ -2683,6 +2683,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '272aa076-0dc1-4322-b59c-6d06f2ceed0a';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -94;
+  $option->label = 'Node + cd';
+  $option->value = 'mu OG lm IKKE mm';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['272aa076-0dc1-4322-b59c-6d06f2ceed0a'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '27be38b8-2b2f-9ca4-31b3-0cb4840bb570';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -98;
@@ -3417,7 +3429,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '481f8701-65f3-433f-ad99-9e2634939275';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'Music-minus-one - karaoke';
   $option->value = 'mm';
   $option->expand = '0';
@@ -3839,9 +3851,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -37;
   $option->label = 'Klassisk musik 1950 ->';
-  $option->value = 'klassisk musik 1950->';
+  $option->value = 'klassisk musik 1950 ->';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['66c0d95a-089e-4cfb-a9ca-b0983aef601d'] = $option;
 
   $option = new stdClass();
@@ -4306,10 +4318,10 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '7b3e78d2-8581-4c68-9ed6-97d8b938d35b';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -38;
-  $option->label = 'Renæssance -> 1600';
+  $option->label = 'Renæssance ->1600';
   $option->value = 'renæssance -> 1600';
   $option->expand = '0';
-  $option->is_disabled = FALSE;
+  $option->is_disabled = TRUE;
   $export['7b3e78d2-8581-4c68-9ed6-97d8b938d35b'] = $option;
 
   $option = new stdClass();
@@ -4491,6 +4503,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['84a44e93-93f1-b3b4-9da2-698a45b3c6a0'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '84c3527d-3d98-43e9-8140-0f75a6192bae';
+  $option->v_uuid = 'e1bf5870-5dec-51d4-a968-5a9c01b08d89';
+  $option->sort = -100;
+  $option->label = 'Alle';
+  $option->value = '';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['84c3527d-3d98-43e9-8140-0f75a6192bae'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7323,6 +7347,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fe67f3b8-c3aa-4bf4-edc3-42338575feda'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'fe863004-ece4-4344-8de5-8f9599315686';
+  $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
+  $option->sort = -99;
+  $option->label = 'e-artikler';
+  $option->value = 'term.type=(avisartikel ELLER tidsskriftsartikel)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['fe863004-ece4-4344-8de5-8f9599315686'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
