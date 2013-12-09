@@ -32,7 +32,7 @@ function bibdk_language_settings_strongarm() {
     'domain' => '',
     'prefix' => 'da',
     'weight' => '0',
-    'javascript' => '5gGobYWLl-XIpJgyjhYuT_iTXr74ZY5xlmZzCelWNF8',
+    'javascript' => 'kKS-Odi3ScYeTCELyla918-oc38SG_ivznFAs81Yb0M',
   );
   $export['language_default'] = $strongarm;
 
