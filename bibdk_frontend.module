@@ -216,9 +216,8 @@ function bibdk_frontend_exit() {
   }*/
   
   //$path = drupal_get_path_alias();
-  
-  $path = $_GET['q'];
+  $path = current_path();
   if ( (strpos($path, 'search/') === 0 || strpos($path, 'vejviser') === 0) || ( strpos($path, 'user/') === 0  && $path != 'user/login' && $path != 'user/logout' ) ) {
-    $_SESSION['referrer'] = $path .'?'.drupal_http_build_query($_GET);
+      $_SESSION['referrer'] = current_path().'?'.drupal_http_build_query($_GET);
   }
 }
