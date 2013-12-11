@@ -117,6 +117,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_usersettings',
     'bibliotek_dk_search_controls',
     'bibliotek_dk_carousel_settings',
+    'bibliotek_dk_user_alert_features',
     //Content
     'bibdk_article',
     'bibdk_adhl',
@@ -134,7 +135,7 @@ function _bibdk_frontend_enable_modules() {
  *  function _bibdk_frontend_setup_captcha() removed - setup added to bibdkcaptcha module.
  */
 function bibdk_frontend_update_7004(&$sandbox) {
-  
+
 }
 
 /** Implements hook_update_N
@@ -203,7 +204,44 @@ function _bibdk_search_carousel_set_blocks_7011() {
       $query->values($record);
       $query->execute();
     } catch (Exception $e) {
-// do nothing
+      // do nothing
+    }
+  }
+}
+
+
+/**
+ * Enable user_alert and scheduler
+ * */
+function bibdk_frontend_update_7012(&$sandbox) {
+  module_enable(array('bibliotek_dk_user_alert_features'));
+  _bibdk_search_carousel_set_blocks_7012();
+}
+
+/** \brief
+ * define and set carousel block
+ */
+function _bibdk_search_carousel_set_blocks_7012() {
+  $values = array(
+    array(
+      'module' => 'user_alert',
+      'delta'  => 'user_alert',
+      'theme'  => 'bibdk_theme',
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
+    ),
+  );
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  foreach ($values as $record) {
+    try {
+      $query->values($record);
+      $query->execute();
+    } catch (Exception $e) {
+      drupal_set_message(t("Failed to set user_alert block in content area!"), 'warning');
     }
   }
 }
