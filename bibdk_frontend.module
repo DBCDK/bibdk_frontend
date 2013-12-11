@@ -7,7 +7,10 @@ function bibdk_frontend_user_login(&$edit, $account) {
   if (!isset($edit['uid'])) {
     return;
   }
-
+  
+  global $language;
+  $language->language = $account->language;
+  
   // go to user page on first time login
   if (isset($edit['input']['firsttime'])) {
     // we KNOE that login succeeded - or we wouldn't be here
