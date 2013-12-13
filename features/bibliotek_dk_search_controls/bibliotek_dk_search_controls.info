@@ -1,7 +1,7 @@
-name = Bibliotek.dk - search controls
+name = Bibliotek.dk - Search Controls
 description = Feature : Parameters for sort, size & format controls
 core = 7.x
-package = Bibdk features
+package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = bibliotek_dk_search_controls
