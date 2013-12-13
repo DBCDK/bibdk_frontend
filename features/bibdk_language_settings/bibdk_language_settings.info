@@ -1,4 +1,4 @@
-name = Bibliotek.dk language settings
+name = Bibliotek.dk - Language Settings
 description = Set up danish, english (british) & Drupal english (disabled)
 core = 7.x
 package = Bibliotek.dk

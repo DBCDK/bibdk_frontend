@@ -1,7 +1,7 @@
-name = Topbar menu block feature
+name = Bibliotek.dk - Topbar Menu Block Feature
 description = Feature holding the topbar menu block
 core = 7.x
-package = Bibdk features
+package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = topbar_menu_block_feature
