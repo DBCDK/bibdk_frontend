@@ -120,6 +120,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_user_alert_features',
     //Content
     'bibdk_article',
+    'bibdk_banner',
     'bibdk_adhl',
     //Submodule
     'bibdk_search_carousel',
