@@ -2519,7 +2519,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -97;
   $option->label = 'blu-ray';
-  $option->value = 'dkcclterm.ts=blu-ray';
+  $option->value = 'term.type=blu-ray';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['21f6c940-699c-aaa4-f5e0-b70d62f7aebd'] = $option;

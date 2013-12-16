@@ -27,12 +27,12 @@ function bibdk_language_settings_strongarm() {
     'native' => 'Dansk',
     'direction' => '0',
     'enabled' => '1',
-    'plurals' => '0',
-    'formula' => '',
+    'plurals' => '2',
+    'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'da',
     'weight' => '0',
-    'javascript' => 'kKS-Odi3ScYeTCELyla918-oc38SG_ivznFAs81Yb0M',
+    'javascript' => 'sJACI_KOZ77YncThfGsqcIQWmUy7j03BpZdRz4NHL7s',
   );
   $export['language_default'] = $strongarm;
 
