@@ -1,4 +1,4 @@
-name = Bibliotek.dk - Custom Search
+name = bibdk_custom_search_feature
 description = Feature export of custom search pages
 core = 7.x
 package = Bibliotek.dk

@@ -1931,7 +1931,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -98;
   $option->label = 'engelsk';
-  $option->value = 'eng';
+  $option->value = 'term.language=eng';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['00a9186a-34b4-1d04-559b-84254e8975ea'] = $option;
@@ -1955,7 +1955,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -85;
   $option->label = 'kinesisk';
-  $option->value = 'chi';
+  $option->value = 'term.language=chi';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['01cb27f7-17f2-4784-01ac-3b10f34f4865'] = $option;
@@ -1967,7 +1967,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -73;
   $option->label = 'tjekkisk';
-  $option->value = '(cze ELLER ces)';
+  $option->value = 'term.language=(cze ELLER ces)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['021049fe-ac98-4234-29b6-8dcfe6af72f8'] = $option;
@@ -2087,7 +2087,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -88;
   $option->label = 'portugisisk';
-  $option->value = 'por';
+  $option->value = 'term.language=por';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['0a640dca-4e71-5194-d9e9-deb2c0fba93a'] = $option;
@@ -2195,7 +2195,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -78;
   $option->label = 'serbisk';
-  $option->value = 'scc';
+  $option->value = 'term.language=scc';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['136e3a23-c968-bac4-19cc-967c3969a983'] = $option;
@@ -2327,7 +2327,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -97;
   $option->label = 'bulgarsk';
-  $option->value = 'bul';
+  $option->value = 'term.language=bul';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1a08671b-8407-7ab4-51ea-7d95322dc90a'] = $option;
@@ -2411,7 +2411,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -88;
   $option->label = 'hollandsk';
-  $option->value = '(dut ELLER fle)';
+  $option->value = 'term.language=(dut ELLER fle)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1ed2a1de-ba07-7174-e147-525624d93ecf'] = $option;
@@ -2471,7 +2471,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -75;
   $option->label = 'svensk';
-  $option->value = '(swe ELLER sve)';
+  $option->value = 'term.language=(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2132a4bc-74b9-31a4-d91e-177decac5196'] = $option;
@@ -2531,7 +2531,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -91;
   $option->label = 'færøsk';
-  $option->value = '(far ELLER fao)';
+  $option->value = 'term.language=(far ELLER fao)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['22837940-734a-4bf4-3d3d-b9dd680b100d'] = $option;
@@ -2603,7 +2603,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -97;
   $option->label = 'engelsk';
-  $option->value = 'eng';
+  $option->value = 'term.language=eng';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['23d48bf0-07a3-3b74-3de3-77b918d1426d'] = $option;
@@ -2699,7 +2699,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -98;
   $option->label = 'dansk';
-  $option->value = 'dan';
+  $option->value = 'term.language=dan';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['27be38b8-2b2f-9ca4-31b3-0cb4840bb570'] = $option;
@@ -2843,7 +2843,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -81;
   $option->label = 'portugisisk';
-  $option->value = 'por';
+  $option->value = 'term.language=por';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2c622624-22ad-8664-d58e-07809a75c48b'] = $option;
@@ -2867,7 +2867,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -77;
   $option->label = 'somali';
-  $option->value = 'som';
+  $option->value = 'term.language=som';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2e137bb2-3835-fc34-c959-8e740005c21a'] = $option;
@@ -2903,7 +2903,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -96;
   $option->label = 'farsi';
-  $option->value = 'per';
+  $option->value = 'term.language=per';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2f1986f4-c08a-b044-95ad-464501323bd7'] = $option;
@@ -2963,7 +2963,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -90;
   $option->label = 'norsk';
-  $option->value = 'nor';
+  $option->value = 'term.language=nor';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['316a7dea-9c98-70e4-a9b1-03767f6e368e'] = $option;
@@ -2999,7 +2999,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -70;
   $option->label = 'ungarsk';
-  $option->value = 'ung';
+  $option->value = 'term.language=ung';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['33f4a211-7b06-2a74-594d-71ef52132a7b'] = $option;
@@ -3107,7 +3107,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -99;
   $option->label = 'arabisk';
-  $option->value = 'ara';
+  $option->value = 'term.language=ara';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['37416938-5d08-3a24-b1ef-91cb82d5732c'] = $option;
@@ -3215,7 +3215,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -82;
   $option->label = 'polsk';
-  $option->value = 'pol';
+  $option->value = 'term.language=pol';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['3b73e77a-12a0-1d84-8523-57ce326ef281'] = $option;
@@ -3359,7 +3359,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -80;
   $option->label = 'rumænsk';
-  $option->value = 'rum';
+  $option->value = 'term.language=rum';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['41a0ca6b-d9f2-6c94-b974-4c13a2dcfd11'] = $option;
@@ -3479,7 +3479,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -91;
   $option->label = 'kinesisk';
-  $option->value = 'chi';
+  $option->value = 'term.language=chi';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4ca8354d-2a97-e5f4-f1fa-80229c9b2ff4'] = $option;
@@ -3599,7 +3599,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -92;
   $option->label = 'fransk';
-  $option->value = '(fra ELLER fre)';
+  $option->value = 'term.language=(fra ELLER fre)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['533b4694-b2c4-3fe4-a910-df0e1945ed67'] = $option;
@@ -3707,7 +3707,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -95;
   $option->label = 'russisk';
-  $option->value = 'rus';
+  $option->value = 'term.language=rus';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5de14e11-f071-b804-9982-8f846a064768'] = $option;
@@ -3731,7 +3731,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -89;
   $option->label = 'hebræisk';
-  $option->value = 'heb';
+  $option->value = 'term.language=heb';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5f242142-3055-49d4-dd7f-00c6caf78cbf'] = $option;
@@ -3947,7 +3947,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -96;
   $option->label = 'fransk';
-  $option->value = '(fre ELLER fra)';
+  $option->value = 'term.language=(fre ELLER fra)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['6c48c5ac-7a71-1d64-2dd8-4e6477c505bc'] = $option;
@@ -4043,7 +4043,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -97;
   $option->label = 'finsk';
-  $option->value = 'fin';
+  $option->value = 'term.language=fin';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['701db998-d8c5-1824-9d4d-f19d481cdde2'] = $option;
@@ -4187,7 +4187,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -85;
   $option->label = 'svensk';
-  $option->value = '(swe ELLER sve)';
+  $option->value = 'term.language=(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7500eb47-bedc-ad54-2da0-f3c6809128fc'] = $option;
@@ -4223,7 +4223,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -89;
   $option->label = 'polsk';
-  $option->value = 'pol';
+  $option->value = 'term.language=pol';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['75e5df4f-aaa3-bc34-a96e-2937b653f4d4'] = $option;
@@ -4247,7 +4247,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -93;
   $option->label = 'finsk';
-  $option->value = 'fin';
+  $option->value = 'term.language=fin';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7725de77-b75d-aaa4-6906-3170a680ac7f'] = $option;
@@ -4571,7 +4571,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -69;
   $option->label = 'urdu';
-  $option->value = 'urd';
+  $option->value = 'term.language=urd';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['880be159-017e-0ce4-dd6c-a788c95f1bae'] = $option;
@@ -4667,7 +4667,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -72;
   $option->label = 'tyrkisk';
-  $option->value = 'tur';
+  $option->value = 'term.language=tur';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['8b8646ab-b23d-0574-25e9-9680d86025c7'] = $option;
@@ -4739,7 +4739,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -74;
   $option->label = 'thai';
-  $option->value = 'tha';
+  $option->value = 'term.language=tha';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['91381e4b-b3f9-0d84-1d43-bee4d0234e15'] = $option;
@@ -4751,7 +4751,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -99;
   $option->label = 'arabisk';
-  $option->value = 'ara';
+  $option->value = 'term.language=ara';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['91a976b7-5e74-1824-39f6-27f8f392279e'] = $option;
@@ -4823,7 +4823,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -71;
   $option->label = 'tysk';
-  $option->value = '(ger ELLER deu)';
+  $option->value = 'term.language=(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['92d882e0-03e9-6534-d951-4b15016e7ff6'] = $option;
@@ -4943,7 +4943,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -95;
   $option->label = 'engelsk';
-  $option->value = 'eng';
+  $option->value = 'term.language=eng';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['9947585b-b40d-f444-6d69-80402a0f0224'] = $option;
@@ -5339,7 +5339,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -81;
   $option->label = 'urdu';
-  $option->value = 'urd';
+  $option->value = 'term.language=urd';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ac2e6822-aed4-c7e4-3970-7ade71e61637'] = $option;
@@ -5507,7 +5507,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -87;
   $option->label = 'russisk';
-  $option->value = 'rus';
+  $option->value = 'term.language=rus';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b1cea512-2100-7854-d1a6-c74e53c923ae'] = $option;
@@ -5591,7 +5591,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -94;
   $option->label = 'italiensk';
-  $option->value = 'ita';
+  $option->value = 'term.language=ita';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b406746a-4f49-5f44-adac-3777b1d68cf3'] = $option;
@@ -5603,7 +5603,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -84;
   $option->label = 'norsk';
-  $option->value = 'nor';
+  $option->value = 'term.language=nor';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b4e9afa1-3fc3-07d4-41e0-e2ee3f6175c3'] = $option;
@@ -5675,7 +5675,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -94;
   $option->label = 'farsi';
-  $option->value = 'per';
+  $option->value = 'term.language=per';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b766ca42-7778-76a4-1d6f-1091c9d3a3db'] = $option;
@@ -5687,7 +5687,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -91;
   $option->label = 'svensk';
-  $option->value = '(swe ELLER sve)';
+  $option->value = 'term.language=(swe ELLER sve)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b8085e36-a519-6cf4-59e9-d8c015ab5569'] = $option;
@@ -5771,7 +5771,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -82;
   $option->label = 'ungarsk';
-  $option->value = 'ung';
+  $option->value = 'term.language=ung';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bc0d7849-9216-5904-95d1-3ed519d163f9'] = $option;
@@ -5939,7 +5939,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -76;
   $option->label = 'spansk';
-  $option->value = '(spa ELLER esl)';
+  $option->value = 'term.language=(spa ELLER esl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['c27fef62-9e01-ec54-e185-775d04fcb050'] = $option;
@@ -6119,7 +6119,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -95;
   $option->label = 'fransk';
-  $option->value = '(fre ELLER fra)';
+  $option->value = 'term.language=(fre ELLER fra)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['cb75ed6d-0a8d-e624-0d26-8929e18564d9'] = $option;
@@ -6251,7 +6251,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -86;
   $option->label = 'spansk';
-  $option->value = '(spa ELLER esl)';
+  $option->value = 'term.language=(spa ELLER esl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d2bff843-77c0-2b24-318d-692c9d6305d6'] = $option;
@@ -6311,7 +6311,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -94;
   $option->label = 'hollandsk';
-  $option->value = '(dut ELLER fle)';
+  $option->value = 'term.language=(dut ELLER fle)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d3f4f0e3-cdd7-b174-59b2-96afb155a93a'] = $option;
@@ -6443,7 +6443,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -79;
   $option->label = 'russisk';
-  $option->value = 'rus';
+  $option->value = 'term.language=rus';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d6d472cc-889e-9c44-813b-1762db4053df'] = $option;
@@ -6479,7 +6479,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -92;
   $option->label = 'italiensk';
-  $option->value = 'ita';
+  $option->value = 'term.language=ita';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d7a82e8c-d8db-7d34-5d45-773837ceda52'] = $option;
@@ -6515,7 +6515,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -86;
   $option->label = 'italiensk';
-  $option->value = 'ita';
+  $option->value = 'term.language=ita';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d93646ef-5f1d-2494-dd2a-5cb5616161b0'] = $option;
@@ -6563,7 +6563,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -68;
   $option->label = 'vietnamesisk';
-  $option->value = 'vie';
+  $option->value = 'term.language=vie';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['dd1dd4d0-869e-5554-4d1a-5c2d16193d9f'] = $option;
@@ -6599,7 +6599,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -84;
   $option->label = 'tyrkisk';
-  $option->value = 'tur';
+  $option->value = 'term.language=tur';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['de1ec428-a519-9384-95b4-926c8b511c87'] = $option;
@@ -6671,7 +6671,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -90;
   $option->label = 'tysk';
-  $option->value = '(ger ELLER deu)';
+  $option->value = 'term.language=(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e0202101-6715-9ab4-9959-9b31ac45a183'] = $option;
@@ -6707,7 +6707,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -99;
   $option->label = 'dansk';
-  $option->value = 'dan';
+  $option->value = 'term.language=dan';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e11c22da-d437-6984-4155-3855b6b28a05'] = $option;
@@ -6743,7 +6743,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -98;
   $option->label = 'bosnisk';
-  $option->value = 'bos';
+  $option->value = 'term.language=bos';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e1b4aa08-4fa3-62a4-e1e4-b5152e1bbb94'] = $option;
@@ -6755,7 +6755,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -83;
   $option->label = 'persisk';
-  $option->value = 'per';
+  $option->value = 'term.language=per';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e20787ad-330c-9044-b16c-3968c2dd2af8'] = $option;
@@ -6815,7 +6815,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -96;
   $option->label = 'dansk';
-  $option->value = 'dan';
+  $option->value = 'term.language=dan';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['e41da0d5-7d4a-f6f4-b55f-a7d286963ac0'] = $option;
@@ -6971,7 +6971,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -87;
   $option->label = 'islandsk';
-  $option->value = '(ice ELLER isl)';
+  $option->value = 'term.language=(ice ELLER isl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ee176ca0-7de0-09e4-f5ad-6a3cd43d156e'] = $option;
@@ -6983,7 +6983,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -93;
   $option->label = 'norsk';
-  $option->value = 'nor';
+  $option->value = 'term.language=nor';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ee309163-b72e-02a4-5d53-03271178944e'] = $option;
@@ -7019,7 +7019,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -90;
   $option->label = 'grønlandsk';
-  $option->value = 'kal';
+  $option->value = 'term.language=kal';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ef468366-590a-94b4-e963-98c373ca4c6f'] = $option;
@@ -7151,7 +7151,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -83;
   $option->label = 'tysk';
-  $option->value = '(ger ELLER deu)';
+  $option->value = 'term.language=(ger ELLER deu)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['f7753574-f55f-cbb4-253e-5f60c9be868a'] = $option;
@@ -7211,7 +7211,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -92;
   $option->label = 'spansk';
-  $option->value = 'spa';
+  $option->value = 'term.language=spa';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['f92de73b-8c43-aba4-edf1-52b336f0e1c2'] = $option;
@@ -7307,7 +7307,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -93;
   $option->label = 'islandsk';
-  $option->value = '(ice ELLER isl)';
+  $option->value = 'term.language=(ice ELLER isl)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fd6b4c9d-6d2d-b414-d9e0-5c0bd1263e65'] = $option;
@@ -7414,7 +7414,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'artikler og net, sprog';
   $value->sort = -64;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.language';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
@@ -7531,7 +7531,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'bøger, sprog';
   $value->sort = -70;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.language';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
@@ -7661,7 +7661,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'alle materialer, sprog';
   $value->sort = -86;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.language';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
