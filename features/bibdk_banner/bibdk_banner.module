@@ -1,0 +1,100 @@
+<?php
+/**
+ * @file
+ * Code for the bibdk_banner feature.
+ */
+
+include_once 'bibdk_banner.features.inc';
+
+/*
+ * Implements hook_block_info
+ */
+function bibdk_banner_block_info(){
+  $blocks['bibdk_banner'] = array(
+    'info' => 'Bibdk banner',
+    'region' => 'banner',
+    // 'visibility' => BLOCK_VISIBILITY_LISTED,
+    // 'pages' => '<front>',
+  );
+  return $blocks;
+}
+
+/*
+ * Implements hook_block_view
+ */
+function bibdk_banner_block_view($delta = ''){
+  $block = array();
+  switch ($delta) {
+    case 'bibdk_banner':
+      if ( user_access('access content') ) {
+        if ( $banners = bibdk_banner_get_content() ) {
+          $block['subject'] = NULL;
+          $block['content'] = array(
+            '#theme' => 'bibdk_banner_block',
+            '#banners' => $banners,
+          );
+        }
+      }
+      break;
+  }
+  return $block;
+}
+
+/*
+ * Implements hook_theme
+ */
+function bibdk_banner_theme(){
+  $themes = array(
+    'bibdk_banner_block' => array(
+      'variables' => array('banners' => NULL),
+      'template' => 'theme/bibdk-banner-block'
+    ),
+    'bibdk_banner_content' => array(
+      'variables' => array('title' => NULL, 'banner' => NULL),
+      'template' => 'theme/bibdk-banner-content'
+    ),
+  );
+  return $themes;
+}
+
+
+/*
+* Fetch nodes of type bibdk_banner from db
+*/
+
+function bibdk_banner_get_content() {
+  //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
+  $columns = array();
+  $query = new EntityFieldQuery();
+
+  $query
+      ->entityCondition('entity_type', 'node', '=')
+      ->propertyCondition('type', 'bibdk_banner', '=')
+      ->propertyCondition('status', '1', '=')
+      ->propertyOrderBy('changed', 'DESC');
+
+  $result = $query->execute();
+
+  if ( !isset($result['node']) ) {
+    return;
+  }
+
+  $articles = node_load_multiple(array_keys($result['node']));
+  $article_fields = field_info_instances('node', 'bibdk_banner');
+
+  $values = array();
+  foreach ($articles as $article) {
+    $value = array();
+    foreach ($article_fields as $name => $field) {
+      $value[$name] = field_view_field('node', $article, $name);
+      $value['title'] = $article->title;
+      $value['#title'] = $article->title;
+      $value['#banner'] = field_view_field('node', $article, 'field_image');
+      $value['#banner']['#title'] = NULL;
+      $value['#theme'] = 'bibdk_banner_content';
+    }
+    $values[] = $value;
+  }
+  return $values;
+}
+
