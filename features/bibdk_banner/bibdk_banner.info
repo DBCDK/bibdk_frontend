@@ -5,10 +5,14 @@ package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = bibdk_banner
+
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = image
 dependencies[] = strongarm
+
+files[] = test/bibdk_banner.test
+
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field][] = node-bibdk_banner-field_banner_url

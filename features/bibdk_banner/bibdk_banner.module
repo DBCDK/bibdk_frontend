@@ -13,8 +13,8 @@ function bibdk_banner_block_info(){
   $blocks['bibdk_banner'] = array(
     'info' => 'Bibdk banner',
     'region' => 'banner',
-    // 'visibility' => BLOCK_VISIBILITY_LISTED,
-    // 'pages' => '<front>',
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => '<front>',
   );
   return $blocks;
 }
@@ -74,7 +74,7 @@ function bibdk_banner_carousel_help($path, $arg) {
 
 
 /*
-* Fetch nodes of type bibdk_banner from db
+* Fetch nodes of type bibdk_banner from db and return render array.
 */
 function bibdk_banner_get_content() {
 
