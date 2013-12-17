@@ -4,6 +4,6 @@
  */
 ?>
 
-<div class="banner-wrapper" style="">
-  <?php echo drupal_render($banners); ?>
+<div class="banner-block">
+  <?php echo render($banners); ?>
 </div>

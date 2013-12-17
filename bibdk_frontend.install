@@ -19,47 +19,69 @@ function _bibdk_frontend_set_blocks() {
   $values = array(
     array(
       'module' => 'locale',
-      'delta' => 'language',
-      'theme' => $default_theme,
+      'delta'  => 'language',
+      'theme'  => $default_theme,
       'status' => '1',
       'weight' => '0',
       'region' => 'topbar',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
     ),
     array(
       'module' => 'menu',
-      'delta' => 'menu-global-login-menu',
-      'theme' => $default_theme,
+      'delta'  => 'menu-global-login-menu',
+      'theme'  => $default_theme,
       'status' => '1',
       'weight' => '15',
       'region' => 'topbar',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
     ),
     array(
       'module' => 'bibdk_frontend',
-      'delta' => 'bibdk_tabs',
-      'theme' => $default_theme,
+      'delta'  => 'bibdk_tabs',
+      'theme'  => $default_theme,
       'status' => 1,
       'weight' => 0,
       'region' => 'sidebar',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
     ),
     array(
       'module' => 'ting_search_carousel',
-      'delta' => 'ting_search_carousel',
-      'theme' => $default_theme,
+      'delta'  => 'ting_search_carousel',
+      'theme'  => $default_theme,
       'status' => 1,
       'weight' => 0,
       'region' => 'carousel',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
+    ),
+    array(
+      'module' => 'user_alert',
+      'delta'  => 'user_alert',
+      'theme'  => 'bibdk_theme',
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
+    ),
+    array(
+      'module' => 'bibdk_banner',
+      'delta'  => 'bibdk_banner',
+      'theme'  => 'bibdk_theme',
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'banner',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
     ),
   );
 
@@ -231,6 +253,43 @@ function _bibdk_search_carousel_set_blocks_7012() {
       'status' => 1,
       'weight' => 0,
       'region' => 'content',
+      'pages'  => '',
+      'cache'  => -1,
+      'title'  => '<none>',
+    ),
+  );
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  foreach ($values as $record) {
+    try {
+      $query->values($record);
+      $query->execute();
+    } catch (Exception $e) {
+      drupal_set_message(t("Failed to set user_alert block in content area!"), 'warning');
+    }
+  }
+}
+
+
+/**
+ * Enable user_banner
+ * */
+function bibdk_frontend_update_7013(&$sandbox) {
+  module_enable(array('bibdk_banner'));
+  _bibdk_banner_set_blocks_7013();
+}
+
+/** \brief
+ * define and set banner block
+ */
+function _bibdk_banner_set_blocks_7013() {
+  $values = array(
+    array(
+      'module' => 'bibdk_banner',
+      'delta'  => 'bibdk_banner',
+      'theme'  => 'bibdk_theme',
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'banner',
       'pages'  => '',
       'cache'  => -1,
       'title'  => '<none>',

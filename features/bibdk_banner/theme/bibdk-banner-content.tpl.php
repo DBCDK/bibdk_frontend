@@ -4,4 +4,6 @@
  */
 ?>
 
-<?php echo drupal_render($banner); ?>
+<div class="banner">
+  <?php echo render($banner); ?>
+</div>

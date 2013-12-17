@@ -58,13 +58,27 @@ function bibdk_banner_theme(){
 }
 
 
+
+/**
+ * Implements hook_help().
+ */
+function bibdk_banner_carousel_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#bibdk_banner';
+      $file = drupal_get_path('module', 'bibdk_search_carousel') . "/help/bibdk_banner.help";
+      return $output = file_get_contents($file);
+    break;
+  }
+}
+
+
+
 /*
 * Fetch nodes of type bibdk_banner from db
 */
-
 function bibdk_banner_get_content() {
-  //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
-  $columns = array();
+
+  $output = array();
   $query = new EntityFieldQuery();
 
   $query
@@ -79,22 +93,38 @@ function bibdk_banner_get_content() {
     return;
   }
 
-  $articles = node_load_multiple(array_keys($result['node']));
-  $article_fields = field_info_instances('node', 'bibdk_banner');
+  foreach ( $result['node'] as $n => $banner ) {
+    $node = node_load($banner->nid);
 
-  $values = array();
-  foreach ($articles as $article) {
-    $value = array();
-    foreach ($article_fields as $name => $field) {
-      $value[$name] = field_view_field('node', $article, $name);
-      $value['title'] = $article->title;
-      $value['#title'] = $article->title;
-      $value['#banner'] = field_view_field('node', $article, 'field_image');
-      $value['#banner']['#title'] = NULL;
-      $value['#theme'] = 'bibdk_banner_content';
+    $url = field_get_items('node', $node, 'field_banner_url');
+    $url = $url[0]['safe_value'];
+
+    $image = field_get_items('node', $node, 'field_image');
+    foreach ( $image as $key => $value ) {
+      $output = array();
+      $output = field_view_value('node', $node, 'field_image', $image[$key], array(
+        'type' => 'image',
+        'settings' => array(
+          // 'image_style' => 'thumbnail',
+          'image_link' => 'content',
+        ),
+      ));
+      $output['#item']['attributes']['id'] = array(
+        'selid-banner-' . $n,
+      );
+      $output['#path']['path'] = $url;
+      unset($output['#path']['options']);
+      $output['#path']['options']['attributes']['class'] = array(
+        'banner-link',
+      );
+      $output['#path']['options']['attributes']['id'] = array(
+        'selid-banner-link-' . $n,
+      );
+      $render[$n]['#theme'] = 'bibdk_banner_content';
+      $render[$n]['#banner'] = $output;
     }
-    $values[] = $value;
   }
-  return $values;
-}
 
+  return $render;
+
+}
