@@ -9,10 +9,12 @@ include_once 'bibdk_banner.features.inc';
 /*
  * Implements hook_block_info
  */
-function bibdk_banner_block_info(){
+function bibdk_banner_block_info() {
   $blocks['bibdk_banner'] = array(
     'info' => 'Bibdk banner',
+    'cache' => DRUPAL_CACHE_GLOBAL,
     'region' => 'banner',
+    'status' => TRUE,
     'visibility' => BLOCK_VISIBILITY_LISTED,
     'pages' => '<front>',
   );
@@ -22,7 +24,7 @@ function bibdk_banner_block_info(){
 /*
  * Implements hook_block_view
  */
-function bibdk_banner_block_view($delta = ''){
+function bibdk_banner_block_view($delta = '') {
   $block = array();
   switch ($delta) {
     case 'bibdk_banner':
@@ -43,7 +45,7 @@ function bibdk_banner_block_view($delta = ''){
 /*
  * Implements hook_theme
  */
-function bibdk_banner_theme(){
+function bibdk_banner_theme() {
   $themes = array(
     'bibdk_banner_block' => array(
       'variables' => array('banners' => NULL),

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Drupal webtestcase for the bibdk_banner feature.
+ */
 
 /**
  * Class bibdkBannerWebtestCase
@@ -18,7 +22,7 @@ class bibdkBannerWebtestCase extends DrupalWebTestCase {
   }
 
   public function testRunner() {
-    global $bannerURL;
+    global $_bibdk_banner_bannerURL;
     // Create and log in our privileged user.
     $this->admin_user = $this->drupalCreateUser(array(
       'access content',
@@ -40,12 +44,12 @@ class bibdkBannerWebtestCase extends DrupalWebTestCase {
    *
    */
   public function CreateBannerTest() {
-    global $bannerURL;
+    global $_bibdk_banner_bannerURL;
 
     // Create node to edit.
     $edit = array();
     $edit['title'] = $this->randomName(8);
-    $edit["field_banner_url[und][0][value]"] = $bannerURL = 'http://' . $this->randomName(16);
+    $edit["field_banner_url[und][0][value]"] = $_bibdk_banner_bannerURL = 'http://' . $this->randomName(16);
     $this->drupalPost('node/add/bibdk-banner', $edit, t('Save'));
     $this->assertText('Banner image field is required.', 'Empty banner image, and banner image field is required.');
 
@@ -62,12 +66,21 @@ class bibdkBannerWebtestCase extends DrupalWebTestCase {
    *
    */
   public function GetBanner() {
-    global $bannerURL;
+    global $_bibdk_banner_bannerURL;
 
     $this->drupalGet('');
-    $this->assertFieldById('selid-banner-1', 'Banner image was found on front page.');
-    $this->assertFieldById('selid-banner-link-1', 'Banner image link was found on front page.');
-    $this->assertLinkByHref($bannerURL, 'Link to ' . $bannerURL . ' was found on front page' );
+
+    $banner_image = $this->xpath('//img[@id="selid-banner-1"]/@id');
+    $this->assertTrue($banner_image, 'Banner image was found on front page.');
+
+    $banner_link = $this->xpath('//a[@id="selid-banner-link-1"]/@id');
+    $this->assertTrue($banner_link, 'Banner image link was found on front page.');
+
+    // check that xpath actually fail if id is not present.
+    $banner_link = $this->xpath('//a[@id="selid-dummy-fubar-1"]/@id');
+    $this->assertFalse($banner_link, 'Dummy image link was not found on front page.');
+
+    $this->assertLinkByHref($_bibdk_banner_bannerURL, 0, 'Link to ' . $_bibdk_banner_bannerURL . ' was found on front page' );
   }
 
   /** Set up block in ccontent area
@@ -79,5 +92,3 @@ class bibdkBannerWebtestCase extends DrupalWebTestCase {
   }
 
 }
-
-?>
