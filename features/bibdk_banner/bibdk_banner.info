@@ -5,14 +5,11 @@ package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-1.0
 project = bibdk_banner
-
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = image
 dependencies[] = strongarm
-
-files[] = test/bibdk_banner.test
-
+dependencies[] = scheduler
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field][] = node-bibdk_banner-field_banner_url
@@ -26,3 +23,14 @@ features[variable][] = menu_parent_bibdk_banner
 features[variable][] = node_options_bibdk_banner
 features[variable][] = node_preview_bibdk_banner
 features[variable][] = node_submitted_bibdk_banner
+features[variable][] = scheduler_expand_fieldset_bibdk_banner
+features[variable][] = scheduler_publish_enable_bibdk_banner
+features[variable][] = scheduler_publish_past_date_bibdk_banner
+features[variable][] = scheduler_publish_required_bibdk_banner
+features[variable][] = scheduler_publish_revision_bibdk_banner
+features[variable][] = scheduler_publish_touch_bibdk_banner
+features[variable][] = scheduler_unpublish_enable_bibdk_banner
+features[variable][] = scheduler_unpublish_required_bibdk_banner
+features[variable][] = scheduler_unpublish_revision_bibdk_banner
+features[variable][] = scheduler_use_vertical_tabs_bibdk_banner
+files[] = test/bibdk_banner.test
