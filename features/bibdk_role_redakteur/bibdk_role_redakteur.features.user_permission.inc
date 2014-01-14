@@ -30,6 +30,16 @@ function bibdk_role_redakteur_user_default_permissions() {
     'module' => 'toolbar',
   );
 
+  // Exported permission: create bibdk articles.
+  $permissions['create bibdk articles'] = array(
+    'name' => 'create bibdk articles',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'redakteur',
+    ),
+    'module' => 'bibdk_article',
+  );
+
   // Exported permission: create bibdk_article content.
   $permissions['create bibdk_article content'] = array(
     'name' => 'create bibdk_article content',
@@ -70,6 +80,16 @@ function bibdk_role_redakteur_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete bibdk articles.
+  $permissions['delete bibdk articles'] = array(
+    'name' => 'delete bibdk articles',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'redakteur',
+    ),
+    'module' => 'bibdk_article',
+  );
+
   // Exported permission: delete own bibdk_article content.
   $permissions['delete own bibdk_article content'] = array(
     'name' => 'delete own bibdk_article content',
@@ -108,6 +128,16 @@ function bibdk_role_redakteur_user_default_permissions() {
       1 => 'redakteur',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: edit bibdk articles.
+  $permissions['edit bibdk articles'] = array(
+    'name' => 'edit bibdk articles',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'redakteur',
+    ),
+    'module' => 'bibdk_article',
   );
 
   // Exported permission: edit own bibdk_article content.
