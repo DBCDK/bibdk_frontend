@@ -8,6 +8,7 @@ project = bibdk_role_redakteur
 dependencies[] = bibdk_article
 dependencies[] = features
 dependencies[] = toolbar
+dependencies[] = html_5_text_format
 features[features_api][] = api:1
 features[user_permission][] = access content overview
 features[user_permission][] = access toolbar
