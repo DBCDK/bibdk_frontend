@@ -161,6 +161,18 @@ function bibdk_frontend_menu() {
   return $items;
 }
 
+/**
+ * Implements hook_menu_alter()
+ *
+ * Remove forgotten password, and register user menu-links from the sidebar,
+ * by changing type MENU_LOCAL_TASK to MENU_CALLBACK
+ *
+ * @param $items
+ */
+function bibdk_frontend_menu_alter(&$items){
+  $items['user/password']['type'] = MENU_CALLBACK;
+  $items['user/register']['type'] = MENU_CALLBACK;
+}
 
 /**
  * Implementation of hook_form_alter().
