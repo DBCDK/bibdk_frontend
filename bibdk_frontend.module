@@ -7,7 +7,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
   if (!isset($edit['uid'])) {
     return;
   }
-  
+
   // set language from account
   $languages = language_list();
   $lingo = !empty($account->language) ? $account->language : language_default()->language;
@@ -111,35 +111,11 @@ function bibdk_frontend_block_info() {
  */
 function bibdk_frontend_block_view($delta = '') {
   $block = array();
-  switch ($delta) {
-    case 'bibdk_tabs':
-      $block['content'] = menu_local_tabs();
-      if (is_array($block['content']['#secondary'])) {
-        foreach ($block['content']['#secondary'] as $n => $tab) {
-          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
-          $block['content']['#secondary'][$n]['#link']['localized_options']['attributes']['id'][] = drupal_html_id('selid-tabs-' . $block['content']['#secondary'][$n]['#link']['title']);
-        }
-      }
-      drupal_alter('bibdk_tabs', $block);
-      break;
-  }
-
-  //unset primary tab
-  if (isset($block['content']['#primary'])) {
-    unset($block['content']['#primary']);
+  if ($delta == 'bibdk_tabs'){
+    $tabs = menu_local_tabs();
+    $block['content'] = $tabs;
   }
   return $block;
-}
-
-function bibdk_frontend_bibdk_tabs_alter(&$data) {
-  if (!empty($data['content']['#secondary'])) {
-    foreach ($data['content']['#secondary'] as $key => $tab) {
-      if ($tab['#link']['path'] == 'user/%/edit/bibdk_mypage') { // bibdk_mypage profile tab
-        $data['content']['#bibdk_mypage_tab'] = $tab;
-        unset($data['content']['#secondary'][$key]);
-      }
-    }
-  }
 }
 
 function bibdk_frontend_block_view_alter(&$data, $block) {
@@ -184,7 +160,6 @@ function bibdk_frontend_menu() {
 
   return $items;
 }
-
 
 
 /**
