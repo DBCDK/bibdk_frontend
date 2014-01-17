@@ -306,3 +306,19 @@ function _bibdk_banner_set_blocks_7013() {
     }
   }
 }
+
+
+/**
+ * Remove unused profile2 types
+ * */
+function bibdk_frontend_update_7014(&$sandbox) {
+  $unused_profile_types = array('bibdk_search_history', 'bibdk_mypage', 'bibdk_cart_list', 'bibdk_openuserstatus', 'bibdk_usersettings_user_settings', 'bibdk_favourite_list');
+  if (function_exists('profile2_type_load')) {
+    foreach ($unused_profile_types as $type) {
+      $profile_type = profile2_type_load($type);
+      if (is_object($profile_type)) {
+        $profile_type->delete();
+      }
+    }
+  }
+}
