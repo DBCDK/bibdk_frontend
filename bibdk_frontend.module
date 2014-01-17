@@ -113,7 +113,9 @@ function bibdk_frontend_block_view($delta = '') {
   $block = array();
   if ($delta == 'bibdk_tabs'){
     $tabs = menu_local_tabs();
-    $block['content'] = $tabs;
+    if(!empty($tabs['#primary']) || !empty($tabs['#secondary'])){
+      $block['content'] = $tabs;
+    }
   }
   return $block;
 }
