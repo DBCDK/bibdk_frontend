@@ -25,7 +25,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
     // remind user to add favourites
     drupal_set_message(_bibdk_frontend_remember_favourites_message());
     if (module_exists('bibdk_mypage')) {
-      drupal_goto('user/' . $account->uid . '/edit/bibdk_mypage', $options);
+      drupal_goto('user/' . $account->uid, $options);
     }
     else {
       drupal_goto('user',$options);
@@ -167,11 +167,18 @@ function bibdk_frontend_menu() {
  * Remove forgotten password, and register user menu-links from the sidebar,
  * by changing type MENU_LOCAL_TASK to MENU_CALLBACK
  *
+ * And
+ *
+ * Rename userrelated page titles
+ *
  * @param $items
  */
 function bibdk_frontend_menu_alter(&$items){
   $items['user/password']['type'] = MENU_CALLBACK;
   $items['user/register']['type'] = MENU_CALLBACK;
+  $items['user/%user/view']['title'] = 'My page';
+  $items['user/%user/edit']['title'] = 'Account';
+  $items['user/%user/edit']['weight'] = 32;
 }
 
 /**
