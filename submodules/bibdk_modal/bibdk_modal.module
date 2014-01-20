@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function bibdk_modal_init() {
+  // Do not load modal_forms during the Drupal installation process, e.g. if part
+  // of installation profiles.
+  if (!drupal_installation_attempted()) {
+    _bibdk_modal_forms_doheader();
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function bibdk_modal_menu() {
+
+  $items['bibdk_modal/%ctools_js/login'] = array(
+    'title' => 'Log in',
+    'page callback' => 'bibdk_modal_login',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+
+  );
+
+  return $items;
+}
+
+function _bibdk_modal_forms_doheader() {
+  static $already_added = FALSE;
+  if ($already_added) {
+    return; // Don't add the JavaScript and CSS multiple times.
+  }
+
+  // Include the CTools tools that we need.
+  ctools_include('ajax');
+  ctools_include('modal');
+
+  // Add CTools' javascript to the page.
+  ctools_modal_add_js();
+
+  // Create our own javascript that will be used to theme a modal.
+  $bibdk_modal_style = array(
+    'bibdk-modal-style' => array(
+      'modalSize' => array(
+        'type' => 'fixed',
+        'width' => 500,
+        'height' => 300,
+        'addWidth' => 20,
+        'addHeight' => 15,
+      ),
+      'modalOptions' => array(
+        'opacity' => .8,
+        'background-color' => '#000',
+      ),
+      'animation' => 'fadeIn',
+      'modalTheme' => 'BibdkModal',
+      'throbber' => theme('image', array(
+        'path' => ctools_image_path('ajax-loader.gif', 'bibdk_modal'),
+        'alt' => t('Loading...', array(), array('context' => 'bibdk_modal')),
+        'title' => t('Loading', array(), array('context' => 'bibdk_modal')),
+      )),
+    ),
+  );
+
+  drupal_add_js($bibdk_modal_style, 'setting');
+
+  // Since we have our js, css and images in well-known named directories,
+  // CTools makes it easy for us to just use them without worrying about
+  // using drupal_get_path() and all that ugliness.
+  ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
+  ctools_add_css('bibdk_modal', 'bibdk_modal');
+
+  $already_added = TRUE;
+}

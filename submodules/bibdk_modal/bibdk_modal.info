@@ -4,7 +4,11 @@ core = 7.x
 version = 7.x-0.1
 package = Bibdk Frontend
 
-stylesheets[all][] = css/jquery.custombox.css
+dependencies[] = ctools
 
-scripts[] = js/jquery.custombox.js
-scripts[] = js/login_overlay.js
+files[] = includes/bibdk_modal.forms.inc
+
+;stylesheets[all][] = css/jquery.custombox.css
+
+;scripts[] = js/jquery.custombox.js
+scripts[] = js/bibdk_modal.js
