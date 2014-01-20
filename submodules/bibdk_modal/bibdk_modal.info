@@ -8,7 +8,4 @@ dependencies[] = ctools
 
 files[] = includes/bibdk_modal.forms.inc
 
-;stylesheets[all][] = css/jquery.custombox.css
-
-;scripts[] = js/jquery.custombox.js
 scripts[] = js/bibdk_modal.js
