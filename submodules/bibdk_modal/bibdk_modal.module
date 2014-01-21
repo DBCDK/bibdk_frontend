@@ -114,11 +114,11 @@ function _bibdk_modal_forms_doheader() {
       ),
       'animation' => 'fadeIn',
       'modalTheme' => 'BibdkModal',
-      'throbber' => theme('image', array(
-        'path' => ctools_image_path('ajax-loader.gif', 'bibdk_modal'),
+      /*'throbber' => theme('image', array(
+        #'path' => ctools_image_path('ajax-loader.gif', 'bibdk_modal'),
         'alt' => t('Loading...', array(), array('context' => 'bibdk_modal')),
         'title' => t('Loading', array(), array('context' => 'bibdk_modal')),
-      )),
+      )),*/
     ),
   );
 
