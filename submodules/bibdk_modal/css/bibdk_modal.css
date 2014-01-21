@@ -5,7 +5,9 @@ div.ctools-sample-modal-content {
 	margin:0;
 	padding:0;
 	text-align:left;
+	height: 100%
 }
+
 div.ctools-sample-modal-content .modal-scroll{
 	overflow:hidden;
 	overflow-y:auto;
@@ -22,6 +24,7 @@ div.ctools-sample-modal-content #popups-loading {
   -webkit-border-radius: 8px;
   z-index:99;
 }
+/*
 div.ctools-sample-modal-content #popups-loading span.popups-loading-message {
   background:#FFF url(../images/loading-large.gif) no-repeat 8px center;
   display:block;
@@ -43,9 +46,9 @@ div.ctools-sample-modal-content .popups-box tbody {
 }
 div.ctools-sample-modal-content .popups-box tr {
 	background-color:transparent;
-}
+}*/
 div.ctools-sample-modal-content td.popups-border {
-  background: url(../images/popups-border.png);
+  /*background: url(../images/popups-border.png);*/
   background-color:transparent;
   border: none;
 }
@@ -91,11 +94,11 @@ div.ctools-sample-modal-content .popups-container {
   background-color:#fff;
 }
 div.ctools-sample-modal-content div.popups-title {
-  -moz-border-radius-topleft: 0px;
-  -webkit-border-radius-topleft: 0px;
+  /*-moz-border-radius-topleft: 0px;
+  -webkit-border-radius-topleft: 0px;*/  
   margin-bottom:0px;
-  background-color:#ff7200;
-  border:1px solid #ce5c00;
+  background-color:#178bad;
+  border:1px solid #178bad;
   padding:4px 10px 5px;
   color:white;
   font-size:1em;
@@ -103,7 +106,7 @@ div.ctools-sample-modal-content div.popups-title {
 }
 div.ctools-sample-modal-content .popups-body {
   background-color:#fff;
-  padding:8px;
+  /* padding:8px; */
 }
 div.ctools-sample-modal-content .popups-box .popups-buttons,
 div.ctools-sample-modal-content .popups-box .popups-footer {
