@@ -7,7 +7,7 @@ function bibdk_modal_init() {
   // Do not load modal_forms during the Drupal installation process, e.g. if part
   // of installation profiles.
   if (!drupal_installation_attempted()) {
-    _bibdk_modal_forms_doheader();
+    _bibdk_modal_forms_doheader($_GET['q']);
   }
 }
 
@@ -82,7 +82,7 @@ function _bibdk_modal_get_login_form_links() {
   return $links;
 }
 
-function _bibdk_modal_forms_doheader() {
+function _bibdk_modal_forms_doheader($req) {
   static $already_added = FALSE;
   if ($already_added) {
     return; // Don't add the JavaScript and CSS multiple times.
@@ -101,13 +101,13 @@ function _bibdk_modal_forms_doheader() {
   // Create our own javascript that will be used to theme a modal.
   $bibdk_modal_style = array(
     'bibdk-modal-style' => array(
-      /*'modalSize' => array(
+      'modalSize' => array(
         'type' => 'fixed',
         'width' => 500,
-        'height' => 300,
+        'height' => 500,
         'addWidth' => 20,
         'addHeight' => 15,
-      ),*/
+      ),
       'modalOptions' => array(
         'opacity' => .8,
         'background-color' => '#000',
@@ -130,5 +130,6 @@ function _bibdk_modal_forms_doheader() {
   ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
   ctools_add_css('bibdk_modal', 'bibdk_modal');
 
+  ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
   $already_added = TRUE;
 }
