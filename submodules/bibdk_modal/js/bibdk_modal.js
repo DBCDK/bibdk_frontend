@@ -1,7 +1,7 @@
 (function($) {
 
    //TODO set links that should be rewritten in a settings object
-  Drupal.behaviors.overlay = {
+  Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
 
       //Rewrite login link

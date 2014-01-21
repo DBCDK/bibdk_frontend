@@ -15,7 +15,6 @@ function bibdk_modal_init() {
  * Implements hook_menu().
  */
 function bibdk_modal_menu() {
-
   $items['bibdk_modal/%ctools_js/login'] = array(
     'title' => 'Log in',
     'page callback' => 'bibdk_modal_login',
@@ -23,10 +22,64 @@ function bibdk_modal_menu() {
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
+  );
 
+  $items['bibdk_modal/%ctools_js/password'] = array(
+    'title' => 'Forgot Password',
+    'page callback' => 'bibdk_modal_forgot_password',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/register'] = array(
+    'title' => 'Register new user',
+    'page callback' => 'bibdk_modal_register',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Setting the #action url to point to the login-url in order to ensure correct
+ * behavior by the modal form.
+ * Links for creating a new user and forgot password is added to the form as
+ * well.
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ */
+function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
+  if(!empty($form_state['ajax'])){
+    $form['#action'] = 'bibdk_modal/ajax/login';
+    $form['modal_links'] = _bibdk_modal_get_login_form_links();
+  }
+}
+
+/**
+ * Generates links for forgot password and create new user forms.
+ *
+ * @return array $links
+ */
+function _bibdk_modal_get_login_form_links() {
+  $items[] = ctools_modal_text_button(t('Create new account'), 'bibdk_modal/nojs/register', t('Create a new user account'), 'ctools-modal-bibdk-modal-style');
+  $items[] = ctools_modal_text_button(t('Request new password'), 'bibdk_modal/nojs/password', t('Request new password via e-mail.'), 'ctools-modal-bibdk-modal-style');
+
+  $links = array(
+    '#theme' => 'item_list',
+    '#items' => $items,
+    '#weight' => 10,
+  );
+
+  return $links;
 }
 
 function _bibdk_modal_forms_doheader() {
@@ -39,19 +92,22 @@ function _bibdk_modal_forms_doheader() {
   ctools_include('ajax');
   ctools_include('modal');
 
+  //Needed to ensure ctools_ajax_command_reload() and ctools_ajax_command_redirect() works
+  ctools_add_js('ajax-responder');
+
   // Add CTools' javascript to the page.
   ctools_modal_add_js();
 
   // Create our own javascript that will be used to theme a modal.
   $bibdk_modal_style = array(
     'bibdk-modal-style' => array(
-      'modalSize' => array(
+      /*'modalSize' => array(
         'type' => 'fixed',
         'width' => 500,
         'height' => 300,
         'addWidth' => 20,
         'addHeight' => 15,
-      ),
+      ),*/
       'modalOptions' => array(
         'opacity' => .8,
         'background-color' => '#000',
