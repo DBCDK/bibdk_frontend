@@ -7,12 +7,10 @@
  * wrapper.
  *
  * @param null $js
- * @return array|mixed
  */
 function bibdk_modal_login($js = NULL) {
-
   if (!$js) {
-    return drupal_get_form('user_login');
+    drupal_goto('user/login');
   }
 
   $form_state = _bibdk_modal_set_form_state();
@@ -40,12 +38,11 @@ function bibdk_modal_login($js = NULL) {
  * wrapper.
  *
  * @param null $js
- * @return array|mixed
  */
 function bibdk_modal_forgot_password($js = NULL) {
   module_load_include('pages.inc', 'user');
   if (!$js) {
-    return drupal_get_form('user_pass');
+    drupal_goto('user/password');
   }
 
   $form_state = _bibdk_modal_set_form_state();
@@ -73,11 +70,10 @@ function bibdk_modal_forgot_password($js = NULL) {
  * wrapper.
  *
  * @param null $js
- * @return array|mixed
  */
 function bibdk_modal_register($js = NULL) {
   if (!$js) {
-    return drupal_get_form('user_register_form');
+    drupal_goto('user/register');
   }
 
   $form_state = _bibdk_modal_set_form_state();
