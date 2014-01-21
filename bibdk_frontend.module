@@ -4,14 +4,12 @@
  * Implements hook_user_login().
  */
 function bibdk_frontend_user_login(&$edit, $account) {
+
   if (!isset($edit['uid'])) {
     return;
   }
-  
-  // set language from account
-  $languages = language_list();
-  $lingo = !empty($account->language) ? $account->language : language_default()->language;
-  $user_language = $languages[$lingo];
+
+  $user_language = _bibdk_frontend_get_user_language($account);
   // set options array for drupal_goto
   $options = array('language' => $user_language);
 
@@ -24,20 +22,55 @@ function bibdk_frontend_user_login(&$edit, $account) {
     drupal_set_message(_bibdk_frontend_welcome_message());
     // remind user to add favourites
     drupal_set_message(_bibdk_frontend_remember_favourites_message());
+
     if (module_exists('bibdk_mypage')) {
-      drupal_goto('user/' . $account->uid . '/edit/bibdk_mypage', $options);
+      $url = 'user/' . $account->uid . '/edit/bibdk_mypage';
+      _bibdk_frontend_login_redirect($edit, $url, $options);
     }
     else {
-      drupal_goto('user',$options);
+      $url = 'user';
+      _bibdk_frontend_login_redirect($edit, $url, $options);
     }
   }
-  elseif( !isset($_POST['form_id'])  ){
-    drupal_goto('', $options);
+  // do NOT redirect on password reset || go to frontpage on normal login
+  elseif ((!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') || !isset($_POST['form_id'])) {
+    $url = '';
+    _bibdk_frontend_login_redirect($edit, $url, $options);
   }
-  // do NOT redirect on password reset
-  elseif ( !isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset' )  {
-    // go to frontpage on normal login
-    drupal_goto('', $options);
+}
+
+/**
+ *
+ * @param $account
+ * @return mixed
+ */
+function _bibdk_frontend_get_user_language($account) {
+  // set language from account
+  $languages = language_list();
+  $lingo = !empty($account->language) ? $account->language : language_default()->language;
+
+  return $languages[$lingo];
+}
+
+/**
+ * Redirects the user after a successful login.
+ * If $ajax is set to TRUE (we are in a modal) no redirect will happen, instead
+ * the redirect URL will be returned as the as the redirect will be handled
+ * by the modal.
+ *
+ * @param array $edit
+ * @param string $url
+ * @param array $options
+ */
+function _bibdk_frontend_login_redirect(&$edit, $url, $options) {
+  if (!empty($edit['ajax'])) {
+    $edit['modal_redirect'] = array(
+      'url' => $url,
+      'options' => $options,
+    );
+  }
+  else {
+    drupal_goto($url, $options);
   }
 }
 
