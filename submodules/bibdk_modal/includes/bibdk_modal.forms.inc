@@ -49,15 +49,8 @@ function bibdk_modal_forgot_password($js = NULL) {
 
   $output = ctools_modal_form_wrapper('user_pass', $form_state);
 
-  if (empty($output)) {
-    $output[] = ctools_modal_command_loading();
-    $output[] = ctools_ajax_command_redirect('user');
-  }
-
   if (!empty($form_state['executed'])) {
-    $url = $form_state['modal_redirect']['url'];
-    $options = $form_state['modal_redirect']['options'];
-    $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    $output[] = ctools_ajax_command_reload();
     $output[] = ctools_modal_command_dismiss();
   }
 
