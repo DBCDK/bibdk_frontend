@@ -130,6 +130,8 @@ function _bibdk_modal_forms_doheader($req) {
   ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
   ctools_add_css('bibdk_modal', 'bibdk_modal');
 
+  //Overriding part of CTools' modal.js
   ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
+
   $already_added = TRUE;
 }
