@@ -1,3 +1,10 @@
+
+/**
+ * Overriding Drupal.CTools.Modal.show (modal.js) to ensure correct resize of
+ * modal
+ *
+ * @see modal.js
+ */
 (function($) {
   // Make sure our objects are defined.
   Drupal.CTools = Drupal.CTools || {};
