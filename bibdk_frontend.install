@@ -157,6 +157,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_adhl',
     //Submodule
     'bibdk_search_carousel',
+    'bibdk_modal',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
@@ -346,4 +347,11 @@ function _bibdk_banner_set_blocks_7013() {
       drupal_set_message(t("Failed to set user_alert block in content area!"), 'warning');
     }
   }
+}
+
+/**
+ * Enable bibdk_modal
+ * */
+function bibdk_frontend_update_7014(&$sandbox) {
+  module_enable(array('bibdk_modal'));
 }
