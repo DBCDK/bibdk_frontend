@@ -6,7 +6,7 @@ Drupal.theme.prototype.BibdkModal = function() {
   var html = '';
 
   html += '<div id="ctools-modal" class="popups-box">';
-  html += '  <div class="ctools-modal-content ctools-sample-modal-content">';
+  html += '  <div class="ctools-modal-content">';
   html += '    <table cellpadding="0" cellspacing="0" id="ctools-face-table">';
   html += '      <tr>';
   html += '        <td class="popups-cl popups-border"></td>';

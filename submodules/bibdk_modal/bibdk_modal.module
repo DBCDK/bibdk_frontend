@@ -60,7 +60,7 @@ function bibdk_modal_menu() {
 function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
   if(!empty($form_state['ajax'])){
     $form['#action'] = 'bibdk_modal/ajax/login';
-    $form['modal_links'] = _bibdk_modal_get_login_form_links();
+    $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
   }
 }
 
@@ -106,9 +106,9 @@ function _bibdk_modal_forms_doheader($req) {
       'modalSize' => array(
         'type' => 'fixed',
         'width' => 500,
-        'height' => 500,
-        'addWidth' => 20,
-        'addHeight' => 15,
+        'height' => 600,
+        'addWidth' => 0,
+        'addHeight' => 0,
       ),
       'modalOptions' => array(
         'opacity' => .8,
@@ -116,21 +116,12 @@ function _bibdk_modal_forms_doheader($req) {
       ),
       'animation' => 'fadeIn',
       'modalTheme' => 'BibdkModal',
-      /*'throbber' => theme('image', array(
-        #'path' => ctools_image_path('ajax-loader.gif', 'bibdk_modal'),
-        'alt' => t('Loading...', array(), array('context' => 'bibdk_modal')),
-        'title' => t('Loading', array(), array('context' => 'bibdk_modal')),
-      )),*/
     ),
   );
 
   drupal_add_js($bibdk_modal_style, 'setting');
 
-  // Since we have our js, css and images in well-known named directories,
-  // CTools makes it easy for us to just use them without worrying about
-  // using drupal_get_path() and all that ugliness.
   ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
-  ctools_add_css('bibdk_modal', 'bibdk_modal');
 
   //Overriding part of CTools' modal.js
   ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
