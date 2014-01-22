@@ -107,6 +107,7 @@ function _bibdk_modal_forms_doheader($req) {
         'type' => 'fixed',
         'width' => 500,
         'height' => 600,
+        'minHeight' => 180,
         'addWidth' => 0,
         'addHeight' => 0,
       ),

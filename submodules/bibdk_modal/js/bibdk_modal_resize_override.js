@@ -31,6 +31,7 @@
         type: 'scale',
         width: .8,
         height: .8,
+        minHeight:.8,
         addWidth: 0,
         addHeight: 0,
         // How much to remove from the inner content to make space for the
@@ -76,8 +77,8 @@
       });
       $('div.ctools-modal-content .modal-content', context).css({
         'width': (width - Drupal.CTools.Modal.currentSettings.modalSize.contentRight) + 'px',
-        'min-height': '200px',
-        'height': '100%' //(height - Drupal.CTools.Modal.currentSettings.modalSize.contentBottom) + 'px'
+        'min-height': Drupal.CTools.Modal.currentSettings.modalSize.minHeight + 'px',
+        'height': '100%'
       });
     };
 
