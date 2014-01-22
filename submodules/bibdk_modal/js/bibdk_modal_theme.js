@@ -2,6 +2,7 @@
  * Provide the HTML to create the modal dialog.
  */
 Drupal.theme.prototype.BibdkModal = function() {
+  //TODO avoid the use of tables
   var html = '';
 
   html += '<div id="ctools-modal" class="popups-box">';

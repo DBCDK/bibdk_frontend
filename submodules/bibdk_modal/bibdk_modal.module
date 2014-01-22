@@ -101,6 +101,8 @@ function _bibdk_modal_forms_doheader($req) {
   // Create our own javascript that will be used to theme a modal.
   $bibdk_modal_style = array(
     'bibdk-modal-style' => array(
+      'loadingText' => t('Loading...', array(), array('context' => 'bibdk_modal')),
+      'closeText' => t('Close Window', array(), array('context' => 'bibdk_modal')),
       'modalSize' => array(
         'type' => 'fixed',
         'width' => 500,
