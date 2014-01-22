@@ -12,7 +12,6 @@
 
 
   Drupal.CTools.Modal.show = function(choice) {
-    console.log(choice);
     var opts = {};
 
     if(choice && typeof choice == 'string' && Drupal.settings[choice]) {
