@@ -18,12 +18,10 @@ function bibdk_modal_login($js = NULL) {
   $output = ctools_modal_form_wrapper('user_login', $form_state);
 
   if (empty($output)) {
-    $output[] = ctools_modal_command_loading();
     $output[] = ctools_ajax_command_redirect('user');
   }
 
   if (!empty($form_state['executed'])) {
-    #fb($form_state);
     $url = $form_state['modal_redirect']['url'];
     $options = $form_state['modal_redirect']['options'];
     $output[] = ctools_ajax_command_redirect($url, 0, $options);
@@ -49,6 +47,10 @@ function bibdk_modal_forgot_password($js = NULL) {
   $form_state = _bibdk_modal_set_form_state();
 
   $output = ctools_modal_form_wrapper('user_pass', $form_state);
+
+  if (empty($output)) {
+    $output[] = ctools_ajax_command_redirect('user');
+  }
 
   if (!empty($form_state['executed'])) {
     //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
@@ -76,14 +78,12 @@ function bibdk_modal_register($js = NULL) {
   $output = ctools_modal_form_wrapper('user_register_form', $form_state);
 
   if (empty($output)) {
-    $output[] = ctools_modal_command_loading();
     $output[] = ctools_ajax_command_redirect('user');
   }
 
   if (!empty($form_state['executed'])) {
-    $url = $form_state['modal_redirect']['url'];
-    $options = $form_state['modal_redirect']['options'];
-    $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
+    $output[] = ctools_ajax_command_reload();
     $output[] = ctools_modal_command_dismiss();
   }
 
