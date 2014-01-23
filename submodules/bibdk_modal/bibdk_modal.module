@@ -7,7 +7,7 @@ function bibdk_modal_init() {
   // Do not load modal_forms during the Drupal installation process, e.g. if part
   // of installation profiles.
   if (!drupal_installation_attempted()) {
-    _bibdk_modal_forms_doheader($_GET['q']);
+    _bibdk_modal_forms_doheader();
   }
 }
 
@@ -65,7 +65,7 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Generates links for forgot password and create new user forms.
+ * Generates links for forgotten password and create new user forms.
  *
  * @return array $links
  */
@@ -82,7 +82,11 @@ function _bibdk_modal_get_login_form_links() {
   return $links;
 }
 
-function _bibdk_modal_forms_doheader($req) {
+/**
+ * Configuration method. Used for loading JavaScript and CSS and setting
+ * properties on the modal we're going to display
+ */
+function _bibdk_modal_forms_doheader() {
   static $already_added = FALSE;
   if ($already_added) {
     return; // Don't add the JavaScript and CSS multiple times.
