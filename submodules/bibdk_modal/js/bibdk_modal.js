@@ -3,7 +3,6 @@
   //TODO set links that should be rewritten in a settings object
   Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
-      console.log('attach');
       //Rewrite login link
       $("a[href*='/user/login'], a[href*='?q=user/login']", context).once('init-modal-forms-login',function() {
         this.href = this.href.replace(/user\/login/, 'bibdk_modal/nojs/login');
