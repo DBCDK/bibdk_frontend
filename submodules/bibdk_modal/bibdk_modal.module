@@ -70,8 +70,8 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
  * @return array $links
  */
 function _bibdk_modal_get_login_form_links() {
-  $items[] = ctools_modal_text_button(t('Create new account'), 'bibdk_modal/nojs/register', t('Create a new user account'), 'ctools-modal-bibdk-modal-style');
-  $items[] = ctools_modal_text_button(t('Request new password'), 'bibdk_modal/nojs/password', t('Request new password via e-mail.'), 'ctools-modal-bibdk-modal-style');
+  $items[] = ctools_modal_text_button(t('Create new account'), 'bibdk_modal/nojs/register', t('Create a new user account'), 'ctools-modal-bibdk-modal-style register-link');
+  $items[] = ctools_modal_text_button(t('Request new password'), 'bibdk_modal/nojs/password', t('Request new password via e-mail.'), 'ctools-modal-bibdk-modal-style forgot-pword-link');
 
   $links = array(
     '#theme' => 'item_list',
