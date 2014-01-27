@@ -14,7 +14,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     parent::setUp();
   }
 
-  function test_bibdk_modal_set_form_state() {
+  public function test_bibdk_modal_set_form_state() {
     module_load_include('inc', 'bibdk_modal', 'includes/bibdk_modal.forms');
 
     $expected = array(
