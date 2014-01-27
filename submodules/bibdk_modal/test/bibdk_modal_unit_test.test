@@ -1,0 +1,27 @@
+<?php
+
+class BibdkModalUnittestCase extends DrupalUnitTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => t('Modal - unit test'),
+      'description' => t('Unittesting whatever that\'s possible to unittest'),
+      'group' => t('Bibliotek.dk - Frontend'),
+    );
+  }
+
+  public function setUp() {
+    parent::setUp();
+  }
+
+  function test_bibdk_modal_set_form_state() {
+    module_load_include('inc', 'bibdk_modal', 'includes/bibdk_modal.forms');
+
+    $expected = array(
+      'ajax' => TRUE,
+    );
+
+    $return = _bibdk_modal_set_form_state();
+    $this->assertEqual($expected, $return, 'Got array as expected');
+  }
+}
