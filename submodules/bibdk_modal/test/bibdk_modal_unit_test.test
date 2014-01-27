@@ -4,24 +4,108 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
 
   public static function getInfo() {
     return array(
-      'name' => t('Modal - unit test'),
+      'name' => t('Modal - Unit test'),
       'description' => t('Unittesting whatever that\'s possible to unittest'),
       'group' => t('Bibliotek.dk - Frontend'),
     );
   }
 
   public function setUp() {
+    module_load_include('inc', 'bibdk_modal', 'includes/bibdk_modal.forms');
+    module_load_include('php', 'bibdk_modal', 'test/mockups/bibdk_modal_test_mockup');
+
+    global $bibdk_modal;
+    $bibdk_modal = array(
+      'executed' => FALSE
+    );
+
     parent::setUp();
   }
 
-  public function test_bibdk_modal_set_form_state() {
-    module_load_include('inc', 'bibdk_modal', 'includes/bibdk_modal.forms');
+  public function tearDown() {
+    global $bibdk_modal;
+    unset($bibdk_modal);
 
+    parent::tearDown();
+  }
+
+  public function test_bibdk_modal_set_form_state() {
     $expected = array(
       'ajax' => TRUE,
     );
 
     $return = _bibdk_modal_set_form_state();
     $this->assertEqual($expected, $return, 'Got array as expected');
+  }
+
+  public function test_bibdk_modal_login_form(){
+    global $bibdk_modal;
+
+    $return = bibdk_modal_login_form(TRUE);
+    $this->assertEqual($return[0], 'not executed', 'Got a non executed form');
+
+    $bibdk_modal['executed'] = TRUE;
+
+    $return = bibdk_modal_login_form(TRUE);
+    $this->assertEqual($return[0], 'was executed', 'Got a executed form');
+
+    $redrect_array = array(
+      'command' => 'redirect',
+      'url' => 'A URL',
+      'delay' => 'delay',
+    );
+
+    $this->assertEqual($redrect_array, $return[1], 'Got a redirect command array');
+
+    $dismiss_array = array(
+      'command' => 'modal_dismiss',
+    );
+    $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
+  }
+
+  public function test_bibdk_modal_forgot_password_form(){
+    global $bibdk_modal;
+
+    $return = bibdk_modal_forgot_password_form(TRUE);
+    $this->assertEqual($return[0], 'not executed', 'Got a non executed form');
+
+    $bibdk_modal['executed'] = TRUE;
+
+    $return = bibdk_modal_forgot_password_form(TRUE);
+    $this->assertEqual($return[0], 'was executed', 'Got a executed form');
+
+    $reload_array = array(
+      'command' => 'reload',
+    );
+
+    $this->assertEqual($reload_array, $return[1], 'Got a reload command array');
+
+    $dismiss_array = array(
+      'command' => 'modal_dismiss',
+    );
+    $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
+  }
+
+  public function test_bibdk_modal_register_form(){
+    global $bibdk_modal;
+
+    $return = bibdk_modal_register_form(TRUE);
+    $this->assertEqual($return[0], 'not executed', 'Got a non executed form');
+
+    $bibdk_modal['executed'] = TRUE;
+
+    $return = bibdk_modal_register_form(TRUE);
+    $this->assertEqual($return[0], 'was executed', 'Got a executed form');
+
+    $reload_array = array(
+      'command' => 'reload',
+    );
+
+    $this->assertEqual($reload_array, $return[1], 'Got a reload command array');
+
+    $dismiss_array = array(
+      'command' => 'modal_dismiss',
+    );
+    $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
   }
 }
