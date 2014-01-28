@@ -58,8 +58,8 @@ function bibdk_modal_menu() {
  * @param string $form_id
  */
 function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
-  if(!empty($form_state['ajax'])){
-    $form['#action'] = 'bibdk_modal/ajax/login';
+  if (!empty($form_state['ajax'])) {
+    $form['#action'] = url('bibdk_modal/ajax/login');
     $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
   }
 }
