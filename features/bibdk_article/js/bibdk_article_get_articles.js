@@ -1,15 +1,15 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
- * 
+ *
  * Change article depending on which tab was pressed in advanced search tabs
  * @see bibdk_custom_search module for implementation of advanced search
  */
 (function($) {
-    
+
 Drupal.behaviors.GetArticlesOnClick = {
     attach: function(context) {
-        $('#search-form .horizontal-nav li', context).click(function(e) {
+        $('#search-form .nav--horizontal li', context).click(function(e) {
             Drupal.bibdkArticlesGet($(this));
         });
     }
@@ -25,9 +25,9 @@ Drupal.bibdkArticlesGet = function(element) {
         },
         dataType: 'json',
         success: Drupal.bibdkArticlesReplace
-    });        
+    });
 };
-    
+
 Drupal.bibdkArticlesReplace = function(response) {
     $('.bibdk_article_ajax_replace').replaceWith(response.output);
 }
