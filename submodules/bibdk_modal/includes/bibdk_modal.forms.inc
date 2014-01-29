@@ -28,9 +28,14 @@ function bibdk_modal_login_form($js) {
   $output = ctools_modal_form_wrapper('user_login', $form_state);
 
   if (!empty($form_state['executed'])) {
-    $url = $form_state['modal_redirect']['url'];
-    $options = $form_state['modal_redirect']['options'];
-    $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    if (!empty($form_state['modal_redirect']['url'])) {
+      $url = $form_state['modal_redirect']['url'];
+      $options = $form_state['modal_redirect']['options'];
+      $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    }
+    else {
+      $output[] = ctools_ajax_command_reload();
+    }
     $output[] = ctools_modal_command_dismiss();
   }
 
