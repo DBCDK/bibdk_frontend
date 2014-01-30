@@ -24,7 +24,7 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/password/%destination'] = array(
+  $items['bibdk_modal/%ctools_js/password'] = array(
     'title' => 'Forgot Password',
     'page callback' => 'bibdk_modal_forgot_password',
     'page arguments' => array(1),
