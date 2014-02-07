@@ -21,12 +21,12 @@
 
   BibdkModal.bindEvents = function(context) {
     $('#modalBackdrop', context).bind('click', BibdkModal.closeModal);
-    $('body', context).bind('keydown', BibdkModal.keyEventHandler);
+    $(document).bind('keydown', BibdkModal.keyEventHandler);
   };
 
-  BibdkModal.unbindEvents = function(context){
-    $('#modalBackdrop', context).unbind('click', BibdkModal.closeModal);
-    $('body', context).unbind('keydown', BibdkModal.keyEventHandler);
+  BibdkModal.unbindEvents = function(){
+    $('#modalBackdrop').unbind('click', BibdkModal.closeModal);
+    $(document).unbind('keydown', BibdkModal.keyEventHandler);
   };
 
   BibdkModal.keyEventHandler = function(event){
@@ -38,7 +38,6 @@
 
   BibdkModal.closeModal = function(){
     $('.close').trigger('click');
-    $('#modalBackdrop').unbind('click', BibdkModal.closeModal);
     BibdkModal.unbindEvents();
   };
 
