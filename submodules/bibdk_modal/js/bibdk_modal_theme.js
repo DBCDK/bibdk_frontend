@@ -5,7 +5,7 @@ Drupal.theme.prototype.BibdkModal = function() {
   //TODO avoid the use of tables
   var html = '';
 
-  html += '<div id="ctools-modal" class="popups-box">';
+  html += '<div id="ctools-modal" class="popups-box" role="dialog">';
   html += '  <div class="ctools-modal-content">';
   html += '    <table cellpadding="0" cellspacing="0" id="ctools-face-table">';
   html += '      <tr>';
