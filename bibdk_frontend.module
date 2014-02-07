@@ -27,14 +27,8 @@ function bibdk_frontend_user_login(&$edit, $account) {
     // remind user to add favourites
     drupal_set_message(_bibdk_frontend_remember_favourites_message());
 
-    if (module_exists('bibdk_mypage')) {
-      $url = 'user/' . $account->uid . '/edit/bibdk_mypage';
-      _bibdk_frontend_login_redirect($edit, $url, $options);
-    }
-    else {
-      $url = 'user';
-      _bibdk_frontend_login_redirect($edit, $url, $options);
-    }
+    $url = 'user';
+    _bibdk_frontend_login_redirect($edit, $url, $options);
   }
   // do NOT redirect on password reset || go to frontpage on normal login
   elseif ((!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') || !isset($_POST['form_id'])) {
@@ -157,7 +151,9 @@ function bibdk_frontend_block_view($delta = '') {
   $block = array();
   if ($delta == 'bibdk_tabs'){
     $tabs = menu_local_tabs();
-    $block['content'] = $tabs;
+    if(!empty($tabs['#primary']) || !empty($tabs['#secondary'])){
+      $block['content'] = $tabs;
+    }
   }
 
   return $block;
@@ -224,6 +220,25 @@ function bibdk_frontend_menu() {
   return $items;
 }
 
+/**
+ * Implements hook_menu_alter()
+ *
+ * Remove forgotten password, and register user menu-links from the sidebar,
+ * by changing type MENU_LOCAL_TASK to MENU_CALLBACK
+ *
+ * And
+ *
+ * Rename userrelated page titles
+ *
+ * @param $items
+ */
+function bibdk_frontend_menu_alter(&$items){
+  $items['user/password']['type'] = MENU_CALLBACK;
+  $items['user/register']['type'] = MENU_CALLBACK;
+  $items['user/%user/view']['title'] = 'My page';
+  $items['user/%user/edit']['title'] = 'Account';
+  $items['user/%user/edit']['weight'] = 32;
+}
 
 /**
  * Implementats hook_form_FORM_ID_alter().
@@ -257,8 +272,6 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
  * Saves the path a user visited on page exit.
  */
 function bibdk_frontend_exit() {
-  // drupal is not fully bootstrapped on cached pages
-  // @see https://drupal.org/node/2060613
   $path = $_GET['q'];
   if ((strpos($path, 'search/') === 0 || strpos($path, 'vejviser') === 0) || (strpos($path, 'user/') === 0 && $path != 'user/login' && $path != 'user/logout')) {
     $_SESSION['referrer'] = $path . '?' . drupal_http_build_query($_GET);
