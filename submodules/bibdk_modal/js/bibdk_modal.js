@@ -53,7 +53,6 @@
 
   Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
-      console.log('attach');
       BibdkModal.setLinkActions(context);
       BibdkModal.bindEvents(context);
       BibdkModal.addAccessibilityInfo(context);
