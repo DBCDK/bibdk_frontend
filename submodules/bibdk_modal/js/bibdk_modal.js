@@ -19,8 +19,14 @@
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
   };
 
+  BibdkModal.addAccessibilityInfo = function(context){
+    $("#modalContent", context).attr("role", 'dialog');
+    $("#modalContent", context).attr("aria-hidden", false);
+  };
+
   BibdkModal.bindEvents = function(context) {
     $('#modalBackdrop', context).bind('click', BibdkModal.closeModal);
+    $('.close', context).bind('click',  BibdkModal.setMainwrapperAttr);
     $(document).bind('keydown', BibdkModal.keyEventHandler);
   };
 
@@ -41,10 +47,16 @@
     BibdkModal.unbindEvents();
   };
 
+  BibdkModal.setMainwrapperAttr = function(){
+    $('#mainwrapper').attr("aria-hidden", false);
+  };
+
   Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
+      console.log('attach');
       BibdkModal.setLinkActions(context);
       BibdkModal.bindEvents(context);
+      BibdkModal.addAccessibilityInfo(context);
     }
   };
 })(jQuery);

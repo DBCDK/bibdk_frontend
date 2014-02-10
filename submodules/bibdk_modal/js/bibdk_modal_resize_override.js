@@ -55,6 +55,8 @@
 
     Drupal.CTools.Modal.currentSettings = settings;
 
+    $('#mainwrapper').attr("aria-hidden", true);
+
     var resize = function(e) {
       // When creating the modal, it actually exists only in a theoretical
       // place that is not in the DOM. But once the modal exists, it is in the
