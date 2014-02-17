@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function bibdk_modal_init() {
+  // Do not load modal_forms during the Drupal installation process, e.g. if part
+  // of installation profiles.
+  if (!drupal_installation_attempted()) {
+    _bibdk_modal_forms_doheader();
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function bibdk_modal_menu() {
+  $items['bibdk_modal/%ctools_js/login'] = array(
+    'title' => 'Log in',
+    'page callback' => 'bibdk_modal_login',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/password'] = array(
+    'title' => 'Forgot Password',
+    'page callback' => 'bibdk_modal_forgot_password',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/register'] = array(
+    'title' => 'Register new user',
+    'page callback' => 'bibdk_modal_register',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Setting the #action url to point to the login-url in order to ensure correct
+ * behavior by the modal form.
+ * Links for creating a new user and forgot password is added to the form as
+ * well.
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ */
+function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form_state['ajax'])) {
+    $form['#action'] = url('bibdk_modal/ajax/login');
+    $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
+  }
+}
+
+/**
+ * Generates links for forgotten password and create new user forms.
+ *
+ * @return array $links
+ */
+function _bibdk_modal_get_login_form_links() {
+  $items[] = ctools_modal_text_button(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/register', t('Create a new user account', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style register-link');
+  $items[] = ctools_modal_text_button(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/password', t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style forgot-pword-link');
+
+  $links = array(
+    '#theme' => 'item_list',
+    '#items' => $items,
+    '#weight' => 10,
+  );
+
+  return $links;
+}
+
+/**
+ * Configuration method. Used for loading JavaScript and CSS and setting
+ * properties on the modal we're going to display
+ */
+function _bibdk_modal_forms_doheader() {
+  static $already_added = FALSE;
+  if ($already_added) {
+    return; // Don't add the JavaScript and CSS multiple times.
+  }
+
+  // Include the CTools tools that we need.
+  ctools_include('ajax');
+  ctools_include('modal');
+
+  //Needed to ensure ctools_ajax_command_reload() and ctools_ajax_command_redirect() works
+  ctools_add_js('ajax-responder');
+
+  // Add CTools' javascript to the page.
+  ctools_modal_add_js();
+
+  // Create our own javascript that will be used to theme a modal.
+  $bibdk_modal_style = array(
+    'bibdk-modal-style' => array(
+      'loadingText' => t('Loading...', array(), array('context' => 'bibdk_modal')),
+      'closeText' => t('Close Window', array(), array('context' => 'bibdk_modal')),
+      'modalSize' => array(
+        'type' => 'fixed',
+        'width' => 500,
+        'height' => 400,
+        'minHeight' => 180,
+        'addWidth' => 0,
+        'addHeight' => 0,
+      ),
+      'modalOptions' => array(
+        'opacity' => .8,
+        'background-color' => '#000',
+      ),
+      'animation' => 'fadeIn',
+      'modalTheme' => 'BibdkModal',
+    ),
+  );
+
+  drupal_add_js($bibdk_modal_style, 'setting');
+
+  ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
+
+  //Overriding part of CTools' modal.js
+  ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
+
+  $already_added = TRUE;
+}

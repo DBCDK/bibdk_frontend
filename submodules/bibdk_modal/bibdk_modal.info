@@ -1,0 +1,12 @@
+name = Bibliotek.dk - Modal
+description = Defines the worktabs on work-level, visible when the user hits 'More information'
+core = 7.x
+version = 7.x-0.1
+package = Bibdk Frontend
+
+dependencies[] = ctools
+
+files[] = includes/bibdk_modal.forms.inc
+files[] = test/bibdk_modal_unit_test.test
+
+scripts[] = js/bibdk_modal.js

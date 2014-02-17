@@ -4,10 +4,12 @@
  * Implements hook_user_login().
  */
 function bibdk_frontend_user_login(&$edit, $account) {
+
   if (!isset($edit['uid'])) {
     return;
   }
-  
+
+  $user_language = _bibdk_frontend_get_user_language($account);
   // set language from account
   $languages = language_list();
   $lingo = !empty($account->language) ? $account->language : language_default()->language;
@@ -24,20 +26,49 @@ function bibdk_frontend_user_login(&$edit, $account) {
     drupal_set_message(_bibdk_frontend_welcome_message());
     // remind user to add favourites
     drupal_set_message(_bibdk_frontend_remember_favourites_message());
-    if (module_exists('bibdk_mypage')) {
-      drupal_goto('user/' . $account->uid . '/edit/bibdk_mypage', $options);
-    }
-    else {
-      drupal_goto('user',$options);
-    }
+
+    $url = 'user';
+    _bibdk_frontend_login_redirect($edit, $url, $options);
   }
-  elseif( !isset($_POST['form_id'])  ){
-    drupal_goto('', $options);
+  // do NOT redirect on password reset || go to frontpage on normal login
+  elseif ((!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') || !isset($_POST['form_id'])) {
+    $url = '';
+    _bibdk_frontend_login_redirect($edit, $url, $options);
   }
-  // do NOT redirect on password reset
-  elseif ( !isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset' )  {
-    // go to frontpage on normal login
-    drupal_goto('', $options);
+}
+
+/**
+ *
+ * @param $account
+ * @return mixed
+ */
+function _bibdk_frontend_get_user_language($account) {
+  // set language from account
+  $languages = language_list();
+  $lingo = !empty($account->language) ? $account->language : language_default()->language;
+
+  return $languages[$lingo];
+}
+
+/**
+ * Redirects the user after a successful login.
+ * If $ajax is set to TRUE (we are in a modal) no redirect will happen, instead
+ * the redirect URL will be returned as the as the redirect will be handled
+ * by the modal.
+ *
+ * @param array $edit
+ * @param string $url
+ * @param array $options
+ */
+function _bibdk_frontend_login_redirect(&$edit, $url, $options) {
+  if (!empty($edit['ajax'])) {
+    $edit['modal_redirect'] = array(
+      'url' => $url,
+      'options' => $options,
+    );
+  }
+  else {
+    drupal_goto($url, $options);
   }
 }
 
@@ -48,7 +79,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
  */
 function bibdk_frontend_l10n_update_projects_alter(&$projects) {
   $projects['bibliotekdk'] = array(
-    'project_type'  => 'module',
+    'project_type' => 'module',
     'name' => 'bibliotekdk',
     'info' => array(
       'version' => '7.x-0.1',
@@ -60,12 +91,18 @@ function bibdk_frontend_l10n_update_projects_alter(&$projects) {
   );
 }
 
-
+/**
+ * @return string
+ */
 function _bibdk_frontend_remember_favourites_message() {
   $link = l(t('add_favourites'), 'vejviser');
+
   return t('remember_to_add_favourite_libraries') . ' ' . $link;
 }
 
+/**
+ * @return null|string
+ */
 function _bibdk_frontend_welcome_message() {
   return t('Welcome', array(), array('context' => 'bibdk_provider'));
 }
@@ -91,6 +128,7 @@ function bibdk_frontend_default_page_manager_pages() {
     include $file->uri; // no not use include_once(). hook_default_page_manager_pages() is called twice.
     $pages[$page->name] = $page;
   }
+
   return $pages;
 }
 
@@ -111,26 +149,19 @@ function bibdk_frontend_block_info() {
  */
 function bibdk_frontend_block_view($delta = '') {
   $block = array();
-  switch ($delta) {
-    case 'bibdk_tabs':
-      $block['content'] = menu_local_tabs();
-      if (is_array($block['content']['#secondary'])) {
-        foreach ($block['content']['#secondary'] as $n => $tab) {
-          $block['content']['#secondary'][$n]['#link']['title'] = t($tab['#link']['title'], array(), array('context' => 'bibdk_frontend'));
-          $block['content']['#secondary'][$n]['#link']['localized_options']['attributes']['id'][] = drupal_html_id('selid-tabs-' . $block['content']['#secondary'][$n]['#link']['title']);
-        }
-      }
-      drupal_alter('bibdk_tabs', $block);
-      break;
+  if ($delta == 'bibdk_tabs'){
+    $tabs = menu_local_tabs();
+    if(!empty($tabs['#primary']) || !empty($tabs['#secondary'])){
+      $block['content'] = $tabs;
+    }
   }
 
-  //unset primary tab
-  if (isset($block['content']['#primary'])) {
-    unset($block['content']['#primary']);
-  }
   return $block;
 }
 
+/**
+ * @param $data
+ */
 function bibdk_frontend_bibdk_tabs_alter(&$data) {
   if (!empty($data['content']['#secondary'])) {
     foreach ($data['content']['#secondary'] as $key => $tab) {
@@ -142,6 +173,10 @@ function bibdk_frontend_bibdk_tabs_alter(&$data) {
   }
 }
 
+/**
+ * @param $data
+ * @param $block
+ */
 function bibdk_frontend_block_view_alter(&$data, $block) {
   if ($block->delta == 'menu-global-login-menu') {
     foreach ($data['content'] as $key => $value) {
@@ -185,24 +220,49 @@ function bibdk_frontend_menu() {
   return $items;
 }
 
-
+/**
+ * Implements hook_menu_alter()
+ *
+ * Remove forgotten password, and register user menu-links from the sidebar,
+ * by changing type MENU_LOCAL_TASK to MENU_CALLBACK
+ *
+ * And
+ *
+ * Rename userrelated page titles
+ *
+ * @param $items
+ */
+function bibdk_frontend_menu_alter(&$items){
+  $items['user/password']['type'] = MENU_CALLBACK;
+  $items['user/register']['type'] = MENU_CALLBACK;
+  $items['user/%user/view']['title'] = 'My page';
+  $items['user/%user/edit']['title'] = 'Account';
+  $items['user/%user/edit']['weight'] = 32;
+}
 
 /**
- * Implementation of hook_form_alter().
+ * Implementats hook_form_FORM_ID_alter().
  *
- * Update the page action : add destination parameter in order to return to referrer.
+ * Update the page action : add destination parameter in order to return to
+ * referrer.
  *
- * @param &$form
- * @param $form_state
- * @param $form_id
- * @return
- *   Return the structure of the form.
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
  */
 function bibdk_frontend_form_user_login_alter(&$form, $form_state, $form_id) {
-  $form['#action'] = url('user/login', array('query' => array('destination' => ( isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '' )));
+  $form['#action'] = url('user/login', array('query' => array('destination' => (isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '')));
 }
+
+/**
+ * Implementats hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ */
 function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_id) {
-  $form['#action'] = url('user/login', array('query' => array('destination' =>  ( isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '' )));
+  $form['#action'] = url('user/login', array('query' => array('destination' => (isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '')));
 }
 
 
@@ -212,16 +272,8 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
  * Saves the path a user visited on page exit.
  */
 function bibdk_frontend_exit() {
-  // drupal is not fully bootstrapped on cached pages
-  // @see https://drupal.org/node/2060613
-  // Do not continue if not fully bootstrapped.
- /* if (drupal_get_bootstrap_phase() < DRUPAL_BOOTSTRAP_FULL) {
-    return;
-  }*/
-
-  //$path = drupal_get_path_alias();
   $path = $_GET['q'];
-  if ( (strpos($path, 'search/') === 0 || strpos($path, 'vejviser') === 0) || ( strpos($path, 'user/') === 0  && $path != 'user/login' && $path != 'user/logout' ) ) {
-      $_SESSION['referrer'] = $path.'?'.drupal_http_build_query($_GET);
+  if ((strpos($path, 'search/') === 0 || strpos($path, 'vejviser') === 0) || (strpos($path, 'user/') === 0 && $path != 'user/login' && $path != 'user/logout')) {
+    $_SESSION['referrer'] = $path . '?' . drupal_http_build_query($_GET);
   }
 }
