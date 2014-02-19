@@ -34,7 +34,7 @@ function bibdk_modal_login_form($js) {
       $output[] = ctools_ajax_command_redirect($url, 0, $options);
     }
     else {
-      $output[] = ctools_ajax_command_reload();
+      $output[] = _bibdk_modal_custom_reload();
     }
     $output[] = ctools_modal_command_dismiss();
   }
@@ -72,7 +72,7 @@ function bibdk_modal_forgot_password_form($js) {
 
   if (!empty($form_state['executed'])) {
     //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
-    $output[] = ctools_ajax_command_reload();
+    $output[] = _bibdk_modal_custom_reload();
     $output[] = ctools_modal_command_dismiss();
   }
 
@@ -108,7 +108,7 @@ function bibdk_modal_register_form($js) {
 
   if (!empty($form_state['executed'])) {
     //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
-    $output[] = ctools_ajax_command_reload();
+    $output[] = _bibdk_modal_custom_reload();
     $output[] = ctools_modal_command_dismiss();
   }
 
@@ -124,4 +124,21 @@ function _bibdk_modal_set_form_state() {
   );
 
   return $form_state;
+}
+
+/**
+ * Returns array with command for the bibdk_custom_reload command.
+ *
+ * Instead of just reloading the page the bibdk_custom_reload command requests
+ * the browser to go to the current URL, which is done to avoid pop-up messages
+ * in FF and IE when the logs in from a page with a form displayed.
+ *
+ * The command is implemented in bibdk.modal.js
+ *
+ * @return array
+ */
+function _bibdk_modal_custom_reload(){
+  return array(
+    'command' => 'bibdk_custom_reload',
+  );
 }

@@ -20,7 +20,7 @@ function bibdk_article_block_info() {
 }
 
 /** Implements hook_menu
- * 
+ *
  */
 function bibdk_article_menu() {
   $items['bibdk_article/searchpage_callback'] = array(
@@ -34,7 +34,7 @@ function bibdk_article_menu() {
 }
 
 /** Ajax callback function to get articles by searchpage type (film, bøger, net etc.)
- * 
+ *
  */
 function bibdk_article_searchpage_ajax_callback() {
   $type = $_GET['type'];
@@ -45,14 +45,14 @@ function bibdk_article_searchpage_ajax_callback() {
 }
 
 /**
- * Implements hook_form_FÒRM_ID_alter (search_block_form) 
- * 
+ * Implements hook_form_FÒRM_ID_alter (search_block_form)
+ *
  * add javascript for getting bibdk_articles
  */
 function bibdk_article_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   if (module_exists('bibdk_custom_search')) {
     $path = drupal_get_path('module', 'bibdk_article');
-    $form['#attached']['js'][] = 
+    $form['#attached']['js'][] =
        $path . '/js/bibdk_article_get_articles.js';
   }
 }
@@ -129,7 +129,7 @@ function bibdk_article_block_view($delta = '', $path = NULL) {
         $block['content'] = array(
           '#theme' => 'bibdk_article_frontpage',
           '#items' => $articles,
-          '#prefix' => '<div class="bibdk_article_ajax_replace">',
+          '#prefix' => '<div class="bibdk_article_ajax_replace row">',
           '#suffix' => '</div>',
         );
       }
@@ -164,11 +164,13 @@ function bibdk_article_get_rendered_articles($path) {
     return $rendered_articles;
   }
 
+  $number_of_elements = count($article_values);
   foreach ($article_values as $article_value) {
-    $article = bibdk_article_set_column($article_value);
+    $number_of_elements--;
+    $article = bibdk_article_set_column($article_value, $number_of_elements);
     $rendered_articles[key($article)][] = theme('bibdk_articles_block_widget', current($article));
   }
-  // default sort by key (weight)  
+  // default sort by key (weight)
   ksort($rendered_articles);
 
   return $rendered_articles;
@@ -190,11 +192,14 @@ function bibdk_article_render_helpdesk() {
  * @param  array $value entity from database
  * @return array (column number  => article)
  */
-function bibdk_article_set_column($value) {
+function bibdk_article_set_column($value, $last = false) {
   $columns = isset($value['field_columns']['#items'][0]['value']) ? $value['field_columns']['#items'][0]['value'] : '2';
   $rows = isset($value['field_rows']['#items'][0]['value']) ? $value['field_rows']['#items'][0]['value'] : '2';
   $color = isset($value['field_color']['#items'][0]['value']) ? $value['field_color']['#items'][0]['value'] : 'light-grey';
   $classes = bibdk_article_get_classes($columns, $rows, $color);
+  if ($last){
+    $classes['class'][] = 'end';
+  }
   $weight = isset($value['field_weight']['#items'][0]['value']) ? $value['field_weight']['#items'][0]['value'] : 1;
   $url = isset($value['field_link']['#items'][0]['value']) ? $value['field_link']['#items'][0]['value'] : NULL;
   $text = isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL;
@@ -217,9 +222,9 @@ function _bibdk_article_render_link($url, $text){
     '#title' => $text,
     '#attributes' => array(
       'id' => array(
-        'selid-' . drupal_html_id($url),        
+        'selid-' . drupal_html_id($url),
       ),
-      'target' => '_blank',      
+      'target' => '_blank',
     ),
   );
   return drupal_render($link);
@@ -294,7 +299,7 @@ function bibdk_article_get_article_values() {
 
 /**
  *
- * @return array [page_path]=>[page_title] 
+ * @return array [page_path]=>[page_title]
  */
 function bibdk_article_get_page_paths() {
   $ret = array();
@@ -315,7 +320,7 @@ function bibdk_article_get_page_paths() {
 
 function bibdk_article_get_classes($columns, $rows, $color) {
   $classes = array(
-    'width' => 'span' . (3 * $columns),
+    'width' => 'columns small-' . (3 * $columns),
     'type' => 'article-widget',
     'height' => 'widget-' . $color . ' widget-height-' . $rows,
   );

@@ -9,7 +9,6 @@ function bibdk_frontend_user_login(&$edit, $account) {
     return;
   }
 
-  $user_language = _bibdk_frontend_get_user_language($account);
   // set language from account
   $languages = language_list();
   $lingo = !empty($account->language) ? $account->language : language_default()->language;
