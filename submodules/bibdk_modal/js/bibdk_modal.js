@@ -2,6 +2,10 @@
 
   var BibdkModal = {};
 
+  Drupal.ajax.prototype.commands.bibdk_custom_reload = function(ajax, data, status) {
+    window.location = document.URL;
+  };
+
   BibdkModal.setLinkActions = function(context){
     //Rewrite login link
     $("a[href*='/user/login'], a[href*='?q=user/login']", context).once('init-modal-forms-login',function() {
