@@ -30,9 +30,3 @@ function ctools_modal_command_dismiss(){
     'command' => 'modal_dismiss',
   );
 }
-
-function ctools_ajax_command_reload(){
-  return array(
-    'command' => 'reload',
-  );
-}

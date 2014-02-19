@@ -75,7 +75,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     $this->assertEqual($return[0], 'was executed', 'Got a executed form');
 
     $reload_array = array(
-      'command' => 'reload',
+      'command' => 'bibdk_custom_reload',
     );
 
     $this->assertEqual($reload_array, $return[1], 'Got a reload command array');
@@ -98,7 +98,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     $this->assertEqual($return[0], 'was executed', 'Got a executed form');
 
     $reload_array = array(
-      'command' => 'reload',
+      'command' => 'bibdk_custom_reload',
     );
 
     $this->assertEqual($reload_array, $return[1], 'Got a reload command array');
