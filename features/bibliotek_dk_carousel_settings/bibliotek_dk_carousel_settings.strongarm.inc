@@ -51,32 +51,46 @@ function bibliotek_dk_carousel_settings_strongarm() {
       'offset' => '5',
     ),
     3 => array(
+      'title' => 'Ny musik',
+      'subtitle' => 'musik for voksne',
+      'query' => '(term.type=musik ELLER term.workType=music) OG dkcclterm.sf=v',
+      'period' => '2',
+      'offset' => '5',
+    ),
+    4 => array(
       'title' => 'Nye spil på biblioteket',
       'subtitle' => 'spil for voksne',
       'query' => '(term.workType=game) OG dkcclterm.sf=v',
       'period' => '12',
       'offset' => '8',
     ),
-    4 => array(
+    5 => array(
       'title' => 'Nye bøger for børn',
       'subtitle' => 'bøger for børn',
       'query' => '(dkcclterm.sf=b ELLER dkcclterm.sf=s)  OG dkcclterm.uu=nt OG (term.type=bog)',
       'period' => '3',
       'offset' => '4',
     ),
-    5 => array(
+    6 => array(
       'title' => 'Nye spillefilm for børn',
       'subtitle' => 'spillefilm for børn',
       'query' => '(term.type=dvd) OG dkcclterm.cl=77.74',
       'period' => '12',
       'offset' => '8',
     ),
-    6 => array(
+    7 => array(
       'title' => 'Nye spil for børn',
       'subtitle' => 'spil for børn ',
       'query' => '(term.workType=game) OG dkcclterm.sf=b',
       'period' => '12',
       'offset' => '8',
+    ),
+    8 => array(
+      'title' => 'Ny musik for børn',
+      'subtitle' => 'musik for børn',
+      'query' => '(term.type=musik ELLER term.workType=music) OG dkcclterm.sf=b',
+      'period' => '7',
+      'offset' => '5',
     ),
   );
   $export['ting_carousel_search_queries'] = $strongarm;
