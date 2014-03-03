@@ -884,8 +884,7 @@ Du skal ikke skrive og mellem ordene.';
   $element->element_title = 'spil_medierådets_aldersanbefaling';
   $element->element_label = 'Medierådets aldersanbefalinger';
   $element->description = 'PEGI aldersmærkning';
-  $element->help_text = 'PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende, anstødeligt e.l.
-';
+  $element->help_text = 'PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende, anstødeligt e.l.';
   $element->sort = -68;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -1163,16 +1162,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->region = 'expand';
   $map_element->sort = -48;
   $export['5f5d6a16-f03c-b4b4-0909-da8a067e5375'] = $map_element;
-
-  $map_element = new stdClass();
-  $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
-  $map_element->api_version = 1;
-  $map_element->p_uuid = '28226dd7-3165-49d8-a8e1-f9f82a44f418';
-  $map_element->e_uuid = 'e8fff062-b583-49f5-989f-327864488b5d';
-  $map_element->me_uuid = '6577dc4d-ceea-43b9-b49b-d2163eba3698';
-  $map_element->region = 'expand';
-  $map_element->sort = -49;
-  $export['6577dc4d-ceea-43b9-b49b-d2163eba3698'] = $map_element;
 
   $map_element = new stdClass();
   $map_element->disabled = FALSE; /* Edit this to true to make a default map_element disabled initially */
@@ -3840,6 +3829,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5b63b5fd-97e8-f254-3184-8926e6912ad5'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '5c28868d-dde5-48fb-af37-4da92b760f05';
+  $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
+  $option->sort = 10;
+  $option->label = 'alle';
+  $option->value = 'facet.language=facet.language';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['5c28868d-dde5-48fb-af37-4da92b760f05'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7798,7 +7799,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
   $value->value_title = 'noder, materialetyper';
   $value->sort = 10;
-  $value->value_type = 'checkboxes';
+  $value->value_type = 'radios';
   $value->search_code = '';
   $value->default_value = 'mu';
   $value->expand = 0;
