@@ -4209,7 +4209,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
   $option->sort = -95;
   $option->label = 'stemmer';
-  $option->value = '(pd ELLER pl ELLER so ELLER st ELLER sv)';
+  $option->value = 'dkcclterm.ma=(pd ELLER pl ELLER so ELLER st ELLER sv)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7067c647-eb62-4319-8474-934da929cb30'] = $option;
@@ -7801,7 +7801,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->sort = 10;
   $value->value_type = 'radios';
   $value->search_code = '';
-  $value->default_value = 'mu';
+  $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1'] = $value;
