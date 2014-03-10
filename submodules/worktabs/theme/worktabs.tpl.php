@@ -7,8 +7,8 @@
     <?php endforeach; ?>
   </div>
   <!-- tabs-nav -->
-  <div class="tabs-sections">
-    <div class="tabs-sections-wrapper">
+  <div class="tabs-sections-wrapper">
+    <div class="tabs-sections">
       <?php foreach ($tabs as $type => $tab) : ?>
         <div id="<?php print $type . $pid; ?>" class="tabs-section <?php print $tab['active']; ?>">
           <div class="text clearfix">
@@ -18,7 +18,8 @@
       <?php endforeach; ?>
       <!-- tabs-section -->
     </div>
+    <!-- tabs-sections -->
   </div>
-  <!-- tabs-sections -->
+  <!-- tabs-sections-wrapper -->
 </div>
 <!-- work tabs -->
