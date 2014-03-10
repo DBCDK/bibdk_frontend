@@ -15,7 +15,7 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
 
   public function setUp() {
     module_load_include('module', 'worktabs', 'worktabs');
-    parent::setUp('worktabs');
+    parent::setUp();
   }
 
   /**
@@ -62,7 +62,7 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
 /**
  * Class WorktabsWebtestCase
  */
-class WorktabsWebtestCase extends DrupalWebTestCase {
+class WorktabsWebtestCase extends DrupalUnitTestCase {
 
   public static function getInfo() {
     return array(
@@ -73,7 +73,8 @@ class WorktabsWebtestCase extends DrupalWebTestCase {
   }
 
   public function setUp() {
-    parent::setUp('worktabs');
+    module_load_include('module', 'worktabs', 'worktabs');
+    parent::setUp();
   }
 
   public function testRenderedContent() {
