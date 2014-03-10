@@ -1,7 +1,7 @@
 <!-- item -->
 <div class="tab-item clearfix">
   <span class="tab-title text-small<?php ($single) ? print ' active' : print ''; ?>">
-    <?php print $title; ?>
+    <?php print render($title); ?>
   </span>
 
   <a href="#" class="tab-link toggle-worktab-content text-small<?php ($single) ? print ' toggled' : print ''; ?>">
@@ -11,7 +11,7 @@
   </a>
 
   <div class="tab-content <?php (!$single) ? print 'visuallyhidden' : print ''; ?>">
-    <?php print $content; ?>
+    <?php print render($content); ?>
   </div>
 </div>
 <!-- item -->

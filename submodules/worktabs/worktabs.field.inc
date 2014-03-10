@@ -55,7 +55,7 @@ function worktabs_field_load($entity_type, $entities, $field, $instances, $langc
 function worktabs_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
   if ($entity) {
-    $element[]['#markup'] = worktabs_get_tabs($entity);
+    $element[] = worktabs_get_tabs($entity);
   }
 
   return $element;

@@ -82,7 +82,7 @@ class WorktabsWebtestCase extends DrupalUnitTestCase {
     $tabs = worktabs_merge_content($content);
     $rendered = worktabs_render_content($tabs);
     foreach ($rendered as $item) {
-      if (!empty($item['content'])) {
+      if (!empty($item['#content'])) {
         $this->assertTrue(preg_match('<!-- item -->', $item['content']), '<!-- item --> pattern found indicating the item has been rendered');
       }
     }

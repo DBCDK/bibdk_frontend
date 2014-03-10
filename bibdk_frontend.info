@@ -6,3 +6,4 @@ package = Bibdk Frontend
 project = bibliotekdk
 
 files[] = test/bibdk_frontend.test
+dependecies[] = translatable

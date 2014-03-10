@@ -34,11 +34,11 @@
  */
 function hook_worktabs_items($tabs, $entity) {
   $tabs['PARENT_TAB']['MY_ITEM'] = array(
-    'title' => '',
-    'btn_txt_closed' => '',
-    'btn_txt_open' => '',
-    'rendered' => '',
-    'weight' => 0,
+    '#title' => '',
+    '#btn_txt_closed' => '',
+    '#btn_txt_open' => '',
+    '#content' => array(),
+    '#weight' => 0,
     );
   return $tabs;
 }
