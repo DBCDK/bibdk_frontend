@@ -30,7 +30,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
     _bibdk_frontend_login_redirect($edit, $url, $options);
   }
   // do NOT redirect on password reset || go to frontpage on normal login
-  elseif ((!isset($_GET['pass-reset-token']) && $_POST['form_id'] != 'user_pass_reset') || !isset($_POST['form_id'])) {
+  elseif (( !isset($_GET['pass-reset-token']) && (isset($_POST['form_id']) && $_POST['form_id'] != 'user_pass_reset')) || !isset($_POST['form_id'])) {
     $url = '';
     _bibdk_frontend_login_redirect($edit, $url, $options);
   }
