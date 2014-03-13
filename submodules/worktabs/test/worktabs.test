@@ -58,33 +58,3 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
     }
   }
 }
-
-/**
- * Class WorktabsWebtestCase
- */
-class WorktabsWebtestCase extends DrupalUnitTestCase {
-
-  public static function getInfo() {
-    return array(
-      'name' => t('Worktabs - Webtest'),
-      'description' => t('Testing the worktabs functionality'),
-      'group' => t('Bibliotek.dk - Frontend'),
-    );
-  }
-
-  public function setUp() {
-    module_load_include('module', 'worktabs', 'worktabs');
-    parent::setUp();
-  }
-
-  public function testRenderedContent() {
-    $content = drupal_json_decode(file_get_contents(drupal_get_path('module', 'worktabs') . '/test/mockup/content_mockup.json'));
-    $tabs = worktabs_merge_content($content);
-    $rendered = worktabs_render_content($tabs);
-    foreach ($rendered as $item) {
-      if (!empty($item['#content'])) {
-        $this->assertTrue(preg_match('<!-- item -->', $item['content']), '<!-- item --> pattern found indicating the item has been rendered');
-      }
-    }
-  }
-}

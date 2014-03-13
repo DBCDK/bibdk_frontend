@@ -90,27 +90,6 @@ function worktabs_get_content($tabs, $entity) {
 }
 
 /**
- * Renders the items for each tab.
- * One item is one horizontal item that can be folded in/out
- * If there is no more than on item in a tab the item will be folded out as default
- *
- * @param $tabs
- * @return mixed
- *
- * @see theme/tab_item.tpl.php
- */
-function worktabs_render_content($tabs) {
-  foreach ($tabs as &$tab) {
-    $content = '';
-    foreach ($tab['content'] as $inner) {
-    }
-    $tab['content'] = $content;
-  }
-
-  return $tabs;
-}
-
-/**
  * Merges the cotent retreived with the outer tabs
  *
  * @param $content
