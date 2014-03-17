@@ -4,3 +4,5 @@ core = 7.x
 version = 7.x-0.42
 package = Bibdk Frontend
 project = bibliotekdk
+
+files[] = test/bibdk_frontend.test
