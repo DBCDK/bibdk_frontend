@@ -1,5 +1,5 @@
 <!-- work tabs -->
-<div class="bibdk-tabs bibdk-tabs-light">
+<div class="worktabs bibdk-tabs bibdk-tabs-light">
   <!-- tabs-nav -->
   <div class="tabs-nav clearfix">
     <?php foreach ($tabs as $type => $tab) : ?>
