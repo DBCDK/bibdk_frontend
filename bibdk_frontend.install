@@ -371,3 +371,10 @@ function bibdk_frontend_update_7015(&$sandbox) {
     }
   }
 }
+
+/**
+ * Enable translatable module for existing installations
+ */
+function bibdk_frontend_update_7016(&$sandbox) {
+  module_enable(array('translatable'));
+}
