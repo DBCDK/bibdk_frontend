@@ -142,6 +142,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
     'html_5_text_format',
+    'bibliotek_dk_administration_menu',
     'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
     'bibdk_custom_search_feature',
