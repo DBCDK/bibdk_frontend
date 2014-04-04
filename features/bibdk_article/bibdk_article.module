@@ -141,9 +141,9 @@ function bibdk_article_block_view($delta = '', $path = NULL) {
 
 function bibdk_article_get_rendered_articles($path) {
   $rendered_articles = array();
-  //insert bibdk_helpdesk FIRST in array
-  $rendered_articles[0] = bibdk_article_render_helpdesk();
-
+  //insert bibdk_helpdesk FIRST in array if it exists
+  if ($helpdesk = bibdk_article_render_helpdesk())
+    $rendered_articles[0] = $helpdesk;
 
   $article_nodes = bibdk_article_get_article_values();
   // datacheck
