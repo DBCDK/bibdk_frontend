@@ -204,10 +204,12 @@ function bibdk_article_set_column($value, $last = false) {
   $url = isset($value['field_link']['#items'][0]['value']) ? $value['field_link']['#items'][0]['value'] : NULL;
   $text = isset($value['field_link_text']['#items'][0]['value']) ? $value['field_link_text']['#items'][0]['value'] : NULL;
 
+  $link_classes = isset($value['field_link_classes']['#items'][0]['value']) ? explode(' ',$value['field_link_classes']['#items'][0]['value']) : array();
+
   $item = array(
     'title' => $value['title'],
     'body' => drupal_render($value['body']),
-    'link' => (isset($url) && isset($text)) ? _bibdk_article_render_link($url, $text) : '',
+    'link' => (isset($url) && isset($text)) ? _bibdk_article_render_link($url, $text, $link_classes) : '',
     'image' => drupal_render($value['field_image']),
     'class' => drupal_attributes($classes),
   );
@@ -215,7 +217,7 @@ function bibdk_article_set_column($value, $last = false) {
   return array($weight => $item);
 }
 
-function _bibdk_article_render_link($url, $text){
+function _bibdk_article_render_link($url, $text, $classes = array()){
   $link = array(
     '#type' => 'link',
     '#href' => $url,
@@ -225,6 +227,7 @@ function _bibdk_article_render_link($url, $text){
         'selid-' . drupal_html_id($url),
       ),
       'target' => '_blank',
+      'class' => $classes,
     ),
   );
   return drupal_render($link);

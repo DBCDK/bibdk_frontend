@@ -20,11 +20,11 @@ function bibdk_article_ctools_plugin_api() {
 function bibdk_article_node_info() {
   $items = array(
     'bibdk_article' => array(
-      'name' => t('Article'),
+      'name' => t('Artikel'),
       'base' => 'node_content',
       'description' => t('Add information articles to the frontpage'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );

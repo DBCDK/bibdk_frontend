@@ -15,6 +15,7 @@ features[field][] = node-bibdk_article-field_color
 features[field][] = node-bibdk_article-field_columns
 features[field][] = node-bibdk_article-field_image
 features[field][] = node-bibdk_article-field_link
+features[field][] = node-bibdk_article-field_link_classes
 features[field][] = node-bibdk_article-field_link_text
 features[field][] = node-bibdk_article-field_page
 features[field][] = node-bibdk_article-field_rows
