@@ -28,7 +28,11 @@ function worktabs_theme($existing, $type, $theme, $path) {
       'template' => 'theme/worktabs_no_content',
       'variables' => array(
         'no_content' => '',
-        'btn_txt_empty' => t('No content at the moment', array(), array('context' => 'worktabs')),
+        'btn_txt_empty' => array(
+          '#type' => 'translatable',
+          '#translate' => 'No content at the moment',
+          '#options' =>  array('context' => 'worktabs'),
+        ),
       ),
     ),
   );
