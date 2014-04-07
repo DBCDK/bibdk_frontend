@@ -2309,6 +2309,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '1779bde0-7545-4436-a6be-cc56dcaf8c54';
+  $option->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->sort = 10;
+  $option->label = 'studiepartiturer';
+  $option->value = 'dkcclterm.ma=ps';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['1779bde0-7545-4436-a6be-cc56dcaf8c54'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '17bfc996-7f89-77e4-d521-2ab315cd9f5d';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -80;
@@ -2647,8 +2659,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '238c9bb0-6841-da64-199a-aab1670b05e8';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
-  $option->label = 'Playstation vita';
+  $option->sort = -94;
+  $option->label = 'Playstation Vita';
   $option->value = '(playstation vita)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -2923,7 +2935,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -92;
   $option->label = 'e-spil';
   $option->value = '(pc-spil (net))';
   $option->expand = '0';
@@ -3101,6 +3113,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '34c605ba-e1b2-4518-a59a-a31cc3166bb2';
+  $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
+  $option->sort = -97;
+  $option->label = 'e-tidsskriftartikler';
+  $option->value = 'term.type=tidsskriftsartikel ';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['34c605ba-e1b2-4518-a59a-a31cc3166bb2'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '34d43ebd-ef9a-ea74-418c-df26f7b1be75';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -79;
@@ -3116,7 +3140,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '34fa1c8d-267f-4a5e-9ffd-52458e94d627';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
   $option->sort = -99;
-  $option->label = 'e-noder';
+  $option->label = 'digital sheet music';
   $option->value = 'dkcclterm.ma=(mu OG xe)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3163,7 +3187,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -89;
+  $option->sort = -88;
   $option->label = 'Xbox 360';
   $option->value = '(xbox 360)';
   $option->expand = '0';
@@ -3181,6 +3205,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['36d207fa-72a6-2f94-7de7-455c9836ab71'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '371908a1-021f-46e7-89c5-ebc3fcd8d52b';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -84;
+  $option->label = 'alle partiturer';
+  $option->value = 'dkcclterm.ma=(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
+  $option->expand = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->is_disabled = FALSE;
+  $export['371908a1-021f-46e7-89c5-ebc3fcd8d52b'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3305,6 +3341,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '3ab0660b-f523-4eee-bced-bdd0054916e5';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -87;
+  $option->label = 'Xbox One';
+  $option->value = '(xbox one)';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['3ab0660b-f523-4eee-bced-bdd0054916e5'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '3b73e77a-12a0-1d84-8523-57ce326ef281';
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -82;
@@ -3415,7 +3463,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3ffa308b-9344-4969-a5b4-31cff8427b81';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'PSP';
   $option->value = 'psp';
   $option->expand = '0';
@@ -3601,6 +3649,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4ca8354d-2a97-e5f4-f1fa-80229c9b2ff4'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '4e2cd7cc-1a34-4c96-9e34-ef6c5febd59a';
+  $option->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->sort = 10;
+  $option->label = 'klaverpartiturer';
+  $option->value = 'dkcclterm.ma=pp';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['4e2cd7cc-1a34-4c96-9e34-ef6c5febd59a'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3937,6 +3997,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['60a8d35c-1823-94d4-59e0-9617bc880a54'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '61bc3514-f377-409a-ba69-1f8d07ac8fe3';
+  $option->v_uuid = '819ed112-ec85-8f64-2573-a5a88f7ac3d9';
+  $option->sort = -96;
+  $option->label = 'e-avisartikler';
+  $option->value = 'term.type=avisartikel ';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['61bc3514-f377-409a-ba69-1f8d07ac8fe3'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4301,6 +4373,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '74105a66-91c0-4fe7-bcbe-cbbb0e54bbe3';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -91;
+  $option->label = 'noder for kor';
+  $option->value = 'dkcclterm.ma=mu OG dkcclterm.em=(kor ELLER børnekor ELLER drengekor ELLER pigekor ELLER mandskor ELLER kvindekor ELLER damekor)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['74105a66-91c0-4fe7-bcbe-cbbb0e54bbe3'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -58;
@@ -4327,7 +4411,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -91;
   $option->label = 'Wii';
   $option->value = 'wii';
   $option->expand = '0';
@@ -5651,7 +5735,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'Noder for guitar';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.dk=(78.457 ELLER 78.4571 ELLER 78.437 ELLER 78.427*) ELLER dkcclterm.em=guitar)';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['adb3819a-daca-4a3b-9e3e-027492d5469f'] = $option;
 
   $option = new stdClass();
@@ -6017,6 +6101,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'ba46f4b5-5bd8-4aee-bf22-066cceaf3324';
+  $option->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->sort = 10;
+  $option->label = 'stemmer';
+  $option->value = 'dkcclterm.ma=(pd ELLER pl ELLER so ELLER st ELLER sv)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['ba46f4b5-5bd8-4aee-bf22-066cceaf3324'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'bb597965-709c-43eb-8431-f3ec368ddd68';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -62;
@@ -6031,8 +6127,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
-  $option->label = 'Nintendo ds';
+  $option->sort = -95;
+  $option->label = 'Nintendo DS';
   $option->value = '(nintendo ds)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -6109,6 +6205,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bde43043-5498-4b53-83b4-2b5eccc2b82e'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'bdf133e7-9a53-42fe-8cc6-8ee526b70a38';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -96;
+  $option->label = 'Playstation 4';
+  $option->value = '(playstation 4)';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['bdf133e7-9a53-42fe-8cc6-8ee526b70a38'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7015,8 +7123,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e12fa2f8-c2e6-ee54-29dc-5860e95905c5';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -91;
-  $option->label = 'Wii u';
+  $option->sort = -90;
+  $option->label = 'Wii U';
   $option->value = '(wii u)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -7567,7 +7675,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -90;
+  $option->sort = -89;
   $option->label = 'Xbox';
   $option->value = 'xbox';
   $option->expand = '0';
@@ -7714,6 +7822,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
  */
 function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $export = array();
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
+  $value->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $value->value_title = 'noder, partiturtyper';
+  $value->sort = 10;
+  $value->value_type = 'checkboxes';
+  $value->search_code = '';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['0cd9f79e-2d4c-466a-a2ce-121b00a41005'] = $value;
 
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
