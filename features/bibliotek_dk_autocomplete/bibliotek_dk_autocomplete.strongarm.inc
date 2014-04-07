@@ -14,7 +14,7 @@ function bibliotek_dk_autocomplete_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'bibdk_autocomplete_rest_url';
-  $strongarm->value = 'http://rausu:7000/suggest-testbroend/rest';
+  $strongarm->value = 'http://opensuggestion.addi.dk/1.0/rest';
   $export['bibdk_autocomplete_rest_url'] = $strongarm;
 
   $strongarm = new stdClass();
