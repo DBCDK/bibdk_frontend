@@ -30,6 +30,26 @@ function bibdk_role_redakteur_user_default_permissions() {
     'module' => 'toolbar',
   );
 
+  // Exported permission: access user profiles.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'redakteur',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: administer users.
+  $permissions['administer users'] = array(
+    'name' => 'administer users',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'redakteur',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: create bibdk articles.
   $permissions['create bibdk articles'] = array(
     'name' => 'create bibdk articles',
