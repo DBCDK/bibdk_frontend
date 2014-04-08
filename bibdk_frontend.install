@@ -5,6 +5,7 @@ function bibdk_frontend_install() {
   _bibdk_frontend_set_blocks();
   _bibdk_frontend_enable_modules();
   bibdk_frontend_setup_cache();
+  bibdk_frontend_set_weight();
 }
 
 /** \brief
@@ -377,4 +378,27 @@ function bibdk_frontend_update_7015(&$sandbox) {
  */
 function bibdk_frontend_update_7016(&$sandbox) {
   module_enable(array('translatable'));
+}
+
+/**
+ * Set weight to make sure frontend is called last in the login process
+ */
+function bibdk_frontend_update_7017(&$sandbox) {
+  bibdk_frontend_set_weight();
+}
+
+/**
+ * Change weight on module
+ * bibdk_frontend needs to be the last module called in the login process, because
+ * it makes a redirect
+ */
+function bibdk_frontend_set_weight() {
+  db_update('system')
+    ->fields(array(
+      'weight' => 15,
+    ))
+    ->condition('type', 'module')
+    ->condition('name', 'bibdk_frontend')
+    ->execute();
+
 }
