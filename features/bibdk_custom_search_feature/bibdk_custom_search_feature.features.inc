@@ -4209,9 +4209,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -37;
   $option->label = 'Klassisk musik 1950 ->';
-  $option->value = 'klassisk musik 1950 ->';
+  $option->value = 'klassisk musik 1950';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['66c0d95a-089e-4cfb-a9ca-b0983aef601d'] = $option;
 
   $option = new stdClass();
@@ -4725,9 +4725,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -38;
   $option->label = 'Renæssance ->1600';
-  $option->value = 'renæssance -> 1600';
+  $option->value = 'renæssance 1600';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['7b3e78d2-8581-4c68-9ed6-97d8b938d35b'] = $option;
 
   $option = new stdClass();
