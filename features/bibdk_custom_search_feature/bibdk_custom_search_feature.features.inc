@@ -515,7 +515,7 @@ synge*';
   $element->api_version = 1;
   $element->e_uuid = '76a5db8e-179c-4c8b-bd60-4864ba5e6132';
   $element->element_title = 'noder, alle titler';
-  $element->element_label = 'Titel på sang eller musik';
+  $element->element_label = 'Titel på sang eller musikstykke';
   $element->description = '';
   $element->help_text = 'Her kan du søge på alle titler, både enkeltnumre, albumtitler og værktitler';
   $element->sort = 10;
@@ -2225,6 +2225,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '120ef2de-bb72-49cc-945e-6a69fe7dffd8';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -95;
+  $option->label = 'to guitarer';
+  $option->value = 'dkcclterm.dk=78.437 OG dkcclterm.no=guitarer';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['120ef2de-bb72-49cc-945e-6a69fe7dffd8'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '121adc7f-242e-eb84-0545-f4ba6cc3e1f2';
   $option->v_uuid = '6918cf0f-f206-d494-f9da-32aa0d945ab9';
   $option->sort = -99;
@@ -2261,6 +2273,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '13e8eec6-5512-46ef-82c3-add9ff7bd85a';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -84;
+  $option->label = 'alle partiturer';
+  $option->value = 'dkcclterm.ma=(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
+  $option->expand = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->is_disabled = FALSE;
+  $export['13e8eec6-5512-46ef-82c3-add9ff7bd85a'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '13e9c659-5d7c-4fd9-b8a9-634363b8b3f3';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -64;
@@ -2281,6 +2305,30 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['14dad616-4848-e334-0123-874033a23e7f'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '159e3695-369f-4fde-9f2c-cbbf6fd437ce';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -88;
+  $option->label = 'tre eller flere strygere og blæsere';
+  $option->value = 'dkcclterm.dk=78.423*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['159e3695-369f-4fde-9f2c-cbbf6fd437ce'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '15d400a1-1e44-4730-b85e-63195d888c8d';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -96;
+  $option->label = 'noder for kor';
+  $option->value = 'dkcclterm.ma=mu OG dkcclterm.em=(kor ELLER børnekor ELLER drengekor ELLER pigekor ELLER mandskor ELLER kvindekor ELLER damekor)';
+  $option->expand = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->is_disabled = FALSE;
+  $export['15d400a1-1e44-4730-b85e-63195d888c8d'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2419,8 +2467,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '1c3cbec4-6dc2-484e-9253-ff269c1b0973';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -85;
-  $option->label = 'Noder for trommesæt';
+  $option->sort = -88;
+  $option->label = 'noder for trommesæt';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.dk=(78.482 ELLER 78.4821) ELLER dkcclterm.em=trommesæt)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -2521,6 +2569,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '1fd3aa44-cbf2-4fc9-8934-3a1886e29c36';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -91;
+  $option->label = 'to eller flere strygere med klaver';
+  $option->value = 'dkcclterm.dk=78.424*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['1fd3aa44-cbf2-4fc9-8934-3a1886e29c36'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2731,8 +2791,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '25dfd2ef-64fe-46e2-9385-c872e6382c16';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -86;
-  $option->label = 'Guitarskoler';
+  $option->sort = -89;
+  $option->label = 'guitarskoler';
   $option->value = 'dkcclterm.em=guitarskoler';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -2767,7 +2827,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '272aa076-0dc1-4322-b59c-6d06f2ceed0a';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -94;
+  $option->sort = -98;
   $option->label = 'node + cd';
   $option->value = 'dkcclterm.ma=(mu OG lm) IKKE dkcclterm.ma=mm';
   $option->expand = '0';
@@ -2785,18 +2845,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['27be38b8-2b2f-9ca4-31b3-0cb4840bb570'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '27e48668-09a1-4ab5-a7be-0b2dfe3240c2';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -98;
-  $option->label = 'alle partiturer';
-  $option->value = 'dkcclterm.ma=(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['27e48668-09a1-4ab5-a7be-0b2dfe3240c2'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -2869,6 +2917,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2a55c4ce-15c8-c274-9930-3027f2e9ca66'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '2b2918ab-84c8-4948-9595-005bba25e299';
+  $option->v_uuid = '6e072028-31b8-4f7d-86cc-d24ce84024bd';
+  $option->sort = 10;
+  $option->label = 'Mindre orkestre og ensembler';
+  $option->value = 'dkcclterm.dk=(78.411:8 ELLER 78.421:9 ELLER 78.422:9 ELLER 78.423:9 ELLER 78.424:9 ELLER 78.425:9 ELLER 78.426:9 ELLER 78.427:9 ELLER 78.429:9)';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['2b2918ab-84c8-4948-9595-005bba25e299'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3140,7 +3200,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '34fa1c8d-267f-4a5e-9ffd-52458e94d627';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
   $option->sort = -99;
-  $option->label = 'digital sheet music';
+  $option->label = 'e-noder';
   $option->value = 'dkcclterm.ma=(mu OG xe)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3209,18 +3269,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = '371908a1-021f-46e7-89c5-ebc3fcd8d52b';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -84;
-  $option->label = 'alle partiturer';
-  $option->value = 'dkcclterm.ma=(pp ELLER ps ELLER pa ELLER pl ELLER pk ELLER pu ELLER pr ELLER po)';
-  $option->expand = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
-  $option->is_disabled = FALSE;
-  $export['371908a1-021f-46e7-89c5-ebc3fcd8d52b'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = '37416938-5d08-3a24-b1ef-91cb82d5732c';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = -99;
@@ -3277,6 +3325,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['380a95e5-72a6-e4f4-d927-f04c627a79eb'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '384f2c0d-786b-4c48-a486-a5df8f742b92';
+  $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->sort = -100;
+  $option->label = 'børnekor';
+  $option->value = 'dkcclterm.em=børnekor';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['384f2c0d-786b-4c48-a486-a5df8f742b92'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3353,6 +3413,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '3ac29d85-70d4-4873-a354-794960e5d118';
+  $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->sort = -96;
+  $option->label = 'mandskor';
+  $option->value = 'dkcclterm.em=mandskor';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3ac29d85-70d4-4873-a354-794960e5d118'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '3b73e77a-12a0-1d84-8523-57ce326ef281';
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -82;
@@ -3409,6 +3481,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['3c6bc3ed-54d9-27a4-410c-48e3070c8d83'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '3d806cb8-2148-4d03-bc75-77cae81c6f8c';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -99;
+  $option->label = 'to blæsere';
+  $option->value = 'dkcclterm.ok=78.432 ';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3d806cb8-2148-4d03-bc75-77cae81c6f8c'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3497,6 +3581,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '40fcea21-dfda-495a-b5d4-21e5666a2297';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -92;
+  $option->label = 'tre eller flere strygere';
+  $option->value = 'dkcclterm.dk=78.421*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['40fcea21-dfda-495a-b5d4-21e5666a2297'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '41a0ca6b-d9f2-6c94-b974-4c13a2dcfd11';
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = -80;
@@ -3505,6 +3601,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['41a0ca6b-d9f2-6c94-b974-4c13a2dcfd11'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '41c9cc64-b9f5-4a83-8038-75b5ac7d4af0';
+  $option->v_uuid = '6e072028-31b8-4f7d-86cc-d24ce84024bd';
+  $option->sort = 10;
+  $option->label = 'Stort orkester med soloinstrument';
+  $option->value = 'dkcclterm.dk=78.412*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['41c9cc64-b9f5-4a83-8038-75b5ac7d4af0'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3571,8 +3679,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '47f92a49-8a05-4e2e-91ea-770aac361df8';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -92;
-  $option->label = 'Sangskoler';
+  $option->sort = -95;
+  $option->label = 'sangskoler';
   $option->value = 'dkcclterm.em=(sangskoler ELLER sangteknik)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3583,7 +3691,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '481f8701-65f3-433f-ad99-9e2634939275';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -93;
+  $option->sort = -94;
   $option->label = 'Music-Minus-One - karaoke';
   $option->value = 'dkcclterm.ma=mm';
   $option->expand = '0';
@@ -3673,6 +3781,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['4ebd873c-5a7d-e614-4544-8f6b40c40f11'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '4f3830c1-9b44-4373-9518-135c4715efa0';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -89;
+  $option->label = 'to eller flere strygere og blæsere med klaver';
+  $option->value = 'dkcclterm.dk=78.426*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['4f3830c1-9b44-4373-9518-135c4715efa0'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3905,6 +4025,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '5cc6e82f-2e20-4ad3-8f0d-8482f0f33ed8';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -96;
+  $option->label = 'tre eller flere guitarer';
+  $option->value = 'dkcclterm.dk=78.427* OG dkcclterm.no=guitarer';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['5cc6e82f-2e20-4ad3-8f0d-8482f0f33ed8'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '5de14e11-f071-b804-9982-8f846a064768';
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -95;
@@ -3937,6 +4069,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5f242142-3055-49d4-dd7f-00c6caf78cbf'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '5f5d6031-17e0-4025-9e53-796184b447f9';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -94;
+  $option->label = 'én stryger med klaver';
+  $option->value = 'dkcclterm.dk=78.434*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['5f5d6031-17e0-4025-9e53-796184b447f9'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4065,9 +4209,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -37;
   $option->label = 'Klassisk musik 1950 ->';
-  $option->value = 'klassisk musik 1950 ->';
+  $option->value = 'klassisk musik 1950';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['66c0d95a-089e-4cfb-a9ca-b0983aef601d'] = $option;
 
   $option = new stdClass();
@@ -4111,8 +4255,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '68c94958-d077-49e2-9847-9298e67cf6e7';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -89;
-  $option->label = 'Klaverskoler';
+  $option->sort = -92;
+  $option->label = 'klaverskoler';
   $option->value = 'dkcclterm.em=klaverskoler';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -4141,6 +4285,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['6978c229-80fd-48b4-35ea-8741d346c5cd'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '6a64f578-db7e-4a70-929b-46ab16aaf89d';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -97;
+  $option->label = 'to eller flere blæsere med klaver';
+  $option->value = 'dkcclterm.dk=78.425*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['6a64f578-db7e-4a70-929b-46ab16aaf89d'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4217,6 +4373,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '6da9b561-2952-4a10-b69d-3846b260af35';
+  $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->sort = -97;
+  $option->label = 'kvindekor';
+  $option->value = '(dkcclterm.em=kvindekor ELLER dkcclterm.em=damekor)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['6da9b561-2952-4a10-b69d-3846b260af35'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '6dd989df-1478-0ff4-a5a5-e518aa5dfb77';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = 12;
@@ -4273,18 +4441,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['701db998-d8c5-1824-9d4d-f19d481cdde2'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = '7067c647-eb62-4319-8474-934da929cb30';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -95;
-  $option->label = 'stemmer';
-  $option->value = 'dkcclterm.ma=(pd ELLER pl ELLER so ELLER st ELLER sv)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['7067c647-eb62-4319-8474-934da929cb30'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4373,18 +4529,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = '74105a66-91c0-4fe7-bcbe-cbbb0e54bbe3';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -91;
-  $option->label = 'noder for kor';
-  $option->value = 'dkcclterm.ma=mu OG dkcclterm.em=(kor ELLER børnekor ELLER drengekor ELLER pigekor ELLER mandskor ELLER kvindekor ELLER damekor)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['74105a66-91c0-4fe7-bcbe-cbbb0e54bbe3'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = '7469d725-4e5f-8884-7150-bc8d653adf09';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -58;
@@ -4459,8 +4603,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '7553fe18-ed47-4f1a-a725-eea0fecadc02';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -93;
-  $option->label = 'Sangnoder';
+  $option->sort = -97;
+  $option->label = 'sangnoder';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.no=sangstemme? ELLER dkcclterm.ti=stemme?) ';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -4581,9 +4725,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -38;
   $option->label = 'Renæssance ->1600';
-  $option->value = 'renæssance -> 1600';
+  $option->value = 'renæssance 1600';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['7b3e78d2-8581-4c68-9ed6-97d8b938d35b'] = $option;
 
   $option = new stdClass();
@@ -4597,6 +4741,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7c16db30-ece8-aff4-895b-a29c47adf457'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '7c1c2d1f-9bf2-40d5-8b41-c97848da6379';
+  $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->sort = -98;
+  $option->label = 'drengekor';
+  $option->value = 'dkcclterm.em=drengekor';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['7c1c2d1f-9bf2-40d5-8b41-c97848da6379'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -4889,18 +5045,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = '8ae8deac-d243-4fee-a578-3acb0b740c00';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -96;
-  $option->label = 'klaverpartiturer';
-  $option->value = 'dkcclterm.ma=pp';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['8ae8deac-d243-4fee-a578-3acb0b740c00'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = '8b122891-e93c-28a4-39eb-94509fb94b0d';
   $option->v_uuid = 'da48923f-e5ba-5ef4-ad4f-c8aab6767a83';
   $option->sort = -8;
@@ -5005,6 +5149,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['8eda79e6-8d41-1804-ed41-16fc659fc232'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '8f1bda4f-b6a8-4f61-b38f-3b6aaa0411b6';
+  $option->v_uuid = '6e072028-31b8-4f7d-86cc-d24ce84024bd';
+  $option->sort = 10;
+  $option->label = 'Stort orkester uden soloinstrument';
+  $option->value = 'dkcclterm.dk=(78.41 ELLER 78.411)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['8f1bda4f-b6a8-4f61-b38f-3b6aaa0411b6'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5155,8 +5311,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '949561ff-b017-42b2-aad2-38151a3a34a5';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -87;
-  $option->label = 'Noder for basguitar';
+  $option->sort = -90;
+  $option->label = 'noder for basguitar';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.dk=(78.458 ELLER 78.4581) ELLER dkcclterm.em=basguitar)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -5257,6 +5413,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['9947585b-b40d-f444-6d69-80402a0f0224'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '99d0719a-0363-49b5-8cfa-cfee94190079';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -86;
+  $option->label = 'noder for orkestre';
+  $option->value = 'dkcclterm.dk=78.41* ';
+  $option->expand = '6e072028-31b8-4f7d-86cc-d24ce84024bd';
+  $option->is_disabled = FALSE;
+  $export['99d0719a-0363-49b5-8cfa-cfee94190079'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5381,6 +5549,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'a0dceb5c-cce4-4060-8214-41ef6e154231';
+  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
+  $option->sort = -87;
+  $option->label = 'noder for mere end ét instrument';
+  $option->value = 'dkcclterm.ma=mu OG dkcclterm.dk=(78.42* ELLER 78.43*)';
+  $option->expand = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->is_disabled = FALSE;
+  $export['a0dceb5c-cce4-4060-8214-41ef6e154231'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'a180dbaa-b9db-7474-8107-156f3be0b527';
   $option->v_uuid = '8e7bda97-5430-9774-e54c-4d2b0005a06b';
   $option->sort = -87;
@@ -5389,6 +5569,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['a180dbaa-b9db-7474-8107-156f3be0b527'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'a18d1a9c-435c-4153-b320-f534778db866';
+  $option->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
+  $option->sort = 10;
+  $option->label = 'stemmer';
+  $option->value = 'dkcclterm.ma=(pd ELLER pl ELLER so ELLER st ELLER sv)';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['a18d1a9c-435c-4153-b320-f534778db866'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -5731,8 +5923,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'adb3819a-daca-4a3b-9e3e-027492d5469f';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -88;
-  $option->label = 'Noder for guitar';
+  $option->sort = -91;
+  $option->label = 'noder for guitar';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.dk=(78.457 ELLER 78.4571 ELLER 78.437 ELLER 78.427*) ELLER dkcclterm.em=guitar)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -6101,18 +6293,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = 'ba46f4b5-5bd8-4aee-bf22-066cceaf3324';
-  $option->v_uuid = '0cd9f79e-2d4c-466a-a2ce-121b00a41005';
-  $option->sort = 10;
-  $option->label = 'stemmer';
-  $option->value = 'dkcclterm.ma=(pd ELLER pl ELLER so ELLER st ELLER sv)';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['ba46f4b5-5bd8-4aee-bf22-066cceaf3324'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = 'bb597965-709c-43eb-8431-f3ec368ddd68';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -62;
@@ -6121,6 +6301,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bb597965-709c-43eb-8431-f3ec368ddd68'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'bb9dafee-e196-439c-8d36-38d311d192cd';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -98;
+  $option->label = 'tre eller flere blæsere';
+  $option->value = 'dkcclterm.dk=78.422*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['bb9dafee-e196-439c-8d36-38d311d192cd'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -6533,6 +6725,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'ccf15476-4053-4ff1-85b4-bd5e70957dbb';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -93;
+  $option->label = 'to strygere';
+  $option->value = 'dkcclterm.ok=78.431 ';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['ccf15476-4053-4ff1-85b4-bd5e70957dbb'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'cd8beb6b-d0c4-9a94-cd4a-980cd2435a3e';
   $option->v_uuid = 'ceae1f55-323f-9774-250b-4b39f9b0bf91';
   $option->sort = -100;
@@ -6889,6 +7093,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['d7a82e8c-d8db-7d34-5d45-773837ceda52'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'd7ce9337-5657-4ba3-a0aa-879cb9a54161';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -100;
+  $option->label = 'én blæser med klaver';
+  $option->value = 'dkcclterm.dk=78.435*';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['d7ce9337-5657-4ba3-a0aa-879cb9a54161'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7267,8 +7483,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e4b8ed67-7bf4-48cb-80c0-127967c1201f';
   $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -90;
-  $option->label = 'Noder for klaver';
+  $option->sort = -93;
+  $option->label = 'noder for klaver';
   $option->value = 'dkcclterm.ma=mu OG (dkcclterm.dk=(78.53 ELLER 78.531 ELLER 78.55 ELLER 78.551 ELLER 78.56 ELLER 78.561) ELLER dkcclterm.em=klaver)';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -7301,14 +7517,14 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = 'e5fc3b36-0007-4532-8242-f3c448e0efac';
-  $option->v_uuid = '2dfa5ad4-131f-4fb8-881f-3607e4e1d4d1';
-  $option->sort = -97;
-  $option->label = 'studiepartiturer';
-  $option->value = 'dkcclterm.ma=ps';
+  $option->o_uuid = 'e7639d4a-0a74-461d-a9ba-e741f01f689f';
+  $option->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $option->sort = -90;
+  $option->label = 'én stryger og én blæser';
+  $option->value = 'dkcclterm.dk=78.433';
   $option->expand = '0';
   $option->is_disabled = FALSE;
-  $export['e5fc3b36-0007-4532-8242-f3c448e0efac'] = $option;
+  $export['e7639d4a-0a74-461d-a9ba-e741f01f689f'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7441,6 +7657,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['ef468366-590a-94b4-e963-98c373ca4c6f'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'ef6ac49e-4c9a-476e-9d7c-902251c9bfb0';
+  $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $option->sort = -95;
+  $option->label = 'pigekor';
+  $option->value = 'dkcclterm.em=pigekor';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['ef6ac49e-4c9a-476e-9d7c-902251c9bfb0'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -8047,6 +8275,32 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
   $value->api_version = 1;
+  $value->v_uuid = '6e072028-31b8-4f7d-86cc-d24ce84024bd';
+  $value->value_title = 'noder, orkestermusik';
+  $value->sort = 10;
+  $value->value_type = 'radios';
+  $value->search_code = '';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['6e072028-31b8-4f7d-86cc-d24ce84024bd'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
+  $value->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
+  $value->value_title = 'noder, kortyper';
+  $value->sort = 10;
+  $value->value_type = 'radios';
+  $value->search_code = '';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
   $value->v_uuid = '70391b7f-5ccc-e634-657a-5a51ef315920';
   $value->value_title = 'musik, albumtitel';
   $value->sort = -32;
@@ -8238,6 +8492,19 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->expand = 0;
   $value->is_disabled = FALSE;
   $export['da48923f-e5ba-5ef4-ad4f-c8aab6767a83'] = $value;
+
+  $value = new stdClass();
+  $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
+  $value->api_version = 1;
+  $value->v_uuid = 'db557731-87b3-4fd0-b09b-ef08bdfa4d5b';
+  $value->value_title = 'noder, flere instrumenter';
+  $value->sort = 10;
+  $value->value_type = 'radios';
+  $value->search_code = '';
+  $value->default_value = '';
+  $value->expand = 0;
+  $value->is_disabled = FALSE;
+  $export['db557731-87b3-4fd0-b09b-ef08bdfa4d5b'] = $value;
 
   $value = new stdClass();
   $value->disabled = FALSE; /* Edit this to true to make a default value disabled initially */
