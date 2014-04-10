@@ -228,6 +228,7 @@ function _bibdk_article_render_link($url, $text, $classes = array()){
       ),
       'target' => '_blank',
       'class' => $classes,
+      'data-rel' => 'standard',
     ),
   );
   return drupal_render($link);
