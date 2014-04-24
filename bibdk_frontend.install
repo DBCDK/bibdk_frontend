@@ -151,6 +151,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_search_controls',
     'bibliotek_dk_carousel_settings',
     'bibliotek_dk_user_alert_features',
+    'bibliotek_dk_mobile_redirect',
     'bibdk_role_redakteur',
     //Content
     'bibdk_article',
