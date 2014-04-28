@@ -14,7 +14,7 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
   }
 
   public function setUp() {
-    parent::setUp('bibdk_article', 'bibdk_article_test_dummy');
+    parent::setUp('bibdk_article');
   }
 
   public function testRunner() {
