@@ -20,6 +20,11 @@
       this.href = this.href.replace(/user\/login/, 'bibdk_modal/nojs/login');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite 'my page' menu login link
+    $(".page-user .tabs.primary a[href*='/user'], .page-user .tabs.primary a[href*='?q=user']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace(/user/, 'bibdk_modal/nojs/login');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
     //Rewrite forgot password link
     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
@@ -29,6 +34,7 @@
     $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
