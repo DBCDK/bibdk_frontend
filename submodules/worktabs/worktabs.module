@@ -82,6 +82,7 @@ function worktabs_get_tabs($entity) {
   $tabs['#tabs'] = worktabs_merge_content($content);;
   $tabs['#pid'] = _worktabs_trim_string($entity->id);
   drupal_add_js(drupal_get_path('module', 'worktabs') . '/js/worktabs.js');
+  $tabs['#type'] = 'worktabs';
   return $tabs;
 }
 
