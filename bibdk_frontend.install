@@ -380,3 +380,11 @@ function bibdk_frontend_update_7015(&$sandbox) {
 function bibdk_frontend_update_7016(&$sandbox) {
   module_enable(array('translatable'));
 }
+
+/**
+ * Enable bibliotek_dk_mobile_redirect feature for existing installations
+ */
+function bibdk_frontend_update_7017(&$sandbox) {
+  module_enable(array('bibliotek_dk_mobile_redirect'));
+}
+
