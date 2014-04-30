@@ -21,7 +21,7 @@
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
     //Rewrite 'my page' menu login link
-    $(".not-logged-in .page-user .tabs.primary a[href='/user'], .page-user .tabs.primary a[href*='?q=user']", context).once('init-modal-forms-login',function() {
+    $(".not-logged-in.page-user .tabs.primary a[href$='/user'], .not-logged-in.page-user .tabs.primary a[href$='?q=user']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/user/, 'bibdk_modal/nojs/login');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
