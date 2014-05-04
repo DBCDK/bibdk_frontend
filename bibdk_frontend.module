@@ -17,7 +17,8 @@ function bibdk_frontend_user_login(&$edit, $account) {
   $options = array('language' => $user_language);
 
   // go to user page on first time login
-  if (isset($edit['input']['firsttime'])) {
+  // Fix for bug
+  if ($account->access == 0) {
     // we KNOW that login succeeded - or we wouldn't be here
     // unset messages
     drupal_get_messages();
@@ -67,7 +68,8 @@ function _bibdk_frontend_login_redirect(&$edit, $url, $options) {
     );
   }
   else {
-    drupal_goto($url, $options);
+    //$form_state['redirect'] = $url;
+    drupal_goto($url);
   }
 }
 
