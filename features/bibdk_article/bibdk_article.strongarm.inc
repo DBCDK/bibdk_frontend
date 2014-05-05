@@ -40,6 +40,9 @@ function bibdk_article_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'language' => array(
+          'weight' => '1',
+        ),
       ),
       'display' => array(),
     ),

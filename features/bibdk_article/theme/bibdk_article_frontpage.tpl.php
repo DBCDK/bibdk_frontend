@@ -6,8 +6,10 @@
 ?>
 <?php
 foreach ($items as $key => $item) {
-  foreach ($item as $article) {
-    print $article;
+  if ($item){
+    foreach ($item as $article) {
+      print $article;
+    }
   }
 }
 ?>

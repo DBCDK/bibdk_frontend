@@ -56,7 +56,7 @@ function bibdk_article_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -84,7 +84,7 @@ function bibdk_article_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -152,7 +152,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '5',
       ),
     ),
   );
@@ -226,7 +226,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '7',
       ),
     ),
   );
@@ -256,6 +256,7 @@ function bibdk_article_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
+        'profile2_private' => FALSE,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -311,7 +312,7 @@ function bibdk_article_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '17',
+        'weight' => '11',
       ),
     ),
   );
@@ -387,7 +388,83 @@ function bibdk_article_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '16',
+        'weight' => '9',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-bibdk_article-field_link_classes'.
+  $fields['node-bibdk_article-field_link_classes'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_link_classes',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'bibdk_article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Add classes to the link. If adding more classes separate with a space e.g. class1 class2',
+      'display' => array(
+        'bibdk_help_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 20,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_link_classes',
+      'label' => 'link classes',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '10',
       ),
     ),
   );
@@ -461,7 +538,7 @@ function bibdk_article_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => '15',
+        'weight' => '8',
       ),
     ),
   );
@@ -483,7 +560,16 @@ function bibdk_article_field_default_fields() {
       'locked' => '0',
       'module' => 'list',
       'settings' => array(
-        'allowed_values' => bibdk_article_get_page_paths(),
+        'allowed_values' => array(
+          'bibdk_frontpage/spil' => 'Spil',
+          'bibdk_frontpage/noder' => 'Noder',
+          'bibdk_frontpage/musik' => 'Musik',
+          'bibdk_frontpage/film' => 'Film',
+          'bibdk_frontpage/net' => 'E-materialer',
+          'bibdk_frontpage/bog' => 'Bøger',
+          'bibdk_frontpage/artikel' => 'Artikler',
+          'bibdk_frontpage' => 'Alle materialer',
+        ),
         'allowed_values_function' => '',
         'profile2_private' => FALSE,
       ),
@@ -528,7 +614,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '18',
+        'weight' => '12',
       ),
     ),
   );
@@ -598,7 +684,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
+        'weight' => '6',
       ),
     ),
   );
@@ -679,18 +765,20 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '11',
+        'weight' => '4',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add classes to the link. If adding more classes separate with a space e.g. class1 class2');
   t('Body');
   t('color');
   t('columns');
   t('image');
   t('link');
+  t('link classes');
   t('link text');
   t('on which page to display this article');
   t('page type');

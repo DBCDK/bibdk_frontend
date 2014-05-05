@@ -5,6 +5,7 @@ function bibdk_frontend_install() {
   _bibdk_frontend_set_blocks();
   _bibdk_frontend_enable_modules();
   bibdk_frontend_setup_cache();
+  bibdk_frontend_set_weight();
 }
 
 /** \brief
@@ -151,6 +152,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_search_controls',
     'bibliotek_dk_carousel_settings',
     'bibliotek_dk_user_alert_features',
+    'bibliotek_dk_mobile_redirect',
     'bibdk_role_redakteur',
     //Content
     'bibdk_article',
@@ -159,6 +161,7 @@ function _bibdk_frontend_enable_modules() {
     //Submodule
     'bibdk_search_carousel',
     'bibdk_modal',
+    'bibdk_voxb',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
@@ -377,4 +380,34 @@ function bibdk_frontend_update_7015(&$sandbox) {
  */
 function bibdk_frontend_update_7016(&$sandbox) {
   module_enable(array('translatable'));
+}
+
+/**
+ * Enable bibliotek_dk_mobile_redirect feature for existing installations
+ */
+function bibdk_frontend_update_7017(&$sandbox) {
+  module_enable(array('bibliotek_dk_mobile_redirect'));
+}
+
+/**
+ * Set weight to make sure frontend is called last in the login process
+ */
+function bibdk_frontend_update_7018(&$sandbox) {
+  bibdk_frontend_set_weight();
+}
+
+/**
+ * Change weight on module
+ * bibdk_frontend needs to be the last module called in the login process, because
+ * it makes a redirect
+ */
+function bibdk_frontend_set_weight() {
+  db_update('system')
+    ->fields(array(
+      'weight' => 0,
+    ))
+    ->condition('type', 'module')
+    ->condition('name', 'bibdk_frontend')
+    ->execute();
+
 }
