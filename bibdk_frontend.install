@@ -404,7 +404,7 @@ function bibdk_frontend_update_7018(&$sandbox) {
 function bibdk_frontend_set_weight() {
   db_update('system')
     ->fields(array(
-      'weight' => 15,
+      'weight' => 0,
     ))
     ->condition('type', 'module')
     ->condition('name', 'bibdk_frontend')
