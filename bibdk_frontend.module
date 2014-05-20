@@ -4,27 +4,34 @@
  * Implements hook_user_login().
  */
 function bibdk_frontend_user_login(&$edit, $account) {
-  // check if this is a brand new user
-  if($account->access == $account->created){
-    $edit = array('data'=>array('new_user' => TRUE));
-    if(!user_save($account,$edit)){
-      // do nothing .. bad luck. no add welcome message will be set
-    }
-  }
 
   if (!isset($edit['uid'])) {
     return;
   }
 
-  // do NOT redirect on password reset || go to frontpage on normal login
-  if (( !isset($_GET['pass-reset-token']) && (isset($_POST['form_id']) && $_POST['form_id'] != 'user_pass_reset')) || !isset($_POST['form_id'])) {
-    // set language from account
-    $languages = language_list();
-    $lingo = !empty($account->language) ? $account->language : language_default()->language;
-    $user_language = $languages[$lingo];
-    // set options array for drupal_goto
-    $options = array('language' => $user_language);
+  // set language from account
+  $languages = language_list();
+  $lingo = !empty($account->language) ? $account->language : language_default()->language;
+  $user_language = $languages[$lingo];
+  // set options array for drupal_goto
+  $options = array('language' => $user_language);
 
+  // go to user page on first time login
+  // Fix for bug
+  if ($account->access == 0) {
+    // we KNOW that login succeeded - or we wouldn't be here
+    // unset messages
+    drupal_get_messages();
+    // set a welcome message
+    drupal_set_message(_bibdk_frontend_welcome_message());
+    // remind user to add favourites
+    drupal_set_message(_bibdk_frontend_remember_favourites_message());
+
+    $url = 'user';
+    _bibdk_frontend_login_redirect($edit, $url, $options);
+  }
+  // do NOT redirect on password reset || go to frontpage on normal login
+  elseif (( !isset($_GET['pass-reset-token']) && (isset($_POST['form_id']) && $_POST['form_id'] != 'user_pass_reset')) || !isset($_POST['form_id'])) {
     $url = '';
     _bibdk_frontend_login_redirect($edit, $url, $options);
   }
@@ -43,28 +50,6 @@ function _bibdk_frontend_get_user_language($account) {
   return $languages[$lingo];
 }
 
-/** Implements hook_form_FORM_ID_alter (user_profile_form)
- * * add a custom submit method to set a welcome message
- * @param $form
- * @param $form_state
- */
-function bibdk_frontend_form_user_profile_form_alter(&$form, $form_state){
-  $form['#submit'][] = 'bibdk_frontend_add_favourite_message';
-
-}
-
-/** Set a message for new bibliotek.dk users. Unset the user['data']['new_user] element
- * @param $form
- * @param $form_state
- */
-function bibdk_frontend_add_favourite_message($form, $form_state){
-  global $user;
-  // check if user is new
-  if(!empty($user->data['new_user'])){
-    drupal_set_message(_bibdk_frontend_remember_favourites_message());
-    user_save($user,array('data'=>array('new_user'=>NULL)));
-  }
-}
 /**
  * Redirects the user after a successful login.
  * If $ajax is set to TRUE (we are in a modal) no redirect will happen, instead
