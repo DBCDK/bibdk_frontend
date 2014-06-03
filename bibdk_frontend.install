@@ -161,7 +161,6 @@ function _bibdk_frontend_enable_modules() {
     //Submodule
     'bibdk_search_carousel',
     'bibdk_modal',
-    'bibdk_voxb',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
