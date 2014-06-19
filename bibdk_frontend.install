@@ -153,6 +153,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_carousel_settings',
     'bibliotek_dk_user_alert_features',
     'bibliotek_dk_mobile_redirect',
+    'bibliotek_dk_captcha',
     'bibdk_role_redakteur',
     //Content
     'bibdk_article',
@@ -411,3 +412,11 @@ function bibdk_frontend_set_weight() {
     ->execute();
 
 }
+
+/**
+ * Enable bibliotek_dk_captcha feature for existing installations
+ */
+function bibdk_frontend_update_7019(&$sandbox) {
+  module_enable(array('bibliotek_dk_captcha'));
+}
+
