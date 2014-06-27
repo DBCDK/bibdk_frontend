@@ -184,7 +184,7 @@ function bibdk_frontend_update_7004(&$sandbox) {
 /** Implements hook_update_N
  * set default caching
  */
-function bibdk_frontend_update_7019(&$sandbox) {
+function bibdk_frontend_update_7005(&$sandbox) {
   bibdk_frontend_setup_cache();
 }
 
@@ -363,8 +363,6 @@ function _bibdk_banner_set_blocks_7013() {
 function bibdk_frontend_update_7014(&$sandbox) {
   module_enable(array('bibdk_modal'));
 }
-
-
 
 /**
  * Remove unused profile2 types
