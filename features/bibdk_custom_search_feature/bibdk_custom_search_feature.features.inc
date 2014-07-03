@@ -2843,7 +2843,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->label = 'node + cd';
   $option->value = 'dkcclterm.ma=(mu OG lm) IKKE dkcclterm.ma=mm';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['272aa076-0dc1-4322-b59c-6d06f2ceed0a'] = $option;
 
   $option = new stdClass();
@@ -5492,7 +5492,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '9d8e4436-74ce-9704-8d42-3fcafbdb35eb';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -82;
-  $option->label = 'folkekomedier';
+  $option->label = 'folkekomedie';
   $option->value = 'folkekomedier';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -6932,10 +6932,10 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'd4173a4c-3c03-2f94-dd81-56ff83728e1d';
   $option->v_uuid = 'f81d0c50-5f4b-d1f4-f11f-c000c901c841';
   $option->sort = -66;
-  $option->label = 'tv-serier';
+  $option->label = 'tv-serie';
   $option->value = 'tv-serier';
   $option->expand = '0';
-  $option->is_disabled = TRUE;
+  $option->is_disabled = FALSE;
   $export['d4173a4c-3c03-2f94-dd81-56ff83728e1d'] = $option;
 
   $option = new stdClass();
