@@ -297,3 +297,50 @@ function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
     unset($variables['form']['#data_toggle']);
   }
 }
+
+
+/** Implements hook_bibdk_usersettings_user_tabs
+ * @return array
+ * See also : bibdk_theme_form_alter in template.php (disable locale in user_profile_form)
+ */
+function bibdk_frontend_bibdk_usersettings_user_tabs(){
+  $tab['locale'] = array(
+    'title'  => t('Language'),
+    'description' => t('tab_language_description'),
+    'weight' => 10,
+  );
+  return $tab;
+}
+
+
+/** Implements hook_bibdk_usersettings_user_settings
+ * @return array
+ */
+function bibdk_frontend_bibdk_usersettings_user_settings(){
+  global $user;
+
+  $form['#user_category'] = 'account';
+  locale_language_selector_form($form, $form_state, $user);
+
+  $usersettings_form['locale'] = $form['locale'];
+  $usersettings_form['locale']['#type']   = 'container';
+  $usersettings_form['locale']['#weight'] =  0;
+  $usersettings_form['locale']['#tab']    = 'locale';
+  $usersettings_form['locale']['language']['#element_validate'] = array('_bibdk_frontend_bibdk_usersettings_save');
+
+  return $usersettings_form;
+
+}
+
+
+/** Save language settings
+ * @return array
+ */
+function _bibdk_frontend_bibdk_usersettings_save($element, &$form_state) {
+  global $user;
+  if ( !empty($element['#value']) ) {
+    user_save($user, array('language'=>$element['#value']));
+  }
+}
+
+
