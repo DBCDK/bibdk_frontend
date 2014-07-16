@@ -51,8 +51,10 @@ function bibdk_usersettings_language_bibdk_usersettings_user_settings(){
   );
 
   $usersettings_form['bibdk_language']['locale'] = $form['locale'];
+  $usersettings_form['bibdk_language']['locale']['#type'] = 'container';
   $usersettings_form['bibdk_language']['locale']['language']['#element_validate'] = array('_bibdk_usersettings_language_save');
 
+dpm($usersettings_form);
   return $usersettings_form;
 
 }
