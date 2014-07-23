@@ -161,7 +161,7 @@ function bibdk_search_carousel_search_submit($form, &$form_state) {
  */
 function bibdk_search_carousel_ting_search_carousel_query($query) {
 
-  $bibdk_query_prefix = ' ' . t('BOOLEAN_AND') . ' ' . variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk') . '=(';
+  $bibdk_query_prefix = CQL_AND . variable_get('bibdk_search_carousel_week_search_code', 'dkcclterm.kk') . '=(';
   $bibdk_query_suffix = ')';
   $bibdk_dateformat = variable_get('bibdk_search_carousel_dateformat', 'bk\mYW');
   $today = time();
@@ -174,17 +174,9 @@ function bibdk_search_carousel_ting_search_carousel_query($query) {
     $periods[] = date($bibdk_dateformat, $today - $weeks);
   }
   if ( !empty($periods)  ) {
-    $query['query'] = $query['query'] . $bibdk_query_prefix . implode(' ' . t('BOOLEAN_OR') . ' ', $periods) . $bibdk_query_suffix;
+    $query['query'] = $query['query'] . $bibdk_query_prefix . implode(CQL_OR, $periods) . $bibdk_query_suffix;
   }
 
+  debug($query);
   return $query;
 }
-
-
-
-/**
- * Boolean operators have to be translated.
- */
-t('BOOLEAN_AND');
-t('BOOLEAN_OR');
-t('BOOLEAN_NOT');
