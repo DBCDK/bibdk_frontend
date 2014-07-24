@@ -177,6 +177,5 @@ function bibdk_search_carousel_ting_search_carousel_query($query) {
     $query['query'] = $query['query'] . $bibdk_query_prefix . implode(CQL_OR, $periods) . $bibdk_query_suffix;
   }
 
-  debug($query);
   return $query;
 }
