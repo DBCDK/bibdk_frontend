@@ -297,3 +297,4 @@ function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
     unset($variables['form']['#data_toggle']);
   }
 }
+
