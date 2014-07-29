@@ -34,7 +34,7 @@ class BibdkUserLanguageSettingsWebTestCase extends DrupalWebTestCase {
     $this->assertLink('Settings');
     $this->clickLink('Settings');
 
-    $this->assertText('Language settings');
+    $this->assertText('Language');
     $this->assertText('Danish (Dansk)');
     $this->assertText('English');
   }
