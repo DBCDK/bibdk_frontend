@@ -166,6 +166,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_search_carousel',
     'bibdk_modal',
     'bibdk_voxb',
+    'bibdk_usersettings_language',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
@@ -421,5 +422,13 @@ function bibdk_frontend_set_weight() {
  */
 function bibdk_frontend_update_7019(&$sandbox) {
   module_enable(array('bibliotek_dk_captcha'));
+}
+
+
+/**
+ * Enable bibliotek_dk_captcha feature for existing installations
+ */
+function bibdk_frontend_update_7020(&$sandbox) {
+  module_enable(array('bibdk_usersettings_language'));
 }
 
