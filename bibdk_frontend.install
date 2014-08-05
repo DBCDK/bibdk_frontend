@@ -132,7 +132,10 @@ function bibdk_frontend_setup_cache() {
   variable_set('TingClientObjectRequest_cache_lifetime', 10);
   // borchk
   variable_set('bibdk_borchk_cache_enable', 1);
-  variable_set('bibdk_borchk_cache_lifetime', 60);
+  variable_set('bibdk_borchk_cache_lifetime', 1);
+  //forsrights
+  variable_set('bibdk_forsrights_cache_enable', 1);
+  variable_set('bibdk_forsrights_cache_lifetime', 1);
 }
 
 //TODO move modules to .info file as dependcies and only enable new ones through hook_update_N().
@@ -153,6 +156,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_carousel_settings',
     'bibliotek_dk_user_alert_features',
     'bibliotek_dk_mobile_redirect',
+    'bibliotek_dk_captcha',
     'bibdk_role_redakteur',
     //Content
     'bibdk_article',
@@ -161,6 +165,8 @@ function _bibdk_frontend_enable_modules() {
     //Submodule
     'bibdk_search_carousel',
     'bibdk_modal',
+    'bibdk_voxb',
+    'bibdk_usersettings_language',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
@@ -410,3 +416,19 @@ function bibdk_frontend_set_weight() {
     ->execute();
 
 }
+
+/**
+ * Enable bibliotek_dk_captcha feature for existing installations
+ */
+function bibdk_frontend_update_7019(&$sandbox) {
+  module_enable(array('bibliotek_dk_captcha'));
+}
+
+
+/**
+ * Enable bibliotek_dk_captcha feature for existing installations
+ */
+function bibdk_frontend_update_7020(&$sandbox) {
+  module_enable(array('bibdk_usersettings_language'));
+}
+

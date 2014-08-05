@@ -69,11 +69,31 @@
     $('#mainwrapper').attr("aria-hidden", false);
   };
 
+  /**
+   * Overrides Drupal.CTools.Modal.modal_display in ctools/js/modal.js to add
+   * autofocus on name input field.
+   */
+  BibdkModal.overrideCtoolsModalDisplay = function(){
+    Drupal.CTools.Modal.modal_display = function(ajax, response, status) {
+      if ($('#modalContent').length == 0) {
+        Drupal.CTools.Modal.show(Drupal.CTools.Modal.getSettings(ajax.element));
+      }
+      $('#modal-title').html(response.title);
+      // Simulate an actual page load by scrolling to the top after adding the
+      // content. This is helpful for allowing users to see error messages at the
+      // top of a form, etc.
+      $('#modal-content').html(response.output).scrollTop(0);
+      Drupal.attachBehaviors();
+      $('#edit-name').focus();
+    };
+  };
+
   Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
       BibdkModal.setLinkActions(context);
       BibdkModal.bindEvents(context);
       BibdkModal.addAccessibilityInfo(context);
+      BibdkModal.overrideCtoolsModalDisplay();
     }
   };
 })(jQuery);
