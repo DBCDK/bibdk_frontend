@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Bibliotek.dk - User mails feature.
- */
-
-include_once 'bibliotek_dk_user_mails.features.inc';
