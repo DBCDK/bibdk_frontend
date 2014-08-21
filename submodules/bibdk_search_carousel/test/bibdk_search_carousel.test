@@ -153,7 +153,7 @@ class BibdkCarouselWebtestCase extends DrupalWebTestCase {
       $weeks = $week * ( $n + $query['offset'] );
       $periods[] = date($bibdk_dateformat, $today - $weeks);
     }
-    $expected_query = 'foo BOOLEAN_AND ' . $bibdk_search_code . '=(' . implode(' BOOLEAN_OR ', $periods) . ')';
+    $expected_query = 'foo and ' . $bibdk_search_code . '=(' . implode(' or ', $periods) . ')';
 
     $this->assertEqual($expected_query, $new_query['query'], 'Query string formatted correctly.');
   }
