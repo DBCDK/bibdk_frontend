@@ -174,7 +174,7 @@ Skriv dit emne eller starten på det ord du søger noget om - skriver du flere o
   $element->element_title = 'musik_ophav1';
   $element->element_label = 'Medvirkende';
   $element->description = 'fx: netrebko';
-  $element->help_text = 'Medvirkende: 
+  $element->help_text = 'Medvirkende:
 i begge felter kan du søge på musikere, sangere, grupper og komponister. De to felter betyder at du kan kombinere to sangere eller en kunstner og en komponist og finde hvor de optræder sammen.';
   $element->sort = -59;
   $element->tab_index = 0;
@@ -666,7 +666,7 @@ Ex. pisa*';
   $element->element_title = 'net_forfatter';
   $element->element_label = 'Forfatter eller udgiver';
   $element->description = 'fx skat';
-  $element->help_text = 'Skriv den eller de dele af navnet, du er sikker på. 
+  $element->help_text = 'Skriv den eller de dele af navnet, du er sikker på.
 ';
   $element->sort = -78;
   $element->tab_index = 0;
@@ -2145,7 +2145,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = 10;
   $option->label = 'alle';
-  $option->value = 'facet.type=\'facet.type\'';
+  $option->value = 'facet.type=facet.type';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['0b824b0f-1162-4c1c-a8b6-f451e7a82bb6'] = $option;
@@ -4029,7 +4029,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
   $option->sort = 10;
   $option->label = 'alle';
-  $option->value = 'facet.language=\'facet.language\'';
+  $option->value = 'facet.language=facet.language';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['5c28868d-dde5-48fb-af37-4da92b760f05'] = $option;
@@ -5877,7 +5877,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
   $option->sort = 10;
   $option->label = 'alle';
-  $option->value = 'facet.language=\'facet.language\'';
+  $option->value = 'facet.language=facet.language';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['acccc8f3-ac9e-4cb2-9c15-82bcc3f42eaa'] = $option;
