@@ -14,7 +14,7 @@ function html_5_text_format_filter_default_formats() {
   $formats['html_5'] = array(
     'format' => 'html_5',
     'name' => 'HTML 5',
-    'cache' => '1',
+    'cache' => '0',
     'status' => '1',
     'weight' => '0',
     'filters' => array(
@@ -36,6 +36,13 @@ function html_5_text_format_filter_default_formats() {
         'weight' => '-39',
         'status' => '1',
         'settings' => array(),
+      ),
+      'shortcode' => array(
+        'weight' => '0',
+        'status' => '1',
+        'settings' => array(
+          'favourite_library' => 1,
+        ),
       ),
     ),
   );

@@ -44,12 +44,8 @@ function bibdk_search_carousel_admin_form($form, &$form_state) {
 
   $form['bibdk_search_carousel_search']['boolean_information'] = array(
     '#markup' =>  t(
-      'Boolean operators used: @and, @or and @not',
-      array(
-        '@and' => t('BOOLEAN_AND'),
-        '@or'  => t('BOOLEAN_OR'),
-        '@not' => t('BOOLEAN_NOT')
-      ),
+      'Boolean operators used: "and", "or" and "not"',
+      array(),
       array(
         'context' => 'bibdk_search_carousel'
       )
