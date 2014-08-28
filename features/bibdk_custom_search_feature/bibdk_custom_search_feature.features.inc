@@ -6308,8 +6308,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'bb597965-709c-43eb-8431-f3ec368ddd68';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -62;
-  $option->label = 'Rock"n"roll';
-  $option->value = '"rock"n"roll"';
+  $option->label = 'Rock\'n\'roll';
+  $option->value = '"rock\'n\'roll"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bb597965-709c-43eb-8431-f3ec368ddd68'] = $option;
