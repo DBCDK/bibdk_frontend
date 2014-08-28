@@ -2684,8 +2684,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '22909313-574f-4f0c-9fde-d13f1e28ad3b';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -96;
-  $option->label = '80"er musik';
-  $option->value = '"80"er musik"';
+  $option->label = '80\'er musik';
+  $option->value = '"80\'er musik"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['22909313-574f-4f0c-9fde-d13f1e28ad3b'] = $option;
@@ -3368,8 +3368,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '3992e7b1-9f8d-40ad-af50-4db6a8e477df';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -97;
-  $option->label = '70"er rock';
-  $option->value = '"70"er rock"';
+  $option->label = '70\'er rock';
+  $option->value = '"70\'er rock"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['3992e7b1-9f8d-40ad-af50-4db6a8e477df'] = $option;
@@ -5648,8 +5648,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'a34b968a-8fd2-4f96-b28f-88dbf2342b6f';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -98;
-  $option->label = '60"er soul';
-  $option->value = '"60"er soul"';
+  $option->label = '60\'er soul';
+  $option->value = '"60\'er soul"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['a34b968a-8fd2-4f96-b28f-88dbf2342b6f'] = $option;
@@ -6128,8 +6128,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'b402bba1-5e59-4cd9-a0d2-af74685baaad';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -99;
-  $option->label = '60"er rock';
-  $option->value = '"60"er rock"';
+  $option->label = '60\'er rock';
+  $option->value = '"60\'er rock"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['b402bba1-5e59-4cd9-a0d2-af74685baaad'] = $option;
