@@ -24,16 +24,16 @@ function bibliotek_dk_search_controls_strongarm() {
       'access_key' => 'access_key',
       'tab_index' => 'tab_index',
       'values' => array(
-        3 => array(
-          'label' => 'Date, ascending',
-          'value' => 'date_ascending',
-          'default' => 0,
-          'sort' => '-10',
-        ),
         2 => array(
           'label' => 'Date, descending',
           'value' => 'date_descending',
           'default' => 1,
+          'sort' => '-10',
+        ),
+        3 => array(
+          'label' => 'Date, ascending',
+          'value' => 'date_ascending',
+          'default' => 0,
           'sort' => '-9',
         ),
         5 => array(
@@ -59,6 +59,18 @@ function bibliotek_dk_search_controls_strongarm() {
           'value' => 'creator_descending',
           'default' => 0,
           'sort' => '-5',
+        ),
+        7 => array(
+          'label' => 'Emnesortering  - test',
+          'value' => 'rank_subject',
+          'default' => 0,
+          'sort' => '-4',
+        ),
+        8 => array(
+          'label' => 'Titelsortering - test',
+          'value' => 'rank_main_title',
+          'default' => 0,
+          'sort' => '-3',
         ),
       ),
     ),
