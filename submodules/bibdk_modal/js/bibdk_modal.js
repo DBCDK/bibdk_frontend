@@ -20,6 +20,11 @@
       this.href = this.href.replace(/user\/login/, 'bibdk_modal/nojs/login');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite 'my page' menu login link
+    $(".not-logged-in.page-user .tabs.primary a[href$='/user'], .not-logged-in.page-user .tabs.primary a[href$='?q=user']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace(/user/, 'bibdk_modal/nojs/login');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
     //Rewrite forgot password link
     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
@@ -29,6 +34,7 @@
     $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
@@ -63,11 +69,31 @@
     $('#mainwrapper').attr("aria-hidden", false);
   };
 
+  /**
+   * Overrides Drupal.CTools.Modal.modal_display in ctools/js/modal.js to add
+   * autofocus on name input field.
+   */
+  BibdkModal.overrideCtoolsModalDisplay = function(){
+    Drupal.CTools.Modal.modal_display = function(ajax, response, status) {
+      if ($('#modalContent').length == 0) {
+        Drupal.CTools.Modal.show(Drupal.CTools.Modal.getSettings(ajax.element));
+      }
+      $('#modal-title').html(response.title);
+      // Simulate an actual page load by scrolling to the top after adding the
+      // content. This is helpful for allowing users to see error messages at the
+      // top of a form, etc.
+      $('#modal-content').html(response.output).scrollTop(0);
+      Drupal.attachBehaviors();
+      $('#edit-name').focus();
+    };
+  };
+
   Drupal.behaviors.bibdk_modal = {
     attach: function(context, settings) {
       BibdkModal.setLinkActions(context);
       BibdkModal.bindEvents(context);
       BibdkModal.addAccessibilityInfo(context);
+      BibdkModal.overrideCtoolsModalDisplay();
     }
   };
 })(jQuery);

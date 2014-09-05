@@ -17,10 +17,6 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
     parent::setUp('bibdk_article');
   }
 
-  public function testHest() {
-    $this->assertTrue(TRUE);
-  }
-
   public function testRunner() {
     // Create and log in our privileged user.
     $this->admin_user = $this->drupalCreateUser(array(
@@ -28,26 +24,47 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
       'administer content types',
       'delete bibdk articles',
       'edit bibdk articles',
+      'administer blocks'
         ));
     $this->drupalLogin($this->admin_user);
     $this->CreateArticleTest();
     $this->GetArticle();
+    $this->_testArticleView();
   }
 
   /** Test create bibdk_article
-   * 
+   *
    */
   public function CreateArticleTest() {
     // Create node to edit.
     $edit = array();
-    $edit['title'] = $this->randomName(8);
-    $edit["body[und][0][value]"] = $this->randomName(16);
+    $edit['title'] = 'article_title';
+    $edit["body[und][0][value]"] = 'article_content';
+    $edit["field_link_text[und][0][value]"] = 'link name value';
+    $edit["field_link[und][0][value]"] = 'http://someurl/';
+    $edit["field_link_classes[und][0][value]"] = 'class1 class2';
+    $edit["field_page[und]"] = 'bibdk_frontpage';
     $this->drupalPost('node/add/bibdk_article', $edit, t('Save'));
     $this->assertText(t('@title has been created.', array('@title' => $edit['title'])));
+    $this->assertText('class1 class2', 'link classes saved');
   }
-  
+
+  /**
+   * Test article block view
+   */
+  public function _testArticleView() {
+    $edit['blocks[bibdk_article_bibdk_articles][region]'] = 'content';
+    $this->drupalPost('admin/structure/block', $edit, t('Save blocks'));
+    $this->drupalGet('bibdk_frontpage');
+    $this->assertText('article_title');
+    $this->assertText('article_content');
+    $this->assertLink('link name value');
+    $this->assertRaw('class="class1 class2"');
+
+  }
+
   /** Test retrival of bibdk_article
-   * 
+   *
    */
   public function GetArticle() {
     $article = bibdk_article_get_article_values();
