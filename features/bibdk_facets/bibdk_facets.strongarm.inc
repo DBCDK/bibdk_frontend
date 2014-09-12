@@ -125,6 +125,11 @@ function bibdk_facets_strongarm() {
       'title' => 'Hovedansvar',
       'weight' => '10',
     ),
+    22 => array(
+      'name' => 'facet.sheetMusic',
+      'title' => 'Nodetype',
+      'weight' => '10',
+    ),
   );
   $export['ding_facetbrowser_facets'] = $strongarm;
 
