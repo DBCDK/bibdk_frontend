@@ -174,7 +174,7 @@ Skriv dit emne eller starten på det ord du søger noget om - skriver du flere o
   $element->element_title = 'musik_ophav1';
   $element->element_label = 'Medvirkende';
   $element->description = 'fx: netrebko';
-  $element->help_text = 'Medvirkende:
+  $element->help_text = 'Medvirkende: 
 i begge felter kan du søge på musikere, sangere, grupper og komponister. De to felter betyder at du kan kombinere to sangere eller en kunstner og en komponist og finde hvor de optræder sammen.';
   $element->sort = -59;
   $element->tab_index = 0;
@@ -666,7 +666,7 @@ Ex. pisa*';
   $element->element_title = 'net_forfatter';
   $element->element_label = 'Forfatter eller udgiver';
   $element->description = 'fx skat';
-  $element->help_text = 'Skriv den eller de dele af navnet, du er sikker på.
+  $element->help_text = 'Skriv den eller de dele af navnet, du er sikker på. 
 ';
   $element->sort = -78;
   $element->tab_index = 0;
@@ -2049,7 +2049,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -98;
   $option->label = 'e-musik';
-  $option->value = '("musik" and "term.accessType="online")';
+  $option->value = '("musik" and term.accessType="online")';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['04e1ad22-c09f-19c4-25f0-c8cbb3cfc80c'] = $option;
@@ -3009,7 +3009,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
   $option->sort = -92;
   $option->label = 'e-spil';
-  $option->value = '("pc-spil"("net"))';
+  $option->value = '("pc-spil (net)")';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['2e1186cb-6a2c-9c54-dd1a-6172443fc570'] = $option;
@@ -5504,7 +5504,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '9dc38888-1f28-6554-89ed-473d9e41f3d6';
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -95;
-  $option->label = 'grammofonplader';
+  $option->label = 'grammofonplade';
   $option->value = 'term.type="grammofonplade"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -7257,7 +7257,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -99;
   $option->label = 'cd musik';
-  $option->value = 'term.type=("cd"("musik"))';
+  $option->value = 'term.type="cd(musik)"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['dee76133-eebc-1384-7501-d9955a2b55da'] = $option;
@@ -7880,7 +7880,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = 'fa52fa54-1334-7014-313e-17fce62dc6f1';
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -96;
-  $option->label = 'video';
+  $option->label = 'VHS';
   $option->value = 'term.type="video"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
