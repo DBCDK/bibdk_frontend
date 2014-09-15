@@ -13,6 +13,27 @@ function bibdk_modal_login($js = FALSE) {
   print ajax_render($output);
 }
 
+/** menu callback. wrap blog_node_form in modal.
+ * @param bool $js
+ */
+function bibdk_modal_review_edit_node($js=FALSE){
+  if (!function_exists("node_form")) {
+    include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
+  }
+
+  $form_state = _bibdk_modal_set_form_state();
+  $blog_node = bibdk_voxb_set_blog_node();
+  //$form_state['node'] = $blog_node;
+  $form_state['build_info']['args'] = array($blog_node);
+  //$output = ctools_modal_form_wrapper('bibdk_voxb_review_modal_edit_form', $form_state);
+  $output = ctools_modal_form_wrapper('blog_node_form', $form_state);
+  if (!empty($form_state['executed'])) {
+    $output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+  }
+
+  print ajax_render($output);
+}
+
 /**
  * Login form generator
  * @param $js
@@ -105,6 +126,7 @@ function bibdk_modal_register_form($js) {
   $form_state = _bibdk_modal_set_form_state();
 
   $output = ctools_modal_form_wrapper('user_register_form', $form_state);
+
 
   if (!empty($form_state['executed'])) {
     //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
