@@ -38,12 +38,12 @@
 
     Drupal.behaviors.worktabs = {
         attach: function (context) {
-            $('.tab-link', context).click(function(e){
+            $('.tab-link', context).once().click(function(e){
                 e.preventDefault();
                 Drupal.itemClicked($(this));
             });
 
-            $('.worktabs .tabs-nav a', context).click(function(e) {
+            $('.worktabs .tabs-nav a', context).once().click(function(e) {
                 e.preventDefault();
                 Drupal.worktabsClick($(this));
             });
