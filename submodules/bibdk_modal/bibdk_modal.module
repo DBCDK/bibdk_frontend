@@ -42,6 +42,27 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['bibdk_modal/%ctools_js/voxb/review/edit'] = array(
+    'title' => 'Edit review',
+    'page callback' => 'bibdk_modal_review_edit_node',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/voxb/review/create'] = array(
+    'title' => 'Edit review',
+    'page callback' => 'bibdk_modal_review_edit_node',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+
+
+
   return $items;
 }
 
