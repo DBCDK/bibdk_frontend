@@ -35,6 +35,16 @@
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite edit review link
+    $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
+    //Rewrite edit review link
+    $("a[href*='/voxb/ajax/review/create'], a[href*='?q=voxb/ajax/review/create']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace('/voxb/ajax/review/create', '/bibdk_modal/nojs/voxb/review/create');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
