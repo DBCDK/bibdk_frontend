@@ -45,6 +45,12 @@
       this.href = this.href.replace('/voxb/ajax/review/create', '/bibdk_modal/nojs/voxb/review/create');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite offensive content link
+    $("a[href*='/voxb/offensive'], a[href*='?q=voxb/offensive']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace('voxb/offensive', 'bibdk_modal/nojs/voxb/offensive');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
+
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
