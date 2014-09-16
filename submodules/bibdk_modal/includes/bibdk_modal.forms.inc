@@ -13,6 +13,17 @@ function bibdk_modal_login($js = FALSE) {
   print ajax_render($output);
 }
 
+function bibdk_modal_offensive_form($js = FALSE){
+  $form_state = _bibdk_modal_set_form_state();
+  $output = ctools_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
+
+  if (!empty($form_state['executed'])) {
+    $output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+  }
+
+  print ajax_render($output);
+}
+
 /** menu callback. wrap blog_node_form in modal.
  * @param bool $js
  */
