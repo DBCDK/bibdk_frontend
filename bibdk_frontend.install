@@ -440,3 +440,10 @@ function bibdk_frontend_update_7021(&$sandbox) {
   module_enable(array('bibliotek_dk_advanced_aggregate'));
 }
 
+/**
+ * Enable bibliotek.dk autocomplete for existing installations
+ */
+function bibdk_frontend_update_7022(&$sandbox) {
+  module_enable(array('bibliotek_dk_autocomplete'));
+}
+
