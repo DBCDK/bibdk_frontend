@@ -16,9 +16,11 @@ function bibdk_modal_login($js = FALSE) {
 function bibdk_modal_offensive_form($js = FALSE){
   $form_state = _bibdk_modal_set_form_state();
   $output = ctools_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
-
+  $message = t('bibdk_voxb_offensive_reported', array(), array('context' => 'bibdk_voxb'));
+  $voxb_id = $_GET['voxb_id'];
   if (!empty($form_state['executed'])) {
-    $output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+    //$output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+    $output = array(bibdk_voxb_offensive_posted ($voxb_id, $message),ctools_modal_command_dismiss());
   }
 
   print ajax_render($output);
@@ -34,12 +36,15 @@ function bibdk_modal_review_edit_node($js=FALSE){
 
   $form_state = _bibdk_modal_set_form_state();
   $blog_node = bibdk_voxb_set_blog_node();
+  $wrap = entity_metadata_wrapper('node' ,$blog_node);
+  $voxb_id = $wrap->field_voxb_id->value();
   //$form_state['node'] = $blog_node;
   $form_state['build_info']['args'] = array($blog_node);
   //$output = ctools_modal_form_wrapper('bibdk_voxb_review_modal_edit_form', $form_state);
+
   $output = ctools_modal_form_wrapper('blog_node_form', $form_state);
   if (!empty($form_state['executed'])) {
-    $output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+    $output = array(bibdk_voxb_ajax_review_saved($voxb_id), ctools_modal_command_dismiss());
   }
 
   print ajax_render($output);
