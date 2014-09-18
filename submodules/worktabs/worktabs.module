@@ -22,6 +22,7 @@ function worktabs_theme($existing, $type, $theme, $path) {
         'btn_txt_open' => '',
         'single' => FALSE,
         'content' => array(),
+        'more_id' => '',
       ),
     ),
     'worktabs_no_content' => array(
@@ -55,7 +56,7 @@ function worktabs_element_info() {
 }
 
 function worktabs_pre_render($elements) {
-  $pre_render_elements = array('title', 'content', 'btn_txt_closed', 'btn_txt_open');
+  $pre_render_elements = array('title', 'content', 'btn_txt_closed', 'btn_txt_open', 'more_id');
 
   foreach ($elements['#tabs'] as $type => $tab) {
     foreach ($pre_render_elements as $pre) {
