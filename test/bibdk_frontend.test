@@ -21,8 +21,6 @@ class UserAlertWebTestCase extends DrupalWebTestCase {
     // Enable any modules required for the test
     parent::setUp('user_alert', 'search');
 
-    menu_rebuild();
-
     // Create and log in our privileged user.
     $this->privileged_user = $this->drupalCreateUser(array(
       'access content',
@@ -30,14 +28,10 @@ class UserAlertWebTestCase extends DrupalWebTestCase {
     ));
   }
 
-  public function testRunner() {
-    $this->_testBibdkUserAlert();
-  }
-
   /**
    * Test creation and search of a bibliotek.dk help node.
    */
-  private function _testBibdkUserAlert() {
+  public function test_bibdk_bser_alert() {
     $this->drupalLogin($this->privileged_user);
 
     // Create node to edit.
