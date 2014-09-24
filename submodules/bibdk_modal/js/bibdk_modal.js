@@ -11,6 +11,9 @@
       }
     } else {
       location.reload(true);
+      if(window.opener != null) {
+          window.opener.location.reload(true);
+      }
     }
   };
 
