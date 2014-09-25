@@ -61,13 +61,13 @@ function bibliotek_dk_search_controls_strongarm() {
           'sort' => '-5',
         ),
         7 => array(
-          'label' => 'Emnesortering  - test',
+          'label' => 'Jeg leder efter en titel  - test',
           'value' => 'rank_subject',
           'default' => 0,
           'sort' => '-4',
         ),
         8 => array(
-          'label' => 'Titelsortering - test',
+          'label' => 'Jeg leder efter et emne - test',
           'value' => 'rank_main_title',
           'default' => 0,
           'sort' => '-3',

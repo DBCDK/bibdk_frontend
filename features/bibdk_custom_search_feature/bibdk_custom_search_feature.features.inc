@@ -278,8 +278,7 @@ Du finder ikke alle film fra de nævnte lande.';
   $element->element_title = 'film_bibliotekets_aldersanbefaling';
   $element->element_label = 'Aldersanbefaling';
   $element->description = 'Biblioteket anbefaler';
-  $element->help_text = 'Her kan du søge på hvilken aldersgruppe filmen er egnet til.
-Hold Ctrl nede for at vælge mere end én.';
+  $element->help_text = 'Her kan du søge på hvilken aldersgruppe filmen er egnet til.';
   $element->sort = -61;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -884,7 +883,7 @@ Du skal ikke skrive og mellem ordene.';
   $element->element_title = 'spil_medierådets_aldersanbefaling';
   $element->element_label = 'Medierådets aldersanbefalinger';
   $element->description = 'PEGI aldersmærkning';
-  $element->help_text = 'PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende, anstødeligt e.l.';
+  $element->help_text = 'PEGI mærkningen fortæller ikke hvor svært spillet er, men om det kan være skræmmende. Læs mere om <a href="http://www.pegi.dk/visArtikel.asp?artikelID=179" target="_blank">PEGI-afmærkning.</a>';
   $element->sort = -68;
   $element->tab_index = 0;
   $element->access_key = '';
@@ -2577,7 +2576,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -81;
   $option->label = 'Filmmusik - soundtrack';
-  $option->value = '("filmmusik - soundtrack")';
+  $option->value = '"soundtrack*"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['1f762c21-aa4b-bbc4-05e4-8d22c9fd1bb9'] = $option;
@@ -2731,7 +2730,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '238c9bb0-6841-da64-199a-aab1670b05e8';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -95;
   $option->label = 'Playstation Vita';
   $option->value = '("playstation vita")';
   $option->expand = '0';
@@ -3007,7 +3006,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -93;
   $option->label = 'e-spil';
   $option->value = '("pc-spil (net)")';
   $option->expand = '0';
@@ -3259,7 +3258,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -88;
+  $option->sort = -89;
   $option->label = 'Xbox 360';
   $option->value = '("xbox 360")';
   $option->expand = '0';
@@ -3415,9 +3414,9 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3ab0660b-f523-4eee-bced-bdd0054916e5';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -87;
-  $option->label = 'Xbox One';
-  $option->value = '("xbox one")';
+  $option->sort = -90;
+  $option->label = 'Xbox';
+  $option->value = '"xbox"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['3ab0660b-f523-4eee-bced-bdd0054916e5'] = $option;
@@ -3559,7 +3558,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3ffa308b-9344-4969-a5b4-31cff8427b81';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -94;
   $option->label = 'PSP';
   $option->value = '"psp"';
   $option->expand = '0';
@@ -4208,7 +4207,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '66c0d95a-089e-4cfb-a9ca-b0983aef601d';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -37;
-  $option->label = 'Klassisk musik 1950 ->';
+  $option->label = 'Klassisk musik 1950->';
   $option->value = '"klassisk musik 1950"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -4555,7 +4554,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -91;
+  $option->sort = -92;
   $option->label = 'Wii';
   $option->value = '"wii"';
   $option->expand = '0';
@@ -5181,7 +5180,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -89;
   $option->label = 'Dansk pop/rock';
-  $option->value = '("dansk pop/rock")';
+  $option->value = '"dansk pop/rock"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['90c833d5-e0f7-4d9a-b434-8d97e32c32f2'] = $option;
@@ -6331,7 +6330,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
+  $option->sort = -96;
   $option->label = 'Nintendo DS';
   $option->value = '("nintendo ds")';
   $option->expand = '0';
@@ -6409,18 +6408,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bde43043-5498-4b53-83b4-2b5eccc2b82e'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'bdf133e7-9a53-42fe-8cc6-8ee526b70a38';
-  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
-  $option->label = 'Playstation 4';
-  $option->value = '("playstation 4")';
-  $option->expand = '0';
-  $option->is_disabled = TRUE;
-  $export['bdf133e7-9a53-42fe-8cc6-8ee526b70a38'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -7257,7 +7244,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '604357bb-a73b-65c4-11d8-cf798b7eabe1';
   $option->sort = -99;
   $option->label = 'cd musik';
-  $option->value = 'term.type="cd(musik)"';
+  $option->value = 'term.type="cd (musik)"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['dee76133-eebc-1384-7501-d9955a2b55da'] = $option;
@@ -7339,7 +7326,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e12fa2f8-c2e6-ee54-29dc-5860e95905c5';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -90;
+  $option->sort = -91;
   $option->label = 'Wii U';
   $option->value = '("wii u")';
   $option->expand = '0';
@@ -7897,18 +7884,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fa74e669-6750-e144-d183-d9192df30082'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
-  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -89;
-  $option->label = 'Xbox';
-  $option->value = '"xbox"';
-  $option->expand = '0';
-  $option->is_disabled = TRUE;
-  $export['fab66772-bda7-3ab4-4904-f0d0f91a2891'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
