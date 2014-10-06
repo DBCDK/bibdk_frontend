@@ -127,23 +127,14 @@ function worktabs_merge_content($content) {
  */
 function worktabs_get_outer() {
   return array(
-    'subjects' => array(
-      'title' => array(
-        '#type' => 'translatable',
-        '#translate' => 'Subjects',
-      ),
-      'content' => array(),
-      'class' => 'active',
-      'active' => 'active',
-    ),
     'more-about' => array(
       'title' => array(
         '#type' => 'translatable',
         '#translate' => 'More Info',
       ),
       'content' => array(),
-      'class' => '',
-      'active' => 'visuallyhidden',
+      'class' => 'active',
+      'active' => 'active',
     ),
     'reviews' => array(
       'title' => array(
