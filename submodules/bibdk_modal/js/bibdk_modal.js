@@ -38,6 +38,10 @@
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite edit favourite user data link
+    $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace(/overlay\/favourite\/userdata/ , 'bibdk_modal/nojs/favourite/userdata');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
   };
 
   BibdkModal.addAccessibilityInfo = function(context){

@@ -116,6 +116,34 @@ function bibdk_modal_register_form($js) {
 }
 
 /**
+ * Genrate form fro editing favourite userdaata
+ * @param bool $js
+ * @param string $branchid
+ * @return array|mixed Form array
+ */
+function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
+
+  $form_state = _bibdk_modal_set_form_state();
+  $form_state['branchid'] = $branchid;
+
+  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+
+  if (!empty($form_state['executed'])) {
+    if (!empty($form_state['modal_redirect']['url'])) {
+      $url = $form_state['modal_redirect']['url'];
+      $options = $form_state['modal_redirect']['options'];
+      $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    }
+    else {
+      $output[] = _bibdk_modal_custom_reload();
+    }
+    $output[] = ctools_modal_command_dismiss();
+  }
+
+  print ajax_render($output);
+}
+
+/**
  * @return array
  */
 function _bibdk_modal_set_form_state() {
