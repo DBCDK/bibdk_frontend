@@ -45,9 +45,9 @@
 
     //Rewrite add favourite library
     if(Drupal.settings.uid){
-      var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list';
+      var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?agency';
       $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login',function() {
-        this.href = this.href.replace(url , 'bibdk_modal/nojs/bibdk_favourite_list');
+        this.href = this.href.replace(url , 'bibdk_modal/nojs/add_to_favorites');
       }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
     }
   };
