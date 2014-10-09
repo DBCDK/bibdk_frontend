@@ -42,6 +42,14 @@
     $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).once('init-modal-forms-login',function() {
       this.href = this.href.replace(/overlay\/favourite\/userdata/ , 'bibdk_modal/nojs/favourite/userdata');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+
+    //Rewrite add favourite library
+    if(Drupal.settings.uid){
+      var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list';
+      $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login',function() {
+        this.href = this.href.replace(url , 'bibdk_modal/nojs/bibdk_favourite_list');
+      }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+    }
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
