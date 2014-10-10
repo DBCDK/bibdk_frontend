@@ -144,6 +144,46 @@ function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
 }
 
 /**
+ * Genrate form fro editing favourite userdaata
+ * @internal param bool $js
+ * @internal param string $branchid
+ * @return array|mixed Form array
+ */
+function bibdk_modal_add_to_favorites_callback() {
+  //fb('bibdk_modal_add_to_favorites_callback');
+  //TODO make call to bibdk_favourite_check_for_new_agency() in bibdk_favorite.module and set message to the user about the library was saved
+  drupal_set_message('hest');
+
+  //TODO rewrite this...
+  if (empty($_GET['agency'])) {
+    drupal_goto('user/register'); //TODO go somewhere else... at least not user register
+  }
+
+  $branchid = $_GET['agency'];
+
+  $form_state = _bibdk_modal_set_form_state();
+  $form_state['branchid'] = $branchid;
+
+  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+
+  //TODO add redirect url
+
+  if (!empty($form_state['executed'])) {
+    if (!empty($form_state['modal_redirect']['url'])) {
+      $url = $form_state['modal_redirect']['url'];
+      $options = $form_state['modal_redirect']['options'];
+      $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    }
+    else {
+      $output[] = _bibdk_modal_custom_reload();
+    }
+    $output[] = ctools_modal_command_dismiss();
+  }
+
+  print ajax_render($output);
+}
+
+/**
  * @return array
  */
 function _bibdk_modal_set_form_state() {

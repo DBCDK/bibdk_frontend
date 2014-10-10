@@ -51,6 +51,15 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['bibdk_modal/%ctools_js/add_to_favorites'] = array(
+    'title' => 'Edit favourite library user data',
+    'page callback' => 'bibdk_modal_add_to_favorites_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
