@@ -127,6 +127,7 @@ function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
   $form_state['branchid'] = $branchid;
 
   $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
 
   if (!empty($form_state['executed'])) {
     if (!empty($form_state['modal_redirect']['url'])) {
@@ -154,7 +155,7 @@ function bibdk_modal_add_to_favorites_callback() {
   module_load_include('inc', 'bibdk_favourite', 'includes/bibdk_favourite.forms');
 
   $agencyName = bibdk_favourite_check_for_new_agency();
-  drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
+  drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata below.", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
 
   if (empty($_GET['agency'])) {
     $url = "";
@@ -170,6 +171,7 @@ function bibdk_modal_add_to_favorites_callback() {
   $form_state['branchid'] = $branchid;
 
   $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
 
   $output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
 
@@ -185,6 +187,20 @@ function bibdk_modal_add_to_favorites_callback() {
   }
 
   print ajax_render($output);
+}
+
+/**
+ * Wraps a form (delivered in a modal) in a a element-wrapper and a element
+ *
+ * @param array $output
+ * @return array
+ */
+function bibdk_modal_wrap_form_in_element_wrapper($output){
+  if(!empty($output[0]['output'])){
+    $output[0]['output'] = '<div class="element-wrapper"><div class="element">' . $output[0]['output'] . '</div></div>';
+    return $output;
+  }
+    return $output;
 }
 
 /**
