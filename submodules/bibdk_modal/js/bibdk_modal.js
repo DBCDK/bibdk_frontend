@@ -61,11 +61,13 @@
     $('#modalBackdrop', context).bind('click', BibdkModal.closeModal);
     $('.close', context).bind('click',  BibdkModal.setMainwrapperAttr);
     $(document).bind('keydown', BibdkModal.keyEventHandler);
+    $('body', context).bind('focus', BibdkModal.modalHasFocus);
   };
 
   BibdkModal.unbindEvents = function(){
     $('#modalBackdrop').unbind('click', BibdkModal.closeModal);
     $(document).unbind('keydown', BibdkModal.keyEventHandler);
+    $('body').unbind('focus', BibdkModal.modalHasFocus);
   };
 
   BibdkModal.keyEventHandler = function(event){
@@ -82,6 +84,14 @@
 
   BibdkModal.setMainwrapperAttr = function(){
     $('#mainwrapper').attr("aria-hidden", false);
+  };
+
+  /**
+   * Set the modal window 10% from top of current viewport
+   */
+  BibdkModal.modalHasFocus = function(){
+    var top = (window.innerHeight * 0.1) + $(window).scrollTop();
+    $('#modalContent').css({top:top + 'px'});
   };
 
   /**
