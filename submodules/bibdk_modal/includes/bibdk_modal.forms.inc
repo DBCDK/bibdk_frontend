@@ -154,7 +154,7 @@ function bibdk_modal_add_to_favorites_callback() {
   module_load_include('inc', 'bibdk_favourite', 'includes/bibdk_favourite.forms');
 
   $agencyName = bibdk_favourite_check_for_new_agency();
-  drupal_set_message(t("%library added to your favorite libraries. Please enter your userdata", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
+  drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
 
   if (empty($_GET['agency'])) {
     $url = "";
@@ -170,6 +170,8 @@ function bibdk_modal_add_to_favorites_callback() {
   $form_state['branchid'] = $branchid;
 
   $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+
+  $output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
 
   if (!empty($form_state['executed'])) {
     if ($user->uid) {
