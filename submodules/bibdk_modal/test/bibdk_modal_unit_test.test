@@ -38,7 +38,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     $this->assertEqual($expected, $return, 'Got array as expected');
   }
 
-  public function test_bibdk_modal_login_form(){
+  public function test_bibdk_modal_login_form() {
     global $bibdk_modal;
 
     $return = bibdk_modal_login_form(TRUE);
@@ -63,7 +63,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
   }
 
-  public function test_bibdk_modal_forgot_password_form(){
+  public function test_bibdk_modal_forgot_password_form() {
     global $bibdk_modal;
 
     $return = bibdk_modal_forgot_password_form(TRUE);
@@ -86,7 +86,7 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
     $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
   }
 
-  public function test_bibdk_modal_register_form(){
+  public function test_bibdk_modal_register_form() {
     global $bibdk_modal;
 
     $return = bibdk_modal_register_form(TRUE);
@@ -107,5 +107,26 @@ class BibdkModalUnittestCase extends DrupalUnitTestCase {
       'command' => 'modal_dismiss',
     );
     $this->assertEqual($dismiss_array, $return[2], 'Got a dismiss command array');
+  }
+
+  public function test_bibdk_modal_wrap_form_in_element_wrapper() {
+    $output = array();
+    $result = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $this->assertEqual($output, $result, "result is as expected");
+
+    $output[0]['output'] = 'hest';
+    $expected[0]['output'] = '<div class="element-wrapper"><div class="element">hest</div></div>';
+    $result = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $this->assertEqual($expected, $result, "result is as expected");
+
+    $output[0]['output'] = '';
+    $expected = $output;
+    $result = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $this->assertEqual($expected, $result, "result is as expected");
+
+    $output[0]['output'] = ' ';
+    $expected[0]['output'] = '<div class="element-wrapper"><div class="element"> </div></div>';
+    $result = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $this->assertEqual($expected, $result, "result is as expected");
   }
 }
