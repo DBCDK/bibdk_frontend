@@ -47,7 +47,7 @@
     if(Drupal.settings.uid){
       var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
       $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login',function() {
-        this.href = this.href.replace(url , 'bibdk_modal/nojs/add_to_favorites?');
+        this.href = this.href.replace(url , 'bibdk_modal/nojs/bibdk_favourite_list?');
       }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
     }
   };
