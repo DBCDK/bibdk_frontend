@@ -252,6 +252,7 @@ function bibdk_frontend_menu_alter(&$items){
  * @param string $form_id
  */
 function bibdk_frontend_form_user_login_alter(&$form, $form_state, $form_id) {
+  drupal_set_message(t('use_bibdk_login__not_library_id', array(), array('context' => 'bibdk_frontend')), 'warning');
   $form['#action'] = url('user/login', array('query' => array('destination' => (isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '')));
 }
 

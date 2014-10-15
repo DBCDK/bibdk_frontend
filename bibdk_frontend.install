@@ -145,7 +145,6 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_language_settings',
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
-    'html_5_text_format',
     'bibliotek_dk_administration_menu',
     'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
@@ -158,7 +157,9 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_mobile_redirect',
     'bibliotek_dk_captcha',
     'bibdk_role_redakteur',
+    'bibliotek_dk_autocomplete',
     'bibliotek_dk_advanced_aggregate',
+    'bibliotek_dk_work_entity_feature',
     //Content
     'bibdk_article',
     'bibdk_banner',
@@ -438,5 +439,19 @@ function bibdk_frontend_update_7020(&$sandbox) {
  */
 function bibdk_frontend_update_7021(&$sandbox) {
   module_enable(array('bibliotek_dk_advanced_aggregate'));
+}
+
+/**
+ * Enable bibliotek.dk autocomplete for existing installations
+ */
+function bibdk_frontend_update_7022(&$sandbox) {
+  module_enable(array('bibliotek_dk_autocomplete'));
+}
+
+/**
+ * Enable bibliotek_dk_work_entity_feature for existing installations
+ */
+function bibdk_frontend_update_7023(&$sandbox) {
+  module_enable(array('bibliotek_dk_work_entity_feature'));
 }
 
