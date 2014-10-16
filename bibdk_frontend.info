@@ -7,5 +7,4 @@ project = bibliotekdk
 
 files[] = test/bibdk_frontend.test
 
-dependencies[] = panels
 dependencies[] = translatable
