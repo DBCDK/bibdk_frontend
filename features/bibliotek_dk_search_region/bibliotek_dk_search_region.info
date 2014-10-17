@@ -6,6 +6,5 @@ version = 7.x-1.0
 project = bibliotek_dk_search_region
 dependencies[] = fe_block
 dependencies[] = search
-dependencies[] = panels
 features[fe_block_settings][] = search-form
 features[features_api][] = api:1
