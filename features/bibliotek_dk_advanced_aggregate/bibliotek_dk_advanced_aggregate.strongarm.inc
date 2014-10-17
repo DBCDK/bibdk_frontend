@@ -73,7 +73,7 @@ function bibliotek_dk_advanced_aggregate_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'advagg_cron_timestamp';
-  $strongarm->value = 1407752787;
+  $strongarm->value = 1413540901;
   $export['advagg_cron_timestamp'] = $strongarm;
 
   $strongarm = new stdClass();
