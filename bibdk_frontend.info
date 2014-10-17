@@ -8,3 +8,4 @@ project = bibliotekdk
 files[] = test/bibdk_frontend.test
 
 dependencies[] = translatable
+dependencies[] = panels
