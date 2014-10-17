@@ -6412,6 +6412,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = 'bdf133e7-9a53-42fe-8cc6-8ee526b70a38';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -96;
+  $option->label = 'Playstation 4';
+  $option->value = '("playstation 4")';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['bdf133e7-9a53-42fe-8cc6-8ee526b70a38'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = 'be868e4b-ccf5-3c84-5548-60aef49deeae';
   $option->v_uuid = 'e23b14bf-2112-19c4-41a7-64c531a76301';
   $option->sort = -87;
@@ -7884,6 +7896,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['fa74e669-6750-e144-d183-d9192df30082'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -89;
+  $option->label = 'Xbox';
+  $option->value = '"xbox"';
+  $option->expand = '0';
+  $option->is_disabled = TRUE;
+  $export['fab66772-bda7-3ab4-4904-f0d0f91a2891'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
