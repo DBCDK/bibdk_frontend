@@ -160,7 +160,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_autocomplete',
     'bibliotek_dk_advanced_aggregate',
     'bibliotek_dk_work_entity_feature',
-    'bibdk_ie6nomore',
+    'bibdk_ie6nomore_settings',
     //Content
     'bibdk_article',
     'bibdk_banner',
