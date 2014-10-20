@@ -2,6 +2,7 @@ name = Bibliotek.dk - Advanced Aggregate
 description = Feature containing the configuration of the Advanced Aggregate module in bibliotek.dk
 core = 7.x
 package = Bibliotek.dk
+php = 5.2.4
 version = 7.x-0.1
 project = bibliotek_dk_advanced_aggregate
 dependencies[] = ctools

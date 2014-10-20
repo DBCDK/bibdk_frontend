@@ -116,6 +116,94 @@ function bibdk_modal_register_form($js) {
 }
 
 /**
+ * Genrate form fro editing favourite userdaata
+ * @param bool $js
+ * @param string $branchid
+ * @return array|mixed Form array
+ */
+function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
+
+  $form_state = _bibdk_modal_set_form_state();
+  $form_state['branchid'] = $branchid;
+
+  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+
+  if (!empty($form_state['executed'])) {
+    if (!empty($form_state['modal_redirect']['url'])) {
+      $url = $form_state['modal_redirect']['url'];
+      $options = $form_state['modal_redirect']['options'];
+      $output[] = ctools_ajax_command_redirect($url, 0, $options);
+    }
+    else {
+      $output[] = _bibdk_modal_custom_reload();
+    }
+    $output[] = ctools_modal_command_dismiss();
+  }
+
+  print ajax_render($output);
+}
+
+/**
+ * Genrate form fro editing favourite userdaata
+ * @internal param bool $js
+ * @internal param string $branchid
+ * @return array|mixed Form array
+ */
+function bibdk_modal_add_to_favorites_callback() {
+  global $user;
+  module_load_include('inc', 'bibdk_favourite', 'includes/bibdk_favourite.forms');
+
+  $agencyName = bibdk_favourite_check_for_new_agency();
+  drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata below.", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
+
+  if (empty($_GET['agency'])) {
+    $url = "";
+    if ($user->uid) {
+      $url = "user/$user->uid/bibdk_favourite_list";
+    }
+    drupal_goto($url);
+  }
+
+  $branchid = $_GET['agency'];
+
+  $form_state = _bibdk_modal_set_form_state();
+  $form_state['branchid'] = $branchid;
+
+  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
+  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+
+  $output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
+
+  if (!empty($form_state['executed'])) {
+    if ($user->uid) {
+      $url = "user/$user->uid/bibdk_favourite_list";
+      $output[] = ctools_ajax_command_redirect($url, 0, array());
+    }
+    else {
+      $output[] = _bibdk_modal_custom_reload();
+    }
+    $output[] = ctools_modal_command_dismiss();
+  }
+
+  print ajax_render($output);
+}
+
+/**
+ * Wraps a form (delivered in a modal) in a a element-wrapper and a element
+ *
+ * @param array $output
+ * @return array
+ */
+function bibdk_modal_wrap_form_in_element_wrapper($output){
+  if(!empty($output[0]['output'])){
+    $output[0]['output'] = '<div class="element-wrapper"><div class="element">' . $output[0]['output'] . '</div></div>';
+    return $output;
+  }
+    return $output;
+}
+
+/**
  * @return array
  */
 function _bibdk_modal_set_form_state() {
@@ -137,7 +225,7 @@ function _bibdk_modal_set_form_state() {
  *
  * @return array
  */
-function _bibdk_modal_custom_reload(){
+function _bibdk_modal_custom_reload() {
   return array(
     'command' => 'bibdk_custom_reload',
   );

@@ -42,6 +42,24 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['bibdk_modal/%ctools_js/favourite/userdata'] = array(
+    'title' => 'Edit favourite library user data',
+    'page callback' => 'bibdk_modal_edit_favourite_userdata_form',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
+    'title' => 'Edit favourite library user data',
+    'page callback' => 'bibdk_modal_add_to_favorites_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 

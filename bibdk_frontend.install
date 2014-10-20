@@ -159,6 +159,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_role_redakteur',
     'bibliotek_dk_autocomplete',
     'bibliotek_dk_advanced_aggregate',
+    'bibliotek_dk_work_entity_feature',
     //Content
     'bibdk_article',
     'bibdk_banner',
@@ -172,6 +173,10 @@ function _bibdk_frontend_enable_modules() {
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
   }
+
+  // We activate this module alone, because requirements might not be met.
+  // But this should not break the site.
+  module_enable(array('bibdk_yaz'));
 }
 
 /**
@@ -447,3 +452,18 @@ function bibdk_frontend_update_7022(&$sandbox) {
   module_enable(array('bibliotek_dk_autocomplete'));
 }
 
+/**
+ * Enable bibliotek_dk_work_entity_feature for existing installations
+ */
+function bibdk_frontend_update_7023(&$sandbox) {
+  module_enable(array('bibliotek_dk_work_entity_feature'));
+}
+
+/**
+ * Enable bibdk_yaz for existing installations
+ */
+function bibdk_frontend_update_7024(&$sandbox) {
+  // Requirements might not be met.
+  // But this should not break the site.
+  module_enable(array('bibdk_yaz'));
+}

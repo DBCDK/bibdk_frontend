@@ -38,6 +38,18 @@
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
+    //Rewrite edit favourite user data link
+    $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).once('init-modal-forms-login',function() {
+      this.href = this.href.replace(/overlay\/favourite\/userdata/ , 'bibdk_modal/nojs/favourite/userdata');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+
+    //Rewrite add favourite library
+    if(Drupal.settings.uid){
+      var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
+      $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login',function() {
+        this.href = this.href.replace(url , 'bibdk_modal/nojs/bibdk_favourite_list?');
+      }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+    }
   };
 
   BibdkModal.addAccessibilityInfo = function(context){
@@ -49,11 +61,13 @@
     $('#modalBackdrop', context).bind('click', BibdkModal.closeModal);
     $('.close', context).bind('click',  BibdkModal.setMainwrapperAttr);
     $(document).bind('keydown', BibdkModal.keyEventHandler);
+    $('body', context).bind('focus', BibdkModal.modalHasFocus);
   };
 
   BibdkModal.unbindEvents = function(){
     $('#modalBackdrop').unbind('click', BibdkModal.closeModal);
     $(document).unbind('keydown', BibdkModal.keyEventHandler);
+    $('body').unbind('focus', BibdkModal.modalHasFocus);
   };
 
   BibdkModal.keyEventHandler = function(event){
@@ -70,6 +84,14 @@
 
   BibdkModal.setMainwrapperAttr = function(){
     $('#mainwrapper').attr("aria-hidden", false);
+  };
+
+  /**
+   * Set the modal window 10% from top of current viewport
+   */
+  BibdkModal.modalHasFocus = function(){
+    var top = (window.innerHeight * 0.1) + $(window).scrollTop();
+    $('#modalContent').css({top:top + 'px'});
   };
 
   /**

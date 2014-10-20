@@ -51,6 +51,12 @@ function bibliotek_dk_user_alert_features_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'bibdk_newsroom_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',

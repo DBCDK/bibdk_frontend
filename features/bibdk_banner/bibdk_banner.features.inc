@@ -24,7 +24,7 @@ function bibdk_banner_node_info() {
       'base' => 'node_content',
       'description' => t('Add a banner advertisment to the banner region.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );

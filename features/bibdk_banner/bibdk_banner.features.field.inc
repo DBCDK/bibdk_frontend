@@ -50,6 +50,12 @@ function bibdk_banner_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'bibdk_newsroom_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -123,6 +129,12 @@ function bibdk_banner_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '1',
+        ),
+        'bibdk_newsroom_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'default' => array(
           'label' => 'hidden',
