@@ -1,0 +1,11 @@
+name = Article view
+description = article list for frontpage and custom search pages
+core = 7.x
+package = Bibliotek.dk
+version = 7.x-1.0
+project = article_view
+dependencies[] = ctools
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = bibdk_articles_view
