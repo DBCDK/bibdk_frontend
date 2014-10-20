@@ -470,10 +470,10 @@ function bibdk_frontend_update_7024(&$sandbox) {
 }
 
 /**
- * Enable bibdk_ie6nomore for existing installations
+ * Enable bibdk_ie6nomore_settings for existing installations
  */
 function bibdk_frontend_update_7025(&$sandbox) {
   // Requirements might not be met.
   // But this should not break the site.
-  module_enable(array('bibdk_ie6nomore'));
+  module_enable(array('bibdk_ie6nomore_settings'));
 }
