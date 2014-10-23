@@ -5,3 +5,62 @@
  */
 
 include_once 'article_view.features.inc';
+
+/**
+ * Implements hook_preprocess_HOOK
+ *
+ * Add classes and fields that needs to be handled in special ways to
+ * bibdk_articles_view
+ * @param $vars
+ */
+function bibdk_article_preprocess_views_view_fields(&$vars) {
+  $view = $vars['view'];
+  // only handle bibdk_articles_view
+  if ($view->name != 'bibdk_articles_view') {
+    return;
+  }
+  // get the node
+  $node = node_load($vars['row']->nid);
+  $wrapper = entity_metadata_wrapper('node', $node);
+  // get column field
+  $columns = $wrapper->field_columns->value();
+  // default value
+  $columns = empty($columns) ? '2' : $columns;
+
+  // get rows
+  $rows = $wrapper->field_rows->value();
+  // default value
+  $rows = empty($rows) ? '2' : $rows;
+
+  // get color
+  $color = $wrapper->field_color->value();
+  // default value
+  $color = empty($color) ? 'light-grey' : $color;
+
+  $classes = bibdk_article_get_classes($columns, $rows, $color);
+  $vars['class'] = drupal_attributes($classes);
+
+  // get link text
+  $link_text = $wrapper->field_link_text->value();
+  // get link url
+  $link_url = $wrapper->field_bibdk_article_link->value();
+
+  if (!empty($link_text) && !empty($link_url)) {
+    $attributes = array('target'=>'_blank');
+    $link = l($link_text, $link_url, $attributes);
+
+    // add link field to fields array
+    $vars['fields']['article_link']->content = $link;
+    $vars['fields']['article_link']->label_html = '';
+
+    $vars['fields']['article_link']->wrapper_prefix = '<footer class="footer"><div class="field-read-more">';
+    $vars['fields']['article_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div>';
+  }
+}
+
+
+
+
+
+
+
