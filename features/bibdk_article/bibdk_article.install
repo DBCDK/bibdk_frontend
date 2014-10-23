@@ -36,3 +36,25 @@ function bibdk_article_update_7009() {
     db_drop_table($table_name);
   }
 }
+
+/**
+ * Update values in bibdk_article page type select list to conform to aritcle_view
+ * @param $sandbox
+ */
+function bibdk_article_update_7010(&$sandbox) {
+  $valuemap = array(
+    'bibdk_frontpage/spil' => 'spil',
+    'bibdk_frontpage/noder' => 'noder',
+    'bibdk_frontpage/musik' => 'musik',
+    'bibdk_frontpage/film' => 'film',
+    'bibdk_frontpage/net' => 'net',
+    'bibdk_frontpage/bog' => 'bog',
+    'bibdk_frontpage/artikel' => 'artikel'
+  );
+
+  foreach ($valuemap as $key => $value) {
+    db_update('field_data_field_page')
+      ->fields(array('field_page_value' => $value))
+      ->condition('field_page_value', $key, '=')->execute();
+  }
+}
