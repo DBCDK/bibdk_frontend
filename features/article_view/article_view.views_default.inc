@@ -120,7 +120,9 @@ function article_view_views_default_views() {
   $handler->display->display_options['arguments']['field_page_value']['id'] = 'field_page_value';
   $handler->display->display_options['arguments']['field_page_value']['table'] = 'field_data_field_page';
   $handler->display->display_options['arguments']['field_page_value']['field'] = 'field_page_value';
+  $handler->display->display_options['arguments']['field_page_value']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_page_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_page_value']['default_argument_options']['argument'] = 'bibdk_frontpage';
   $handler->display->display_options['arguments']['field_page_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_page_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_page_value']['summary_options']['items_per_page'] = '25';
