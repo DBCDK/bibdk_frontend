@@ -38,7 +38,7 @@ function bibdk_article_update_7009() {
 }
 
 /**
- * Update values in bibdk_article page type select list to conform to aritcle_view
+ * Update existing articles page type field to conform to aritcle_view
  * @param $sandbox
  */
 function bibdk_article_update_7010(&$sandbox) {
