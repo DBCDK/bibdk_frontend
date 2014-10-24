@@ -46,7 +46,7 @@ function bibdk_article_preprocess_views_view_fields(&$vars) {
   $link_url = $wrapper->field_bibdk_article_link->value();
 
   if (!empty($link_text) && !empty($link_url)) {
-    $attributes = array('target'=>'_blank');
+    $attributes = array('attributes'=>array('target'=>'_blank'));
     $link = l($link_text, $link_url, $attributes);
 
     // add link field to fields array
