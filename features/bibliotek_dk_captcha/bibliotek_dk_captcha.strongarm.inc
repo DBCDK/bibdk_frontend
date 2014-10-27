@@ -83,24 +83,6 @@ function bibliotek_dk_captcha_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_placement_map_cache';
-  $strongarm->value = array(
-    'bibdk_subject_hierarchy_suggestion_form' => array(
-      'path' => array(),
-      'key' => 'subject_hierarchy_submit_suggestion',
-      'weight' => NULL,
-    ),
-    'user_register_form' => array(
-      'path' => array(),
-      'key' => 'actions',
-      'weight' => 99,
-    ),
-  );
-  $export['captcha_placement_map_cache'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'captcha_wrong_response_counter';
   $strongarm->value = 18;
   $export['captcha_wrong_response_counter'] = $strongarm;

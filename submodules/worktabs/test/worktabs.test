@@ -14,7 +14,7 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
   }
 
   public function setUp() {
-    module_load_include('module', 'worktabs', 'worktabs');
+    module_load_include('module', 'worktabs');
     parent::setUp();
   }
 
@@ -23,7 +23,7 @@ class WorktabsUnitTestCase extends DrupalUnitTestCase {
    */
   public function testOuterTabsGen() {
     $tabs = worktabs_get_outer();
-    $this->assertTrue(array_key_exists('subjects', $tabs), 'Key \'subjects\' is present');
+    $this->assertFalse(array_key_exists('subjects', $tabs), 'Key \'subjects\' is not present');
     $this->assertTrue(array_key_exists('more-about', $tabs), 'Key \'more-about\' is present');
     $this->assertTrue(array_key_exists('reviews', $tabs), 'Key \'reviews\' is present');
 
