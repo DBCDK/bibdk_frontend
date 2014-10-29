@@ -72,7 +72,7 @@ function bibdk_modal_menu() {
 
   $items['bibdk_modal/%ctools_js/voxb/review/create'] = array(
     'title' => 'Edit review',
-    'page callback' => 'bibdk_modal_review_edit_node',
+    'page callback' => 'bibdk_modal_review_create_node',
     'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
