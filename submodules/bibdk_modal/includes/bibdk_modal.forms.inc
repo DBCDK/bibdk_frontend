@@ -26,10 +26,16 @@ function bibdk_modal_offensive_form($js = FALSE){
   print ajax_render($output);
 }
 
+
+function bibdk_modal_review_create_node($js=FALSE) {
+  $pid = bibdk_voxb_review_check_pid();
+  return bibdk_modal_review_edit_node($js,$pid);
+}
+
 /** menu callback. wrap blog_node_form in modal.
  * @param bool $js
  */
-function bibdk_modal_review_edit_node($js=FALSE){
+function bibdk_modal_review_edit_node($js=FALSE, $pid=NULL){
   if (!function_exists("node_form")) {
     include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
   }
@@ -44,7 +50,12 @@ function bibdk_modal_review_edit_node($js=FALSE){
 
   $output = ctools_modal_form_wrapper('blog_node_form', $form_state);
   if (!empty($form_state['executed'])) {
-    $output = array(bibdk_voxb_ajax_review_saved($voxb_id), ctools_modal_command_dismiss());
+    if(empty($pid)) {
+      $output = array(bibdk_voxb_ajax_review_saved($voxb_id), ctools_modal_command_dismiss());
+    }
+    else {
+      $output = array(bibdk_voxb_ajax_review_created($pid), ctools_modal_command_dismiss());
+    }
   }
 
   print ajax_render($output);
