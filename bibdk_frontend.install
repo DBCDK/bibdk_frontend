@@ -160,6 +160,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_autocomplete',
     'bibliotek_dk_advanced_aggregate',
     'bibliotek_dk_work_entity_feature',
+    'bibliotek_dk_offcanvas_menu',
     //Content
     'bibdk_article',
     'bibdk_banner',
@@ -466,4 +467,13 @@ function bibdk_frontend_update_7024(&$sandbox) {
   // Requirements might not be met.
   // But this should not break the site.
   module_enable(array('bibdk_yaz'));
+}
+
+/**
+ * Enable bibliotek_dk_offcanvas_menu for existing installations
+ */
+function bibdk_frontend_update_7025(&$sandbox) {
+  module_enable(array('bibliotek_dk_offcanvas_menu'));
+  //TODO mmj disable modules that featurs that are no longer needed. Also remove from hook_install().
+  module_disable(array());
 }
