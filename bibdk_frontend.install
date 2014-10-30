@@ -376,7 +376,14 @@ function bibdk_frontend_update_7014(&$sandbox) {
  * Remove unused profile2 types
  * */
 function bibdk_frontend_update_7015(&$sandbox) {
-  $unused_profile_types = array('bibdk_search_history', 'bibdk_mypage', 'bibdk_cart_list', 'bibdk_openuserstatus', 'bibdk_usersettings_user_settings', 'bibdk_favourite_list');
+  $unused_profile_types = array(
+    'bibdk_search_history',
+    'bibdk_mypage',
+    'bibdk_cart_list',
+    'bibdk_openuserstatus',
+    'bibdk_usersettings_user_settings',
+    'bibdk_favourite_list'
+  );
   if (function_exists('profile2_type_load')) {
     foreach ($unused_profile_types as $type) {
       $profile_type = profile2_type_load($type);
@@ -430,7 +437,6 @@ function bibdk_frontend_set_weight() {
 function bibdk_frontend_update_7019(&$sandbox) {
   module_enable(array('bibliotek_dk_captcha'));
 }
-
 
 /**
  * Enable bibliotek_dk_captcha feature for existing installations
