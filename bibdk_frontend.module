@@ -292,7 +292,7 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
   );
 
   foreach ($device_types as $type) {
-    $current_type = 'devicetype_' . $type;
+    $current_type = 'devicesize_' . $type;
     $form['devicetypes'][$current_type] = array(
       '#type' => 'checkbox',
       '#title' => ucfirst($type),
@@ -302,9 +302,16 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
   }
 }
 
+/**
+ * Implements hook_menu_link_alter().
+ * The settings related to devicevisibility should be stored in db with the rest
+ * of the link settings.
+ *
+ * @param $item
+ */
 function bibdk_frontend_menu_link_alter(&$item) {
   foreach ($item as $key => $value) {
-    if (strpos($key, 'devicetype_', 0) !== FALSE) {
+    if (strpos($key, 'devicesize_', 0) !== FALSE) {
       $item['options']['devicetypes'][$key] = $value;
     }
   }
