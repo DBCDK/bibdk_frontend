@@ -20,10 +20,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Link til forside',
       ),
-      'langcode' => 'da',
       'devicetypes' => array(
         'devicesize_small' => 1,
-        'devicesize_large' => 0,
+        'devicesize_large' => 1,
       ),
     ),
     'module' => 'menu',
