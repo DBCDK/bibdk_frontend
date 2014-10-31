@@ -143,10 +143,7 @@ function _bibdk_frontend_enable_modules() {
   $modules = array(
     //Features
     'bibdk_language_settings',
-    'bibliotek_dk_global_login_menu',
-    'topbar_menu_block_feature',
     'bibliotek_dk_administration_menu',
-    'bibliotek_dk_header_actions',
     'bibliotek_dk_search_region',
     'bibdk_custom_search_feature',
     'bibliotek_dk_lightbox2_settings',
@@ -480,6 +477,5 @@ function bibdk_frontend_update_7024(&$sandbox) {
  */
 function bibdk_frontend_update_7025(&$sandbox) {
   module_enable(array('bibliotek_dk_offcanvas_menu'));
-  //TODO mmj disable modules that featurs that are no longer needed. Also remove from hook_install().
-  module_disable(array());
+  module_disable(array('bibliotek_dk_global_login_menu', 'bibliotek_dk_header_actions', 'topbar_menu_block_feature'));
 }
