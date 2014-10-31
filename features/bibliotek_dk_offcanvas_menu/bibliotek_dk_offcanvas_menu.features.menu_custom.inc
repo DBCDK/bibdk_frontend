@@ -10,18 +10,26 @@
 function bibliotek_dk_offcanvas_menu_menu_default_menu_custom() {
   $menus = array();
 
-  // Exported menu: menu-bibliotek-dk---off-canvas-m.
-  $menus['menu-bibliotek-dk---off-canvas-m'] = array(
-    'menu_name' => 'menu-bibliotek-dk---off-canvas-m',
-    'title' => 'Bibliotek.dk - Off Canvas Menu',
-    'description' => 'Off Canvas menu der ligger i højre side',
+  // Exported menu: menu-offcanvas-menu-da.
+  $menus['menu-offcanvas-menu-da'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'title' => 'Bibliotek.dk - Offcanvas Menu Dansk',
+    'description' => '',
     'language' => 'und',
-    'i18n_mode' => '5',
+    'i18n_mode' => '0',
+  );
+  // Exported menu: menu-offcanvas-menu-eng.
+  $menus['menu-offcanvas-menu-eng'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'title' => 'Bibliotek.dk - Offcanvas Menu Engelsk',
+    'description' => '',
+    'language' => 'und',
+    'i18n_mode' => '0',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Bibliotek.dk - Off Canvas Menu');
-  t('Off Canvas menu der ligger i højre side');
+  t('Bibliotek.dk - Offcanvas Menu Dansk');
+  t('Bibliotek.dk - Offcanvas Menu Engelsk');
 
 
   return $menus;

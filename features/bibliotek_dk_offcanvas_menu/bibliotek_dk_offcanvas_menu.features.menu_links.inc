@@ -10,15 +10,125 @@
 function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-bibliotek-dk---off-canvas-m:<front>
-  $menu_links['menu-bibliotek-dk---off-canvas-m:<front>'] = array(
-    'menu_name' => 'menu-bibliotek-dk---off-canvas-m',
+  // Exported menu link: menu-offcanvas-menu-da:<front>
+  $menu_links['menu-offcanvas-menu-da:<front>'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
     'link_path' => '<front>',
     'router_path' => '',
     'link_title' => 'Forside',
     'options' => array(
       'attributes' => array(
-        'title' => 'Link til forside',
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-50',
+  );
+  // Exported menu link: menu-offcanvas-menu-da:http://statsbiblioteket.dk/videnskabeligeartikler/
+  $menu_links['menu-offcanvas-menu-da:http://statsbiblioteket.dk/videnskabeligeartikler/'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'link_path' => 'http://statsbiblioteket.dk/videnskabeligeartikler/',
+    'router_path' => '',
+    'link_title' => 'Videnskabelige artikler',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-46',
+  );
+  // Exported menu link: menu-offcanvas-menu-da:overlay/help
+  $menu_links['menu-offcanvas-menu-da:overlay/help'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'link_path' => 'overlay/help',
+    'router_path' => 'overlay/help',
+    'link_title' => 'Hjælp',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-47',
+  );
+  // Exported menu link: menu-offcanvas-menu-da:overlay/helpdesk
+  $menu_links['menu-offcanvas-menu-da:overlay/helpdesk'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'link_path' => 'overlay/helpdesk',
+    'router_path' => 'overlay/helpdesk',
+    'link_title' => 'Spørg biblioteksvagten',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 0,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
+  );
+  // Exported menu link: menu-offcanvas-menu-da:vejviser
+  $menu_links['menu-offcanvas-menu-da:vejviser'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'link_path' => 'vejviser',
+    'router_path' => 'vejviser',
+    'link_title' => 'Find bibliotek',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+  );
+  // Exported menu link: menu-offcanvas-menu-eng:<front>
+  $menu_links['menu-offcanvas-menu-eng:<front>'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Home',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
       ),
       'devicetypes' => array(
         'devicesize_small' => 1,
@@ -32,9 +142,106 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-offcanvas-menu-eng:http://statsbiblioteket.dk/videnskabeligeartikler/
+  $menu_links['menu-offcanvas-menu-eng:http://statsbiblioteket.dk/videnskabeligeartikler/'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => 'http://statsbiblioteket.dk/videnskabeligeartikler/',
+    'router_path' => '',
+    'link_title' => 'Scientific articles',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '15',
+  );
+  // Exported menu link: menu-offcanvas-menu-eng:overlay/help
+  $menu_links['menu-offcanvas-menu-eng:overlay/help'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => 'overlay/help',
+    'router_path' => 'overlay/help',
+    'link_title' => 'Help',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '10',
+  );
+  // Exported menu link: menu-offcanvas-menu-eng:overlay/helpdesk
+  $menu_links['menu-offcanvas-menu-eng:overlay/helpdesk'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => 'overlay/helpdesk',
+    'router_path' => 'overlay/helpdesk',
+    'link_title' => 'Ask helpdesk',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 0,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '7',
+  );
+  // Exported menu link: menu-offcanvas-menu-eng:vejviser
+  $menu_links['menu-offcanvas-menu-eng:vejviser'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => 'vejviser',
+    'router_path' => 'vejviser',
+    'link_title' => 'Find library',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_large' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '5',
+  );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Ask helpdesk');
+  t('Find bibliotek');
+  t('Find library');
   t('Forside');
+  t('Help');
+  t('Hjælp');
+  t('Home');
+  t('Scientific articles');
+  t('Spørg biblioteksvagten');
+  t('Videnskabelige artikler');
 
 
   return $menu_links;
