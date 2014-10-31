@@ -1,0 +1,12 @@
+name = Bibliotek.dk - Offcanvas Menu
+description = Feature containing the offcanvas menu
+core = 7.x
+package = Features
+php = 5.2.4
+version = 7.x-0.1
+project = bibliotek_dk_offcanvas_menu
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:1
+features[menu_custom][] = menu-bibliotek-dk---off-canvas-m
+features[menu_links][] = menu-bibliotek-dk---off-canvas-m:<front>
