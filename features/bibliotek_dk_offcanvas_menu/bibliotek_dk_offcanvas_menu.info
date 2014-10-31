@@ -1,7 +1,7 @@
 name = Bibliotek.dk - Offcanvas Menu
 description = Feature containing the offcanvas menu
 core = 7.x
-package = Features
+package = Bibliotek.dk
 php = 5.2.4
 version = 7.x-0.1
 project = bibliotek_dk_offcanvas_menu
