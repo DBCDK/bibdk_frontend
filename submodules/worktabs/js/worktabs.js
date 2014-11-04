@@ -1,10 +1,5 @@
 (function($) {
-  var Bbidk_worktabs = {
-    behaviors: {
-      worktabs: {
-      }
-    }
-  };
+  var Bbidk_worktabs = {};
 
   Bbidk_worktabs.itemClicked = function(element) {
     Bbidk_worktabs.hideItems(element);
@@ -45,7 +40,7 @@
     });
   };
 
-  Bbidk_worktabs.behaviors.worktabs = {
+  Drupal.behaviors.worktabs = {
     attach: function(context) {
       $('.tab-link', context).once().click(function(e) {
         e.preventDefault();
