@@ -13,6 +13,54 @@ function bibdk_modal_login($js = FALSE) {
   print ajax_render($output);
 }
 
+function bibdk_modal_offensive_form($js = FALSE){
+  $form_state = _bibdk_modal_set_form_state();
+  $output = ctools_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
+  $message = t('bibdk_voxb_offensive_reported', array(), array('context' => 'bibdk_voxb'));
+  $voxb_id = $_GET['voxb_id'];
+  if (!empty($form_state['executed'])) {
+    //$output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
+    $output = array(bibdk_voxb_offensive_posted ($voxb_id, $message),ctools_modal_command_dismiss());
+  }
+
+  print ajax_render($output);
+}
+
+
+function bibdk_modal_review_create_node($js=FALSE) {
+  $pid = bibdk_voxb_review_check_pid();
+  return bibdk_modal_review_edit_node($js,$pid);
+}
+
+/** menu callback. wrap blog_node_form in modal.
+ * @param bool $js
+ */
+function bibdk_modal_review_edit_node($js=FALSE, $pid=NULL){
+  if (!function_exists("node_form")) {
+    include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
+  }
+
+  $form_state = _bibdk_modal_set_form_state();
+  $blog_node = bibdk_voxb_set_blog_node();
+  $wrap = entity_metadata_wrapper('node' ,$blog_node);
+  $voxb_id = $wrap->field_voxb_id->value();
+  //$form_state['node'] = $blog_node;
+  $form_state['build_info']['args'] = array($blog_node);
+  //$output = ctools_modal_form_wrapper('bibdk_voxb_review_modal_edit_form', $form_state);
+
+  $output = ctools_modal_form_wrapper('blog_node_form', $form_state);
+  if (!empty($form_state['executed'])) {
+    if(empty($pid)) {
+      $output = array(bibdk_voxb_ajax_review_saved($voxb_id), ctools_modal_command_dismiss());
+    }
+    else {
+      $output = array(bibdk_voxb_ajax_review_created($pid), ctools_modal_command_dismiss());
+    }
+  }
+
+  print ajax_render($output);
+}
+
 /**
  * Login form generator
  * @param $js
@@ -105,6 +153,7 @@ function bibdk_modal_register_form($js) {
   $form_state = _bibdk_modal_set_form_state();
 
   $output = ctools_modal_form_wrapper('user_register_form', $form_state);
+
 
   if (!empty($form_state['executed'])) {
     //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page

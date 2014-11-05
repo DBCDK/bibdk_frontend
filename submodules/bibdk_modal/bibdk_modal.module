@@ -51,6 +51,7 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+
   $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_add_to_favorites_callback',
@@ -58,6 +59,32 @@ function bibdk_modal_menu() {
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/voxb/review/edit'] = array(
+    'title' => 'Edit review',
+    'page callback' => 'bibdk_modal_review_edit_node',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/voxb/review/create'] = array(
+    'title' => 'Edit review',
+    'page callback' => 'bibdk_modal_review_create_node',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/%ctools_js/voxb/offensive'] = array(
+    'title' => t('report_offensive_content', array(), array('context'=>'bibdk_voxb')),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('search content'),
+    'page callback' => 'bibdk_modal_offensive_form',
+    'file' => 'includes/bibdk_modal.forms.inc',
   );
 
   return $items;
