@@ -30,7 +30,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-49',
   );
   // Exported menu link: menu-offcanvas-menu-da:http://statsbiblioteket.dk/videnskabeligeartikler/
   $menu_links['menu-offcanvas-menu-da:http://statsbiblioteket.dk/videnskabeligeartikler/'] = array(
@@ -52,7 +52,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-45',
   );
   // Exported menu link: menu-offcanvas-menu-da:overlay/help
   $menu_links['menu-offcanvas-menu-da:overlay/help'] = array(
@@ -74,7 +74,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '-46',
   );
   // Exported menu link: menu-offcanvas-menu-da:overlay/helpdesk
   $menu_links['menu-offcanvas-menu-da:overlay/helpdesk'] = array(
@@ -96,7 +96,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-47',
   );
   // Exported menu link: menu-offcanvas-menu-da:vejviser
   $menu_links['menu-offcanvas-menu-da:vejviser'] = array(
@@ -118,7 +118,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-48',
   );
   // Exported menu link: menu-offcanvas-menu-eng:<front>
   $menu_links['menu-offcanvas-menu-eng:<front>'] = array(
@@ -140,7 +140,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-49',
   );
   // Exported menu link: menu-offcanvas-menu-eng:http://statsbiblioteket.dk/videnskabeligeartikler/
   $menu_links['menu-offcanvas-menu-eng:http://statsbiblioteket.dk/videnskabeligeartikler/'] = array(
@@ -162,7 +162,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '15',
+    'weight' => '-45',
   );
   // Exported menu link: menu-offcanvas-menu-eng:overlay/help
   $menu_links['menu-offcanvas-menu-eng:overlay/help'] = array(
@@ -184,7 +184,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '10',
+    'weight' => '-46',
   );
   // Exported menu link: menu-offcanvas-menu-eng:overlay/helpdesk
   $menu_links['menu-offcanvas-menu-eng:overlay/helpdesk'] = array(
@@ -206,7 +206,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '7',
+    'weight' => '-47',
   );
   // Exported menu link: menu-offcanvas-menu-eng:vejviser
   $menu_links['menu-offcanvas-menu-eng:vejviser'] = array(
@@ -228,7 +228,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '5',
+    'weight' => '-48',
   );
   // Translatables
   // Included for use with string extractors like potx.
