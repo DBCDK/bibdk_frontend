@@ -49,6 +49,9 @@ function bibdk_article_preprocess_views_view_fields(&$vars) {
     $attributes = array('attributes'=>array('target'=>'_blank'));
     $link = l($link_text, $link_url, $attributes);
 
+    // iniitialize link object
+    $vars['fields']['article_link'] = new stdClass();
+
     // add link field to fields array
     $vars['fields']['article_link']->content = $link;
     $vars['fields']['article_link']->label_html = '';
