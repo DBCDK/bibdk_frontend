@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Article view feature.
+ * Code for the article_view feature.
  */
 
 include_once 'article_view.features.inc';
@@ -13,10 +13,10 @@ include_once 'article_view.features.inc';
  * bibdk_articles_view
  * @param $vars
  */
-function bibdk_article_preprocess_views_view_fields(&$vars) {
+function article_view_preprocess_views_view_fields(&$vars) {
   $view = $vars['view'];
   // only handle bibdk_articles_view
-  if ($view->name != 'bibdk_articles_view') {
+  if ($view->name != 'article_view') {
     return;
   }
   // get the node
@@ -60,10 +60,3 @@ function bibdk_article_preprocess_views_view_fields(&$vars) {
     $vars['fields']['article_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div>';
   }
 }
-
-
-
-
-
-
-

@@ -1,12 +1,11 @@
-name = Article view
-description = article list for frontpage and custom search pages
+name = article_view
+description = bibdk articles in a view(block)
 core = 7.x
-package = Bibliotek.dk
-php = 5.2.4
+package = Features
 version = 7.x-1.0
 project = article_view
 dependencies[] = ctools
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
-features[views_view][] = bibdk_articles_view
+features[views_view][] = article_view
