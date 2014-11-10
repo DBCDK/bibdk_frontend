@@ -22,7 +22,6 @@ function article_view_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'article_view';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -124,6 +123,36 @@ function article_view_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Page type (field_taxonomy) */
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['id'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['table'] = 'field_data_field_taxonomy';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['field'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_options']['argument'] = 'alle_materialer';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['break_phrase'] = TRUE;
+  /* Contextual filter: Content: page region (field_page_region) */
+  $handler->display->display_options['arguments']['field_page_region_tid']['id'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['table'] = 'field_data_field_page_region';
+  $handler->display->display_options['arguments']['field_page_region_tid']['field'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_options']['argument'] = 'bottom';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_page_region_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['vocabularies'] = array(
+    'page_region' => 'page_region',
+  );
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['type'] = 'convert';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -143,21 +172,126 @@ function article_view_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: bottom pane */
+  $handler = $view->new_display('panel_pane', 'bottom pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Page type (field_taxonomy) */
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['id'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['table'] = 'field_data_field_taxonomy';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['field'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_options']['argument'] = 'alle_materialer';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['break_phrase'] = TRUE;
+  /* Contextual filter: Content: page region (field_page_region) */
+  $handler->display->display_options['arguments']['field_page_region_tid']['id'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['table'] = 'field_data_field_page_region';
+  $handler->display->display_options['arguments']['field_page_region_tid']['field'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_options']['argument'] = 'bottom';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_page_region_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['vocabularies'] = array(
+    'page_region' => 'page_region',
+  );
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_page_region_tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['argument_input'] = array(
+    'field_taxonomy_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:file.fid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Page type (field_taxonomy)',
+    ),
+    'field_page_region_tid' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_vocabulary.name',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: page region (field_page_region)',
+    ),
+  );
+
+  /* Display: top pane */
+  $handler = $view->new_display('panel_pane', 'top pane', 'panel_pane_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Page type (field_taxonomy) */
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['id'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['table'] = 'field_data_field_taxonomy';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['field'] = 'field_taxonomy_tid';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['default_argument_options']['argument'] = 'alle_materialer';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_taxonomy_tid']['break_phrase'] = TRUE;
+  /* Contextual filter: Content: page region (field_page_region) */
+  $handler->display->display_options['arguments']['field_page_region_tid']['id'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['table'] = 'field_data_field_page_region';
+  $handler->display->display_options['arguments']['field_page_region_tid']['field'] = 'field_page_region_tid';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_page_region_tid']['default_argument_options']['argument'] = 'top';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_page_region_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_page_region_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['vocabularies'] = array(
+    'page_region' => 'page_region',
+  );
+  $handler->display->display_options['arguments']['field_page_region_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_page_region_tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['argument_input'] = array(
+    'field_taxonomy_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:file.fid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Page type (field_taxonomy)',
+    ),
+    'field_page_region_tid' => array(
+      'type' => 'context',
+      'context' => 'entity:file.fid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: page region (field_page_region)',
+    ),
+  );
   $translatables['article_view'] = array(
     t('Master'),
-    t('article_view'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('All'),
     t('Block'),
-    t('Content pane'),
+    t('bottom pane'),
     t('View panes'),
+    t('top pane'),
   );
   $export['article_view'] = $view;
 
