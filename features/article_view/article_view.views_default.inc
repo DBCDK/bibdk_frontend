@@ -142,6 +142,10 @@ function article_view_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['article_view'] = array(
     t('Master'),
     t('article_view'),
@@ -152,6 +156,8 @@ function article_view_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Block'),
+    t('Content pane'),
+    t('View panes'),
   );
   $export['article_view'] = $view;
 
