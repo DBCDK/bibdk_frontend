@@ -174,20 +174,6 @@ function bibdk_frontend_bibdk_tabs_alter(&$data) {
   }
 }
 
-/**
- * @param $data
- * @param $block
- */
-function bibdk_frontend_block_view_alter(&$data, $block) {
-  if ($block->delta == 'menu-global-login-menu') {
-    foreach ($data['content'] as $key => $value) {
-      if (isset($value['#title'])) {
-        $data['content'][$key]['#title'] = t($value['#title'], array(), array('context' => 'bibdk_frontend'));
-      }
-    }
-  }
-}
-
 /** Implements hook_form_FORM_ID_alter (profile2_form)
  * remove account settings
  * unset action region
