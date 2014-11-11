@@ -9,4 +9,3 @@ dependencies[] = features
 dependencies[] = taxonomy
 features[features_api][] = api:1
 features[taxonomy][] = page_region
-features[taxonomy][] = page_types

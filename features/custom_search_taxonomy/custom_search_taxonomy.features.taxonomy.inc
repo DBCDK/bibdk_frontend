@@ -17,13 +17,5 @@ function custom_search_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '0',
     ),
-    'page_types' => array(
-      'name' => 'page_types',
-      'machine_name' => 'page_types',
-      'description' => 'types of custom search pages',
-      'hierarchy' => '0',
-      'module' => 'taxonomy',
-      'weight' => '0',
-    ),
   );
 }
