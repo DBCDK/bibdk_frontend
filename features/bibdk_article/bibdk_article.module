@@ -22,7 +22,7 @@ function bibdk_article_block_info() {
 /** Implements hook_menu
  *
  */
-function bibdk_article_menu() {
+/*function bibdk_article_menu() {
   $items['bibdk_article/searchpage_callback'] = array(
     'title' => 'Custom searchpage AJAX callback for articles',
     'page callback' => 'bibdk_article_searchpage_ajax_callback',
@@ -31,31 +31,31 @@ function bibdk_article_menu() {
   );
 
   return $items;
-}
+}*/
 
 /** Ajax callback function to get articles by searchpage type (film, bøger, net etc.)
  *
  */
-function bibdk_article_searchpage_ajax_callback() {
+/*function bibdk_article_searchpage_ajax_callback() {
   $type = $_GET['type'];
   $block = bibdk_article_block_view('bibdk_articles', $type);
   $out = drupal_render($block);
   drupal_json_output(array('output' => $out));
   exit;
-}
+}*/
 
 /**
  * Implements hook_form_FÒRM_ID_alter (search_block_form)
  *
  * add javascript for getting bibdk_articles
  */
-function bibdk_article_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+/*function bibdk_article_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   if (module_exists('bibdk_custom_search')) {
     $path = drupal_get_path('module', 'bibdk_article');
     $form['#attached']['js'][] =
        $path . '/js/bibdk_article_get_articles.js';
   }
-}
+}*/
 
 /**
  * Implements hook_permission().
@@ -114,11 +114,13 @@ function bibdk_article_node_access($node, $op, $account) {
  */
 
 function bibdk_article_block_view($delta = '', $path = NULL) {
+  dpm('BLOCK VIEW');
   $block = array();
 
   if (!isset($path)) {
     $path = current_path();
   }
+
 
   switch ($delta) {
     case 'bibdk_articles':
@@ -140,6 +142,8 @@ function bibdk_article_block_view($delta = '', $path = NULL) {
 }
 
 function bibdk_article_get_rendered_articles($path) {
+
+  dpm('RENDER ARTICLES');
   $rendered_articles = array();
   //insert bibdk_helpdesk FIRST in array if it exists
   if ($helpdesk = bibdk_article_render_helpdesk())
@@ -271,6 +275,7 @@ function bibdk_article_theme() {
  */
 
 function bibdk_article_get_article_values() {
+  dpm('FETCH ARTICLES');
   //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
   $columns = array();
   $query = new EntityFieldQuery();
