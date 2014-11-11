@@ -16,9 +16,14 @@ include_once 'article_view.features.inc';
 function article_view_preprocess_views_view_fields(&$vars) {
   $view = $vars['view'];
   // only handle bibdk_articles_view
+
+
+
   if ($view->name != 'article_view') {
     return;
   }
+
+
   // get the node
   $node = node_load($vars['row']->nid);
   $wrapper = entity_metadata_wrapper('node', $node);
@@ -55,7 +60,6 @@ function article_view_preprocess_views_view_fields(&$vars) {
     // add link field to fields array
     $vars['fields']['article_link']->content = $link;
     $vars['fields']['article_link']->label_html = '';
-
     $vars['fields']['article_link']->wrapper_prefix = '<footer class="footer"><div class="field-read-more">';
     $vars['fields']['article_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div>';
   }
