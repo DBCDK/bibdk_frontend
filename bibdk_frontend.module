@@ -174,7 +174,8 @@ function bibdk_frontend_bibdk_tabs_alter(&$data) {
   }
 }
 
-/** Implements hook_form_FORM_ID_alter (profile2_form)
+/**
+ * Implements hook_form_FORM_ID_alter (profile2_form)
  * remove account settings
  * unset action region
  */
