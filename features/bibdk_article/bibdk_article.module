@@ -271,27 +271,13 @@ function bibdk_article_theme() {
 }
 
 /*
- * Fetch nodes of type bibdk_article from db
+ * get articles from db and extract field values
+ *
+ * @return array; an array of field values
  */
 
 function bibdk_article_get_article_values() {
-  dpm('FETCH ARTICLES');
-  //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
-  $columns = array();
-  $query = new EntityFieldQuery();
-
-  $query
-      ->entityCondition('entity_type', 'node', '=')
-      ->propertyCondition('type', 'bibdk_article', '=')
-      ->propertyCondition('status', '1', '=')
-      ->propertyOrderBy('changed', 'DESC');
-
-  $result = $query->execute();
-
-  if (!isset($result['node']))
-    return;
-
-  $articles = node_load_multiple(array_keys($result['node']));
+  $articles = bibdk_article_get_articles();
   $article_fields = field_info_instances('node', 'bibdk_article');
 
   $values = array();
@@ -304,6 +290,31 @@ function bibdk_article_get_article_values() {
     $values[] = $value;
   }
   return $values;
+}
+
+/**
+ * Fetch nodes of type bibdk_article from db
+ *
+ * @return mixed; An array of node objects(articles) or NULL if none found
+ */
+function bibdk_article_get_articles() {
+  //http://api.drupal.org/api/drupal/includes%21common.inc/function/entity_load/7
+  $columns = array();
+  $query = new EntityFieldQuery();
+
+  $query
+    ->entityCondition('entity_type', 'node', '=')
+    ->propertyCondition('type', 'bibdk_article', '=')
+    ->propertyCondition('status', '1', '=')
+    ->propertyOrderBy('changed', 'DESC');
+
+  $result = $query->execute();
+
+  if (!isset($result['node']))
+    return;
+
+  $articles = node_load_multiple(array_keys($result['node']));
+  return $articles;
 }
 
 /**
