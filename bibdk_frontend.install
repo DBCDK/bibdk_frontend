@@ -171,6 +171,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_modal',
     'bibdk_voxb',
     'bibdk_usersettings_language',
+    'custom_search_taxonomy',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');
