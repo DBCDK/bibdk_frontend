@@ -9,7 +9,7 @@ dependencies[] = features
 dependencies[] = image
 dependencies[] = list
 dependencies[] = strongarm
-dependencies[] = taxonomy
+
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field][] = node-bibdk_article-body
