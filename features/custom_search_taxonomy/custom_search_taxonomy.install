@@ -14,7 +14,7 @@ function custom_search_taxonomy_install(){
  * set terms for taxonomies and update the taxonomy
  */
 function custom_search_get_taxonomy_terms(){
-  $page_types = array(
+  $page_type = array(
     'spil',
     'noder',
     'bog',
@@ -24,7 +24,7 @@ function custom_search_get_taxonomy_terms(){
     'net',
     'alle_materialer',
   );
-  custom_search_taxonomy_update_taxonomy('page_types', $page_types);
+  custom_search_taxonomy_update_taxonomy('page_type', $page_type);
   $page_region = array(
     'top',
     'bottom',
