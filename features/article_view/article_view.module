@@ -66,7 +66,7 @@ function article_view_handle_classes($wrapper) {
   $color = empty($color) ? 'light-grey' : $color;
 
   $region = $wrapper->field_page_region->value();
-  if($region->name == 'top'){
+  if(!empty($region) && $region->name == 'top'){
     $classes = bibdk_article_get_classes(4, 'top', 'light-grey');
   }
   else {
