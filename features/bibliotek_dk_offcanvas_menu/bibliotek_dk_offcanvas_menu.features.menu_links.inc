@@ -120,28 +120,6 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: menu-offcanvas-menu-da:user/logout
-  $menu_links['menu-offcanvas-menu-da:user/logout'] = array(
-    'menu_name' => 'menu-offcanvas-menu-da',
-    'link_path' => 'user/logout',
-    'router_path' => 'user/logout',
-    'link_title' => 'Log ud',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'devicetypes' => array(
-        'devicesize_small' => 1,
-        'devicesize_large' => 0,
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-44',
-  );
   // Exported menu link: menu-offcanvas-menu-da:vejviser
   $menu_links['menu-offcanvas-menu-da:vejviser'] = array(
     'menu_name' => 'menu-offcanvas-menu-da',
@@ -274,28 +252,6 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: menu-offcanvas-menu-eng:user/logout
-  $menu_links['menu-offcanvas-menu-eng:user/logout'] = array(
-    'menu_name' => 'menu-offcanvas-menu-eng',
-    'link_path' => 'user/logout',
-    'router_path' => 'user/logout',
-    'link_title' => 'Log out',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'devicetypes' => array(
-        'devicesize_small' => 1,
-        'devicesize_large' => 0,
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-44',
-  );
   // Exported menu link: menu-offcanvas-menu-eng:vejviser
   $menu_links['menu-offcanvas-menu-eng:vejviser'] = array(
     'menu_name' => 'menu-offcanvas-menu-eng',
@@ -329,8 +285,6 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
   t('Home');
   t('Log in');
   t('Log ind');
-  t('Log out');
-  t('Log ud');
   t('Scientific articles');
   t('Spørg biblioteksvagten');
   t('Videnskabelige artikler');
