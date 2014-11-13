@@ -6,14 +6,33 @@
  * set taxonomy terms manually
  *
  */
-function custom_search_taxonomy_install(){
-  custom_search_get_taxonomy_terms();
+function custom_search_taxonomy_install() {
+  custom_search_taxonomy_create_vocabularies();
+  custom_search_set_taxonomy_terms();
+}
+
+function custom_search_taxonomy_create_vocabularies() {
+  $page_type = (object) array(
+    'name' => 'Page type',
+    'description' => 'page types for custom search pages',
+    'machine_name' => 'page_type',
+  );
+
+  taxonomy_vocabulary_save($page_type);
+
+  $page_region = (object) array(
+    'name' => 'Page region',
+    'description' => 'page regions for article view',
+    'machine_name' => 'page_region',
+  );
+
+  taxonomy_vocabulary_save($page_region);
 }
 
 /**
  * set terms for taxonomies and update the taxonomy
  */
-function custom_search_get_taxonomy_terms(){
+function custom_search_set_taxonomy_terms() {
   $page_type = array(
     'spil',
     'noder',
@@ -29,13 +48,13 @@ function custom_search_get_taxonomy_terms(){
     'top',
     'bottom',
   );
-  custom_search_taxonomy_update_taxonomy('page_region',$page_region);
+  custom_search_taxonomy_update_taxonomy('page_region', $page_region);
 }
 
 /**
  * update taxonomy with given terms
- * @param $machine_name; the taxonomy to update
- * @param $terms; the terms to update with
+ * @param $machine_name ; the taxonomy to update
+ * @param $terms ; the terms to update with
  */
 function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
   $tax = taxonomy_vocabulary_machine_name_load($machine_name);
@@ -46,8 +65,8 @@ function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
   else {
     foreach ($terms as $weight => $term) {
       // check if term is already there
-      $tmp = taxonomy_get_term_by_name($term,$machine_name);
-      if(empty($tmp)) {
+      $tmp = taxonomy_get_term_by_name($term, $machine_name);
+      if (empty($tmp)) {
         $data = new stdClass();
         $data->name = $term;
         $data->vid = $tax->vid;
@@ -57,10 +76,6 @@ function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
       }
     }
   }
-}
-
-function custom_search_taxonomy_update_7008() {
-  custom_search_get_taxonomy_terms();
 }
 
 /*function custom_search_taxonomy_update_7006() {
