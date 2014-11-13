@@ -142,7 +142,6 @@ function bibdk_frontend_setup_cache() {
 function _bibdk_frontend_enable_modules() {
   $modules = array(
     //Features
-    'article_view',
     'bibdk_language_settings',
     'bibliotek_dk_global_login_menu',
     'topbar_menu_block_feature',
@@ -163,7 +162,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_work_entity_feature',
     'bibdk_ie6nomore_settings',
     //Content
-    'bibdk_article',
+    'article_view',
     'bibdk_banner',
     'bibdk_adhl',
     //Submodule
