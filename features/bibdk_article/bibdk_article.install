@@ -8,7 +8,7 @@
 /**
  * Update existing nodes with taxonomy terms
  */
-function bibdk_article_update_7013() {
+function bibdk_article_update_7027() {
   $articles = bibdk_article_get_articles();
   if (empty($articles)) {
     return;
@@ -48,21 +48,10 @@ function bibdk_article_update_7013() {
   }
 }
 
-/**
- * enable taxonomy module
- */
-function bibdk_article_update_7011() {
-  module_enable(array('taxonomy'));
-}
-
-function bibdk_article_update_7012(){
-  module_enable(array('custom_search_taxonomy'));
-}
-
 /** Implements hook_update_N
  * Delete tables and fields for deprecated fields 
  */
-function bibdk_article_update_7009() {
+function bibdk_article_update_7006() {
   $field_names = array
     (
     'field_bibdk_article_image',
@@ -96,14 +85,14 @@ function bibdk_article_update_7009() {
  * Update existing articles page type field to conform to aritcle_view
  * @param $sandbox
  */
-function bibdk_article_update_7010(&$sandbox) {
+/*function bibdk_article_update_7010(&$sandbox) {
   $valuemap = _bibdk_article_get_value_map();
   foreach ($valuemap as $key => $value) {
     db_update('field_data_field_page')
       ->fields(array('field_page_value' => $value))
       ->condition('field_page_value', $key, '=')->execute();
   }
-}
+}*/
 
 function _bibdk_article_get_value_map(){
   return array(
