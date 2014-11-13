@@ -7,7 +7,7 @@
  *
  */
 function custom_search_taxonomy_install() {
-  custom_search_taxonomy_create_vocabularies();
+  //custom_search_taxonomy_create_vocabularies();
   custom_search_set_taxonomy_terms();
 }
 
