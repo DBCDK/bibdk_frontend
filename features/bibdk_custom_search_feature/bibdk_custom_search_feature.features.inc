@@ -999,7 +999,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '13f9e684-9da0-b9b4-f107-223551514ae2';
   $map_element->me_uuid = '1caf330f-4a89-db84-5d76-eea95b25e73e';
   $map_element->region = 'main';
-  $map_element->sort = -50;
+  $map_element->sort = -47;
   $export['1caf330f-4a89-db84-5d76-eea95b25e73e'] = $map_element;
 
   $map_element = new stdClass();
@@ -1069,7 +1069,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'ccf7115d-8830-57f4-21c4-4b7a9c204e9b';
   $map_element->me_uuid = '36fbc763-5883-2174-1598-99eb1beb3bfe';
   $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->sort = -50;
   $export['36fbc763-5883-2174-1598-99eb1beb3bfe'] = $map_element;
 
   $map_element = new stdClass();
@@ -1279,7 +1279,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '4a147ba3-9e4e-bef4-75b3-2a1a02a6494d';
   $map_element->me_uuid = 'a900cbfc-827f-b4d4-21c7-3004631c33a5';
   $map_element->region = 'main';
-  $map_element->sort = -49;
+  $map_element->sort = -46;
   $export['a900cbfc-827f-b4d4-21c7-3004631c33a5'] = $map_element;
 
   $map_element = new stdClass();
@@ -1309,7 +1309,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'b0289528-53b4-2074-258c-735b863085e1';
   $map_element->me_uuid = 'b8e42a9f-1bdf-f424-21dd-0aaf7aa70682';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -49;
   $export['b8e42a9f-1bdf-f424-21dd-0aaf7aa70682'] = $map_element;
 
   $map_element = new stdClass();
@@ -1389,7 +1389,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'acdb74f6-dd28-81c4-5190-af28a09e5d47';
   $map_element->me_uuid = 'da97cc66-0faa-3314-61f1-b90dcb80d330';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -48;
   $export['da97cc66-0faa-3314-61f1-b90dcb80d330'] = $map_element;
 
   $map_element = new stdClass();
@@ -6408,18 +6408,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['bde43043-5498-4b53-83b4-2b5eccc2b82e'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
-  $option->o_uuid = 'bdf133e7-9a53-42fe-8cc6-8ee526b70a38';
-  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
-  $option->label = 'Playstation 4';
-  $option->value = '("playstation 4")';
-  $option->expand = '0';
-  $option->is_disabled = TRUE;
-  $export['bdf133e7-9a53-42fe-8cc6-8ee526b70a38'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
