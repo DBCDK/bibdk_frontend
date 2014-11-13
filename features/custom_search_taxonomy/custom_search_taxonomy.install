@@ -7,6 +7,11 @@
  *
  */
 function custom_search_taxonomy_install() {
+  module_load_include('module', 'uuid', 'uuid');
+  _uuid_install_uuid_fields();
+  uuid_sync_all();
+
+
   custom_search_taxonomy_create_vocabularies();
   custom_search_set_taxonomy_terms();
 }
