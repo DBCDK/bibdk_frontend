@@ -7,26 +7,38 @@
  *
  */
 function custom_search_taxonomy_install() {
-  //custom_search_taxonomy_create_vocabularies();
+  custom_search_taxonomy_create_vocabularies();
   custom_search_set_taxonomy_terms();
 }
 
 function custom_search_taxonomy_create_vocabularies() {
-  $page_type = (object) array(
-    'name' => 'Page type',
-    'description' => 'page types for custom search pages',
-    'machine_name' => 'page_type',
-  );
+  $vocab = taxonomy_vocabulary_machine_name_load('page_type');
+  if(empty($vocab)) {
+    $page_type = (object) array(
+      'name' => 'Page type',
+      'description' => 'page types for custom search pages',
+      'machine_name' => 'page_type',
+    );
 
-  taxonomy_vocabulary_save($page_type);
+    taxonomy_vocabulary_save($page_type);
+    if(empty($page_type->vid)){
+      drupal_set_message('PAGE_TYPE NOT SAVED CORRECTLY','error');
+    }
+  }
 
-  $page_region = (object) array(
-    'name' => 'Page region',
-    'description' => 'page regions for article view',
-    'machine_name' => 'page_region',
-  );
+  $vocab = taxonomy_vocabulary_machine_name_load('page_region');
+  if(empty($vocab)) {
+    $page_region = (object) array(
+      'name' => 'Page region',
+      'description' => 'page regions for article view',
+      'machine_name' => 'page_region',
+    );
 
-  taxonomy_vocabulary_save($page_region);
+    taxonomy_vocabulary_save($page_region);
+    if(empty($page_region->vid)){
+      drupal_set_message('PAGE_REGION NOT SAVED CORRECTLY','error');
+    }
+  }
 }
 
 /**
@@ -63,12 +75,12 @@ function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
     drupal_set_message('Error getting taxonomy ' . $machine_name, 'error');
   }
   else {
-    foreach ($terms as $weight => $term) {
+    foreach ($terms as $weight => $name) {
       // check if term is already there
-      $tmp = taxonomy_get_term_by_name($term, $machine_name);
+      $tmp = taxonomy_get_term_by_name($name, $machine_name);
       if (empty($tmp)) {
         $data = new stdClass();
-        $data->name = $term;
+        $data->name = $name;
         $data->vid = $tax->vid;
         $data->weight = $weight;
 
