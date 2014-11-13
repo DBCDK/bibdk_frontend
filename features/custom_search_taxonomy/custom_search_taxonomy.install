@@ -33,7 +33,7 @@ function custom_search_taxonomy_create_vocabularies() {
  * set terms for taxonomies and update the taxonomy
  */
 function custom_search_set_taxonomy_terms() {
-  $page_type = array(
+  $page_types = array(
     'spil',
     'noder',
     'bog',
@@ -43,12 +43,12 @@ function custom_search_set_taxonomy_terms() {
     'net',
     'alle_materialer',
   );
-  custom_search_taxonomy_update_taxonomy('page_type', $page_type);
-  $page_region = array(
+  custom_search_taxonomy_update_taxonomy('page_type', $page_types);
+  $page_regions = array(
     'top',
     'bottom',
   );
-  custom_search_taxonomy_update_taxonomy('page_region', $page_region);
+  custom_search_taxonomy_update_taxonomy('page_region', $page_regions);
 }
 
 /**
