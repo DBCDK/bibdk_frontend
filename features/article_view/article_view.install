@@ -1,9 +1,0 @@
-<?php
-
-/**
- *  Implements hook_update_N
- * enable view_content to allow views in panels
- */
-function article_view_update_2001(&$sandbox) {
-  module_enable(array('views_content'));
-}
