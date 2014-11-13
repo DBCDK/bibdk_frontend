@@ -23,6 +23,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -45,6 +48,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -67,6 +73,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -89,6 +98,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 0,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 0,
+        'devicesize_xxlarge' => 0,
       ),
     ),
     'module' => 'menu',
@@ -111,6 +123,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 0,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 0,
+        'devicesize_xxlarge' => 0,
       ),
     ),
     'module' => 'menu',
@@ -133,6 +148,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -155,6 +173,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -177,6 +198,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -199,6 +223,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',
@@ -221,6 +248,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 0,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 0,
+        'devicesize_xxlarge' => 0,
       ),
     ),
     'module' => 'menu',
@@ -243,6 +273,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 0,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 0,
+        'devicesize_xxlarge' => 0,
       ),
     ),
     'module' => 'menu',
@@ -265,6 +298,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       'devicetypes' => array(
         'devicesize_small' => 1,
         'devicesize_large' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
       ),
     ),
     'module' => 'menu',

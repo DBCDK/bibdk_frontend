@@ -268,8 +268,11 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
   $current_settings = !empty($form['options']['#value']['devicetypes']) ? $form['options']['#value']['devicetypes'] : NULL;
 
   $device_types = array(
-    'small',
-    'large',
+    'small' => '< 480px',
+    'medium' => '> 768px',
+    'large' => '> 1280px',
+    'xlarge' => '> 1440px',
+    'xxlarge' => '> ∞',
   );
 
   $form['devicetypes'] = array(
@@ -278,13 +281,13 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
     '#description' => 'Set visibility of menu items on different devicesizes'
   );
 
-  foreach ($device_types as $type) {
+  foreach ($device_types as $type => $width) {
     $current_type = 'devicesize_' . $type;
     $form['devicetypes'][$current_type] = array(
       '#type' => 'checkbox',
       '#title' => ucfirst($type),
       '#default_value' => isset($current_settings[$current_type]) ? $current_settings[$current_type] : TRUE,
-      '#description' => "This menu item should be visible on <b>$type</b> screens"
+      '#description' => "This menu item should be visible on <b>$type</b> screens ($width)"
     );
   }
 }
