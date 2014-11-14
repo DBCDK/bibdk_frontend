@@ -31,7 +31,7 @@ function bibdk_frontend_user_login(&$edit, $account) {
     _bibdk_frontend_login_redirect($edit, $url, $options);
   }
   // do NOT redirect on password reset || go to frontpage on normal login
-  elseif (( !isset($_GET['pass-reset-token']) && (isset($_POST['form_id']) && $_POST['form_id'] != 'user_pass_reset')) || !isset($_POST['form_id'])) {
+  elseif ((!isset($_GET['pass-reset-token']) && (isset($_POST['form_id']) && $_POST['form_id'] != 'user_pass_reset')) || !isset($_POST['form_id'])) {
     $url = '';
     _bibdk_frontend_login_redirect($edit, $url, $options);
   }
@@ -150,9 +150,9 @@ function bibdk_frontend_block_info() {
  */
 function bibdk_frontend_block_view($delta = '') {
   $block = array();
-  if ($delta == 'bibdk_tabs'){
+  if ($delta == 'bibdk_tabs') {
     $tabs = menu_local_tabs();
-    if(!empty($tabs['#primary']) || !empty($tabs['#secondary'])){
+    if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])) {
       $block['content'] = $tabs;
     }
   }
@@ -175,20 +175,7 @@ function bibdk_frontend_bibdk_tabs_alter(&$data) {
 }
 
 /**
- * @param $data
- * @param $block
- */
-function bibdk_frontend_block_view_alter(&$data, $block) {
-  if ($block->delta == 'menu-global-login-menu') {
-    foreach ($data['content'] as $key => $value) {
-      if (isset($value['#title'])) {
-        $data['content'][$key]['#title'] = t($value['#title'], array(), array('context' => 'bibdk_frontend'));
-      }
-    }
-  }
-}
-
-/** Implements hook_form_FORM_ID_alter (profile2_form)
+ * Implements hook_form_FORM_ID_alter (profile2_form)
  * remove account settings
  * unset action region
  */
@@ -233,7 +220,7 @@ function bibdk_frontend_menu() {
  *
  * @param $items
  */
-function bibdk_frontend_menu_alter(&$items){
+function bibdk_frontend_menu_alter(&$items) {
   $items['user/password']['type'] = MENU_CALLBACK;
   $items['user/register']['type'] = MENU_CALLBACK;
   $items['user/%user/view']['title'] = 'My page';
@@ -271,6 +258,58 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
   $form['#action'] = url('user/login', array('query' => array('destination' => (isset($_SESSION['referrer'])) ? $_SESSION['referrer'] : '')));
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adds checkboxes in the admin interface that gives admin the ability to set
+ * visibility of specific links on different devices.
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ */
+function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id) {
+  $current_settings = !empty($form['options']['#value']['devicetypes']) ? $form['options']['#value']['devicetypes'] : NULL;
+
+  $device_types = array(
+    'small' => '< 480px',
+    'medium' => '> 768px',
+    'large' => '> 1280px',
+    'xlarge' => '> 1440px',
+    'xxlarge' => '> ∞',
+  );
+
+  $form['devicetypes'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Device visibility',
+    '#description' => 'Set visibility of menu items on different devicesizes'
+  );
+
+  foreach ($device_types as $type => $width) {
+    $current_type = 'devicesize_' . $type;
+    $form['devicetypes'][$current_type] = array(
+      '#type' => 'checkbox',
+      '#title' => ucfirst($type),
+      '#default_value' => isset($current_settings[$current_type]) ? $current_settings[$current_type] : TRUE,
+      '#description' => "This menu item should be visible on <b>$type</b> screens ($width)"
+    );
+  }
+}
+
+/**
+ * Implements hook_menu_link_alter().
+ * The settings related to devicevisibility should be stored in db with the rest
+ * of the link settings.
+ *
+ * @param $item
+ */
+function bibdk_frontend_menu_link_alter(&$item) {
+  foreach ($item as $key => $value) {
+    if (strpos($key, 'devicesize_', 0) !== FALSE) {
+      $item['options']['devicetypes'][$key] = $value;
+    }
+  }
+}
 
 /**
  * Implements hook_exit().
@@ -284,20 +323,19 @@ function bibdk_frontend_exit() {
   }
 }
 
-
 /**
  * Implements template_preprocess_hook().
  */
 function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
-  if ( !empty($variables['form']['#data_toggle']) ) {
-    foreach ( $variables['form']['#data_toggle'] as $n => $toggle ){
-      $key   = $toggle['key'];
+  if (!empty($variables['form']['#data_toggle'])) {
+    foreach ($variables['form']['#data_toggle'] as $n => $toggle) {
+      $key = $toggle['key'];
       $u_key = drupal_html_id($toggle['key']);
       $first = $toggle['options']['first']['value'];
-      $last  = $toggle['options']['last']['value'];
-      $variables['form'][$key]['#title']    = '<span data-child="' . $u_key . '" class="toggle-subgroup"> + </span>' . $variables['form'][$key]['#title'];
+      $last = $toggle['options']['last']['value'];
+      $variables['form'][$key]['#title'] = '<span data-child="' . $u_key . '" class="toggle-subgroup"> + </span>' . $variables['form'][$key]['#title'];
       $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $u_key . '" style="display: block;">';
-      $variables['form'][$last]['#suffix']  = '</fieldset>';
+      $variables['form'][$last]['#suffix'] = '</fieldset>';
     }
     unset($variables['form']['#data_toggle']);
   }
