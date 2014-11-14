@@ -24,7 +24,7 @@
 
   function worktabsClick(item) {
     var id = item[0].getAttribute('href');
-    $(id + ' .tab-content').on('DOMNodeInserted', function() {
+    $(id + ' .tab-content').bind('DOMNodeInserted', function() {
       var list = $(id + ' .tab-content .worktabs-no-content');
       list.map(function(i, e) {
         var p = $(e).parents().filter('.tab-item');
