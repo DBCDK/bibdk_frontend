@@ -255,7 +255,7 @@ function bibdk_frontend_form_user_login_block_alter(&$form, $form_state, $form_i
 }
 
 /**
- * Implementats hook_form_FORM_ID_alter().
+ * Implements hook_form_FORM_ID_alter().
  *
  * Adds checkboxes in the admin interface that gives admin the ability to set
  * visibility of specific links on different devices.
