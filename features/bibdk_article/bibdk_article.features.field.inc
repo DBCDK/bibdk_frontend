@@ -92,7 +92,7 @@ function bibdk_article_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -173,7 +173,7 @@ function bibdk_article_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -246,7 +246,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '9',
       ),
     ),
   );
@@ -325,7 +325,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '11',
       ),
     ),
   );
@@ -417,7 +417,7 @@ function bibdk_article_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '11',
+        'weight' => '7',
       ),
     ),
   );
@@ -579,7 +579,7 @@ function bibdk_article_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '4',
       ),
     ),
   );
@@ -659,7 +659,7 @@ function bibdk_article_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '3',
       ),
     ),
   );
@@ -740,7 +740,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '14',
       ),
     ),
   );
@@ -827,7 +827,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '15',
+        'weight' => '6',
       ),
     ),
   );
@@ -914,7 +914,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '5',
       ),
     ),
   );
@@ -989,7 +989,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '10',
       ),
     ),
   );
@@ -1075,7 +1075,7 @@ function bibdk_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '8',
       ),
     ),
   );
