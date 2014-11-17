@@ -8,7 +8,7 @@
 /**
  * Update existing nodes with taxonomy terms
  */
-function bibdk_article_update_7027() {
+function bibdk_article_update_7037() {
   $articles = bibdk_article_get_articles();
   if (empty($articles)) {
     return;

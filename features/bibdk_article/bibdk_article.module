@@ -19,6 +19,17 @@ function bibdk_article_block_info() {
   return $blocks;
 }
 
+/**
+ * Implement hook_form _FORM_ID_alter (bibdk-article-node-form)
+ *
+ * hide deprecated fields
+ * @TODO delete deprecated fields
+ */
+function bibdk_article_form_bibdk_article_node_form_alter(&$form, &$form_state){
+  $form['field_link']['#type'] = 'hidden';
+  $form['field_page']['#type'] = 'hidden';
+}
+
 /** Implements hook_menu
  *
  */
@@ -114,7 +125,6 @@ function bibdk_article_node_access($node, $op, $account) {
  */
 
 function bibdk_article_block_view($delta = '', $path = NULL) {
-  dpm('BLOCK VIEW');
   $block = array();
 
   if (!isset($path)) {
@@ -142,8 +152,6 @@ function bibdk_article_block_view($delta = '', $path = NULL) {
 }
 
 function bibdk_article_get_rendered_articles($path) {
-
-  dpm('RENDER ARTICLES');
   $rendered_articles = array();
   //insert bibdk_helpdesk FIRST in array if it exists
   if ($helpdesk = bibdk_article_render_helpdesk())
