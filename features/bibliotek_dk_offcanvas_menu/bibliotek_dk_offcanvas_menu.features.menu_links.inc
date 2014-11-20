@@ -46,9 +46,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
         'title' => '',
       ),
       'devicetypes' => array(
-        'devicesize_small' => 1,
+        'devicesize_small' => 0,
         'devicesize_large' => 1,
-        'devicesize_medium' => 1,
+        'devicesize_medium' => 0,
         'devicesize_xlarge' => 1,
         'devicesize_xxlarge' => 1,
       ),
@@ -58,7 +58,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-44',
   );
   // Exported menu link: menu-offcanvas-menu-da:overlay/help
   $menu_links['menu-offcanvas-menu-da:overlay/help'] = array(
@@ -79,11 +79,11 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-45',
   );
   // Exported menu link: menu-offcanvas-menu-da:overlay/helpdesk
   $menu_links['menu-offcanvas-menu-da:overlay/helpdesk'] = array(
@@ -108,7 +108,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '-46',
   );
   // Exported menu link: menu-offcanvas-menu-da:user/login
   $menu_links['menu-offcanvas-menu-da:user/login'] = array(
@@ -196,9 +196,9 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
         'title' => '',
       ),
       'devicetypes' => array(
-        'devicesize_small' => 1,
+        'devicesize_small' => 0,
         'devicesize_large' => 1,
-        'devicesize_medium' => 1,
+        'devicesize_medium' => 0,
         'devicesize_xlarge' => 1,
         'devicesize_xxlarge' => 1,
       ),
@@ -208,7 +208,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-44',
   );
   // Exported menu link: menu-offcanvas-menu-eng:overlay/help
   $menu_links['menu-offcanvas-menu-eng:overlay/help'] = array(
@@ -229,11 +229,11 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-45',
   );
   // Exported menu link: menu-offcanvas-menu-eng:overlay/helpdesk
   $menu_links['menu-offcanvas-menu-eng:overlay/helpdesk'] = array(
@@ -258,7 +258,7 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '-46',
   );
   // Exported menu link: menu-offcanvas-menu-eng:user/login
   $menu_links['menu-offcanvas-menu-eng:user/login'] = array(
