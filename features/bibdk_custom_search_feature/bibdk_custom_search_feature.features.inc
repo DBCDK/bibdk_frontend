@@ -999,7 +999,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '13f9e684-9da0-b9b4-f107-223551514ae2';
   $map_element->me_uuid = '1caf330f-4a89-db84-5d76-eea95b25e73e';
   $map_element->region = 'main';
-  $map_element->sort = -50;
+  $map_element->sort = -47;
   $export['1caf330f-4a89-db84-5d76-eea95b25e73e'] = $map_element;
 
   $map_element = new stdClass();
@@ -1069,7 +1069,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'ccf7115d-8830-57f4-21c4-4b7a9c204e9b';
   $map_element->me_uuid = '36fbc763-5883-2174-1598-99eb1beb3bfe';
   $map_element->region = 'main';
-  $map_element->sort = -46;
+  $map_element->sort = -50;
   $export['36fbc763-5883-2174-1598-99eb1beb3bfe'] = $map_element;
 
   $map_element = new stdClass();
@@ -1279,7 +1279,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = '4a147ba3-9e4e-bef4-75b3-2a1a02a6494d';
   $map_element->me_uuid = 'a900cbfc-827f-b4d4-21c7-3004631c33a5';
   $map_element->region = 'main';
-  $map_element->sort = -49;
+  $map_element->sort = -46;
   $export['a900cbfc-827f-b4d4-21c7-3004631c33a5'] = $map_element;
 
   $map_element = new stdClass();
@@ -1309,7 +1309,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'b0289528-53b4-2074-258c-735b863085e1';
   $map_element->me_uuid = 'b8e42a9f-1bdf-f424-21dd-0aaf7aa70682';
   $map_element->region = 'main';
-  $map_element->sort = -48;
+  $map_element->sort = -49;
   $export['b8e42a9f-1bdf-f424-21dd-0aaf7aa70682'] = $map_element;
 
   $map_element = new stdClass();
@@ -1389,7 +1389,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_map_element() {
   $map_element->e_uuid = 'acdb74f6-dd28-81c4-5190-af28a09e5d47';
   $map_element->me_uuid = 'da97cc66-0faa-3314-61f1-b90dcb80d330';
   $map_element->region = 'main';
-  $map_element->sort = -47;
+  $map_element->sort = -48;
   $export['da97cc66-0faa-3314-61f1-b90dcb80d330'] = $map_element;
 
   $map_element = new stdClass();
@@ -3054,8 +3054,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '2f1986f4-c08a-b044-95ad-464501323bd7';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -96;
-  $option->label = 'farsi';
+  $option->sort = -90;
+  $option->label = 'persisk';
   $option->value = 'term.language="per"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
@@ -3126,7 +3126,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '316a7dea-9c98-70e4-a9b1-03767f6e368e';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -90;
+  $option->sort = -91;
   $option->label = 'norsk';
   $option->value = 'term.language="nor"';
   $option->expand = '0';
@@ -3762,7 +3762,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '4ca8354d-2a97-e5f4-f1fa-80229c9b2ff4';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -91;
+  $option->sort = -92;
   $option->label = 'kinesisk';
   $option->value = 'term.language="chi"';
   $option->expand = '0';
@@ -4026,7 +4026,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '5c28868d-dde5-48fb-af37-4da92b760f05';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = 10;
+  $option->sort = -80;
   $option->label = 'alle';
   $option->value = 'facet.language=facet.language';
   $option->expand = '0';
@@ -6220,18 +6220,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = 'b766ca42-7778-76a4-1d6f-1091c9d3a3db';
-  $option->v_uuid = '95788824-6d40-ebd4-8912-ce2194f48d62';
-  $option->sort = -94;
-  $option->label = 'farsi';
-  $option->value = 'term.language="per"';
-  $option->expand = '0';
-  $option->is_disabled = FALSE;
-  $export['b766ca42-7778-76a4-1d6f-1091c9d3a3db'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = 'b8085e36-a519-6cf4-59e9-d8c015ab5569';
   $option->v_uuid = '12a1e89e-1274-a394-a12a-588d3abde6e9';
   $option->sort = -91;
@@ -6690,7 +6678,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'cb75ed6d-0a8d-e624-0d26-8929e18564d9';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -95;
+  $option->sort = -96;
   $option->label = 'fransk';
   $option->value = 'term.language=("fre" or "fra")';
   $option->expand = '0';
@@ -6906,7 +6894,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd3f4f0e3-cdd7-b174-59b2-96afb155a93a';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -94;
+  $option->sort = -95;
   $option->label = 'hollandsk';
   $option->value = 'term.language=("dut" or "fle")';
   $option->expand = '0';
@@ -7074,7 +7062,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'd7a82e8c-d8db-7d34-5d45-773837ceda52';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -92;
+  $option->sort = -93;
   $option->label = 'italiensk';
   $option->value = 'term.language="ita"';
   $option->expand = '0';
@@ -7888,18 +7876,6 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
-  $option->o_uuid = 'fab66772-bda7-3ab4-4904-f0d0f91a2891';
-  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -89;
-  $option->label = 'Xbox';
-  $option->value = '"xbox"';
-  $option->expand = '0';
-  $option->is_disabled = TRUE;
-  $export['fab66772-bda7-3ab4-4904-f0d0f91a2891'] = $option;
-
-  $option = new stdClass();
-  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
-  $option->api_version = 1;
   $option->o_uuid = 'fc0fd781-c3b8-8864-b527-b73bb75359af';
   $option->v_uuid = 'e8258795-3bbe-5e34-fda2-04a8b420d93f';
   $option->sort = -70;
@@ -7962,7 +7938,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'fd6b4c9d-6d2d-b414-d9e0-5c0bd1263e65';
   $option->v_uuid = '4ed2c5d5-656b-be14-b55f-fbc7c1aff047';
-  $option->sort = -93;
+  $option->sort = -94;
   $option->label = 'islandsk';
   $option->value = 'term.language=("ice" or "isl")';
   $option->expand = '0';
