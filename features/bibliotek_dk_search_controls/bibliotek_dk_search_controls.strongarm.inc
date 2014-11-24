@@ -72,6 +72,12 @@ function bibliotek_dk_search_controls_strongarm() {
           'default' => 0,
           'sort' => '-3',
         ),
+        9 => array(
+          'label' => 'Jeg leder efter en forfatter',
+          'value' => 'rank_author',
+          'default' => 0,
+          'sort' => '-2',
+        ),
       ),
     ),
   );
