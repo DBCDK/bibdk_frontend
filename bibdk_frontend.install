@@ -399,8 +399,8 @@ function bibdk_frontend_update_7018(&$sandbox) {
  */
 function bibdk_frontend_set_weight() {
   db_update('system')->fields(array(
-      'weight' => 0,
-    ))->condition('type', 'module')->condition('name', 'bibdk_frontend')->execute();
+    'weight' => 0,
+  ))->condition('type', 'module')->condition('name', 'bibdk_frontend')->execute();
 
 }
 
@@ -461,10 +461,14 @@ function bibdk_frontend_update_7025(&$sandbox) {
  * Enable bibliotek_dk_offcanvas_menu for existing installations
  */
 function bibdk_frontend_update_7026(&$sandbox) {
-  module_enable(array('bibliotek_dk_offcanvas_menu', 'bibliotek_dk_footer_menu'));
+  module_enable(array(
+    'bibliotek_dk_offcanvas_menu',
+    'bibliotek_dk_footer_menu',
+  ));
+
   module_disable(array(
-      'bibliotek_dk_global_login_menu',
-      'bibliotek_dk_header_actions',
-      'topbar_menu_block_feature'
-    ));
+    'bibliotek_dk_global_login_menu',
+    'bibliotek_dk_header_actions',
+    'topbar_menu_block_feature'
+  ));
 }
