@@ -110,6 +110,31 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: menu-offcanvas-menu-da:user/cart
+  $menu_links['menu-offcanvas-menu-da:user/cart'] = array(
+    'menu_name' => 'menu-offcanvas-menu-da',
+    'link_path' => 'user/cart',
+    'router_path' => 'user/cart',
+    'link_title' => 'Huskeliste',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_large' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
+  );
   // Exported menu link: menu-offcanvas-menu-da:user/login
   $menu_links['menu-offcanvas-menu-da:user/login'] = array(
     'menu_name' => 'menu-offcanvas-menu-da',
@@ -260,6 +285,31 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: menu-offcanvas-menu-eng:user/cart
+  $menu_links['menu-offcanvas-menu-eng:user/cart'] = array(
+    'menu_name' => 'menu-offcanvas-menu-eng',
+    'link_path' => 'user/cart',
+    'router_path' => 'user/cart',
+    'link_title' => 'Cart',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'devicetypes' => array(
+        'devicesize_small' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_large' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
+  );
   // Exported menu link: menu-offcanvas-menu-eng:user/login
   $menu_links['menu-offcanvas-menu-eng:user/login'] = array(
     'menu_name' => 'menu-offcanvas-menu-eng',
@@ -313,12 +363,14 @@ function bibliotek_dk_offcanvas_menu_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Ask helpdesk');
+  t('Cart');
   t('Find bibliotek');
   t('Find library');
   t('Forside');
   t('Help');
   t('Hjælp');
   t('Home');
+  t('Huskeliste');
   t('Log in');
   t('Log ind');
   t('Scientific articles');

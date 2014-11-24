@@ -2,6 +2,7 @@ name = Bibliotek.dk - Footer Menu
 description = Feature containing the responsive footer menu
 core = 7.x
 package = Bibliotek.dk
+php = 5.2.4
 version = 7.x-0.1
 project = bibliotek_dk_footer_menu
 dependencies[] = features
