@@ -137,6 +137,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_work_entity_feature',
     'bibdk_ie6nomore_settings',
     'bibliotek_dk_offcanvas_menu',
+    'bibliotek_dk_footer_menu',
     //Content
     'bibdk_article',
     'bibdk_banner',
@@ -460,7 +461,7 @@ function bibdk_frontend_update_7025(&$sandbox) {
  * Enable bibliotek_dk_offcanvas_menu for existing installations
  */
 function bibdk_frontend_update_7026(&$sandbox) {
-  module_enable(array('bibliotek_dk_offcanvas_menu'));
+  module_enable(array('bibliotek_dk_offcanvas_menu', 'bibliotek_dk_footer_menu'));
   module_disable(array(
       'bibliotek_dk_global_login_menu',
       'bibliotek_dk_header_actions',

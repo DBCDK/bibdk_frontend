@@ -30,7 +30,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '15',
+    'weight' => '-47',
   );
   // Exported menu link: menu-footer-menu-da:overlay/help
   $menu_links['menu-footer-menu-da:overlay/help'] = array(
@@ -52,7 +52,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '10',
+    'weight' => '-50',
   );
   // Exported menu link: menu-footer-menu-da:overlay/help/1
   $menu_links['menu-footer-menu-da:overlay/help/1'] = array(
@@ -74,7 +74,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-49',
   );
   // Exported menu link: menu-footer-menu-da:overlay/help/2
   $menu_links['menu-footer-menu-da:overlay/help/2'] = array(
@@ -96,7 +96,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '5',
+    'weight' => '-48',
   );
   // Exported menu link: menu-footer-menu-eng:<front>
   $menu_links['menu-footer-menu-eng:<front>'] = array(
@@ -118,7 +118,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '15',
+    'weight' => '-47',
   );
   // Exported menu link: menu-footer-menu-eng:overlay/help
   $menu_links['menu-footer-menu-eng:overlay/help'] = array(
@@ -140,7 +140,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '10',
+    'weight' => '-50',
   );
   // Exported menu link: menu-footer-menu-eng:overlay/help/14
   $menu_links['menu-footer-menu-eng:overlay/help/14'] = array(
@@ -162,7 +162,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-49',
   );
   // Exported menu link: menu-footer-menu-eng:overlay/help/29
   $menu_links['menu-footer-menu-eng:overlay/help/29'] = array(
@@ -184,7 +184,7 @@ function bibliotek_dk_footer_menu_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-48',
   );
   // Translatables
   // Included for use with string extractors like potx.
