@@ -1,24 +1,36 @@
 <?php
 /**
- * @file features handles export of taxonomy vocabolaries, but drupal sees terms as content..
- * this file depends on taxonomy vocabularies are set .. manually or by features
+ * @file features handles export of taxonomy vocabolaries, but drupal sees terms as content.
  *
- * set taxonomy terms manually
+ * this file creates and defines fields for taxonomies manually. sofar the taxonomies are:
+ * page_type (spil','noder','bog','artikel','film','musik','net','alle_materialer',)
+ * page_region ('top','bottom') *
+ * column ('left','right')
+ *
  *
  */
-function custom_search_taxonomy_install() {
-  module_load_include('module', 'uuid', 'uuid');
-  _uuid_install_uuid_fields();
-  uuid_sync_all();
 
+/**
+ * Implements hook_install
+ * create taxonomies and taxonomyterms
+ */
+function custom_search_taxonomy_install() {
+  if (module_exists('uuid')) {
+    module_load_include('module', 'uuid', 'uuid');
+    _uuid_install_uuid_fields();
+    uuid_sync_all();
+  }
 
   custom_search_taxonomy_create_vocabularies();
   custom_search_set_taxonomy_terms();
 }
 
+/**
+ * Create vocabularies
+ */
 function custom_search_taxonomy_create_vocabularies() {
   $vocab = taxonomy_vocabulary_machine_name_load('page_type');
-  if(empty($vocab)) {
+  if (empty($vocab)) {
     $page_type = (object) array(
       'name' => 'Page type',
       'description' => 'page types for custom search pages',
@@ -26,13 +38,13 @@ function custom_search_taxonomy_create_vocabularies() {
     );
 
     taxonomy_vocabulary_save($page_type);
-    if(empty($page_type->vid)){
-      drupal_set_message('PAGE_TYPE NOT SAVED CORRECTLY','error');
+    if (empty($page_type->vid)) {
+      drupal_set_message('PAGE_TYPE NOT SAVED CORRECTLY', 'error');
     }
   }
 
   $vocab = taxonomy_vocabulary_machine_name_load('page_region');
-  if(empty($vocab)) {
+  if (empty($vocab)) {
     $page_region = (object) array(
       'name' => 'Page region',
       'description' => 'page regions for article view',
@@ -40,8 +52,22 @@ function custom_search_taxonomy_create_vocabularies() {
     );
 
     taxonomy_vocabulary_save($page_region);
-    if(empty($page_region->vid)){
-      drupal_set_message('PAGE_REGION NOT SAVED CORRECTLY','error');
+    if (empty($page_region->vid)) {
+      drupal_set_message('PAGE_REGION NOT SAVED CORRECTLY', 'error');
+    }
+  }
+
+  $vocab = taxonomy_vocabulary_machine_name_load('column');
+  if (empty($vocab)) {
+    $column = (object) array(
+      'name' => 'column',
+      'description' => 'columns for article view',
+      'machine_name' => 'column',
+    );
+
+    taxonomy_vocabulary_save($column);
+    if (empty($column->vid)) {
+      drupal_set_message('COLUMN NOT SAVED CORRECTLY', 'error');
     }
   }
 }
@@ -61,23 +87,30 @@ function custom_search_set_taxonomy_terms() {
     'alle_materialer',
   );
   custom_search_taxonomy_update_taxonomy('page_type', $page_types);
+
   $page_regions = array(
     'top',
     'bottom',
   );
   custom_search_taxonomy_update_taxonomy('page_region', $page_regions);
+
+  $column = array(
+    'left',
+    'right',
+  );
+  custom_search_taxonomy_update_taxonomy('column', $column);
 }
 
 /**
  * update taxonomy with given terms
- * @param $machine_name ; the taxonomy to update
- * @param $terms ; the terms to update with
+ * @param string $machine_name ; the taxonomy to update
+ * @param array $terms ; the terms to update with
  */
 function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
   $tax = taxonomy_vocabulary_machine_name_load($machine_name);
   // method returns FALSE if $machine_name is not found
   if ($tax === FALSE) {
-    drupal_set_message('Error getting taxonomy ' . $machine_name, 'error');
+    drupal_set_message('Error getting taxonomy: ' . $machine_name, 'error');
   }
   else {
     foreach ($terms as $weight => $name) {
@@ -94,11 +127,3 @@ function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
     }
   }
 }
-
-/*function custom_search_taxonomy_update_7006() {
-  $tmp = taxonomy_vocabulary_machine_name_load('page_types');
-  taxonomy_vocabulary_delete($tmp->vid);
-
-  $tmp = taxonomy_vocabulary_machine_name_load('page_region');
-  taxonomy_vocabulary_delete($tmp->vid);
-}*/
