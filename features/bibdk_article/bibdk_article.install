@@ -62,17 +62,42 @@ function bibdk_article_update_7006() {
     'field_bibdk_article_image',
   );
 
-  
+  bibdk_article_do_delete_fields($field_names);
+
+}
+
+/**
+ * delete obsolete fields (field_link','field_page','field_columns','field_color',)
+ */
+function bibdk_article_update_7047() {
+  $field_names = array
+  (
+    'field_link',
+    'field_page',
+    'field_columns',
+    'field_color',
+  );
+
+  bibdk_article_do_delete_fields($field_names);
+}
+
+/**
+ * Delete row in tables defining given fields.
+ * Drop tables holding data for given fields
+ *
+ * @param array $field_names
+ */
+function bibdk_article_do_delete_fields(array $field_names){
   foreach ($field_names as $field_name) {
     // delete from field_config
     db_delete('field_config')
-        ->condition('field_name', $field_name)
-        ->execute();
+      ->condition('field_name', $field_name)
+      ->execute();
     //delete from field_config_instance
     db_delete('field_config_instance')
-        ->condition('field_name', $field_name)
-        ->execute();
-    // drop revision tables
+      ->condition('field_name', $field_name)
+      ->execute();
+    // drop revision table
     $table_name = 'field_revision_'.$field_name;
     db_drop_table($table_name);
     // drop data-table
