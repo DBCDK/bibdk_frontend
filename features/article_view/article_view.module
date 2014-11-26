@@ -50,27 +50,17 @@ function article_view_preprocess_views_view_fields(&$vars) {
 }
 
 function article_view_handle_classes($wrapper) {
-  // get column field
-  $columns = $wrapper->field_columns->value();
-  // default value
-  $columns = empty($columns) ? '2' : $columns;
-
   // get rows
   $rows = $wrapper->field_rows->value();
   // default value
   $rows = empty($rows) ? '2' : $rows;
-
-  // get color
-  $color = $wrapper->field_color->value();
-  // default value
-  $color = empty($color) ? 'light-grey' : $color;
 
   $region = $wrapper->field_page_region->value();
   if(!empty($region) && $region->name == 'top'){
     $classes = bibdk_article_get_classes(4, 'top', 'light-grey');
   }
   else {
-    $classes = bibdk_article_get_classes($columns, $rows, $color);
+    $classes = bibdk_article_get_classes($rows);
   }
 
   return $classes;
