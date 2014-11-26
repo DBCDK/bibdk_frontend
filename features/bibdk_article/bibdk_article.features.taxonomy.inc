@@ -9,6 +9,14 @@
  */
 function bibdk_article_taxonomy_default_vocabularies() {
   return array(
+    'column' => array(
+      'name' => 'column',
+      'machine_name' => 'column',
+      'description' => 'left or right column',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+    ),
     'page_region' => array(
       'name' => 'Page region',
       'machine_name' => 'page_region',
