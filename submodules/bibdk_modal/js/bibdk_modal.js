@@ -35,14 +35,13 @@
 
   BibdkModal.setLinkActions = function(context) {
     //Rewrite login link
-
     $("a[href*='/user/login'], a[href*='?q=user/login']", context).attr({
       'data-reveal-id': 'bibdk-modal',
       'data-reveal-ajax': 'true',
       'href': function(key, value) {
         return value.replace(/user\/login/, 'bibdk_modal/login');
       }
-    });
+    }).addClass('bibdk-modal-login');
 
     //Rewrite 'my page' menu login link
     $(".not-logged-in.page-user .tabs.primary a[href$='/user'], .not-logged-in.page-user .tabs.primary a[href$='?q=user']", context).once('init-modal-forms-login', function() {
