@@ -49,6 +49,40 @@ function bibdk_modal_login_form() {
   }
 }
 
+/**
+ * Menu callback that returns the forgot password form form wrapped in a modal
+ * If JavaScript is disabled the normal form will be returned without the modal
+ * wrapper.
+ */
+function bibdk_modal_forgot_password() {
+  $output = bibdk_modal_forgot_password_form();
+
+  print ajax_render($output);
+}
+
+/**
+ * Forgot password form generator
+ *
+ * @return array|mixed
+ */
+function bibdk_modal_forgot_password_form() {
+  module_load_include('pages.inc', 'user');
+
+  $form_state = _bibdk_modal_set_form_state();
+
+  $output = bibdk_modal_form_wrapper('user_pass', $form_state);
+  $commands = array();
+
+  if(empty($form_state['executed'])) {
+    $commands[] = bibdk_modal_commands_replace_form($output);
+  } else {
+    $commands[] = bibdk_modal_commands_dismiss();
+    $commands[] = bibdk_modal_commands_reload();
+  }
+
+  return $commands;
+}
+
 function bibdk_modal_offensive_form($js = FALSE) {
   $form_state = _bibdk_modal_set_form_state();
   $output = ctools_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
@@ -104,44 +138,6 @@ function bibdk_modal_review_edit_node($js = FALSE, $pid = NULL) {
   }
 
   print ajax_render($output);
-}
-
-/**
- * Menu callback that returns the forgot password form form wrapped in a modal
- * If JavaScript is disabled the normal form will be returned without the modal
- * wrapper.
- *
- * @param bool $js
- */
-function bibdk_modal_forgot_password($js = FALSE) {
-  $output = bibdk_modal_forgot_password_form($js);
-
-  print ajax_render($output);
-}
-
-/**
- * Forgot password form generator
- *
- * @param $js
- * @return array|mixed
- */
-function bibdk_modal_forgot_password_form($js) {
-  module_load_include('pages.inc', 'user');
-  if (!$js) {
-    drupal_goto('user/password');
-  }
-
-  $form_state = _bibdk_modal_set_form_state();
-
-  $output = ctools_modal_form_wrapper('user_pass', $form_state);
-
-  if (!empty($form_state['executed'])) {
-    //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
-    $output[] = _bibdk_modal_custom_reload();
-    $output[] = ctools_modal_command_dismiss();
-  }
-
-  return $output;
 }
 
 /**
