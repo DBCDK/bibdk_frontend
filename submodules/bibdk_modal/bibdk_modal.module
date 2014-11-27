@@ -1,7 +1,10 @@
 <?php
 
+include_once 'includes/bibdk_modal.commands.inc';
+
 /**
  * Implements hook_init().
+ * TODO mmj this should be deleted when all ctools modals are gone
  */
 function bibdk_modal_init() {
   // Do not load modal_forms during the Drupal installation process, e.g. if part
@@ -15,10 +18,18 @@ function bibdk_modal_init() {
  * Implements hook_menu().
  */
 function bibdk_modal_menu() {
-  $items['bibdk_modal/%ctools_js/login'] = array(
+  /*$items['bibdk_modal/%ctools_js/login'] = array(
     'title' => 'Log in',
     'page callback' => 'bibdk_modal_login',
     'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );*/
+
+  $items['bibdk_modal/login'] = array(
+    'title' => 'Log in',
+    'page callback' => 'bibdk_modal_login',
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
@@ -51,7 +62,6 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
-
   $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_add_to_favorites_callback',
@@ -80,7 +90,7 @@ function bibdk_modal_menu() {
   );
 
   $items['bibdk_modal/%ctools_js/voxb/offensive'] = array(
-    'title' => t('report_offensive_content', array(), array('context'=>'bibdk_voxb')),
+    'title' => t('report_offensive_content', array(), array('context' => 'bibdk_voxb')),
     'type' => MENU_CALLBACK,
     'access arguments' => array('search content'),
     'page callback' => 'bibdk_modal_offensive_form',
@@ -103,8 +113,12 @@ function bibdk_modal_menu() {
  * @param string $form_id
  */
 function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#attributes'] = array(
+    'class' => array('use-ajax-submit'),
+  );
+
   if (!empty($form_state['ajax'])) {
-    $form['#action'] = url('bibdk_modal/ajax/login');
+    $form['#action'] = url('bibdk_modal/login');
     $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
   }
 }
@@ -132,6 +146,7 @@ function _bibdk_modal_get_login_form_links() {
  * properties on the modal we're going to display
  */
 function _bibdk_modal_forms_doheader() {
+  //TODO mmj this method should be deleted when new modals are implemented
   static $already_added = FALSE;
   if ($already_added) {
     return; // Don't add the JavaScript and CSS multiple times.
@@ -177,4 +192,39 @@ function _bibdk_modal_forms_doheader() {
   ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
 
   $already_added = TRUE;
+}
+
+function bibdk_modal_form_wrapper($form_id, &$form_state) {
+  $form_state += array(
+    're_render' => FALSE,
+    'no_redirect' => !empty($form_state['ajax']),
+  );
+
+  $output = drupal_build_form($form_id, $form_state);
+  if (!empty($form_state['ajax']) && (!$form_state['executed'] || $form_state['rebuild']) && empty($form_state['submitted'])) {
+    $form = bibdk_modal_form_render($form_state, $output);
+    return $form;
+  }
+
+  return bibdk_modal_form_render($form_state, $output);
+}
+
+/**
+ * Render a form into an AJAX display.
+ */
+function bibdk_modal_form_render($form_state, $output) {
+  if (is_array($output)) {
+    $output = drupal_render($output);
+  }
+
+  $title = empty($form_state['title']) ? drupal_get_title() : $form_state['title'];
+
+  // If there are messages for the form, render them.
+  if ($messages = theme('status_messages')) {
+    $output = $messages . $output;
+    drupal_get_messages();
+  }
+
+  //TODO mmj this should maybe be provided by some template or so...
+  return '<div id="bibdk-modal-form">' . $output . '<a class="close-reveal-modal">&#215;</a></div>';
 }
