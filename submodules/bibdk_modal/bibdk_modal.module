@@ -44,6 +44,14 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['bibdk_modal/forgot_password'] = array(
+    'title' => 'Forgot Password',
+    'page callback' => 'bibdk_modal_forgot_password',
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
   $items['bibdk_modal/%ctools_js/register'] = array(
     'title' => 'Register new user',
     'page callback' => 'bibdk_modal_register',
@@ -125,12 +133,14 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Generates links for forgotten password and create new user forms.
+ * If we get here we assume that we're in a modal and the client have JS enabled
+ * in hte browser.
  *
  * @return array $links
  */
 function _bibdk_modal_get_login_form_links() {
+  $items[] = l(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/forgot_password', array('attributes' => array('alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')), 'class' => array('use-ajax', 'forgot-pword-link'))));
   $items[] = ctools_modal_text_button(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/register', t('Create a new user account', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style register-link');
-  $items[] = ctools_modal_text_button(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/password', t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style forgot-pword-link');
 
   $links = array(
     '#theme' => 'item_list',
