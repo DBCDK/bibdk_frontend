@@ -35,6 +35,7 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  /*
   $items['bibdk_modal/%ctools_js/password'] = array(
     'title' => 'Forgot Password',
     'page callback' => 'bibdk_modal_forgot_password',
@@ -43,6 +44,7 @@ function bibdk_modal_menu() {
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
+  */
 
   $items['bibdk_modal/forgot_password'] = array(
     'title' => 'Forgot Password',
@@ -56,6 +58,14 @@ function bibdk_modal_menu() {
     'title' => 'Register new user',
     'page callback' => 'bibdk_modal_register',
     'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/register'] = array(
+    'title' => 'Register new user',
+    'page callback' => 'bibdk_modal_register',
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
@@ -121,10 +131,6 @@ function bibdk_modal_menu() {
  * @param string $form_id
  */
 function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
-  $form['actions']['submit']['#attributes'] = array(
-    'class' => array('use-ajax-submit'),
-  );
-
   if (!empty($form_state['ajax'])) {
     $form['#action'] = url('bibdk_modal/login');
     $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
@@ -139,8 +145,18 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
  * @return array $links
  */
 function _bibdk_modal_get_login_form_links() {
-  $items[] = l(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/forgot_password', array('attributes' => array('alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')), 'class' => array('use-ajax', 'forgot-pword-link'))));
-  $items[] = ctools_modal_text_button(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/register', t('Create a new user account', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style register-link');
+  $items[] = l(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/forgot_password', array(
+      'attributes' => array(
+        'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'forgot-pword-link')
+      )
+    ));
+  $items[] = l(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/register', array(
+      'attributes' => array(
+        'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'register-link')
+      )
+    ));
 
   $links = array(
     '#theme' => 'item_list',
@@ -211,16 +227,23 @@ function bibdk_modal_form_wrapper($form_id, &$form_state) {
   );
 
   $output = drupal_build_form($form_id, $form_state);
-  if (!empty($form_state['ajax']) && (!$form_state['executed'] || $form_state['rebuild']) && empty($form_state['submitted'])) {
-    $form = bibdk_modal_form_render($form_state, $output);
-    return $form;
-  }
+
+  // adding 'use-ajax-submit' on submit button to ensure it will be ajax processed
+  $output['actions']['submit']['#attributes']['class'][] = 'use-ajax-submit';
 
   return bibdk_modal_form_render($form_state, $output);
 }
 
 /**
  * Render a form into an AJAX display.
+ *
+ * If there are messages for the form, render them.
+ * If the form has been executed the messages will be shown on the page after
+ * reload.
+ *
+ * @param array $form_state
+ * @param array $output
+ * @return string
  */
 function bibdk_modal_form_render($form_state, $output) {
   if (is_array($output)) {
@@ -229,8 +252,8 @@ function bibdk_modal_form_render($form_state, $output) {
 
   $title = empty($form_state['title']) ? drupal_get_title() : $form_state['title'];
 
-  // If there are messages for the form, render them.
-  if ($messages = theme('status_messages')) {
+  if (empty($form_state['executed'])) {
+    $messages = theme('status_messages');
     $output = $messages . $output;
     drupal_get_messages();
   }
