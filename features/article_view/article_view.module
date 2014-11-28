@@ -65,3 +65,24 @@ function article_view_handle_classes($wrapper) {
 
   return $classes;
 }
+
+/**
+ * callback method for bibdk_custom_header_block
+ */
+function article_view_get_panel_link() {
+  $message = t('more_articles', array(), array('context'=>'bibdk_article'));
+  $path = 'bibdk_articles';
+  $link = array(
+    '#theme' => 'link',
+    '#text' => $message,
+    '#path' => $path,
+    '#options' => array(
+      'attributes' => array(
+        'class' => array('article-view-more-link'),
+        'id' => 'article-view-more-id',
+      ),
+      'html' => FALSE,
+    ),
+  );
+  return $link;
+}
