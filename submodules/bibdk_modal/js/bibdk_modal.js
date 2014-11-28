@@ -3,6 +3,7 @@
   var BibdkModal = {};
 
   Drupal.ajax.prototype.commands.bibdk_modal_reload = function(ajax, data, status) {
+    BibdkModal.detachBehaviorsOnModal();
     var currentUrl = document.URL;
     if(currentUrl.indexOf("reservation/?ids") != -1) {
       window.location.href = currentUrl;
@@ -23,6 +24,7 @@
       var selector = data.selector;
       var html = data.html;
       $(selector).replaceWith(html);
+      BibdkModal.detachBehaviorsOnModal(true);
     }
     else {
       console.log('error');
@@ -30,7 +32,22 @@
   };
 
   Drupal.ajax.prototype.commands.bibdk_modal_dismiss = function(ajax, data, status) {
+    BibdkModal.detachBehaviorsOnModal();
     jQuery('a.close-reveal-modal').trigger('click');
+  };
+  
+  BibdkModal.detachBehaviorsOnModal = function(reattach){
+    var reattach = reattach || false;
+    var modal = document.getElementById('bibdk-modal');
+    Drupal.detachBehaviors(modal, null, null);
+    if(reattach){
+      BibdkModal.attachBehaviorsOnModal();
+    }
+  };
+  
+  BibdkModal.attachBehaviorsOnModal = function() {
+    var modal = document.getElementById('bibdk-modal');
+    Drupal.attachBehaviors(modal, null);
   };
 
   BibdkModal.setLinkActions = function(context) {
@@ -44,9 +61,13 @@
     }).addClass('bibdk-modal-login');
 
     //Rewrite 'my page' menu login link
-    $(".not-logged-in.page-user .tabs.primary a[href$='/user'], .not-logged-in.page-user .tabs.primary a[href$='?q=user']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace(/user/, 'bibdk_modal/nojs/login');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+    $(".not-logged-in.page-user .tabs.primary a[href$='/user'], .not-logged-in.page-user .tabs.primary a[href$='?q=user']", context).attr({
+      'data-reveal-id': 'bibdk-modal',
+      'data-reveal-ajax': 'true',
+      'href': function(key, value) {
+        return value.replace(/user/, 'bibdk_modal/login');
+      }
+    }).addClass('bibdk-modal-login');
 
     //Rewrite forgot password link
     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login', function() {
@@ -150,6 +171,7 @@
   };
 
   BibdkModal.attachAjax = function(modal) {
+    console.log('Is this unused? --> BibdkModal.attachAjax');
     //TODO mmj probably unused
     console.log(modal);
     var $form = $('.element-wrapper', modal);
