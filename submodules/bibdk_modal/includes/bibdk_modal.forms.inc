@@ -73,14 +73,52 @@ function bibdk_modal_forgot_password_form() {
   $output = bibdk_modal_form_wrapper('user_pass', $form_state);
   $commands = array();
 
-  if(empty($form_state['executed'])) {
+  if (empty($form_state['executed'])) {
     $commands[] = bibdk_modal_commands_replace_form($output);
-  } else {
+  }
+  else {
     $commands[] = bibdk_modal_commands_dismiss();
     $commands[] = bibdk_modal_commands_reload();
   }
 
   return $commands;
+}
+
+/**
+ * Menu callback that returns the user register form wrapped in a modal
+ * If JavaScript is disabled the normal form will be returned without the modal
+ * wrapper.
+ */
+function bibdk_modal_register() {
+  $output = bibdk_modal_register_form();
+
+  print ajax_render($output);
+}
+
+/**
+ * Register form generator
+ *
+ * @return array|mixed
+ */
+function bibdk_modal_register_form() {
+  $form_state = _bibdk_modal_set_form_state();
+
+  $output = bibdk_modal_form_wrapper('user_register_form', $form_state);
+  $commands = array();
+
+  //TODO mmj the register form seems a bit different so we have to handle it differently than the two forms above...
+  $commands[] = bibdk_modal_commands_replace_form($output);
+  return $commands;
+
+  if (empty($form_state['executed'])) {
+
+  }
+  else {
+    $commands[] = bibdk_modal_commands_dismiss();
+    $commands[] = bibdk_modal_commands_reload();
+  }
+
+  return $output;
 }
 
 function bibdk_modal_offensive_form($js = FALSE) {
@@ -138,43 +176,6 @@ function bibdk_modal_review_edit_node($js = FALSE, $pid = NULL) {
   }
 
   print ajax_render($output);
-}
-
-/**
- * Menu callback that returns the user register form wrapped in a modal
- * If JavaScript is disabled the normal form will be returned without the modal
- * wrapper.
- *
- * @param bool $js
- */
-function bibdk_modal_register($js = FALSE) {
-  $output = bibdk_modal_register_form($js);
-
-  print ajax_render($output);
-}
-
-/**
- * Register form generator
- *
- * @param $js
- * @return array|mixed
- */
-function bibdk_modal_register_form($js) {
-  if (!$js) {
-    drupal_goto('user/register');
-  }
-
-  $form_state = _bibdk_modal_set_form_state();
-
-  $output = ctools_modal_form_wrapper('user_register_form', $form_state);
-
-  if (!empty($form_state['executed'])) {
-    //Forcing a reload of the page to avoid multiple bindings of events on other elements on the page
-    $output[] = _bibdk_modal_custom_reload();
-    $output[] = ctools_modal_command_dismiss();
-  }
-
-  return $output;
 }
 
 /**
