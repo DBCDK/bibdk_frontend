@@ -162,6 +162,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_work_entity_feature',
     'bibdk_ie6nomore_settings',
     //Content
+    'bibdk_custom_header_block',
     'article_view',
     'bibdk_banner',
     'bibdk_adhl',
