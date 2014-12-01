@@ -36,19 +36,19 @@
     jQuery('a.close-reveal-modal').trigger('click');
   };
 
-  Drupal.ajax.prototype.commands.bibdk_modal_redirect = function(ajax, data, status){
+  Drupal.ajax.prototype.commands.bibdk_modal_redirect = function(ajax, data, status) {
     location.href = data.url;
   };
-  
-  BibdkModal.detachBehaviorsOnModal = function(reattach){
+
+  BibdkModal.detachBehaviorsOnModal = function(reattach) {
     var reattach = reattach || false;
     var modal = document.getElementById('bibdk-modal');
     Drupal.detachBehaviors(modal, null, null);
-    if(reattach){
+    if(reattach) {
       BibdkModal.attachBehaviorsOnModal();
     }
   };
-  
+
   BibdkModal.attachBehaviorsOnModal = function() {
     var modal = document.getElementById('bibdk-modal');
     Drupal.attachBehaviors(modal, null);
@@ -75,15 +75,15 @@
 
     //Rewrite forgot password link
     /*
-    $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login', function() {
+     this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
+     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
-    //Rewrite register new user link
-    $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-    */
+     //Rewrite register new user link
+     $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login', function() {
+     this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
+     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+     */
 
     //Rewrite edit review link
     $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
@@ -109,8 +109,8 @@
     if(Drupal.settings.uid) {
       var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
       /*$("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login', function() {
-        this.href = this.href.replace(url, 'bibdk_modal/nojs/bibdk_favourite_list?');
-      }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');*/
+       this.href = this.href.replace(url, 'bibdk_modal/nojs/bibdk_favourite_list?');
+       }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');*/
 
       $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).attr({
         'data-reveal-id': 'bibdk-modal',
@@ -119,7 +119,6 @@
           return value.replace(url, 'bibdk_modal/bibdk_favourite_list?');
         }
       }).addClass('bibdk-modal-favourites').removeClass('bibdk-popup-link');
-
 
     }
   };
@@ -220,7 +219,7 @@
       BibdkModal.bindEvents(context);
       BibdkModal.overrideCtoolsModalDisplay();
     },
-    detach:function(context){
+    detach: function(context) {
       BibdkModal.removeAccessibilityInfo(context);
     }
   };
