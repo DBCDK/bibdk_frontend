@@ -2,6 +2,10 @@
 
   var BibdkModal = {};
 
+  // ===========================================================================
+  //   COMMANDS
+  // ---------------------------------------------------------------------------
+
   Drupal.ajax.prototype.commands.bibdk_modal_reload = function(ajax, data, status) {
     BibdkModal.detachBehaviorsOnModal();
     var currentUrl = document.URL;
@@ -40,6 +44,10 @@
     location.href = data.url;
   };
 
+  // ---------------------------------------------------------------------------
+  //   COMMANDS -- END
+  // ===========================================================================
+
   BibdkModal.detachBehaviorsOnModal = function(reattach) {
     var reattach = reattach || false;
     var modal = document.getElementById('bibdk-modal');
@@ -73,18 +81,6 @@
       }
     }).addClass('bibdk-modal-login');
 
-    //Rewrite forgot password link
-    /*
-     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login', function() {
-     this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
-     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-
-     //Rewrite register new user link
-     $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login', function() {
-     this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
-     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-     */
-
     //Rewrite edit review link
     $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
       this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
@@ -101,17 +97,17 @@
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
 
     //Rewrite edit favourite user data link
-    $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace(/overlay\/favourite\/userdata/, 'bibdk_modal/nojs/favourite/userdata');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+    $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).attr({
+      'data-reveal-id': 'bibdk-modal',
+      'data-reveal-ajax': 'true',
+      'href': function(key, value) {
+        return value.replace(/overlay\/favourite\/userdata/, 'bibdk_modal/favourite/userdata');
+      }
+    }).addClass('bibdk-modal-favourites').removeClass('bibdk-popup-link');
 
     //Rewrite add favourite library
     if(Drupal.settings.uid) {
       var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
-      /*$("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login', function() {
-       this.href = this.href.replace(url, 'bibdk_modal/nojs/bibdk_favourite_list?');
-       }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');*/
-
       $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).attr({
         'data-reveal-id': 'bibdk-modal',
         'data-reveal-ajax': 'true',
