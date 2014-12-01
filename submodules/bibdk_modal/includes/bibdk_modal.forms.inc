@@ -11,10 +11,11 @@ function bibdk_modal_login() {
 
   if (is_array($output)) {
     print ajax_render($output);
-    exit;
+    drupal_exit();
   }
   else {
     print $output;
+    drupal_exit();
   }
 }
 
@@ -58,6 +59,7 @@ function bibdk_modal_forgot_password() {
   $output = bibdk_modal_forgot_password_form();
 
   print ajax_render($output);
+  drupal_exit();
 }
 
 /**
@@ -93,6 +95,7 @@ function bibdk_modal_register() {
   $output = bibdk_modal_register_form();
 
   print ajax_render($output);
+  drupal_exit();
 }
 
 /**
@@ -172,6 +175,7 @@ function bibdk_modal_review_edit_node($js = FALSE, $pid = NULL) {
   }
 
   print ajax_render($output);
+  drupal_exit();
 }
 
 /**
@@ -202,6 +206,7 @@ function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
   }
 
   print ajax_render($output);
+  drupal_exit();
 }
 
 /**
@@ -248,6 +253,7 @@ function bibdk_modal_add_to_favorites_callback() {
   }
 
   print ajax_render($output);
+  drupal_exit();
 }
 
 /**
