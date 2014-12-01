@@ -35,6 +35,10 @@
     BibdkModal.detachBehaviorsOnModal();
     jQuery('a.close-reveal-modal').trigger('click');
   };
+
+  Drupal.ajax.prototype.commands.bibdk_modal_redirect = function(ajax, data, status){
+    location.href = data.url;
+  };
   
   BibdkModal.detachBehaviorsOnModal = function(reattach){
     var reattach = reattach || false;
@@ -70,6 +74,7 @@
     }).addClass('bibdk-modal-login');
 
     //Rewrite forgot password link
+    /*
     $("a[href*='/user/password'], a[href*='?q=user/password']", context).once('init-modal-forms-login', function() {
       this.href = this.href.replace(/user\/password/, 'bibdk_modal/nojs/password');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
@@ -78,6 +83,7 @@
     $("a[href*='/user/register'], a[href*='?q=user/register']", context).once('init-modal-forms-login', function() {
       this.href = this.href.replace(/user\/register/, 'bibdk_modal/nojs/register');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+    */
 
     //Rewrite edit review link
     $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
@@ -102,15 +108,32 @@
     //Rewrite add favourite library
     if(Drupal.settings.uid) {
       var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
-      $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login', function() {
+      /*$("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).once('init-modal-forms-login', function() {
         this.href = this.href.replace(url, 'bibdk_modal/nojs/bibdk_favourite_list?');
-      }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');
+      }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style').removeClass('bibdk-popup-link');*/
+
+      $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).attr({
+        'data-reveal-id': 'bibdk-modal',
+        'data-reveal-ajax': 'true',
+        'href': function(key, value) {
+          return value.replace(url, 'bibdk_modal/bibdk_favourite_list?');
+        }
+      }).addClass('bibdk-modal-favourites').removeClass('bibdk-popup-link');
+
+
     }
   };
 
   BibdkModal.addAccessibilityInfo = function(context) {
-    $("#modalContent", context).attr("role", 'dialog');
-    $("#modalContent", context).attr("aria-hidden", false);
+    var $modal = $("#bibdk-modal", context);
+    $modal.attr("aria-hidden", false);
+    $modal.attr("role", 'dialog');
+  };
+
+  BibdkModal.removeAccessibilityInfo = function() {
+    var $modal = $("#bibdk-modal");
+    $modal.attr("aria-hidden", true);
+    $modal.removeAttr("role");
   };
 
   BibdkModal.bindEvents = function(context) {
@@ -171,7 +194,7 @@
   };
 
   BibdkModal.attachAjax = function(modal) {
-    console.log('Is this unused? --> BibdkModal.attachAjax');
+    console.log('Is this in use? --> BibdkModal.attachAjax');
     //TODO mmj probably unused
     console.log(modal);
     var $form = $('.element-wrapper', modal);
@@ -184,7 +207,7 @@
     console.log(this);
 
     var element_settings = {
-      url: window.location.origin + Drupal.settings.basePath + Drupal.settings.pathPrefix + 'system/ajax',
+      url: window.location.origin + Drupal.settings.basePath + Drupal.settings.pathPrefix + 'system/ajax'
     };
 
     Drupal.ajax[base] = new Drupal.ajax(base, this, element_settings);
@@ -195,8 +218,10 @@
     attach: function(context, settings) {
       BibdkModal.setLinkActions(context);
       BibdkModal.bindEvents(context);
-      BibdkModal.addAccessibilityInfo(context);
       BibdkModal.overrideCtoolsModalDisplay();
+    },
+    detach:function(context){
+      BibdkModal.removeAccessibilityInfo(context);
     }
   };
 
