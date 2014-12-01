@@ -54,6 +54,7 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  /*
   $items['bibdk_modal/%ctools_js/register'] = array(
     'title' => 'Register new user',
     'page callback' => 'bibdk_modal_register',
@@ -61,7 +62,7 @@ function bibdk_modal_menu() {
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
-  );
+  );*/
 
   $items['bibdk_modal/register'] = array(
     'title' => 'Register new user',
@@ -80,10 +81,19 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  /*
   $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_add_to_favorites_callback',
     'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );*/
+
+  $items['bibdk_modal/bibdk_favourite_list'] = array(
+    'title' => 'Edit favourite library user data',
+    'page callback' => 'bibdk_modal_add_to_favorites_callback',
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
@@ -146,17 +156,17 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
  */
 function _bibdk_modal_get_login_form_links() {
   $items[] = l(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/forgot_password', array(
-      'attributes' => array(
-        'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
-        'class' => array('use-ajax', 'forgot-pword-link')
-      )
-    ));
+    'attributes' => array(
+      'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
+      'class' => array('use-ajax', 'forgot-pword-link')
+    )
+  ));
   $items[] = l(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/register', array(
-      'attributes' => array(
-        'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
-        'class' => array('use-ajax', 'register-link')
-      )
-    ));
+    'attributes' => array(
+      'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
+      'class' => array('use-ajax', 'register-link')
+    )
+  ));
 
   $links = array(
     '#theme' => 'item_list',
@@ -229,7 +239,14 @@ function bibdk_modal_form_wrapper($form_id, &$form_state) {
   $output = drupal_build_form($form_id, $form_state);
 
   // adding 'use-ajax-submit' on submit button to ensure it will be ajax processed
-  $output['actions']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+  if (!empty($output['actions']['submit'])) {
+    $output['actions']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+  }
+
+  //Adding
+  if ($form_id === 'bibdk_favourite_user_form_fields') {
+    $output['wrapper']['buttons']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+  }
 
   return bibdk_modal_form_render($form_state, $output);
 }
