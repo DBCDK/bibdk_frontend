@@ -18,14 +18,6 @@ function bibdk_modal_init() {
  * Implements hook_menu().
  */
 function bibdk_modal_menu() {
-  /*$items['bibdk_modal/%ctools_js/login'] = array(
-    'title' => 'Log in',
-    'page callback' => 'bibdk_modal_login',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'file' => 'includes/bibdk_modal.forms.inc',
-    'type' => MENU_CALLBACK,
-  );*/
 
   $items['bibdk_modal/login'] = array(
     'title' => 'Log in',
@@ -35,17 +27,6 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  /*
-  $items['bibdk_modal/%ctools_js/password'] = array(
-    'title' => 'Forgot Password',
-    'page callback' => 'bibdk_modal_forgot_password',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'file' => 'includes/bibdk_modal.forms.inc',
-    'type' => MENU_CALLBACK,
-  );
-  */
-
   $items['bibdk_modal/forgot_password'] = array(
     'title' => 'Forgot Password',
     'page callback' => 'bibdk_modal_forgot_password',
@@ -53,16 +34,6 @@ function bibdk_modal_menu() {
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
-
-  /*
-  $items['bibdk_modal/%ctools_js/register'] = array(
-    'title' => 'Register new user',
-    'page callback' => 'bibdk_modal_register',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'file' => 'includes/bibdk_modal.forms.inc',
-    'type' => MENU_CALLBACK,
-  );*/
 
   $items['bibdk_modal/register'] = array(
     'title' => 'Register new user',
@@ -72,24 +43,13 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/favourite/userdata'] = array(
+  $items['bibdk_modal/favourite/userdata'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_edit_favourite_userdata_form',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
-
-  /*
-  $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
-    'title' => 'Edit favourite library user data',
-    'page callback' => 'bibdk_modal_add_to_favorites_callback',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'file' => 'includes/bibdk_modal.forms.inc',
-    'type' => MENU_CALLBACK,
-  );*/
 
   $items['bibdk_modal/bibdk_favourite_list'] = array(
     'title' => 'Edit favourite library user data',
@@ -275,6 +235,6 @@ function bibdk_modal_form_render($form_state, $output) {
     drupal_get_messages();
   }
 
-  //TODO mmj this should maybe be provided by some template or so...
+  //TODO mmj this should maybe be provided by some template or so... with a title
   return '<div id="bibdk-modal-form">' . $output . '<a class="close-reveal-modal">&#215;</a></div>';
 }
