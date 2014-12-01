@@ -11,13 +11,20 @@
  *
  * @return array
  */
-function bibdk_modal_commands_reload() {
+function bibdk_modal_command_reload() {
   return array(
     'command' => 'bibdk_modal_reload',
   );
 }
 
-function bibdk_modal_commands_replace_form($html, $selector = '#bibdk-modal-form'){
+/**
+ * Replace the form currently displayed in a modal
+ *
+ * @param string $html Rendered HTML
+ * @param string $selector the selector whose content should be replaced
+ * @return array
+ */
+function bibdk_modal_command_replace_form($html, $selector = '#bibdk-modal-form'){
   return array(
     'command' => 'bibdk_modal_replace_form',
     'selector' => $selector,
@@ -25,8 +32,28 @@ function bibdk_modal_commands_replace_form($html, $selector = '#bibdk-modal-form
   );
 }
 
-function bibdk_modal_commands_dismiss(){
+/**
+ * Dismiss the current modal
+ *
+ * @return array
+ */
+function bibdk_modal_command_dismiss(){
   return array(
     'command' => 'bibdk_modal_dismiss',
   );
+}
+
+/**
+ * Do a client side redirect
+ *
+ * @param string $url
+ * @param array $options
+ * @return array
+ */
+function bibdk_modal_command_redirect($url, $options = array()){
+  return array(
+    'command' => 'bibdk_modal_redirect',
+    'url' => url($url, $options),
+  );
+
 }
