@@ -181,48 +181,49 @@ function bibdk_modal_review_edit_node($js = FALSE, $pid = NULL) {
 /**
  * Genrate form fro editing favourite userdaata
  *
- * @param bool $js
  * @param string $branchid
- * @return array|mixed Form array
  */
-function bibdk_modal_edit_favourite_userdata_form($js, $branchid) {
-
+function bibdk_modal_edit_favourite_userdata_form($branchid) {
   $form_state = _bibdk_modal_set_form_state();
   $form_state['branchid'] = $branchid;
 
-  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
-  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+  $output = bibdk_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
 
-  if (!empty($form_state['executed'])) {
-    if (!empty($form_state['modal_redirect']['url'])) {
-      $url = $form_state['modal_redirect']['url'];
-      $options = $form_state['modal_redirect']['options'];
-      $output[] = ctools_ajax_command_redirect($url, 0, $options);
-    }
-    else {
-      $output[] = _bibdk_modal_custom_reload();
-    }
-    $output[] = ctools_modal_command_dismiss();
+  $commands = array();
+  if (empty($form_state['executed']) && empty($form_state['submitted'])) {
+    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $commands = $output;
+  }
+  elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_modal_command_replace_form($output);
+  }
+  elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_modal_command_reload();
+    $commands[] = bibdk_modal_command_dismiss();
   }
 
-  print ajax_render($output);
+  if (is_array($commands)) {
+    print ajax_render($commands);
+  }
+  else {
+    print $commands;
+  }
+
   drupal_exit();
 }
 
 /**
  * Genrate form fro editing favourite userdaata
  *
- * @internal param bool $js
- * @internal param string $branchid
  * @return array|mixed Form array
  */
 function bibdk_modal_add_to_favorites_callback() {
-  global $user;
   module_load_include('inc', 'bibdk_favourite', 'includes/bibdk_favourite.forms');
 
   $agencyName = bibdk_favourite_check_for_new_agency();
   drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata below.", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
   if (empty($_GET['agency'])) {
+    global $user;
     $url = "";
     if ($user->uid) {
       $url = "user/$user->uid/bibdk_favourite_list";
@@ -238,7 +239,7 @@ function bibdk_modal_add_to_favorites_callback() {
   $output = bibdk_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
 
   $commands = array();
-  //$output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
+  //$output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite')); //TODO mmj to use or not to use?
 
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
     $output = bibdk_modal_wrap_form_in_element_wrapper($output);
@@ -248,6 +249,7 @@ function bibdk_modal_add_to_favorites_callback() {
     $commands[] = bibdk_modal_command_replace_form($output);
   }
   elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    global $user;
     if ($user->uid) {
       $url = "user/$user->uid/bibdk_favourite_list";
       $commands[] = bibdk_modal_command_redirect($url, array());
@@ -268,10 +270,10 @@ function bibdk_modal_add_to_favorites_callback() {
 }
 
 /**
- * Wraps a form (delivered in a modal) in a a element-wrapper and a element
+ * Wraps a form in a element-wrapper and a element
  *
- * @param array $output
- * @return array
+ * @param string $output
+ * @return string
  */
 function bibdk_modal_wrap_form_in_element_wrapper($output) {
   if (!empty($output)) {
