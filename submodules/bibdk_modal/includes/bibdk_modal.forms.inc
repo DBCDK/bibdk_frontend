@@ -33,7 +33,7 @@ function bibdk_modal_login_form() {
 
   if (empty($form_state['submitted'])) {
     return $form;
-  }
+  } //TODO mmj wont a check on executed be sufficient
   elseif ($form_state['submitted'] && (empty($form_state['executed']) || empty($form_state['uid']))) {
     //Something went wrong. Replace the form currently displayed in the modal and let the user try again
     $commands = array();
@@ -106,19 +106,15 @@ function bibdk_modal_register_form() {
   $output = bibdk_modal_form_wrapper('user_register_form', $form_state);
   $commands = array();
 
-  //TODO mmj the register form seems a bit different so we have to handle it differently than the two forms above...
-  $commands[] = bibdk_modal_commands_replace_form($output);
-  return $commands;
-
   if (empty($form_state['executed'])) {
-
+    $commands[] = bibdk_modal_commands_replace_form($output);
   }
   else {
     $commands[] = bibdk_modal_commands_dismiss();
     $commands[] = bibdk_modal_commands_reload();
   }
 
-  return $output;
+  return $commands;
 }
 
 function bibdk_modal_offensive_form($js = FALSE) {
