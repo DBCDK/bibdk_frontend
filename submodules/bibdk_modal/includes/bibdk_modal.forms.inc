@@ -38,14 +38,14 @@ function bibdk_modal_login_form() {
   elseif ($form_state['submitted'] && (empty($form_state['executed']) || empty($form_state['uid']))) {
     //Something went wrong. Replace the form currently displayed in the modal and let the user try again
     $commands = array();
-    $commands[] = bibdk_modal_commands_replace_form($form);
+    $commands[] = bibdk_modal_command_replace_form($form);
     return $commands;
   }
   else if ($form_state['executed'] && $form_state['uid']) {
     //We're successfullt logged in so close the modal and refresh the page
     $commands = array();
-    $commands[] = bibdk_modal_commands_dismiss();
-    $commands[] = bibdk_modal_commands_reload();
+    $commands[] = bibdk_modal_command_dismiss();
+    $commands[] = bibdk_modal_command_reload();
     return $commands;
   }
 }
@@ -76,11 +76,11 @@ function bibdk_modal_forgot_password_form() {
   $commands = array();
 
   if (empty($form_state['executed'])) {
-    $commands[] = bibdk_modal_commands_replace_form($output);
+    $commands[] = bibdk_modal_command_replace_form($output);
   }
   else {
-    $commands[] = bibdk_modal_commands_dismiss();
-    $commands[] = bibdk_modal_commands_reload();
+    $commands[] = bibdk_modal_command_dismiss();
+    $commands[] = bibdk_modal_command_reload();
   }
 
   return $commands;
@@ -110,11 +110,11 @@ function bibdk_modal_register_form() {
   $commands = array();
 
   if (empty($form_state['executed'])) {
-    $commands[] = bibdk_modal_commands_replace_form($output);
+    $commands[] = bibdk_modal_command_replace_form($output);
   }
   else {
-    $commands[] = bibdk_modal_commands_dismiss();
-    $commands[] = bibdk_modal_commands_reload();
+    $commands[] = bibdk_modal_command_dismiss();
+    $commands[] = bibdk_modal_command_reload();
   }
 
   return $commands;
@@ -222,7 +222,6 @@ function bibdk_modal_add_to_favorites_callback() {
 
   $agencyName = bibdk_favourite_check_for_new_agency();
   drupal_set_message(t("%library was added to your favorite libraries. Please enter your userdata below.", array('%library' => $agencyName), array('context' => 'bibdk_favourite')));
-
   if (empty($_GET['agency'])) {
     $url = "";
     if ($user->uid) {
@@ -236,23 +235,35 @@ function bibdk_modal_add_to_favorites_callback() {
   $form_state = _bibdk_modal_set_form_state();
   $form_state['branchid'] = $branchid;
 
-  $output = ctools_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
-  $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+  $output = bibdk_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
 
-  $output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
+  $commands = array();
+  //$output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite'));
 
-  if (!empty($form_state['executed'])) {
+  if (empty($form_state['executed']) && empty($form_state['submitted'])) {
+    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $commands = $output;
+  }
+  elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_modal_command_replace_form($output);
+  }
+  elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
     if ($user->uid) {
       $url = "user/$user->uid/bibdk_favourite_list";
-      $output[] = ctools_ajax_command_redirect($url, 0, array());
+      $commands[] = bibdk_modal_command_redirect($url, array());
     }
     else {
-      $output[] = _bibdk_modal_custom_reload();
+      $commands[] = bibdk_modal_command_reload();
     }
-    $output[] = ctools_modal_command_dismiss();
+    $commands[] = bibdk_modal_command_dismiss();
   }
 
-  print ajax_render($output);
+  if (is_array($commands)) {
+    print ajax_render($commands);
+  }
+  else {
+    print $commands;
+  }
   drupal_exit();
 }
 
@@ -263,8 +274,8 @@ function bibdk_modal_add_to_favorites_callback() {
  * @return array
  */
 function bibdk_modal_wrap_form_in_element_wrapper($output) {
-  if (!empty($output[0]['output'])) {
-    $output[0]['output'] = '<div class="element-wrapper"><div class="element">' . $output[0]['output'] . '</div></div>';
+  if (!empty($output)) {
+    $output = '<div class="element-wrapper"><div class="element">' . $output . '</div></div>';
     return $output;
   }
   return $output;
