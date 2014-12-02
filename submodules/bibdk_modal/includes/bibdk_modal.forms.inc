@@ -5,69 +5,42 @@
  * Menu callback that returns the user_login form wrapped in a modal
  * If JavaScript is disabled in the client we will never get here as the login
  * link is being rewritten by client-side JavaScript.
- */
-function bibdk_modal_login() {
-  $output = bibdk_modal_login_form();
-
-  if (is_array($output)) {
-    print ajax_render($output);
-    drupal_exit();
-  }
-  else {
-    print $output;
-    drupal_exit();
-  }
-}
-
-/**
- * Generates the login form.
+ *
  * If the form hasn't been submitted rendered html will be returned. Otherwise
  * the output will be returned wrapped in one or more commands to have our
  * JavaScript handle it client-side.
  *
  * @return array|mixed
  */
-function bibdk_modal_login_form() {
+function bibdk_modal_login() {
   $form_state = _bibdk_modal_set_form_state();
 
-  $form = bibdk_modal_form_wrapper('user_login', $form_state);
+  $output = bibdk_modal_form_wrapper('user_login', $form_state);
 
-  if (empty($form_state['submitted'])) {
-    return $form;
-  } //TODO mmj wont a check on executed be sufficient
-  elseif ($form_state['submitted'] && (empty($form_state['executed']) || empty($form_state['uid']))) {
+  $commands = array();
+  if (empty($form_state['executed']) && empty($form_state['submitted'])) {
+    $commands = $output;
+  }
+  elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
     //Something went wrong. Replace the form currently displayed in the modal and let the user try again
-    $commands = array();
-    $commands[] = bibdk_modal_command_replace_form($form);
-    return $commands;
+    $commands[] = bibdk_modal_command_replace_form($output);
   }
-  else if ($form_state['executed'] && $form_state['uid']) {
-    //We're successfullt logged in so close the modal and refresh the page
-    $commands = array();
-    $commands[] = bibdk_modal_command_dismiss();
+  elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
     $commands[] = bibdk_modal_command_reload();
-    return $commands;
+    $commands[] = bibdk_modal_command_dismiss();
   }
+
+  bibdk_modal_deliver_output($commands);
 }
 
 /**
  * Menu callback that returns the forgot password form form wrapped in a modal
  * If JavaScript is disabled the normal form will be returned without the modal
  * wrapper.
- */
-function bibdk_modal_forgot_password() {
-  $output = bibdk_modal_forgot_password_form();
-
-  print ajax_render($output);
-  drupal_exit();
-}
-
-/**
- * Forgot password form generator
  *
  * @return array|mixed
  */
-function bibdk_modal_forgot_password_form() {
+function bibdk_modal_forgot_password() {
   module_load_include('pages.inc', 'user');
 
   $form_state = _bibdk_modal_set_form_state();
@@ -83,27 +56,17 @@ function bibdk_modal_forgot_password_form() {
     $commands[] = bibdk_modal_command_reload();
   }
 
-  return $commands;
+  bibdk_modal_deliver_output($commands);
 }
 
 /**
  * Menu callback that returns the user register form wrapped in a modal
  * If JavaScript is disabled the normal form will be returned without the modal
  * wrapper.
- */
-function bibdk_modal_register() {
-  $output = bibdk_modal_register_form();
-
-  print ajax_render($output);
-  drupal_exit();
-}
-
-/**
- * Register form generator
  *
  * @return array|mixed
  */
-function bibdk_modal_register_form() {
+function () {
   $form_state = _bibdk_modal_set_form_state();
 
   $output = bibdk_modal_form_wrapper('user_register_form', $form_state);
@@ -117,23 +80,31 @@ function bibdk_modal_register_form() {
     $commands[] = bibdk_modal_command_reload();
   }
 
-  return $commands;
+  bibdk_modal_deliver_output($commands);
 }
 
-function bibdk_modal_offensive_form($js = FALSE) {
+function bibdk_modal_offensive_form() {
+  //  module_load_include('inc', 'bibdk_voxb', 'bibdk_voxb.offensive.inc');
   $form_state = _bibdk_modal_set_form_state();
-  $output = ctools_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
+  $output = bibdk_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
   $message = t('bibdk_voxb_offensive_reported', array(), array('context' => 'bibdk_voxb'));
   $voxb_id = $_GET['voxb_id'];
-  if (!empty($form_state['executed'])) {
-    //$output = array(ctools_modal_command_dismiss(), _bibdk_modal_custom_reload());
-    $output = array(
-      bibdk_voxb_offensive_posted($voxb_id, $message),
-      ctools_modal_command_dismiss()
-    );
+
+  $commands = array();
+
+  if (empty($form_state['executed']) && empty($form_state['submitted'])) {
+    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $commands = $output;
+  }
+  elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_modal_command_replace_form($output);
+  }
+  elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_voxb_offensive_posted($voxb_id, $message);
+    $commands[] = bibdk_modal_command_dismiss();
   }
 
-  print ajax_render($output);
+  bibdk_modal_deliver_output($commands);
 }
 
 function bibdk_modal_review_create_node() {
@@ -174,19 +145,12 @@ function bibdk_modal_review_edit_node($pid = NULL) {
       $commands[] = bibdk_voxb_ajax_review_saved($voxb_id);
     }
     else {
-      $commands = bibdk_voxb_ajax_review_created($pid);
+      $commands[] = bibdk_voxb_ajax_review_created($pid);
     }
     $commands[] = bibdk_modal_command_dismiss();
   }
 
-  if (is_array($commands)) {
-    print ajax_render($commands);
-  }
-  else {
-    print $commands;
-  }
-
-  drupal_exit();
+  bibdk_modal_deliver_output($commands);
 }
 
 /**
@@ -213,14 +177,7 @@ function bibdk_modal_edit_favourite_userdata_form($branchid) {
     $commands[] = bibdk_modal_command_dismiss();
   }
 
-  if (is_array($commands)) {
-    print ajax_render($commands);
-  }
-  else {
-    print $commands;
-  }
-
-  drupal_exit();
+  bibdk_modal_deliver_output($commands);
 }
 
 /**
@@ -271,13 +228,7 @@ function bibdk_modal_add_to_favorites_callback() {
     $commands[] = bibdk_modal_command_dismiss();
   }
 
-  if (is_array($commands)) {
-    print ajax_render($commands);
-  }
-  else {
-    print $commands;
-  }
-  drupal_exit();
+  bibdk_modal_deliver_output($commands);
 }
 
 /**
