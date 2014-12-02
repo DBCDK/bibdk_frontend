@@ -75,6 +75,21 @@ function bibdk_modal_menu() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function bibdk_modal_theme() {
+  return array(
+    'bibdk_modal_theme' => array(
+      'template' => 'theme/bibdk-modal',
+      'variables' => array(
+        'title' => '',
+        'content' => '',
+      ),
+    ),
+  );
+}
+
+/**
  * Method that delivers content for modal overlays. Based on the $output
  * parameter the method will either print the $output to the client or deliver
  * it in array to be used by clientside AJAX commands.
@@ -198,6 +213,14 @@ function bibdk_modal_form_render($form_state, $output) {
     $output = $messages . $output;
     drupal_get_messages();
   }
+
+  $render = array(
+    '#theme' => 'bibdk_modal_theme',
+    '#title' => $title,
+    '#content' => $output
+  );
+
+  return drupal_render($render);
 
   //TODO mmj this should maybe be provided by some template or so... with a title
   return '<div id="bibdk-modal-form">' . $output . '<a class="close-reveal-modal">&#215;</a></div>';
