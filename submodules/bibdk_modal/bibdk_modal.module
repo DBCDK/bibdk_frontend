@@ -3,18 +3,6 @@
 include_once 'includes/bibdk_modal.commands.inc';
 
 /**
- * Implements hook_init().
- * TODO mmj this should be deleted when all ctools modals are gone
- */
-function bibdk_modal_init() {
-  // Do not load modal_forms during the Drupal installation process, e.g. if part
-  // of installation profiles.
-  if (!drupal_installation_attempted()) {
-    _bibdk_modal_forms_doheader();
-  }
-}
-
-/**
  * Implements hook_menu().
  */
 function bibdk_modal_menu() {
@@ -150,59 +138,6 @@ function _bibdk_modal_get_login_form_links() {
   );
 
   return $links;
-}
-
-/**
- * Configuration method. Used for loading JavaScript and CSS and setting
- * properties on the modal we're going to display
- */
-function _bibdk_modal_forms_doheader() {
-  //TODO mmj this method should be deleted when new modals are implemented
-  static $already_added = FALSE;
-  if ($already_added) {
-    return; // Don't add the JavaScript and CSS multiple times.
-  }
-
-  // Include the CTools tools that we need.
-  ctools_include('ajax');
-  ctools_include('modal');
-
-  //Needed to ensure ctools_ajax_command_reload() and ctools_ajax_command_redirect() works
-  ctools_add_js('ajax-responder');
-
-  // Add CTools' javascript to the page.
-  ctools_modal_add_js();
-
-  // Create our own javascript that will be used to theme a modal.
-  $bibdk_modal_style = array(
-    'bibdk-modal-style' => array(
-      'loadingText' => t('Loading...', array(), array('context' => 'bibdk_modal')),
-      'closeText' => t('Close Window', array(), array('context' => 'bibdk_modal')),
-      'modalSize' => array(
-        'type' => 'fixed',
-        'width' => 500,
-        'height' => 400,
-        'minHeight' => 180,
-        'addWidth' => 0,
-        'addHeight' => 0,
-      ),
-      'modalOptions' => array(
-        'opacity' => .8,
-        'background-color' => '#000',
-      ),
-      'animation' => 'fadeIn',
-      'modalTheme' => 'BibdkModal',
-    ),
-  );
-
-  drupal_add_js($bibdk_modal_style, 'setting');
-
-  ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
-
-  //Overriding part of CTools' modal.js
-  ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
-
-  $already_added = TRUE;
 }
 
 function bibdk_modal_form_wrapper($form_id, &$form_state) {
