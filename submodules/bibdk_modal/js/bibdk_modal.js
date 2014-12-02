@@ -118,16 +118,16 @@
       'href': function(key, value) {
         return value.replace(/voxb\/ajax\/review\/edit/, 'bibdk_modal/voxb/review/edit');
       }
-    }).addClass('bibdk-modal-voxb-create');
-
-    $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+    }).addClass('bibdk-modal-voxb-edit');
 
     //Rewrite offensive content link
-    $("a[href*='/voxb/offensive'], a[href*='?q=voxb/offensive']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace('voxb/offensive', 'bibdk_modal/nojs/voxb/offensive');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+    $("a[href*='/voxb/offensive'], a[href*='?q=voxb/offensive']", context).attr({
+      'data-reveal-id': 'bibdk-modal',
+      'data-reveal-ajax': 'true',
+      'href': function(key, value) {
+        return value.replace(/voxb\/offensive/, 'bibdk_modal/voxb/offensive');
+      }
+    }).addClass('bibdk-modal-voxb-edit');
   };
 
   BibdkModal.addAccessibilityInfo = function(context) {
