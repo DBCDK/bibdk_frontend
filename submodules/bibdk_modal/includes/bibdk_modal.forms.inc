@@ -136,45 +136,56 @@ function bibdk_modal_offensive_form($js = FALSE) {
   print ajax_render($output);
 }
 
-function bibdk_modal_review_create_node($js = FALSE) {
+function bibdk_modal_review_create_node() {
   $pid = bibdk_voxb_review_check_pid();
-  return bibdk_modal_review_edit_node($js, $pid);
+  return bibdk_modal_review_edit_node($pid);
 }
 
-/** menu callback. wrap blog_node_form in modal.
+/**
+ * Menu callback. wrap blog_node_form in modal.
  *
- * @param bool $js
+ * @param string|null $pid
  */
-function bibdk_modal_review_edit_node($js = FALSE, $pid = NULL) {
+function bibdk_modal_review_edit_node($pid = NULL) {
   if (!function_exists("node_form")) {
     include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
   }
 
   $form_state = _bibdk_modal_set_form_state();
+
   $blog_node = bibdk_voxb_set_blog_node();
+
   $wrap = entity_metadata_wrapper('node', $blog_node);
   $voxb_id = $wrap->field_voxb_id->value();
-  //$form_state['node'] = $blog_node;
   $form_state['build_info']['args'] = array($blog_node);
-  //$output = ctools_modal_form_wrapper('bibdk_voxb_review_modal_edit_form', $form_state);
 
-  $output = ctools_modal_form_wrapper('blog_node_form', $form_state);
-  if (!empty($form_state['executed'])) {
+  $output = bibdk_modal_form_wrapper('blog_node_form', $form_state);
+
+  $commands = array();
+  if (empty($form_state['executed']) && empty($form_state['submitted'])) {
+    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
+    $commands = $output;
+  }
+  elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
+    $commands[] = bibdk_modal_command_replace_form($output);
+  }
+  elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
     if (empty($pid)) {
-      $output = array(
-        bibdk_voxb_ajax_review_saved($voxb_id),
-        ctools_modal_command_dismiss()
-      );
+      $commands[] = bibdk_voxb_ajax_review_saved($voxb_id);
     }
     else {
-      $output = array(
-        bibdk_voxb_ajax_review_created($pid),
-        ctools_modal_command_dismiss()
-      );
+      $commands = bibdk_voxb_ajax_review_created($pid);
     }
+    $commands[] = bibdk_modal_command_dismiss();
   }
 
-  print ajax_render($output);
+  if (is_array($commands)) {
+    print ajax_render($commands);
+  }
+  else {
+    print $commands;
+  }
+
   drupal_exit();
 }
 
