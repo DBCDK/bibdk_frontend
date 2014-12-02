@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @file
+ * Include file that contains callback methods and the helpers needed for
+ * delivering forms in a bibdk-modal using Foundation Reveal.
+ */
+
 
 /**
  * Menu callback that returns the user_login form wrapped in a modal
@@ -83,6 +89,9 @@ function bibdk_modal_register() {
   bibdk_modal_deliver_output($commands);
 }
 
+/**
+ * Creates and delivers the form used to report offensive content.
+ */
 function bibdk_modal_offensive_form() {
   //  module_load_include('inc', 'bibdk_voxb', 'bibdk_voxb.offensive.inc');
   $form_state = _bibdk_modal_set_form_state();
@@ -107,9 +116,14 @@ function bibdk_modal_offensive_form() {
   bibdk_modal_deliver_output($commands);
 }
 
+/**
+ * Callback function.
+ * Gets the pid and calls the _review_edit_node form that delivers the actual
+ * form to the client.
+ */
 function bibdk_modal_review_create_node() {
   $pid = bibdk_voxb_review_check_pid();
-  return bibdk_modal_review_edit_node($pid);
+  bibdk_modal_review_edit_node($pid);
 }
 
 /**
