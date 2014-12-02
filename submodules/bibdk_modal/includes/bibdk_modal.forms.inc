@@ -66,7 +66,7 @@ function bibdk_modal_forgot_password() {
  *
  * @return array|mixed
  */
-function () {
+function bibdk_modal_register() {
   $form_state = _bibdk_modal_set_form_state();
 
   $output = bibdk_modal_form_wrapper('user_register_form', $form_state);
