@@ -75,7 +75,7 @@ function bibdk_modal_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/voxb/offensive'] = array(
+  $items['bibdk_modal/voxb/offensive'] = array(
     'title' => t('report_offensive_content', array(), array('context' => 'bibdk_voxb')),
     'type' => MENU_CALLBACK,
     'access arguments' => array('search content'),
@@ -84,6 +84,23 @@ function bibdk_modal_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Method that delivers content for modal overlays. Based on the $output
+ * parameter the method will either print the $output to the client or deliver
+ * it in array to be used by clientside AJAX commands.
+ *
+ * @param array|string $output
+ */
+function bibdk_modal_deliver_output($output) {
+  if (is_array($output)) {
+    print ajax_render($output);
+  }
+  else {
+    print $output;
+  }
+  drupal_exit();
 }
 
 /**
@@ -195,18 +212,32 @@ function bibdk_modal_form_wrapper($form_id, &$form_state) {
   );
 
   $output = drupal_build_form($form_id, $form_state);
+  bibdk_modal_add_ajax_submit($output, $form_id);
 
-  // adding 'use-ajax-submit' on submit button to ensure it will be ajax processed
+  return bibdk_modal_form_render($form_state, $output);
+}
+
+/**
+ * Add use-ajax-submit attribute on submit buttons to ensure Drupal will
+ * ajax-process the form and avoid a new pageload when the form is submitted.
+ *
+ * @param array $output
+ * @param string $form_id
+ */
+function bibdk_modal_add_ajax_submit(&$output, $form_id) {
   if (!empty($output['actions']['submit'])) {
     $output['actions']['submit']['#attributes']['class'][] = 'use-ajax-submit';
   }
 
-  //Adding
-  if ($form_id === 'bibdk_favourite_user_form_fields') {
-    $output['wrapper']['buttons']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+  // some forms needs special treat
+  switch ($form_id) {
+    case 'bibdk_favourite_user_form_fields':
+      $output['wrapper']['buttons']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+      break;
+    case 'bibdk_voxb_offensive_form':
+      $output['wrapper']['button']['#attributes']['class'][] = 'use-ajax-submit';
+      break;
   }
-
-  return bibdk_modal_form_render($form_state, $output);
 }
 
 /**
