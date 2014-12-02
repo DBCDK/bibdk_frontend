@@ -81,21 +81,6 @@
       }
     }).addClass('bibdk-modal-login');
 
-    //Rewrite edit review link
-    $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-
-    //Rewrite edit review link
-    $("a[href*='/voxb/ajax/review/create'], a[href*='?q=voxb/ajax/review/create']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace('/voxb/ajax/review/create', '/bibdk_modal/nojs/voxb/review/create');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-
-    //Rewrite offensive content link
-    $("a[href*='/voxb/offensive'], a[href*='?q=voxb/offensive']", context).once('init-modal-forms-login', function() {
-      this.href = this.href.replace('voxb/offensive', 'bibdk_modal/nojs/voxb/offensive');
-    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
-
     //Rewrite edit favourite user data link
     $("a[href*='/overlay/favourite/userdata/'], a[href*='?q=overlay/favourite/userdata/']", context).attr({
       'data-reveal-id': 'bibdk-modal',
@@ -105,7 +90,7 @@
       }
     }).addClass('bibdk-modal-favourites').removeClass('bibdk-popup-link');
 
-    //Rewrite add favourite library
+    //Rewrite add favourite library - but only if user is logged in
     if(Drupal.settings.uid) {
       var url = 'user/' + Drupal.settings.uid + '/bibdk_favourite_list?';
       $("a[href*='/" + url + "'], a[href*='?q=" + url + "']", context).attr({
@@ -115,8 +100,26 @@
           return value.replace(url, 'bibdk_modal/bibdk_favourite_list?');
         }
       }).addClass('bibdk-modal-favourites').removeClass('bibdk-popup-link');
-
     }
+
+    //Rewrite create review link
+    $("a[href*='/voxb/ajax/review/create'], a[href*='?q=voxb/ajax/review/create']", context).attr({
+      'data-reveal-id': 'bibdk-modal',
+      'data-reveal-ajax': 'true',
+      'href': function(key, value) {
+        return value.replace(/voxb\/ajax\/review\/create/, 'bibdk_modal/voxb/review/create');
+      }
+    }).addClass('bibdk-modal-voxb-create');
+
+    //Rewrite edit review link
+    $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
+      this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
+
+    //Rewrite offensive content link
+    $("a[href*='/voxb/offensive'], a[href*='?q=voxb/offensive']", context).once('init-modal-forms-login', function() {
+      this.href = this.href.replace('voxb/offensive', 'bibdk_modal/nojs/voxb/offensive');
+    }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
   };
 
   BibdkModal.addAccessibilityInfo = function(context) {
