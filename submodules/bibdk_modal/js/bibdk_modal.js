@@ -112,6 +112,14 @@
     }).addClass('bibdk-modal-voxb-create');
 
     //Rewrite edit review link
+    $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).attr({
+      'data-reveal-id': 'bibdk-modal',
+      'data-reveal-ajax': 'true',
+      'href': function(key, value) {
+        return value.replace(/voxb\/ajax\/review\/edit/, 'bibdk_modal/voxb/review/edit');
+      }
+    }).addClass('bibdk-modal-voxb-create');
+
     $("a[href*='/voxb/ajax/review/edit'], a[href*='?q=voxb/ajax/review/edit']", context).once('init-modal-forms-login', function() {
       this.href = this.href.replace('/voxb/ajax/review/edit', '/bibdk_modal/nojs/voxb/review/edit');
     }).addClass('ctools-use-modal  ctools-modal-bibdk-modal-style');
