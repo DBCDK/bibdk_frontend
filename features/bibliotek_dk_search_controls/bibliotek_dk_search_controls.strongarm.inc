@@ -62,19 +62,19 @@ function bibliotek_dk_search_controls_strongarm() {
         ),
         7 => array(
           'label' => 'Jeg leder efter en titel  - test',
-          'value' => 'rank_subject',
+          'value' => 'rank_main_title',
           'default' => 0,
           'sort' => '-4',
         ),
         8 => array(
           'label' => 'Jeg leder efter et emne - test',
-          'value' => 'rank_main_title',
+          'value' => 'rank_subject',
           'default' => 0,
           'sort' => '-3',
         ),
         9 => array(
-          'label' => 'Jeg leder efter en forfatter',
-          'value' => 'rank_author',
+          'label' => 'Jeg leder efter en forfatter - test',
+          'value' => 'rank_creator',
           'default' => 0,
           'sort' => '-2',
         ),
