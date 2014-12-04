@@ -133,18 +133,24 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
  * @return array $links
  */
 function _bibdk_modal_get_login_form_links() {
-  $items[] = l(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/forgot_password', array(
-    'attributes' => array(
-      'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
-      'class' => array('use-ajax', 'forgot-pword-link')
-    )
-  ));
-  $items[] = l(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/register', array(
-    'attributes' => array(
-      'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
-      'class' => array('use-ajax', 'register-link')
-    )
-  ));
+  $links[] = array(
+    '#theme' => 'link',
+    '#text' => t('Request new password', array(), array('context' => 'bibdk_modal')),
+    '#path' => 'bibdk_modal/forgot_password',
+    '#options' => array(
+      'attributes' => array(
+        'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'forgot-pword-link')
+      ),
+      'html' => FALSE,
+      'svg' => 'svg-arrow-right',
+    ),
+  );
+
+  $items = array();
+  foreach($links as $link){
+    $items[] = drupal_render($link);
+  }
 
   $links = array(
     '#theme' => 'item_list',
