@@ -135,6 +135,20 @@ function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
 function _bibdk_modal_get_login_form_links() {
   $links[] = array(
     '#theme' => 'link',
+    '#text' => t('Create new account', array(), array('context' => 'bibdk_modal')),
+    '#path' => 'bibdk_modal/register',
+    '#options' => array(
+      'attributes' => array(
+        'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'forgot-pword-link')
+      ),
+      'html' => FALSE,
+      'svg' => 'svg-arrow-right',
+    ),
+  );
+
+  $links[] = array(
+    '#theme' => 'link',
     '#text' => t('Request new password', array(), array('context' => 'bibdk_modal')),
     '#path' => 'bibdk_modal/forgot_password',
     '#options' => array(
