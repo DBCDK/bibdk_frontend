@@ -108,6 +108,7 @@
    * Set the modal window 10% from top of current viewport
    */
   BibdkModal.modalHasFocus = function(){
+    jQuery('.exit-off-canvas').trigger('click');
     var top = (window.innerHeight * 0.1) + $(window).scrollTop();
     $('#modalContent').css({top:top + 'px'});
   };

@@ -5,6 +5,4 @@ version = 7.x-0.1
 package = Bibliotek.dk
 core = 7.x
 
-files[] = bibdk_usersettings_language.test
-
 dependencies[] = bibdk_usersettings
