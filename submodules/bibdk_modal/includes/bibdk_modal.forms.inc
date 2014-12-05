@@ -180,7 +180,6 @@ function bibdk_modal_edit_favourite_userdata_form($branchid) {
 
   $commands = array();
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
-    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
     $commands = $output;
   }
   elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
@@ -224,7 +223,6 @@ function bibdk_modal_add_to_favorites_callback() {
   //$output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite')); //TODO mmj to use or not to use?
 
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
-    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
     $commands = $output;
   }
   elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
