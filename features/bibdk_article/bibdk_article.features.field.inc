@@ -98,13 +98,13 @@ function bibdk_article_field_default_fields() {
   );
 
   // Exported field: 'node-bibdk_article-field_bibdk_article_link'.
-  $fields['node-bibdk_article-field_bibdk_article_link'] = array(
+  $fields['node-bibdk_article-field_link'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_bibdk_article_link',
+      'field_name' => 'field_link',
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -159,7 +159,7 @@ function bibdk_article_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_bibdk_article_link',
+      'field_name' => 'field_link',
       'label' => 'Link',
       'required' => 0,
       'settings' => array(
