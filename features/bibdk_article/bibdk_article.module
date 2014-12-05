@@ -26,10 +26,10 @@ function bibdk_article_block_info() {
  * @TODO delete deprecated fields
  */
 function bibdk_article_form_bibdk_article_node_form_alter(&$form, &$form_state){
-  $form['field_link']['#type'] = 'hidden';
-  $form['field_page']['#type'] = 'hidden';
-  $form['field_columns']['#type'] = 'hidden';
-  $form['field_color']['#type'] = 'hidden';
+  //$form['field_link']['#type'] = 'hidden';
+ // $form['field_page']['#type'] = 'hidden';
+ // $form['field_columns']['#type'] = 'hidden';
+  //$form['field_color']['#type'] = 'hidden';
 }
 
 /** Implements hook_menu
@@ -352,7 +352,7 @@ function bibdk_article_get_page_paths() {
 function bibdk_article_get_classes( $rows) {
   $classes = array(
     'type' => 'article-widget',
-    'height' => 'widget-height-' . $rows,
+    //'height' => 'widget-height-' . $rows,
   );
   return array('class' => $classes);
 }

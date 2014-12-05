@@ -19,6 +19,7 @@ function article_view_preprocess_views_view_fields(&$vars) {
   if ($view->name != 'article_view') {
     return;
   }
+
   // get the node
   $node = node_load($vars['row']->nid);
   $wrapper = entity_metadata_wrapper('node', $node);
@@ -29,24 +30,19 @@ function article_view_preprocess_views_view_fields(&$vars) {
   // get link text
   $link_text = $wrapper->field_link_text->value();
   // get link url
-  $link_url = $wrapper->field_bibdk_article_link->value();
+  $link_url = $wrapper->field_link->value();
 
-  if (!empty($link_text) && !empty($link_url)) {
-    $attributes = array('attributes'=>array('target'=>'_blank'));
+
+ if (!empty($link_text) && !empty($link_url)) {
+    $attributes = array('attributes' => array('target' => '_blank'));
     $link = l($link_text, $link_url, $attributes);
 
     // iniitialize link object
-    $vars['fields']['article_link'] = new stdClass();
-
-    // add link field to fields array
-    $vars['fields']['article_link']->content = $link;
-    $vars['fields']['article_link']->label_html = '';
-    $vars['fields']['article_link']->wrapper_prefix = '<footer class="footer"><div class="field-read-more">';
-    $vars['fields']['article_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div>';
+    $vars['fields']['field_link']->content = $link;
+    $vars['fields']['field_link']->label_html = '';
+    $vars['fields']['field_link']->wrapper_prefix = '<div class="footer"><div class="field-read-more">';
+    $vars['fields']['field_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div></div>';
   }
-
-  // hack .. link text is shown in link, but make a blank to maintain styling
-  $vars['fields']['field_link_text']->content = '&nbsp ';
 }
 
 function article_view_handle_classes($wrapper) {
@@ -56,7 +52,7 @@ function article_view_handle_classes($wrapper) {
   $rows = empty($rows) ? '2' : $rows;
 
   $region = $wrapper->field_page_region->value();
-  if(!empty($region) && $region->name == 'top'){
+  if (!empty($region) && $region->name == 'top') {
     $classes = bibdk_article_get_classes(4, 'top', 'light-grey');
   }
   else {
@@ -70,7 +66,7 @@ function article_view_handle_classes($wrapper) {
  * callback method for bibdk_custom_header_block
  */
 function article_view_get_panel_link() {
-  $message = t('more_articles', array(), array('context'=>'bibdk_article'));
+  $message = t('more_articles', array(), array('context' => 'bibdk_article'));
   $path = 'bibdk_articles';
   $link = array(
     '#theme' => 'link',
