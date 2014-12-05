@@ -26,10 +26,11 @@ function bibdk_article_block_info() {
  * @TODO delete deprecated fields
  */
 function bibdk_article_form_bibdk_article_node_form_alter(&$form, &$form_state){
-  //$form['field_link']['#type'] = 'hidden';
- // $form['field_page']['#type'] = 'hidden';
- // $form['field_columns']['#type'] = 'hidden';
-  //$form['field_color']['#type'] = 'hidden';
+  $form['field_bibdk_article_link']['#type'] = 'hidden';
+  $form['field_page']['#type'] = 'hidden';
+  $form['field_columns']['#type'] = 'hidden';
+  $form['field_color']['#type'] = 'hidden';
+  $form['field_rows']['#type'] = 'hidden';
 }
 
 /** Implements hook_menu
