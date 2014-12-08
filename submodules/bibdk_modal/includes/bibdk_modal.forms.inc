@@ -102,7 +102,6 @@ function bibdk_modal_offensive_form() {
   $commands = array();
 
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
-    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
     $commands = $output;
   }
   elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
@@ -148,7 +147,6 @@ function bibdk_modal_review_edit_node($pid = NULL) {
 
   $commands = array();
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
-    $output = bibdk_modal_wrap_form_in_element_wrapper($output);
     $commands = $output;
   }
   elseif (empty($form_state['executed']) && !empty($form_state['submitted'])) {
@@ -241,20 +239,6 @@ function bibdk_modal_add_to_favorites_callback() {
   }
 
   bibdk_modal_deliver_output($commands);
-}
-
-/**
- * Wraps a form in a element-wrapper and a element
- *
- * @param string $output
- * @return string
- */
-function bibdk_modal_wrap_form_in_element_wrapper($output) {
-  if (!empty($output)) {
-    $output = '<div class="element-wrapper"><div class="element">' . $output . '</div></div>';
-    return $output;
-  }
-  return $output;
 }
 
 /**
