@@ -241,7 +241,4 @@ function bibdk_modal_form_render($form_state, $output) {
   );
 
   return drupal_render($render);
-
-  //TODO mmj this should maybe be provided by some template or so... with a title
-  return '<div id="bibdk-modal-form">' . $output . '<a class="close-reveal-modal">&#215;</a></div>';
 }
