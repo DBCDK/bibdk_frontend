@@ -140,7 +140,7 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_footer_menu',
     //Content
     'bibdk_custom_header_block',
-    'article_view',
+    'bibdk_article_view',
     'bibdk_banner',
     'bibdk_adhl',
     //Submodule
