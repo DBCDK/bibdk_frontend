@@ -45,22 +45,28 @@ function bibdk_article_view_preprocess_views_view_fields(&$vars) {
   }
 }
 
+
+/**
+ * Set classes needed for styling articles
+ * @param $wrapper
+ * @return array
+ */
 function bibdk_article_view_handle_classes($wrapper) {
-  // get rows
-  $rows = $wrapper->field_rows->value();
-  // default value
-  $rows = empty($rows) ? '2' : $rows;
-
   $region = $wrapper->field_page_region->value();
-  if (!empty($region) && $region->name == 'top') {
-    $classes = bibdk_article_get_classes(4, 'top', 'light-grey');
-  }
-  else {
-    $classes = bibdk_article_get_classes($rows);
-  }
+  $column =  $wrapper->field_column->value();
 
-  return $classes;
+  $region_class = ($region->name == 'top') ? 'bibdk-article-top' : 'bibdk-article-bottom';
+  $column_class = ($column->name == 'left') ? 'bibdk-article-left' : 'bibdk-article-right';
+
+  $classes = array(
+    'article-widget',
+    $region_class,
+    $column_class,
+  );
+
+  return array('class' => $classes);
 }
+
 
 /**
  * callback method for bibdk_custom_header_block
