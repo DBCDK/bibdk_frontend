@@ -93,7 +93,6 @@ function bibdk_modal_register() {
  * Creates and delivers the form used to report offensive content.
  */
 function bibdk_modal_offensive_form() {
-  //  module_load_include('inc', 'bibdk_voxb', 'bibdk_voxb.offensive.inc');
   $form_state = _bibdk_modal_set_form_state();
   $output = bibdk_modal_form_wrapper('bibdk_voxb_offensive_form', $form_state);
   $message = t('bibdk_voxb_offensive_reported', array(), array('context' => 'bibdk_voxb'));
@@ -218,7 +217,6 @@ function bibdk_modal_add_to_favorites_callback() {
   $output = bibdk_modal_form_wrapper('bibdk_favourite_user_form_fields', $form_state);
 
   $commands = array();
-  //$output[0]['title'] = t('please_enter_personal_loaner_data', array(), array('context' => 'bibdk_favourite')); //TODO mmj to use or not to use?
 
   if (empty($form_state['executed']) && empty($form_state['submitted'])) {
     $commands = $output;
