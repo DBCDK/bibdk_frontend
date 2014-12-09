@@ -5,6 +5,5 @@ version = 7.x-0.1
 package = Bibdk Frontend
 
 files[] = includes/bibdk_modal.forms.inc
-files[] = test/bibdk_modal_unit_test.test
 
 scripts[] = js/bibdk_modal.js
