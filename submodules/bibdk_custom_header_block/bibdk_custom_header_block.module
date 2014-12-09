@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @file
+ * hook into ctools
+ */
 
 /**
  * Implements hook_ctools_plugin_directory().

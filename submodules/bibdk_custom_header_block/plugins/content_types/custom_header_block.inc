@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @file
+ * define a configurable plugin
+ */
 
 $plugin = array(
   'single' => TRUE,
