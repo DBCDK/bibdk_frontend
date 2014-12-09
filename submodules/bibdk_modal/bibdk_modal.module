@@ -1,86 +1,70 @@
 <?php
 
-/**
- * Implements hook_init().
- */
-function bibdk_modal_init() {
-  // Do not load modal_forms during the Drupal installation process, e.g. if part
-  // of installation profiles.
-  if (!drupal_installation_attempted()) {
-    _bibdk_modal_forms_doheader();
-  }
-}
+include_once 'includes/bibdk_modal.commands.inc';
 
 /**
  * Implements hook_menu().
  */
 function bibdk_modal_menu() {
-  $items['bibdk_modal/%ctools_js/login'] = array(
+
+  $items['bibdk_modal/login'] = array(
     'title' => 'Log in',
     'page callback' => 'bibdk_modal_login',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/password'] = array(
+  $items['bibdk_modal/forgot_password'] = array(
     'title' => 'Forgot Password',
     'page callback' => 'bibdk_modal_forgot_password',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/register'] = array(
+  $items['bibdk_modal/register'] = array(
     'title' => 'Register new user',
     'page callback' => 'bibdk_modal_register',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/favourite/userdata'] = array(
+  $items['bibdk_modal/favourite/userdata'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_edit_favourite_userdata_form',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-
-  $items['bibdk_modal/%ctools_js/bibdk_favourite_list'] = array(
+  $items['bibdk_modal/bibdk_favourite_list'] = array(
     'title' => 'Edit favourite library user data',
     'page callback' => 'bibdk_modal_add_to_favorites_callback',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/voxb/review/edit'] = array(
-    'title' => 'Edit review',
-    'page callback' => 'bibdk_modal_review_edit_node',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'file' => 'includes/bibdk_modal.forms.inc',
-    'type' => MENU_CALLBACK,
-  );
-
-  $items['bibdk_modal/%ctools_js/voxb/review/create'] = array(
+  $items['bibdk_modal/voxb/review/create'] = array(
     'title' => 'Edit review',
     'page callback' => 'bibdk_modal_review_create_node',
-    'page arguments' => array(1),
     'access callback' => TRUE,
     'file' => 'includes/bibdk_modal.forms.inc',
     'type' => MENU_CALLBACK,
   );
 
-  $items['bibdk_modal/%ctools_js/voxb/offensive'] = array(
-    'title' => t('report_offensive_content', array(), array('context'=>'bibdk_voxb')),
+  $items['bibdk_modal/voxb/review/edit'] = array(
+    'title' => 'Edit review',
+    'page callback' => 'bibdk_modal_review_create_node',
+    'access callback' => TRUE,
+    'file' => 'includes/bibdk_modal.forms.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['bibdk_modal/voxb/offensive'] = array(
+    'title' => t('report_offensive_content', array(), array('context' => 'bibdk_voxb')),
     'type' => MENU_CALLBACK,
     'access arguments' => array('search content'),
     'page callback' => 'bibdk_modal_offensive_form',
@@ -88,6 +72,38 @@ function bibdk_modal_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bibdk_modal_theme() {
+  return array(
+    'bibdk_modal_theme' => array(
+      'template' => 'theme/bibdk-modal',
+      'variables' => array(
+        'title' => '',
+        'content' => '',
+      ),
+    ),
+  );
+}
+
+/**
+ * Method that delivers content for modal overlays. Based on the $output
+ * parameter the method will either print the $output to the client or deliver
+ * it in array to be used by clientside AJAX commands.
+ *
+ * @param array|string $output
+ */
+function bibdk_modal_deliver_output($output) {
+  if (is_array($output)) {
+    print ajax_render($output);
+  }
+  else {
+    print $output;
+  }
+  drupal_exit();
 }
 
 /**
@@ -104,19 +120,51 @@ function bibdk_modal_menu() {
  */
 function bibdk_modal_form_user_login_alter(&$form, &$form_state, $form_id) {
   if (!empty($form_state['ajax'])) {
-    $form['#action'] = url('bibdk_modal/ajax/login');
+    $form['#action'] = url('bibdk_modal/login');
     $form['actions']['modal_links'] = _bibdk_modal_get_login_form_links();
   }
 }
 
 /**
  * Generates links for forgotten password and create new user forms.
+ * If we get here we assume that we're in a modal and the client have JS enabled
+ * in hte browser.
  *
  * @return array $links
  */
 function _bibdk_modal_get_login_form_links() {
-  $items[] = ctools_modal_text_button(t('Create new account', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/register', t('Create a new user account', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style register-link');
-  $items[] = ctools_modal_text_button(t('Request new password', array(), array('context' => 'bibdk_modal')), 'bibdk_modal/nojs/password', t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')), 'ctools-modal-bibdk-modal-style forgot-pword-link');
+  $links[] = array(
+    '#theme' => 'link',
+    '#text' => t('Create new account', array(), array('context' => 'bibdk_modal')),
+    '#path' => 'bibdk_modal/register',
+    '#options' => array(
+      'attributes' => array(
+        'alt' => t('Create a new user account', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'register-link')
+      ),
+      'html' => FALSE,
+      'svg' => 'svg-arrow-right',
+    ),
+  );
+
+  $links[] = array(
+    '#theme' => 'link',
+    '#text' => t('Request new password', array(), array('context' => 'bibdk_modal')),
+    '#path' => 'bibdk_modal/forgot_password',
+    '#options' => array(
+      'attributes' => array(
+        'alt' => t('Request new password via e-mail.', array(), array('context' => 'bibdk_modal')),
+        'class' => array('use-ajax', 'forgot-pword-link')
+      ),
+      'html' => FALSE,
+      'svg' => 'svg-arrow-right',
+    ),
+  );
+
+  $items = array();
+  foreach($links as $link){
+    $items[] = drupal_render($link);
+  }
 
   $links = array(
     '#theme' => 'item_list',
@@ -127,54 +175,69 @@ function _bibdk_modal_get_login_form_links() {
   return $links;
 }
 
-/**
- * Configuration method. Used for loading JavaScript and CSS and setting
- * properties on the modal we're going to display
- */
-function _bibdk_modal_forms_doheader() {
-  static $already_added = FALSE;
-  if ($already_added) {
-    return; // Don't add the JavaScript and CSS multiple times.
-  }
-
-  // Include the CTools tools that we need.
-  ctools_include('ajax');
-  ctools_include('modal');
-
-  //Needed to ensure ctools_ajax_command_reload() and ctools_ajax_command_redirect() works
-  ctools_add_js('ajax-responder');
-
-  // Add CTools' javascript to the page.
-  ctools_modal_add_js();
-
-  // Create our own javascript that will be used to theme a modal.
-  $bibdk_modal_style = array(
-    'bibdk-modal-style' => array(
-      'loadingText' => t('Loading...', array(), array('context' => 'bibdk_modal')),
-      'closeText' => t('Close Window', array(), array('context' => 'bibdk_modal')),
-      'modalSize' => array(
-        'type' => 'fixed',
-        'width' => 500,
-        'height' => 400,
-        'minHeight' => 180,
-        'addWidth' => 0,
-        'addHeight' => 0,
-      ),
-      'modalOptions' => array(
-        'opacity' => .8,
-        'background-color' => '#000',
-      ),
-      'animation' => 'fadeIn',
-      'modalTheme' => 'BibdkModal',
-    ),
+function bibdk_modal_form_wrapper($form_id, &$form_state) {
+  $form_state += array(
+    're_render' => FALSE,
+    'no_redirect' => !empty($form_state['ajax']),
   );
 
-  drupal_add_js($bibdk_modal_style, 'setting');
+  $output = drupal_build_form($form_id, $form_state);
+  bibdk_modal_add_ajax_submit($output, $form_id);
 
-  ctools_add_js('bibdk_modal_theme', 'bibdk_modal');
+  return bibdk_modal_form_render($form_state, $output);
+}
 
-  //Overriding part of CTools' modal.js
-  ctools_add_js('bibdk_modal_resize_override', 'bibdk_modal');
+/**
+ * Add use-ajax-submit attribute on submit buttons to ensure Drupal will
+ * ajax-process the form and avoid a new pageload when the form is submitted.
+ *
+ * @param array $output
+ * @param string $form_id
+ */
+function bibdk_modal_add_ajax_submit(&$output, $form_id) {
+  if (!empty($output['actions']['submit'])) {
+    $output['actions']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+  }
 
-  $already_added = TRUE;
+  // some forms needs special treat
+  switch ($form_id) {
+    case 'bibdk_favourite_user_form_fields':
+      $output['wrapper']['buttons']['submit']['#attributes']['class'][] = 'use-ajax-submit';
+      break;
+    case 'bibdk_voxb_offensive_form':
+      $output['wrapper']['button']['#attributes']['class'][] = 'use-ajax-submit';
+      break;
+  }
+}
+
+/**
+ * Render a form into an AJAX display.
+ *
+ * If there are messages for the form, render them.
+ * If the form has been executed the messages will be shown on the page after
+ * reload.
+ *
+ * @param array $form_state
+ * @param array $output
+ * @return string
+ */
+function bibdk_modal_form_render($form_state, $output) {
+  if (is_array($output)) {
+    $output = drupal_render($output);
+  }
+
+  $title = empty($form_state['title']) ? drupal_get_title() : $form_state['title'];
+
+  if (empty($form_state['executed'])) {
+    $messages = theme('status_messages');
+    $output = $messages . $output;
+  }
+
+  $render = array(
+    '#theme' => 'bibdk_modal_theme',
+    '#title' => $title,
+    '#content' => $output
+  );
+
+  return drupal_render($render);
 }
