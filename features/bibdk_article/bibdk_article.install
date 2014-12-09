@@ -147,6 +147,25 @@ function bibdk_article_do_delete_fields(array $field_names) {
 }
 
 
+/**
+ * map existing page_type to new
+ * @param $page_type
+ * @return bool
+ */
+function _bibdk_article_get_term_from_page_type($page_type) {
+  $valuemap = _bibdk_article_get_value_map();
+  foreach($valuemap as $key=>$value){
+    if( $key == $page_type || $value == $page_type) {
+      return $value;
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * helper function for converting existing page_types to new
+ * @return array
+ */
 function _bibdk_article_get_value_map(){
   return array(
     'bibdk_frontpage/spil' => 'spil',
@@ -159,15 +178,7 @@ function _bibdk_article_get_value_map(){
   );
 }
 
-function _bibdk_article_get_term_from_page_type($page_type) {
-  $valuemap = _bibdk_article_get_value_map();
-  foreach($valuemap as $key=>$value){
-    if( $key == $page_type || $value == $page_type) {
-      return $value;
-    }
-  }
-  return FALSE;
-}
+
 
 
 
