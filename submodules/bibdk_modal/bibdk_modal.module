@@ -231,7 +231,6 @@ function bibdk_modal_form_render($form_state, $output) {
   if (empty($form_state['executed'])) {
     $messages = theme('status_messages');
     $output = $messages . $output;
-    drupal_get_messages();
   }
 
   $render = array(
