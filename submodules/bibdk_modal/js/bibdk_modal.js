@@ -28,6 +28,7 @@
       var html = data.html;
       $(selector).replaceWith(html);
       BibdkModal.detachBehaviorsOnModal(true);
+      onLoad.setFocus();
     }
     else {
       console.log('error');
