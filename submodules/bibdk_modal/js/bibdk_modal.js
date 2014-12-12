@@ -7,18 +7,9 @@
   // ---------------------------------------------------------------------------
   Drupal.ajax.prototype.commands.bibdk_modal_reload = function(ajax, data, status) {
     BibdkModal.detachBehaviorsOnModal();
-    var currentUrl = document.URL;
-    if(currentUrl.indexOf("reservation/?ids") != -1) {
-      window.location.href = currentUrl;
-      if(window.opener != null) {
-        window.opener.location.reload(true);
-      }
-    }
-    else {
-      location.reload(true);
-      if(window.opener != null) {
-        window.opener.location.reload(true);
-      }
+    window.location.href = document.URL;
+    if(window.opener != null) {
+      window.opener.location.reload(true);
     }
   };
 
