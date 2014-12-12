@@ -152,7 +152,7 @@ function bibdk_modal_review_edit_node($pid = NULL) {
     $commands[] = bibdk_modal_command_replace_form($output);
   }
   elseif (!empty($form_state['executed']) && !empty($form_state['submitted'])) {
-    if (empty($pid)) {
+    if (!empty($voxb_id)) {
       $commands[] = bibdk_voxb_ajax_review_saved($voxb_id);
     }
     else {
