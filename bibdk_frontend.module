@@ -186,11 +186,8 @@ function bibdk_frontend_form_profile2_form_alter(&$form, &$form_state) {
  * Implements hook_menu().
  */
 function bibdk_frontend_menu() {
-
   $items = array();
-
   $forms = array('all_element_types', 'all_inline_element_types');
-
   foreach ($forms as $form) {
     $items['bibdk_forms/' . $form] = array(
       'title' => t($form),
