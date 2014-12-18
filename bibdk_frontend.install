@@ -138,6 +138,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_ie6nomore_settings',
     'bibliotek_dk_offcanvas_menu',
     'bibliotek_dk_footer_menu',
+    'bibdk_facets',
     //Content
     'bibdk_article',
     'bibdk_banner',
@@ -470,5 +471,18 @@ function bibdk_frontend_update_7026(&$sandbox) {
     'bibliotek_dk_global_login_menu',
     'bibliotek_dk_header_actions',
     'topbar_menu_block_feature'
+  ));
+}
+
+/**
+ * Enable bibdk_facets for existing installations
+ */
+function bibdk_frontend_update_7027(&$sandbox) {
+  module_enable(array(
+    'bibdk_facets',
+  ));
+
+  module_disable(array(
+    'ding_facets',
   ));
 }
