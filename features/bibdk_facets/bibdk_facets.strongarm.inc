@@ -150,7 +150,7 @@ function bibdk_facets_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ding_facetbrowser_by_ajax';
+  $strongarm->name = 'bibdk_facetbrowser_by_ajax';
   $strongarm->value = 1;
   $export['bibdk_facetbrowser_by_ajax'] = $strongarm;
 
