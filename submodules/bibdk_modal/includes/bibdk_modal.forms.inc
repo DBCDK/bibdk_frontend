@@ -6,7 +6,6 @@
  * delivering forms in a bibdk-modal using Foundation Reveal.
  */
 
-
 /**
  * Menu callback that returns the user_login form wrapped in a modal
  * If JavaScript is disabled in the client we will never get here as the login
@@ -165,7 +164,7 @@ function bibdk_modal_review_edit_node($pid = NULL) {
 }
 
 /**
- * Genrate form fro editing favourite userdaata
+ * Genrate form for editing favourite userdaata
  *
  * @param string $branchid
  */
@@ -191,7 +190,7 @@ function bibdk_modal_edit_favourite_userdata_form($branchid) {
 }
 
 /**
- * Genrate form fro editing favourite userdaata
+ * Genrate form for editing favourite userdaata
  *
  * @return array|mixed Form array
  */
