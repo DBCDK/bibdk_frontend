@@ -7,9 +7,18 @@
   // ---------------------------------------------------------------------------
   Drupal.ajax.prototype.commands.bibdk_modal_reload = function(ajax, data, status) {
     BibdkModal.detachBehaviorsOnModal();
-    window.location.href = document.URL;
-    if(window.opener != null) {
-      window.opener.location.reload(true);
+    var currentUrl = document.URL;
+    if(currentUrl.indexOf("reservation?ids") != -1) {
+      window.location.href = currentUrl;
+      if(window.opener != null) {
+        window.opener.location.reload(true);
+      }
+    }
+    else {
+      location.reload(true);
+      if(window.opener != null) {
+        window.opener.location.reload(true);
+      }
     }
   };
 
@@ -148,4 +157,5 @@
 
   Drupal.bibdkModal = BibdkModal;
 
-})(jQuery);
+})
+(jQuery);
