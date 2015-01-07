@@ -127,3 +127,7 @@ function custom_search_taxonomy_update_taxonomy($machine_name, $terms) {
     }
   }
 }
+
+function custom_search_taxonomy_update_7001(){
+custom_search_taxonomy_install();
+}
