@@ -2730,7 +2730,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '238c9bb0-6841-da64-199a-aab1670b05e8';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -95;
+  $option->sort = -94;
   $option->label = 'Playstation Vita';
   $option->value = '"playstation vita"';
   $option->expand = '0';
@@ -3004,9 +3004,21 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
   $option->api_version = 1;
+  $option->o_uuid = '2c969f0b-ce24-4968-9f64-e589918ed754';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -96;
+  $option->label = 'Playstation 4';
+  $option->value = '"playstation 4"';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['2c969f0b-ce24-4968-9f64-e589918ed754'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
   $option->o_uuid = '2e1186cb-6a2c-9c54-dd1a-6172443fc570';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -93;
+  $option->sort = -92;
   $option->label = 'e-spil';
   $option->value = '"pc-spil (net)"';
   $option->expand = '0';
@@ -3258,7 +3270,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3689ff50-3c68-8c44-59f0-63246f074c2a';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -89;
+  $option->sort = -88;
   $option->label = 'Xbox 360';
   $option->value = '"xbox 360"';
   $option->expand = '0';
@@ -3414,7 +3426,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3ab0660b-f523-4eee-bced-bdd0054916e5';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -90;
+  $option->sort = -89;
   $option->label = 'Xbox';
   $option->value = '"xbox"';
   $option->expand = '0';
@@ -3432,6 +3444,18 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['3ac29d85-70d4-4873-a354-794960e5d118'] = $option;
+
+  $option = new stdClass();
+  $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
+  $option->api_version = 1;
+  $option->o_uuid = '3b148271-66a0-453e-9d20-ec974ddb7567';
+  $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
+  $option->sort = -87;
+  $option->label = 'Xbox One';
+  $option->value = '"xbox one"';
+  $option->expand = '0';
+  $option->is_disabled = FALSE;
+  $export['3b148271-66a0-453e-9d20-ec974ddb7567'] = $option;
 
   $option = new stdClass();
   $option->disabled = FALSE; /* Edit this to true to make a default option disabled initially */
@@ -3558,7 +3582,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '3ffa308b-9344-4969-a5b4-31cff8427b81';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -94;
+  $option->sort = -93;
   $option->label = 'PSP';
   $option->value = '"psp"';
   $option->expand = '0';
@@ -4554,7 +4578,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = '74a3b752-7fe7-4f44-753b-5bfc468555a6';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -92;
+  $option->sort = -91;
   $option->label = 'Wii';
   $option->value = '"wii"';
   $option->expand = '0';
@@ -4808,7 +4832,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = '6e4d6c92-a9b4-4f53-830c-db8bb5ce9dae';
   $option->sort = -100;
   $option->label = 'a cappella';
-  $option->value = '(dkcclterm.dk=78.65* and "cappella*") or dkcclphrase.lem="a cappella*)"';
+  $option->value = 'dkcclterm.dk=78.65* and cappella* or dkcclphrase.lem="a cappella" or dkcclphrase.lem="a cappella kor"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['7fff6718-e551-4822-9261-7806c30dddb0'] = $option;
@@ -6318,7 +6342,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'bc004777-0729-d974-c5c0-4ccf0b6881c2';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -96;
+  $option->sort = -95;
   $option->label = 'Nintendo DS';
   $option->value = '"nintendo ds"';
   $option->expand = '0';
@@ -7314,7 +7338,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->api_version = 1;
   $option->o_uuid = 'e12fa2f8-c2e6-ee54-29dc-5860e95905c5';
   $option->v_uuid = '3c0f6ff4-63f2-8a54-4500-6198904477ba';
-  $option->sort = -91;
+  $option->sort = -90;
   $option->label = 'Wii U';
   $option->value = '"wii u"';
   $option->expand = '0';

@@ -13,7 +13,7 @@ function bibdk_facets_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ding_facetbrowser_facets';
+  $strongarm->name = 'bibdk_facetbrowser_facets';
   $strongarm->value = array(
     0 => array(
       'name' => 'facet.type',
@@ -131,21 +131,29 @@ function bibdk_facets_strongarm() {
       'weight' => '10',
     ),
   );
-  $export['ding_facetbrowser_facets'] = $strongarm;
+  $export['bibdk_facetbrowser_facets'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ding_facetbrowser_number_requested';
+  $strongarm->name = 'bibdk_facetbrowser_number_requested';
   $strongarm->value = '70';
-  $export['ding_facetbrowser_number_requested'] = $strongarm;
+  $export['bibdk_facetbrowser_number_requested'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ding_facetbrowser_number_shown';
+  $strongarm->name = 'bibdk_facetbrowser_number_shown';
   $strongarm->value = '3';
-  $export['ding_facetbrowser_number_shown'] = $strongarm;
+  $export['bibdk_facetbrowser_number_shown'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'bibdk_facetbrowser_by_ajax';
+  $strongarm->value = 1;
+  $export['bibdk_facetbrowser_by_ajax'] = $strongarm;
+
 
   return $export;
 }
