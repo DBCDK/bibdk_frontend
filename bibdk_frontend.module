@@ -257,11 +257,11 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
   $current_settings = !empty($form['options']['#value']['devicetypes']) ? $form['options']['#value']['devicetypes'] : NULL;
 
   $device_types = array(
-    'small' => '< 480px',
-    'medium' => '> 768px',
-    'large' => '> 1280px',
-    'xlarge' => '> 1440px',
-    'xxlarge' => '> ∞',
+    'small' => '<= 480px',
+    'medium' => '<= 768px',
+    'large' => '<= 1280px',
+    'xlarge' => '<= 1440px',
+    'xxlarge' => '< ∞',
   );
 
   $form['devicetypes'] = array(
