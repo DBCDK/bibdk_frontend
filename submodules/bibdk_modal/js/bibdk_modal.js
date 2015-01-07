@@ -157,5 +157,4 @@
 
   Drupal.bibdkModal = BibdkModal;
 
-})
-(jQuery);
+})(jQuery);
