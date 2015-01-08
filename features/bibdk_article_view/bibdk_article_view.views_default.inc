@@ -76,6 +76,7 @@ function bibdk_article_view_views_default_views() {
   $handler->display->display_options['fields']['field_link_text']['table'] = 'field_data_field_link_text';
   $handler->display->display_options['fields']['field_link_text']['field'] = 'field_link_text';
   $handler->display->display_options['fields']['field_link_text']['label'] = '';
+  $handler->display->display_options['fields']['field_link_text']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_link_text']['element_label_colon'] = FALSE;
   /* Field: Content: rows */
   $handler->display->display_options['fields']['field_rows']['id'] = 'field_rows';
@@ -101,10 +102,12 @@ function bibdk_article_view_views_default_views() {
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
   $handler->display->display_options['fields']['field_link']['alter']['text'] = '[field_link_text]';
   $handler->display->display_options['fields']['field_link']['alter']['path'] = '[field_link] ';
   $handler->display->display_options['fields']['field_link']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['field_link']['alter']['external'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: weight (field_weight) */
   $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
   $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
@@ -447,7 +450,6 @@ function bibdk_article_view_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('Link'),
     t('[field_link_text]'),
     t('Block'),
     t('more'),
