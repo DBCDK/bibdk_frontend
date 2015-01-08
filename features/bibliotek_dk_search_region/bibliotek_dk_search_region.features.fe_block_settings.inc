@@ -32,7 +32,8 @@ function bibliotek_dk_search_region_default_fe_block_settings() {
     'region' => 'search_panel',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'vejviser',
+    'pages' => 'vejviser
+user/*',
     'title' => '',
     'cache' => -1,
     'i18n_mode' => '0',
