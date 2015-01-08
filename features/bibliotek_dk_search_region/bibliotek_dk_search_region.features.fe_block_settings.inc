@@ -20,7 +20,7 @@ function bibliotek_dk_search_region_default_fe_block_settings() {
     ),
   );
 
-  // bibdk_theme
+  // Exported block settings for Bibliotek.dk.
   $theme = array();
 
   $theme['search-form'] = array(
@@ -32,18 +32,16 @@ function bibliotek_dk_search_region_default_fe_block_settings() {
     'region' => 'search_panel',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'vejviser
-user/*',
+    'pages' => '',
     'title' => '',
     'cache' => -1,
-    'i18n_mode' => '0',
   );
 
   $export['theme']['bibdk_theme'] = $theme;
 
-  $theme_default = variable_get('theme_default', 'garland');
+  $theme_default = variable_get('theme_default', 'bartik');
   $themes = list_themes();
-  foreach ($export as $theme_key => $settings) {
+  foreach ($export['theme'] as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
       unset($export['theme'][$theme_key]);
     }
