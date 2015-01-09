@@ -34,6 +34,9 @@ function bibdk_article_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'bibdk_newsroom_list' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -44,7 +47,14 @@ function bibdk_article_strongarm() {
           'weight' => '1',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__bibdk_article'] = $strongarm;
