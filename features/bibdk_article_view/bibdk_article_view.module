@@ -43,7 +43,7 @@ function bibdk_article_view_preprocess_views_view_fields(&$vars) {
       $link = bibdk_article_view_get_bottom_link($link_text, $link_url);
       $vars['fields']['field_link']->content = $link;
       $vars['fields']['field_link']->wrapper_prefix = '<div class="footer"><div class="field-read-more">';
-      $vars['fields']['field_link']->wrapper_suffix = '<span class="icon icon-left icon-blue-right">&nbsp;</span></div></div>';
+      $vars['fields']['field_link']->wrapper_suffix = '</div></div>';
     }
   }
 }
@@ -59,8 +59,8 @@ function bibdk_article_view_get_bottom_link($txt,$path){
         'class' => array('article-bottom-link'),
       ),
       'html' => FALSE,
+      'svg' => 'svg-arrow-right',
     ),
-    'svg' => 'arrow-right',
   );
 
   return drupal_render($link);
@@ -77,8 +77,8 @@ function bibdk_article_view_get_top_link($txt, $path) {
         'class' => array('article-top-link'),
       ),
       'html' => FALSE,
+      'svg' => 'svg-arrow-right',
     ),
-    'svg' => 'arrow-right',
   );
 
   return drupal_render($link);
