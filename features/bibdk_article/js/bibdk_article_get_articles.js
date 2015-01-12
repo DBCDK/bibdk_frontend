@@ -5,7 +5,7 @@
  * Change article depending on which tab was pressed in advanced search tabs
  * @see bibdk_custom_search module for implementation of advanced search
  */
-(function($) {
+/*(function($) {
 
 Drupal.behaviors.GetArticlesOnClick = {
     attach: function(context) {
@@ -32,4 +32,4 @@ Drupal.bibdkArticlesReplace = function(response) {
     $('.bibdk_article_ajax_replace').replaceWith(response.output);
 }
 
-}(jQuery));
+}(jQuery));*/
