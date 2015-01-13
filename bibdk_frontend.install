@@ -110,7 +110,7 @@ function bibdk_frontend_setup_cache() {
   variable_set('TingClientObjectRequest_cache_lifetime', 10);
   // borchk
   variable_set('bibdk_borchk_cache_enable', 1);
-  variable_set('bibdk_borchk_cache_lifetime', 1);
+  variable_set('bibdk_borchk_cache_lifetime', 20);
   //forsrights
   variable_set('bibdk_forsrights_cache_enable', 1);
   variable_set('bibdk_forsrights_cache_lifetime', 1);
@@ -140,7 +140,8 @@ function _bibdk_frontend_enable_modules() {
     'bibliotek_dk_footer_menu',
     'bibdk_facets',
     //Content
-    'bibdk_article',
+    'bibdk_custom_header_block',
+    'bibdk_article_view',
     'bibdk_banner',
     'bibdk_adhl',
     //Submodule
@@ -148,6 +149,7 @@ function _bibdk_frontend_enable_modules() {
     'bibdk_modal',
     'bibdk_voxb',
     'bibdk_usersettings_language',
+    'custom_search_taxonomy',
   );
   if (!module_enable($modules)) {
     throw new Exception('A module: ' . current($modules) . ' present in array \'$module_list\' in file \'bibdk_frontend.install\' was not found. Install process aborted.');

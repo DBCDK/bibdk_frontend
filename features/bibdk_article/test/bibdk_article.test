@@ -14,7 +14,7 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
   }
 
   public function setUp() {
-    parent::setUp('bibdk_article');
+    parent::setUp('bibdk_article','bibdk_article_view');
   }
 
   public function testRunner() {
@@ -28,8 +28,6 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
         ));
     $this->drupalLogin($this->admin_user);
     $this->CreateArticleTest();
-    $this->GetArticle();
-    $this->_testArticleView();
   }
 
   /** Test create bibdk_article
@@ -43,35 +41,9 @@ class bibdkArticleWebtestCase extends DrupalWebTestCase {
     $edit["field_link_text[und][0][value]"] = 'link name value';
     $edit["field_link[und][0][value]"] = 'http://someurl/';
     $edit["field_link_classes[und][0][value]"] = 'class1 class2';
-    $edit["field_page[und]"] = 'bibdk_frontpage';
+    $edit["field_page_type[und]"] = '2';
     $this->drupalPost('node/add/bibdk_article', $edit, t('Save'));
     $this->assertText(t('@title has been created.', array('@title' => $edit['title'])));
-    $this->assertText('class1 class2', 'link classes saved');
-  }
-
-  /**
-   * Test article block view
-   */
-  public function _testArticleView() {
-    $edit['blocks[bibdk_article_bibdk_articles][region]'] = 'content';
-    $this->drupalPost('admin/structure/block', $edit, t('Save blocks'));
-    $this->drupalGet('bibdk_frontpage');
-    $this->assertText('article_title');
-    $this->assertText('article_content');
-    $this->assertLink('link name value');
-    $this->assertRaw('class="class1 class2"');
-
-  }
-
-  /** Test retrival of bibdk_article
-   *
-   */
-  public function GetArticle() {
-    $article = bibdk_article_get_article_values();
-    $fieldname = array('title','field_weight','field_link_text','field_link','field_image','field_columns');
-    foreach($fieldname as $key => $value) {
-      $this->assertTrue(isset($article[0][$value]),t('%field found',array('%field'=>$value)));
-    }
   }
 }
 

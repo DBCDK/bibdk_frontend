@@ -173,24 +173,11 @@ function bibdk_frontend_bibdk_tabs_alter(&$data) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter (profile2_form)
- * remove account settings
- * unset action region
- */
-function bibdk_frontend_form_profile2_form_alter(&$form, &$form_state) {
-  unset($form['account']);
-  unset($form['actions']);
-}
-
-/**
  * Implements hook_menu().
  */
 function bibdk_frontend_menu() {
-
   $items = array();
-
   $forms = array('all_element_types', 'all_inline_element_types');
-
   foreach ($forms as $form) {
     $items['bibdk_forms/' . $form] = array(
       'title' => t($form),
@@ -270,11 +257,11 @@ function bibdk_frontend_form_menu_edit_item_alter(&$form, $form_state, $form_id)
   $current_settings = !empty($form['options']['#value']['devicetypes']) ? $form['options']['#value']['devicetypes'] : NULL;
 
   $device_types = array(
-    'small' => '< 480px',
-    'medium' => '> 768px',
-    'large' => '> 1280px',
-    'xlarge' => '> 1440px',
-    'xxlarge' => '> ∞',
+    'small' => '<= 480px',
+    'medium' => '<= 768px',
+    'large' => '<= 1280px',
+    'xlarge' => '<= 1440px',
+    'xxlarge' => '< ∞',
   );
 
   $form['devicetypes'] = array(
