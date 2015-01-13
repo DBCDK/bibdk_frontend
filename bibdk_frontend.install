@@ -110,7 +110,7 @@ function bibdk_frontend_setup_cache() {
   variable_set('TingClientObjectRequest_cache_lifetime', 10);
   // borchk
   variable_set('bibdk_borchk_cache_enable', 1);
-  variable_set('bibdk_borchk_cache_lifetime', 1);
+  variable_set('bibdk_borchk_cache_lifetime', 20);
   //forsrights
   variable_set('bibdk_forsrights_cache_enable', 1);
   variable_set('bibdk_forsrights_cache_lifetime', 1);
