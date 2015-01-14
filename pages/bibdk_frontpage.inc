@@ -150,17 +150,6 @@ $pane->subtype = 'carousel';
 $pane->shown = TRUE;
 $pane->access = array(
   'plugins' => array(
-    0 => array(
-      'name' => 'site_language',
-      'settings' => array(
-        'language' => array(
-          'da' => 'da',
-          'default' => 0,
-          'en-gb' => 0,
-        ),
-      ),
-      'not' => FALSE,
-    ),
     1 => array(
       'name' => 'path_visibility',
       'settings' => array(
