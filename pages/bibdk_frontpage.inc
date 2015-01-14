@@ -104,7 +104,30 @@ $pane->panel = 'middle';
 $pane->type = 'subject_hierarchy';
 $pane->subtype = 'subject_hierarchy';
 $pane->shown = TRUE;
-$pane->access = array();
+$pane->access = array(
+  'plugins' => array(
+    0 => array(
+      'name' => 'site_language',
+      'settings' => array(
+        'language' => array(
+          'da' => 'da',
+          'default' => 0,
+          'en-gb' => 0,
+        ),
+      ),
+      'not' => FALSE,
+    ),
+    1 => array(
+      'name' => 'path_visibility',
+      'settings' => array(
+        'visibility_setting' => '1',
+        'paths' => '<front>',
+      ),
+      'context' => 'empty',
+      'not' => FALSE,
+    ),
+  ),
+);
 $pane->configuration = array();
 $pane->cache = array();
 $pane->style = array(
@@ -125,7 +148,19 @@ $pane->panel = 'middle';
 $pane->type = 'carousel';
 $pane->subtype = 'carousel';
 $pane->shown = TRUE;
-$pane->access = array();
+$pane->access = array(
+  'plugins' => array(
+    1 => array(
+      'name' => 'path_visibility',
+      'settings' => array(
+        'visibility_setting' => '1',
+        'paths' => '<front>',
+      ),
+      'context' => 'empty',
+      'not' => FALSE,
+    ),
+  ),
+);
 $pane->configuration = array(
   'override_title' => 1,
   'override_title_text' => '',
@@ -165,7 +200,3 @@ $display->hide_title = PANELS_TITLE_FIXED;
 $display->title_pane = '0';
 $handler->conf['display'] = $display;
 $page->default_handlers[$handler->name] = $handler;
-
-
-
-
