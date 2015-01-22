@@ -7,7 +7,7 @@
 /**
  * Update existing bibdk_article nodes with new taxonomy term (column: left,right)
  */
-function bibdk_article_update_7038() {
+function bibdk_article_update_7040() {
   $articles = bibdk_article_get_articles();
   if (empty($articles)) {
     return;
@@ -42,7 +42,7 @@ function bibdk_article_update_7005() {
 /**
  * Update existing nodes with taxonomy terms(page_region and type)
  */
-function bibdk_article_update_7037() {
+function bibdk_article_update_7039() {
   $articles = bibdk_article_get_articles();
   if (empty($articles)) {
     return;
