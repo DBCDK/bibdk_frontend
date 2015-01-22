@@ -11,9 +11,9 @@
     <div class="tabs-sections">
       <?php foreach ($tabs as $type => $tab) : ?>
         <div id="<?php print $type . $pid; ?>" class="tabs-section <?php print $tab['active']; ?>">
-          <div class="text clearfix">
+          <dl class="accordion" data-accordion>
             <?php print render($tab['content']); ?>
-          </div>
+          </dl>
         </div>
       <?php endforeach; ?>
       <!-- tabs-section -->
