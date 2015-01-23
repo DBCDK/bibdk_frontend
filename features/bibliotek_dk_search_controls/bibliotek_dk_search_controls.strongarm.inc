@@ -26,7 +26,7 @@ function bibliotek_dk_search_controls_strongarm() {
       'values' => array(
         10 => array(
           'label' => 'I feel lucky',
-          'value' => '',
+          'value' => 'rank_frequency',
           'default' => 1,
           'sort' => '-10',
         ),
