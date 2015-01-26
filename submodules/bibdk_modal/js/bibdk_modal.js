@@ -5,44 +5,46 @@
   // ===========================================================================
   //   COMMANDS
   // ---------------------------------------------------------------------------
-  Drupal.ajax.prototype.commands.bibdk_modal_reload = function(ajax, data, status) {
-    BibdkModal.detachBehaviorsOnModal();
-    var currentUrl = document.URL;
-    if(currentUrl.indexOf("reservation?ids") != -1) {
-      window.location.href = currentUrl;
-      if(window.opener != null) {
-        window.opener.location.reload(true);
-      }
-    }
-    else {
-      location.reload(true);
-      if(window.opener != null) {
-        window.opener.location.reload(true);
-      }
-    }
-  };
+  if (typeof(Drupal.ajax) != 'undefined') {
+      Drupal.ajax.prototype.commands.bibdk_modal_reload = function (ajax, data, status) {
+          BibdkModal.detachBehaviorsOnModal();
+          var currentUrl = document.URL;
+          if (currentUrl.indexOf("reservation?ids") != -1) {
+              window.location.href = currentUrl;
+              if (window.opener != null) {
+                  window.opener.location.reload(true);
+              }
+          }
+          else {
+              location.reload(true);
+              if (window.opener != null) {
+                  window.opener.location.reload(true);
+              }
+          }
+      };
 
-  Drupal.ajax.prototype.commands.bibdk_modal_replace_form = function(ajax, data, status) {
-    if(status === 'success') {
-      var selector = data.selector;
-      var html = data.html;
-      $(selector).replaceWith(html);
-      BibdkModal.detachBehaviorsOnModal(true);
-      onLoad.setFocus();
-    }
-    else {
-      console.log('error');
-    }
-  };
+      Drupal.ajax.prototype.commands.bibdk_modal_replace_form = function (ajax, data, status) {
+          if (status === 'success') {
+              var selector = data.selector;
+              var html = data.html;
+              $(selector).replaceWith(html);
+              BibdkModal.detachBehaviorsOnModal(true);
+              onLoad.setFocus();
+          }
+          else {
+              console.log('error');
+          }
+      };
 
-  Drupal.ajax.prototype.commands.bibdk_modal_dismiss = function(ajax, data, status) {
-    BibdkModal.detachBehaviorsOnModal();
-    jQuery('a.close-reveal-modal').trigger('click');
-  };
+      Drupal.ajax.prototype.commands.bibdk_modal_dismiss = function (ajax, data, status) {
+          BibdkModal.detachBehaviorsOnModal();
+          jQuery('a.close-reveal-modal').trigger('click');
+      };
 
-  Drupal.ajax.prototype.commands.bibdk_modal_redirect = function(ajax, data, status) {
-    location.href = data.url;
-  };
+      Drupal.ajax.prototype.commands.bibdk_modal_redirect = function (ajax, data, status) {
+          location.href = data.url;
+      };
+  }
   // ---------------------------------------------------------------------------
   //   COMMANDS -- END
   // ===========================================================================
