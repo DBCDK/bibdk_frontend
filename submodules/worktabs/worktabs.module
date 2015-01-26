@@ -23,6 +23,7 @@ function worktabs_theme($existing, $type, $theme, $path) {
         'single' => FALSE,
         'content' => array(),
         'more_id' => '',
+        'tab_id' => '',
       ),
     ),
     'worktabs_no_content' => array(
@@ -110,8 +111,9 @@ function worktabs_merge_content($content) {
     );
   $outertabs = worktabs_get_outer();
   foreach ($content as $tab => $inner) {
-    foreach ($inner as &$element) {
+    foreach ($inner as $key => &$element) {
       $element += $default;
+      $element['#tab_id'] = drupal_html_id('worktab-' . $key);
       $element['#single'] = count($inner) < 2;
     }
     uasort($inner, 'drupal_sort_weight');
@@ -128,14 +130,23 @@ function worktabs_merge_content($content) {
  */
 function worktabs_get_outer() {
   return array(
+    'basic-information' => array(
+      'title' => array(
+        '#type' => 'translatable',
+        '#translate' => 'Description',
+      ),
+      'content' => array(),
+      'class' => 'active',
+      'active' => 'active',
+    ),
     'more-about' => array(
       'title' => array(
         '#type' => 'translatable',
         '#translate' => 'More Info',
       ),
       'content' => array(),
-      'class' => 'active',
-      'active' => 'active',
+      'class' => '',
+      'active' => 'visuallyhidden',
     ),
     'reviews' => array(
       'title' => array(
