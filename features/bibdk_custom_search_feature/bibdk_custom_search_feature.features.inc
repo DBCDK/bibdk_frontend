@@ -2780,7 +2780,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f79c6d0f-effe-6944-7951-211d70e904d7';
   $option->sort = -99;
   $option->label = 'dvd';
-  $option->value = '"dvd"';
+  $option->value = 'term.type="dvd"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['240ae559-eafd-d7d4-a156-ed562f3c4946'] = $option;
@@ -3248,7 +3248,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f79c6d0f-effe-6944-7951-211d70e904d7';
   $option->sort = -97;
   $option->label = 'blu-ray';
-  $option->value = '"blu-ray"';
+  $option->value = 'term.type="blu-ray"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['350ab740-dea3-a1e4-a9cf-bb5f6aee3763'] = $option;
@@ -3259,8 +3259,8 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->o_uuid = '35af48c9-0b22-7e14-5986-56bf507da0d0';
   $option->v_uuid = 'f79c6d0f-effe-6944-7951-211d70e904d7';
   $option->sort = -96;
-  $option->label = 'vhs';
-  $option->value = '"video"';
+  $option->label = 'VHS';
+  $option->value = 'term.type="video"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['35af48c9-0b22-7e14-5986-56bf507da0d0'] = $option;
@@ -5360,7 +5360,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_option() {
   $option->v_uuid = 'f79c6d0f-effe-6944-7951-211d70e904d7';
   $option->sort = -98;
   $option->label = 'film på nettet';
-  $option->value = '"film" and term.accessType="online"';
+  $option->value = 'term.type="film" and term.accessType="online"';
   $option->expand = '0';
   $option->is_disabled = FALSE;
   $export['9603f424-38cc-b004-b1a1-342cf9792cbe'] = $option;
@@ -8579,7 +8579,7 @@ function bibdk_custom_search_feature_default_bibdk_custom_search_value() {
   $value->value_title = 'film, materialetype';
   $value->sort = -46;
   $value->value_type = 'checkboxes';
-  $value->search_code = 'term.type';
+  $value->search_code = '';
   $value->default_value = '';
   $value->expand = 0;
   $value->is_disabled = FALSE;
