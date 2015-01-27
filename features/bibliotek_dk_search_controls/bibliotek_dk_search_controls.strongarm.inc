@@ -25,7 +25,7 @@ function bibliotek_dk_search_controls_strongarm() {
       'tab_index' => 'tab_index',
       'values' => array(
         10 => array(
-          'label' => 'I feel lucky',
+          'label' => 'Vælg anden sortering',
           'value' => 'rank_frequency',
           'default' => 1,
           'sort' => '-10',
